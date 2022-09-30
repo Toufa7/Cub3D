@@ -11,6 +11,10 @@
 # include "./get_next_line/get_next_line.h"
 # include "./libft/libft.h"
 
+#define BLUE 0X0000FF
+#define RED 0XFF0000
+#define TRUE 1
+
 typedef struct s_window
 {
     void	    *mlx;
