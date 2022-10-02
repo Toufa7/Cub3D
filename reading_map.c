@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   reading_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:57:27 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/02 09:57:28 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:55 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/02 09:50:56 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub3d.h"
 
-void    ft_free(char *str)
+char	*read_map(int fd)
 {
-	if (str)
-		free(str);
-}
+	char	*join;
+	char	*map;
 
-void    ft_free_double(char **str)
-{
-	int i;
-
-	i = -1;
-	while (str && str[++i])
-		ft_free(str[i]);
-	if (str)
-		free(str);
+	if (!fd)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	join = ft_strdup("");
+	map = get_next_line(fd);
+	while (map)
+	{
+		join = ft_strjoin(join, map);
+		map = get_next_line(fd);
+		ft_free(map);
+	}
+	ft_free(map);
+	return (join);
 }

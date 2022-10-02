@@ -63,6 +63,6 @@ char	**ft_split(char const *s, char c)
 	if (!arr)
 		return (NULL);
 	spliting(arr, s, c);
-	ft_free(s);
+	ft_free((char *)s);
 	return (arr);
 }

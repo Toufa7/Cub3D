@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   move_left.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:57:27 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/02 09:57:28 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:39 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/02 09:50:40 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub3d.h"
 
-void    ft_free(char *str)
+void	move_left(t_mlx *wind)
 {
-	if (str)
-		free(str);
-}
-
-void    ft_free_double(char **str)
-{
-	int i;
-
-	i = -1;
-	while (str && str[++i])
-		ft_free(str[i]);
-	if (str)
-		free(str);
+	wind->field_of_view -= 5;
 }
