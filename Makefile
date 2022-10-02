@@ -34,8 +34,12 @@ OBJECTS = $(FUNCTIONS:.c=.o)
 
 RM = rm -rf
 
-all		:	$(OBJECTS)
-			$(CC) $(C_FLAGS) $(MLX_FLAGS) $(OBJECTS) cub2d.c -o $(NAME)
+all		:	$(NAME)
+
+$(NAME)	:	$(OBJECTS)
+			$(CC) $(C_FLAGS) $(OBJECTS) $(MLX_FLAGS) cub2d.c -o $(NAME)
 
 clean	:	$(OBJECTS)
 			$(RM) $(OBJECTS)
+
+re		:	clean all
