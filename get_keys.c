@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   get_keys.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:57:27 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/02 09:57:28 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:08 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/02 09:50:09 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub3d.h"
 
-void    ft_free(char *str)
+int	get_keys(int press, t_mlx *wind)
 {
-	if (str)
-		free(str);
-}
-
-void    ft_free_double(char **str)
-{
-	int i;
-
-	i = -1;
-	while (str && str[++i])
-		ft_free(str[i]);
-	if (str)
-		free(str);
+	if (press == 123 || press == 0)
+		move_left(wind);
+	if (press == 124 || press == 2)
+		move_right(wind);
+	if (press == 125 || press == 1)
+		move_backword(wind);
+	if (press == 126 || press == 13)
+		move_forward(wind);
+	if (press == 53)
+        destroy_window(wind);
+	map_filling(wind);
+	return (0);
 }

@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   get_player_position.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:57:27 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/02 09:57:28 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:13 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/02 09:50:14 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub3d.h"
 
-void    ft_free(char *str)
+void	get_player_position(t_mlx *wind)
 {
-	if (str)
-		free(str);
-}
+	int	i;
+	int	j;
 
-void    ft_free_double(char **str)
-{
-	int i;
-
-	i = -1;
-	while (str && str[++i])
-		ft_free(str[i]);
-	if (str)
-		free(str);
+	i = 0;
+	while (wind->map[i])
+	{
+		j = 0;
+		while (wind->map[i][j])
+		{
+			if (wind->map[i][j] == 'P')
+			{
+				wind->map[i][j] = '0';
+				wind->y_player = i * 60;
+				wind->x_player = j * 60;
+				break ;
+			}
+			j++;
+		}
+		i++;
+	}
 }
