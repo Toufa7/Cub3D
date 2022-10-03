@@ -34,12 +34,12 @@ void	cast_rays(t_mlx *wind, float nbr_ray)
 		{
 			wind->x_end_of_ray = p_x;
 			wind->y_end_of_ray = p_y;
-			printf("Rays End at : -> [%d py][%d px]\n", wind->y_end_of_ray * 60, wind->x_end_of_ray * 60);
+			// printf("Rays End at : -> [%d py][%d px]\n", wind->y_end_of_ray * 60, wind->x_end_of_ray * 60);
 			break ;
 		}
 		px += cos((nbr_ray) * M_PI / 180) * dis_between_each_pix;
 		py += sin((nbr_ray) * M_PI / 180) * dis_between_each_pix;
-		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
+		mlx_pixel_put(wind->mlx, wind->window, px, py, GREEN);
 		distance_ray++;
 	}
 }

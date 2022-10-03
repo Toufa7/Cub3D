@@ -17,12 +17,13 @@ void	images_to_xpm(t_mlx *wind)
 	int	height;
 	int	width;
 
-	wind->wall = "./sprites/black.xpm";
-	wind->empty = "./sprites/white.xpm";
+	wind->wall = "./sprites/water.xpm";
+	wind->empty = "./sprites/Stone_1.xpm";
+	wind->player = "./sprites/player.xpm";
 	wind->xpm_wall = mlx_xpm_file_to_image(wind->mlx, wind->wall, &width, &height);
 	wind->xpm_empty = mlx_xpm_file_to_image(wind->mlx, wind->empty, &width, &height);
+	wind->xpm_player = mlx_xpm_file_to_image(wind->mlx, wind->player, &width, &height);
 }
-
 
 void	creating_window(t_mlx *wind)
 {
@@ -37,10 +38,11 @@ void	creating_window(t_mlx *wind)
 int	main(int ac, char **av)
 {
 	t_mlx	wind;
+	int		fildes;
 
 	if (ac == 2)
 	{
-		int fildes = open(av[1], O_RDONLY);
+		fildes = open(av[1], O_RDONLY);
 		if (!fildes)
 		{
 			printf("Error\n");

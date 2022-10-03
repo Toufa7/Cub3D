@@ -22,7 +22,7 @@ void	projecting_rays(t_mlx *wind)
 	nbr_of_rays = 60;
 	// Dividing my view into 2 triangle 32° left and 32° right
 	player_view = wind->field_of_view - 32;
-	printf("Field Of View => %f\n", player_view);
+	// printf("Field Of View => %f\n", player_view);
 	while (++i <= nbr_of_rays)
 	{
 		cast_rays(wind, player_view);
