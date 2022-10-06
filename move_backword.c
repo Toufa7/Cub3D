@@ -21,9 +21,7 @@ void	move_backword(t_mlx *wind)
 	move_pixels = 5;
 	y_step = sin(wind->field_of_view * M_PI / 180) * move_pixels;
 	x_step = cos(wind->field_of_view * M_PI / 180) * move_pixels;
-	// printf("Back Player X Position => %f\n", x_step);
-	// printf("Back Player Y Position => %f\n", y_step);
-	if (wind->map[(int)(wind->y_player - y_step * 2) / 60][(int)(wind->x_player - x_step * 2) / 60] == '0')
+	if (wind->map[(int)(wind->y_player - y_step * 2) / 20][(int)(wind->x_player - x_step * 2) / 20] == '0')
 	{
 		wind->x_player -= x_step;
 		wind->y_player -= y_step;

@@ -147,9 +147,9 @@ int req_space(char **str,int start,int i)
 int check_player(char str){
         if (str == 'N' || str == 'S' || str == 'E' || str == 'W')
             return 1;
-
     return 0;
 }
+
 int req_zero(char **str,int start, int i)
 {
     int count = 0;
@@ -231,25 +231,59 @@ void	get_player_position(char **str)
 	}
 }
 
+int last_touches(char **str)
+{
+	int count_0 = 0;
+	int cout_P = 0;
+	int i = 6;
+	int j = 0;
+	while (str[i])
+	{
+		j = 0;
+		while (str[i][j])
+		{
+			if (str[i][j] == '0')
+				count_0++;
+			if (check_player(str[i][j]))
+				cout_P++;
+			j++;
+		}
+		i++;
+	}
+	if (count_0 == 0 || (cout_P == 0 || cout_P > 1) || i == 6)
+	{
+		printf("cout_p = %d\n",cout_P);
+		printf("Error : There is a problem");
+		return 0;
+	}
+	return 1;
+}
+
 int map_checking2(char *str)
 {
     char **split_str = ft_split(str,'\n');
     int statrt = 6;
     if(!check_spaces(split_str,statrt))
         return 0;
+	if (!last_touches(split_str) )
+		return 0;
     return 1;
 }
 t_fd file_dis(char *sp,char *s)
 {
     t_fd fd;
     if (!strcmp(sp,"NO"))
-        fd.ON_fd = open(s,O_RDONLY);
+        fd.NO = ft_strdup(s);
     else if (!strcmp(sp,"SO"))
-        fd.SO_fd = open(s,O_RDONLY);
+        fd.SO = ft_strdup(s);
     else if (!strcmp(sp,"WE"))
-        fd.WE_fd = open(s,O_RDONLY);
+        fd.WE = ft_strdup(s);
     else if (!strcmp(sp,"EA"))
-        fd.EA_fd = open(s,O_RDONLY);
+        fd.EA = ft_strdup(s);
+    else if (!strcmp(sp,"F"))
+        fd.F = ft_strdup(s);
+    else if (!strcmp(sp,"C"))
+        fd.C = ft_strdup(s);
     return fd;
 }
 t_fd take_path(char *str)
@@ -258,18 +292,59 @@ t_fd take_path(char *str)
     char **str_sp = ft_split(ft_strdup(str),'\n');
     t_fd fd;
     int i = 0;
-    while (i < 4)
+    while (i < 6)
     {
         char **sp = ft_split(ft_strdup(str_sp[i]),' ');
         char *s = joining(sp);
         fd = file_dis(sp[0],s);
-       // ft_free(sp);
-        //free(s);
+        ft_free(sp);
+        free(s);
         i++;
     }
     return fd;
 }
-int main (int ac , char **av)
+
+int check_isdigit(char **sp)
+{
+	int i = 0;
+	int j = 0;
+	while (sp[i])
+	{
+		j = 0;
+		int num = ft_atoi(sp[i]);
+		if (num > 255 || num < 0)
+		{
+			printf("Error :Colors  %s High Than 255\n",sp[i]);
+			return 0;
+		}
+		i++;
+	}
+	return	1;
+}
+
+int check_Colors_valid(char *F,char *C)
+{
+    char **sp_f = ft_split(ft_strdup(F),',');
+    char **sp_c = ft_split(ft_strdup(C),',');
+    if(counting(sp_f) != 3 || counting(sp_c) != 3)
+    {
+        printf("Error : There is problem in COLORS.");
+		ft_free(sp_f);
+		ft_free(sp_c);
+        return 0;
+    }
+    if(!check_isdigit(sp_f) || !check_isdigit(sp_c))
+	{
+		ft_free(sp_f);
+		ft_free(sp_c);
+        return 0;
+	}
+	ft_free(sp_f);
+	ft_free(sp_c);
+    return 1;
+}
+
+int main (int ac , char **av)//map with '\n'
 {
     int fd = open("map.txt",O_RDONLY);
     char *str;
@@ -284,9 +359,18 @@ int main (int ac , char **av)
         //free(buf);
     }
     free(buf);
+	if (!str)
+	{
+		printf("Error : Map invalid");
+		return 1;
+	}
+    fd2.full_map = ft_strdup(str);
     if (map_checking(str))
+    {
+        fd2 = take_path(str);
         printf("%d\n", map_checking2(str));
-           // fd2 = take_path(str);
-            //free(str);
-    return (0);///n 
+        printf("**%d\n",check_Colors_valid(fd2.F,fd2.C));
+  		//free(str);
+    }
+    return (0);
 }

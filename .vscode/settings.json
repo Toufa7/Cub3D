@@ -1,5 +1,10 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "sstream": "c"
+=======
+        "cub3d.h": "c",
+        "iterator": "c"
+>>>>>>> 44d479e16ff4c062f23f2fa6d8bd3c1071295928
     }
 }
