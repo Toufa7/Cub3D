@@ -75,5 +75,5 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 		// printf("i ==> %d\n", i);
 		mlx_pixel_put(wind->mlx, wind->window, i, j, 0);
 	}
-	casting_3d(dist,  i, wind);
+	// casting_3d(dist,  i, wind);
 }
