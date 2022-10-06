@@ -24,9 +24,9 @@ void	map_filling(t_mlx	*wind)
 		while (wind->map[i][j])
 		{
 			if (wind->map[i][j] == '1')
-				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_wall, j * 60, i * 60);
+				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_wall, j * 20, i * 20);
 			else if (wind->map[i][j] == '0')
-				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_empty, j * 60, i * 60);
+				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_empty, j * 20, i * 20);
 			j++;
 		}
 		i++;

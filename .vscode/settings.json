@@ -1,1 +1,6 @@
-{}
+{
+    "files.associations": {
+        "cub3d.h": "c",
+        "iterator": "c"
+    }
+}

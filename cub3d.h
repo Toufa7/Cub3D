@@ -55,7 +55,7 @@ void	get_player_position(t_mlx *wind);
 void	move_backword(t_mlx *wind);
 void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
-void	cast_rays(t_mlx	*wind, float nbr_ray);
+void	cast_rays(t_mlx	*wind, float nbr_ray, int i);
 void	projecting_rays(t_mlx	*wind);
 int		get_keys(int press, t_mlx	*wind);
 int		destroy_window(t_mlx *wind);

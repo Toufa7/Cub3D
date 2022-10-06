@@ -30,8 +30,8 @@ void	creating_window(t_mlx *wind)
 	int	height;
 	int	width;
 
-	height = 60 * 38;
-	width = 60 * 11;
+	height = 1920;
+	width = 1080;
 	wind->window = mlx_new_window(wind->mlx, height, width, "Cub2D");
 }
 
