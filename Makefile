@@ -39,3 +39,6 @@ all		:	$(OBJECTS)
 
 clean	:	$(OBJECTS)
 			$(RM) $(OBJECTS)
+
+fclean :	clean
+	$(RM) $(NAME)

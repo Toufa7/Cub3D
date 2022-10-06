@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub2d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/09/30 09:01:58 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/10/04 17:55:51 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int ac, char **av)
 		creating_window(&wind);
 		images_to_xpm(&wind);
 		get_player_position(&wind);
-		wind.field_of_view = 0;
+		wind.field_of_view = 270;
 		map_filling(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);
 		mlx_hook(wind.window, 17, 0, destroy_window, &wind);

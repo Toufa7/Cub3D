@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   projecting_rays.c                                  :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:50:32 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/06 09:53:28 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/02 09:57:15 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/03 14:46:46 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "get_next_line.h"
 
-void	projecting_rays(t_mlx *wind)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		nbr_of_rays;
-	double	player_view;
+	size_t	i;
 
-	i = -1;
-	nbr_of_rays = 660;
-	// Dividing my view into 2 triangle 32° left and 32° right
-	player_view = wind->field_of_view - 32;
-	printf("Field Of View => %f\n", player_view);
-	while (++i <= nbr_of_rays)
+	i = 0;
+	while ((s1[i] || s2[i]) && (i < n))
 	{
-		cast_rays(wind, player_view, i);
-		player_view+= 0.05;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
+	return (0);
 }
