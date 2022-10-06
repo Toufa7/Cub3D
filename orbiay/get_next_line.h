@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:45:50 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/04 12:23:12 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/06 17:43:35 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,18 @@ int check_SO(char **str);
 int counting(char **str);
 char *joining(char **str);
 int check_Walls(char *str,int start,int count);
+int	ft_atoi(const char *str);
 
 typedef struct  fd
 {
-    char *NO;
-    char *SO;
-    char *WE;
-    char *EA;
-    char *full_map;
-}   t_fd;
+    char* NO;
+    char* SO;
+    char* WE;
+    char* EA;
+    char*  F;
+    char*  C;
+    char* full_map;
+}t_fd;
 
 
 #endif
