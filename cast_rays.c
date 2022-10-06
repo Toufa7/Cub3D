@@ -54,7 +54,6 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 	dis_between_each_pix = 2;
 	while (TRUE)
 	{
-		// Getting Player postion in the Map dividing
 		p_x = (int)px / 20;
 		p_y = (int)py / 20;
 		if (wind->map[p_y][p_x] == '1')
@@ -62,18 +61,16 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 			wind->x_end_of_ray = p_x;
 			wind->y_end_of_ray = p_y;
 			dist = sqrt((wind->x_player - wind->x_end_of_ray * 20) * (wind->x_player - wind->x_end_of_ray * 20) + (wind->y_player - wind->y_end_of_ray * 20) * (wind->y_player - wind->y_end_of_ray * 20));
-			printf("Here : -> %f\n", dist);
 			break ;
 		}
 		px += cos((nbr_ray) * M_PI / 180) * dis_between_each_pix;
 		py += sin((nbr_ray) * M_PI / 180) * dis_between_each_pix;
 		mlx_pixel_put(wind->mlx, wind->window, px, py, GREEN);
 	}
-	int j = 0;
-	while (++j < 1080)
-	{
-		// printf("i ==> %d\n", i);
-		mlx_pixel_put(wind->mlx, wind->window, i, j, 0);
-	}
+	// int j = 0;
+	// while (++j < 1080)
+	// {
+	// 	mlx_pixel_put(wind->mlx, wind->window, i, j, 0);
+	// }
 	// casting_3d(dist,  i, wind);
 }

@@ -32,5 +32,6 @@ void	map_filling(t_mlx	*wind)
 		i++;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_player, wind->x_player, wind->y_player);
+	printf("wind.field_of_view -> %f\n", wind->field_of_view);
 	projecting_rays(wind);
 }
