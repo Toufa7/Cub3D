@@ -4,7 +4,12 @@
         "sstream": "c"
 =======
         "cub3d.h": "c",
+<<<<<<< HEAD
+        "iterator": "c",
+        "sstream": "c"
+=======
         "iterator": "c"
 >>>>>>> 44d479e16ff4c062f23f2fa6d8bd3c1071295928
+>>>>>>> d68c9dfff4be14acd2511e98327497111626f2f2
     }
 }

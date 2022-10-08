@@ -25,6 +25,25 @@ void	images_to_xpm(t_mlx *wind)
 	wind->xpm_player = mlx_xpm_file_to_image(wind->mlx, wind->player, &width, &height);
 }
 
+
+void	check_extension(char *av[])
+{
+	if (ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
+	{
+		printf("Provide a .cub file\n");
+		exit(1);
+	}
+}
+
+void	check_existing(char *av[])
+{
+	if (ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
+	{
+		printf("Provide a .cub file\n");
+		exit(1);
+	}
+}
+
 void	creating_window(t_mlx *wind)
 {
 	int	height;
@@ -43,22 +62,15 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		fildes = open(av[1], O_RDONLY);
-		if (!fildes)
-		{
-			printf("Error\n");
-			exit(0);
-		}
+		if (fildes == -1)
+			printf("Error\n");exit(0);
 		wind.map = ft_split(read_map(fildes), '\n');
 		wind.mlx = mlx_init();
-		if (ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
-		{
-			printf("Provide a .cub file\n");
-			exit(1);
-		}
+		check_extension(av);
 		creating_window(&wind);
 		images_to_xpm(&wind);
 		get_player_position(&wind);
-		wind.field_of_view = 270;
+		wind.field_of_view = 360;
 		map_filling(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);
 		mlx_hook(wind.window, 17, 0, destroy_window, &wind);

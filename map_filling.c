@@ -24,13 +24,14 @@ void	map_filling(t_mlx	*wind)
 		while (wind->map[i][j])
 		{
 			if (wind->map[i][j] == '1')
-				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_wall, j * 20, i * 20);
+				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_wall, j * 64, i * 64);
 			else if (wind->map[i][j] == '0')
-				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_empty, j * 20, i * 20);
+				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_empty, j * 64, i * 64);
 			j++;
 		}
 		i++;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_player, wind->x_player, wind->y_player);
+	printf("wind.field_of_view -> %f\n", wind->field_of_view);
 	projecting_rays(wind);
 }
