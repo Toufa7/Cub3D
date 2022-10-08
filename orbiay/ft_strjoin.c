@@ -13,35 +13,31 @@
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	char	*join;
+	int		lens1;
+	char	*str;
 	int		i;
-	int		j;
 
-	//if (s1 == 0 || s2 == 0)
-	//	return (NULL);
-	join = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!join)
+	i = 0;
+	if (!s1)
+		return (ft_strdup(s2));
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) +1) * sizeof(char));
+	if (!str)
 		return (NULL);
-	i = 0;
-	j = 0;
-	if (s1)
+	while (s1[i])
 	{
-		while (s1[i] != '\0')
-		{
-			join[j++] = s1[i++];
-		}
+		str[i] = ((char *)s1)[i];
+		i++;
 	}
-	i = 0;
-	if (s2)
+	lens1 = 0;
+	while (s2[lens1])
 	{
-		while (s2[i] != '\0')
-		{
-			join[j++] = s2[i++];
-		}
+		str[i] = ((char *)s2)[lens1];
+		i++;
+		lens1++;
 	}
-	join[j] = '\0';
+	str[i] = '\0';
 	free(s1);
-	return (join);
+	return (str);
 }
 
 int ft_strlen (char *str)

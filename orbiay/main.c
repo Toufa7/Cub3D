@@ -104,6 +104,10 @@ int map_checking(char *str)
 {
     char **split_str = ft_split(str,'\n');
     int i = 0;
+   if (!check_newline(str))
+   {
+        return 0;
+   }
     while (i < 6)
     {
         if (!first_six_lines(split_str[i],i))
@@ -121,26 +125,40 @@ int req_space(char **str,int start,int i)
     int count = 0;
     if (!str[start + 1])
         count++;
+    int len = ft_strlen(str[start + 1]);
+    printf("1\n");
     if ( str[start][i + 1]&& str[start][i + 1] != ' ' &&  str[start][i + 1] != '1')
     {
         printf("Error Map : U have Problem in Row[%d][%d].",start ,i);
         return 0;
     }
+    printf("2\n");
     if (i > 0 && str[start][i - 1] != ' ' &&  str[start][i - 1] != '1')
     {
          printf("Error Map : U have Problem in Row[%d][%d].",start,i);
         return 0;
     }
-    if(!count && str[start + 1][i] && str[start + 1][i] != ' ' && str[start + 1][i] != '1')
+    printf("3\n");
+    //if(!count && str[start + 1][i] && str[start + 1][i] != ' ' && str[start + 1][i] != '1')
+    //{
+    //    printf("Error Map : U have Problem in Row[%d][%d].",start,i);
+    //    return 0;
+    //}
+    //printf("len=  %d && i = %d\n",len,i);
+    if (i < len - 1 && str[start + 1] && str[start + 1][i] && str[start + 1][i] != ' ' && str[start + 1][i] != '1')
+    {
+        printf("c=  %c\n",str[start + 1][i]);
+        printf("3Error Map : U have Problem in Row[%d][%d].",start,i);
+        return 0;
+    }
+    printf("4\n");
+    printf("starrrt =  %d\n",start);
+    if(start > 6 && str[start - 1] && str[start - 1][i] && str[start - 1][i] != ' ' && str[start - 1][i] != '1' )
     {
         printf("Error Map : U have Problem in Row[%d][%d].",start,i);
         return 0;
     }
-    if(start > 6 && str[start - 1][i] && str[start - 1][i] != ' ' && str[start - 1][i] != '1' &&  str[start][i + 1])
-    {
-         printf("Error Map : U have Problem in Row[%d][%d].",start,i);
-        return 0;
-    }
+    printf("5\n");
     return 1;
 }
 
@@ -197,8 +215,8 @@ int check_spaces(char **str,int start)
             return 0;
         while (str[start][j])
         {
-            if (str[start][j] == ' ' && !req_space(str,start,j))
-                return 0;
+            //if (str[start][j] == ' ' && !req_space(str,start,j))
+            //    return 0;
             if (str[start][j] == '0' && !req_zero(str,start,j))
                 return 0;
             j++;
@@ -347,7 +365,7 @@ int check_Colors_valid(char *F,char *C)
 int main (int ac , char **av)//map with '\n'
 {
     int fd = open("map.txt",O_RDONLY);
-    char *str;
+    char *str = NULL;
     char *buf = get_next_line(fd);
     t_fd fd2;
     
@@ -368,8 +386,8 @@ int main (int ac , char **av)//map with '\n'
     if (map_checking(str))
     {
         fd2 = take_path(str);
-        printf("%d\n", map_checking2(str));
-        printf("**%d\n",check_Colors_valid(fd2.F,fd2.C));
+       if (map_checking2(str))
+            printf("**%d\n",check_Colors_valid(fd2.F,fd2.C));
   		//free(str);
     }
     return (0);

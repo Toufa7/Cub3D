@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:45:50 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/06 17:43:35 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/08 16:56:22 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 
 size_t	ft_strrlen(char *str);
+int check_newline(char *str);
 char	*ft_strdup(char *s1);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_find_len(char *str, char what);
