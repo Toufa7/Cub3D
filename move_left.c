@@ -22,7 +22,7 @@ void	move_left(t_mlx *wind)
 	move_pixels = 5;
 	x_step = cos((wind->field_of_view / 2) * M_PI / 180) * move_pixels;
 	y_step = sin((wind->field_of_view / 2) * M_PI / 180) * move_pixels;
-	if (wind->map[(int)(wind->y_player - y_step * 2) / 20][(int)(wind->x_player - x_step * 2) / 20] == '0')
+	if (wind->map[(int)(wind->y_player - y_step * 2) / 64][(int)(wind->x_player - x_step * 2) / 64] == '0')
 	{
 		wind->x_player -= x_step;
 		wind->y_player -= y_step;

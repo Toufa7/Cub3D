@@ -34,12 +34,19 @@ typedef struct s_window
 	void	*mlx;
 	void	*window;
 	char	**map;
+
+
 	char	*xpm_wall;
 	char	*xpm_empty;
 	char	*xpm_player;
+
+
 	char	*wall;
 	char	*empty;
 	char	*player;
+
+
+	
 	double	field_of_view;
 	double	x_player;
 	double	y_player;
