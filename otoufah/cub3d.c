@@ -60,12 +60,12 @@ int	main(int ac, char **av)
 		images_to_xpm(&wind);
 		wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub3D");
 
-
 		// wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub2D");
 		// wind.img = mlx_new_image(wind.mlx, 1920, 1080);
 		// wind.addr = mlx_get_data_addr(wind.img, &wind.bits_per_pixel, &wind.line_length, &wind.endian);
+
 		wind.field_of_view = 90;
-		
+
 		get_player_position(&wind);
 		map_filling(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);
