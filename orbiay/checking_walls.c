@@ -6,12 +6,13 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:30:44 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/04 15:58:31 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/09 14:35:27 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"get_next_line.h"
+//#include"get_next_line.h"
 
+#include "../cub3d.h"
 int all_walls(char *str)
 {
 	int i = 0;

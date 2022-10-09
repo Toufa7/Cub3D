@@ -1,7 +1,5 @@
-#include<unistd.h>
-#include<stdio.h>
-#include<fcntl.h>
-#include "get_next_line.h"
+
+#include "../cub3d.h"
 #include<string.h>
 int strcmp(const char *s1, const char *s2) {
     if(!s1 || !s2)
@@ -104,10 +102,6 @@ int map_checking(char *str)
 {
     char **split_str = ft_split(str,'\n');
     int i = 0;
-   if (!check_newline(str))
-   {
-        return 0;
-   }
     while (i < 6)
     {
         if (!first_six_lines(split_str[i],i))
@@ -227,27 +221,6 @@ int check_spaces(char **str,int start)
     return 1;
 }
 
-void	get_player_position(char **str)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (str[i])
-	{
-		j = 0;
-		while (str[i][j])
-		{
-			if (str[i][j] == 'N')
-			{
-				str[i][j] = '0';
-				break ;
-			}
-			j++;
-		}
-		i++;
-	}
-}
 
 int last_touches(char **str)
 {
@@ -362,7 +335,8 @@ int check_Colors_valid(char *F,char *C)
     return 1;
 }
 
-int main (int ac , char **av)//map with '\n'
+
+t_fd read_and_add(char **av)
 {
     int fd = open("map.txt",O_RDONLY);
     char *str = NULL;
@@ -380,15 +354,21 @@ int main (int ac , char **av)//map with '\n'
 	if (!str)
 	{
 		printf("Error : Map invalid");
-		return 1;
+		exit(1);
 	}
     fd2.full_map = ft_strdup(str);
     if (map_checking(str))
     {
         fd2 = take_path(str);
-       if (map_checking2(str))
-            printf("**%d\n",check_Colors_valid(fd2.F,fd2.C));
-  		//free(str);
+       if (!map_checking2(str) || !check_Colors_valid(fd2.F,fd2.C))
+            exit(0);
+        printf("\nALL thing is valid\n");
     }
-    return (0);
+    return fd2;
 }
+// int main (int ac , char **av)//map with '\n'
+// {
+//     t_fd fd2;
+//     fd2 = read_and_add(av);
+//     return (0);
+// }

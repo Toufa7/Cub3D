@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:42:07 by otoufah           #+#    #+#             */
-/*   Updated: 2022/09/29 18:21:28 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/10/09 14:42:24 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../cub3d.h"
 
 size_t	ft_strrlen(char *str)
 {

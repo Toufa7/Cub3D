@@ -6,11 +6,12 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 19:28:24 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/03 19:02:21 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/09 14:35:16 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+// #include "get_next_line.h"
+#include "../cub3d.h"
 
 int counting(char **str)
 {

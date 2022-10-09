@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/04 17:55:51 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/09 14:51:23 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	images_to_xpm(t_mlx *wind)
 	wind->wall = "./sprites/water.xpm";
 	wind->empty = "./sprites/Stone_1.xpm";
 	wind->player = "./sprites/player.xpm";
+
+	
 	wind->xpm_wall = mlx_xpm_file_to_image(wind->mlx, wind->wall, &width, &height);
 	wind->xpm_empty = mlx_xpm_file_to_image(wind->mlx, wind->empty, &width, &height);
 	wind->xpm_player = mlx_xpm_file_to_image(wind->mlx, wind->player, &width, &height);
@@ -28,7 +30,7 @@ void	images_to_xpm(t_mlx *wind)
 
 void	check_extension(char *av[])
 {
-	if (ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
+	if (strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
 	{
 		printf("Provide a .cub file\n");
 		exit(1);
@@ -37,7 +39,7 @@ void	check_extension(char *av[])
 
 void	check_existing(char *av[])
 {
-	if (ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
+	if (strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
 	{
 		printf("Provide a .cub file\n");
 		exit(1);
@@ -61,9 +63,10 @@ int	main(int ac, char **av)
 
 	if (ac == 2)
 	{
+		wind.parsing = read_and_add(av);
+		printf("%s\n", wind.parsing.full_map);
+		exit(0);
 		fildes = open(av[1], O_RDONLY);
-		if (fildes == -1)
-			printf("Error\n");exit(0);
 		wind.map = ft_split(read_map(fildes), '\n');
 		wind.mlx = mlx_init();
 		check_extension(av);

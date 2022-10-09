@@ -8,9 +8,7 @@ C_FLAGS = -Wall -Wextra -Werror
 
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
-FUNCTIONS =	get_next_line/get_next_line.c\
-			get_next_line/get_next_line_utils.c\
-			reading_map.c\
+FUNCTIONS =	reading_map.c\
 			map_filling.c\
 			get_player_position.c\
 			get_keys.c\
@@ -21,14 +19,16 @@ FUNCTIONS =	get_next_line/get_next_line.c\
 			move_right.c\
 			move_backword.c\
 			destroy_window.c\
-			libft/ft_split.c\
-			libft/ft_strdup.c\
-			libft/ft_strjoin.c\
-			libft/ft_strlcpy.c\
-			libft/ft_strlen.c\
-			libft/ft_substr.c\
-			libft/ft_strncmp.c\
-			libft/ft_free.c\
+			orbiay/check_textures_colors.c\
+			orbiay/checking_walls.c\
+			orbiay/ft_strcmp.c\
+			orbiay/ft_strncmp.c \
+			orbiay/ft_strdup.c\
+			orbiay/ft_strjoin.c\
+			orbiay/get_next_line.c\
+			orbiay/get_next_line.c\
+			orbiay/main.c\
+			orbiay/ft_split.c\
 		
 OBJECTS = $(FUNCTIONS:.c=.o)
 

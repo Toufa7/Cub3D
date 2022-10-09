@@ -9,7 +9,7 @@
 /*   Updated: 2021/11/27 00:04:04 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line.h"
+#include "../cub3d.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+// #include "get_next_line.h"
+#include "../cub3d.h"
 
 static int	counter_word(char const *s, char c)
 {
