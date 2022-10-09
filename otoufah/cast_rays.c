@@ -9,31 +9,31 @@ void	casting_3d(double distance, int i, t_mlx *mlx)
 
 	projection_3d = (64.0 / distance) * (1080 / 2);
 
-	printf("projection_3d %f\n", projection_3d);
-	printf("ceiling %d\n", ceiling);
-	printf("Floor %f\n", 1080 - projection_3d - ceiling );
-
-
-
 	up_down = projection_3d / 2;
+
 	ceiling = (1080 / 2) - up_down;
+
 	j = 0;
-	while (j < 1080 && j < ceiling) 
+
+	while (j < 1080 && j < ceiling)
 	{
-		my_mlx_pixel_put(mlx, i, j, BLUE);
+		mlx_pixel_put(mlx->mlx, mlx->window, i, j, BLUE);
 		j++;	
 	}
-	while (j < 1080 &&  j < ceiling + projection_3d)
+
+
+	while (j < 1080 && j < ceiling + distance)
 	{
-		my_mlx_pixel_put(mlx, i, j, RED);
+		mlx_pixel_put(mlx->mlx, mlx->window, i, j, RED);
 		j++;	
 	}
+
+
 	while (j < 1080)
 	{
-		my_mlx_pixel_put(mlx, i, j, GREEN);
+		mlx_pixel_put(mlx->mlx, mlx->window, i, j, GREEN);
 		j++;	
 	}
-	mlx_put_image_to_window(mlx->mlx, mlx->window, mlx->img, 0, 0);
 
 }
 

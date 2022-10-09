@@ -38,7 +38,7 @@ OBJECTS = $(FUNCTIONS:.c=.o)
 RM = rm -rf
 
 all		:	$(OBJECTS)
-			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(MLX_FLAGS) $(OBJECTS) ./otoufah/cub3d.c -o $(NAME)
+			$(CC) $(C_FLAGS) $(MLX_FLAGS) $(OBJECTS) ./otoufah/cub3d.c -o $(NAME)
 
 clean	:	$(OBJECTS)
 			$(RM) $(OBJECTS)

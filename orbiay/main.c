@@ -348,14 +348,28 @@ int check_Colors_valid(char *F,char *C)
     return 1;
 }
 
+void	check_extension(char *av[])
+{
+	if (strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
+	{
+		printf("Provide a .cub file\n");
+		exit(1);
+	}
+}
 
 t_fd read_and_add(char **av)
 {
     int fd = open(av[1], O_RDONLY);
+    if (fd == -1)
+    {
+        perror("Error\n");
+        exit(0);
+    }
     char *str = NULL;
     char *buf = get_next_line(fd);
     t_fd fd2;
-    
+
+    check_extension(&av[1]);    
     while (buf)
     {
         str = ft_strjoin(str,buf);

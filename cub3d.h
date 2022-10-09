@@ -22,6 +22,8 @@
 # include <mlx.h>
 #include "get_next_line/get_next_line.h"
 #include "libft/libft.h"
+
+
 # define BLUE 0X0000FF
 # define RED 0XFF0000
 # define GREEN 0X00FF00
@@ -43,17 +45,17 @@ typedef struct  fd
 
 
 
-int check_Walls(char *str,int start,int count);
-int check_SO(char **str);
-int counting(char **str);
-int check_WE(char **str);
-char *joining(char **str);
-int check_EA(char **str);
-int check_F(char **str);
-int check_NO(char **str);
-int check_C(char **str);
-int     check_newline(char *str);
-t_fd read_and_add(char **av);
+int 	check_Walls(char *str,int start,int count);
+int 	check_SO(char **str);
+int 	counting(char **str);
+int 	check_WE(char **str);
+char	*joining(char **str);
+int 	check_EA(char **str);
+int 	check_F(char **str);
+int 	check_NO(char **str);
+int 	check_C(char **str);
+int 	check_newline(char *str);
+t_fd	read_and_add(char **av);
 
 
 //*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-Otoufah Part*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
@@ -95,10 +97,10 @@ typedef struct s_window
 
 void	map_filling(t_mlx *wind);
 void	move_forward(t_mlx *wind);
-void	get_player_position(t_mlx *wind);
 void	move_backword(t_mlx *wind);
 void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
+void	get_player_position(t_mlx *wind);
 void	cast_rays(t_mlx	*wind, float nbr_ray, int i);
 void	projecting_rays(t_mlx	*wind);
 int		get_keys(int press, t_mlx	*wind);

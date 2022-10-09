@@ -1,5 +1,14 @@
 {
     "files.associations": {
-        "get_next_line.h": "c"
-    }
+        "get_next_line.h": "c",
+        "cub3d.h": "c",
+        "stdlib.h": "c"
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/otoufah/Desktop/Cub3d_back",
+            "binaryPath": "/Users/otoufah/Desktop/Cub3d_back/cub3d",
+            "binaryArgs": []
+        }
+    ]
 }

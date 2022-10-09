@@ -24,6 +24,11 @@ void	projecting_rays(t_mlx *wind)
 	while (++i <= nbr_of_rays)
 	{
 		cast_rays(wind, player_view, i);
+		// printf("FOV -> %f\n", wind->field_of_view);
+		// printf("X Player -> %f\n", wind->x_player);
+		// printf("Y Player -> %f\n", wind->y_player);
+		// printf("Player View -> %f\n", player_view);
+		// printf("Idx-> %i\n", i);
 		player_view += 0.0192;
 	}
 }
