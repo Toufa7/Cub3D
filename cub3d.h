@@ -29,8 +29,20 @@
 
 # define TRUE 1
 
+typedef struct	s_data
+{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}				t_data;
+
+
 typedef struct s_window
 {
+	t_data	data;
+
 	void	*mlx;
 	void	*window;
 	char	**map;
@@ -54,6 +66,7 @@ typedef struct s_window
 	int		y_end_of_ray;
 }	t_mlx;
 
+void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 char	*get_next_line(int fd);
 char	*read_map(int fd);
 void	map_filling(t_mlx *wind);

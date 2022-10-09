@@ -2,7 +2,7 @@ NAME = cub2d
 
 CC = gcc
 
-ADDITIONAL_FLAGS = -fsanitize=address
+ADDITIONAL_FLAGS = -g -fsanitize=address
 
 C_FLAGS = -Wall -Wextra -Werror
 
@@ -20,6 +20,7 @@ FUNCTIONS =	get_next_line/get_next_line.c\
 			move_left.c\
 			move_right.c\
 			move_backword.c\
+			my_mlx_pixel_put.c\
 			destroy_window.c\
 			libft/ft_split.c\
 			libft/ft_strdup.c\

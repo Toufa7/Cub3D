@@ -18,7 +18,6 @@ void	move_left(t_mlx *wind)
 	double y_step;
 	int		move_pixels;
 	
-	printf("Left\n");
 	move_pixels = 5;
 	x_step = cos((wind->field_of_view / 2) * M_PI / 180) * move_pixels;
 	y_step = sin((wind->field_of_view / 2) * M_PI / 180) * move_pixels;
