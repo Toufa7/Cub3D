@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   atoi.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:14:28 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 15:15:04 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/09 15:15:18 by orbiay            #+#    #+#             */
+/*   Updated: 2022/10/09 15:15:40 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include"libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
+	int	i;
+	int	rest;
+	int	sen;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && (i < n))
+	rest = 0;
+	sen = 1;
+	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n'
+		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (str[i] == '-')
+			sen = sen * (-1);
 		i++;
 	}
-	return (0);
+	while (str[i] >= '0' && str[i] <= '9' && str[i])
+	{
+		rest = rest * 10 + str[i] - 48;
+		i++;
+	}
+	return (rest * sen);
 }

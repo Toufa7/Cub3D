@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:47:55 by otoufah           #+#    #+#             */
-/*   Updated: 2022/09/29 18:21:07 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/10/09 15:07:46 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*keeping_what_after_newline(char *str)
 	if (!str)
 		return (NULL);
 	idx = ft_find_len(str, '\n');
-	remain = ft_subsstr(str, idx, ft_strrlen(str) - idx);
+	remain = ft_subsstr(str, idx, ft_strlen(str) - idx);
 	free(str);
 	return (remain);
 }

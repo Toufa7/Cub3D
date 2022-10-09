@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   projecting_rays.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:14:28 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 15:15:04 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:32 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/09 15:48:09 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "../cub3d.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	projecting_rays(t_mlx *wind)
 {
-	size_t	i;
+	int		i;
+	int		nbr_of_rays;
+	double	player_view;
 
-	i = 0;
-	while ((s1[i] || s2[i]) && (i < n))
+	i = -1;
+	nbr_of_rays = 1920;
+	player_view = wind->field_of_view - 32;
+	while (++i <= nbr_of_rays)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		cast_rays(wind, player_view, i);
+		player_view += 0.0192;
 	}
-	return (0);
 }

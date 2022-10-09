@@ -3,36 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 20:32:00 by otoufah           #+#    #+#             */
-/*   Updated: 2021/11/27 00:04:04 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/09 15:12:10 by orbiay            #+#    #+#             */
+/*   Updated: 2022/10/09 16:07:58 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
-	char	*join;
+	int		lens1;
+	char	*str;
 	int		i;
-	int		j;
 
-	if (s1 == 0 || s2 == 0)
-		return (NULL);
-	join = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!join)
-		return (NULL);
 	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	if (!s1)
+		return (ft_strdup(s2));
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) +1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s1[i])
 	{
-		join[j++] = s1[i++];
+		str[i] = ((char *)s1)[i];
+		i++;
 	}
-	i = 0;
-	while (s2[i] != '\0')
+	lens1 = 0;
+	while (s2[lens1])
 	{
-		join[j++] = s2[i++];
+		str[i] = ((char *)s2)[lens1];
+		i++;
+		lens1++;
 	}
-	join[j] = '\0';
-	return (join);
+	str[i] = '\0';
+	free(s1);
+	return (str);
 }

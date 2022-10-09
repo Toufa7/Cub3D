@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   move_forward.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:14:28 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 15:15:04 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:18 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/09 15:47:50 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "../cub3d.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	move_forward(t_mlx *wind)
 {
-	size_t	i;
+	double	x_step;
+	double	y_step;
+	int		move_pixels;
 
-	i = 0;
-	while ((s1[i] || s2[i]) && (i < n))
+	move_pixels = 5;
+	y_step = sin(wind->field_of_view * M_PI / 180) * move_pixels;
+	x_step = cos(wind->field_of_view * M_PI / 180) * move_pixels;
+	if (wind->map[(int)(wind->y_player + y_step * 2) / 20][(int)(wind->x_player + x_step * 2) / 20] == '0')
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		wind->x_player += x_step;
+		wind->y_player += y_step;
 	}
-	return (0);
 }
