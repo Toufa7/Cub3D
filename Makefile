@@ -1,4 +1,4 @@
-NAME = cub2d
+NAME = cub3d
 
 CC = gcc
 
@@ -8,37 +8,41 @@ C_FLAGS = -Wall -Wextra -Werror
 
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
-FUNCTIONS =	reading_map.c\
-			map_filling.c\
-			get_player_position.c\
-			get_keys.c\
-			projecting_rays.c\
-			cast_rays.c\
-			move_forward.c\
-			move_left.c\
-			move_right.c\
-			move_backword.c\
-			destroy_window.c\
+FUNCTIONS =	otoufah/reading_map.c\
+			otoufah/map_filling.c\
+			otoufah/get_player_position.c\
+			otoufah/get_keys.c\
+			otoufah/projecting_rays.c\
+			otoufah/cast_rays.c\
+			otoufah/move_forward.c\
+			otoufah/move_left.c\
+			otoufah/move_right.c\
+			otoufah/move_backword.c\
+			otoufah/destroy_window.c\
 			orbiay/check_textures_colors.c\
 			orbiay/checking_walls.c\
-			orbiay/ft_strcmp.c\
-			orbiay/ft_strncmp.c \
-			orbiay/ft_strdup.c\
-			orbiay/ft_strjoin.c\
-			orbiay/get_next_line.c\
-			orbiay/get_next_line.c\
+			orbiay/To_hexa.c\
 			orbiay/main.c\
-			orbiay/ft_split.c\
+			libft/ft_strcmp.c\
+			libft/ft_strncmp.c \
+			libft/ft_strdup.c\
+			libft/ft_strjoin.c\
+			libft/ft_split.c\
+			libft/ft_atoi.c\
+			get_next_line/get_next_line.c\
+			get_next_line/get_next_line_utils.c\
 		
 OBJECTS = $(FUNCTIONS:.c=.o)
 
 RM = rm -rf
 
 all		:	$(OBJECTS)
-			$(CC) $(C_FLAGS) $(MLX_FLAGS) $(OBJECTS) cub2d.c -o $(NAME)
+			$(CC) $(C_FLAGS) $(MLX_FLAGS) $(OBJECTS) cub3d.c -o $(NAME)
 
 clean	:	$(OBJECTS)
 			$(RM) $(OBJECTS)
 
 fclean :	clean
 	$(RM) $(NAME)
+
+re: fclean all

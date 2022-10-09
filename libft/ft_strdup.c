@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   To_hexa.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:38:37 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 16:07:34 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/09 15:11:47 by orbiay            #+#    #+#             */
+/*   Updated: 2022/10/09 15:12:00 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "libft.h"
 
-int check_newline(char *str)
+char	*ft_strdup(char *s1)
 {
-    int i = 0;
-    while (str[i])
-    {
-        if (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n')
-        {
-              printf("str = %c\n",str[i]);
-            return 0;
-        }
-        i++;
-    }
-    return 1;
+	char	*dup;
+	size_t	i;
+	size_t	l;
+	size_t	memory;
+	if (!s1)
+		return 0;
+	l = ft_strlen(s1);
+	memory = (sizeof(char) * l + 1);
+	dup = (char *)malloc(memory);
+	if (!(dup && s1))
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		dup[i] = s1[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }

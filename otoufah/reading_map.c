@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   To_hexa.c                                          :+:      :+:    :+:   */
+/*   reading_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:38:37 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 16:07:34 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:55 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/09 15:48:15 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int check_newline(char *str)
-{
-    int i = 0;
-    while (str[i])
-    {
-        if (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n')
-        {
-              printf("str = %c\n",str[i]);
-            return 0;
-        }
-        i++;
-    }
-    return 1;
-}
+// char	*read_map(int fd)
+// {
+// 	char	*join;
+// 	char	*map;
+
+// 	if (!fd)
+// 	{
+// 		printf("Error\n");
+// 		exit(1);
+// 	}
+// 	join = ft_strdup("");
+// 	map = get_next_line(fd);
+// 	while (map)
+// 	{
+// 		join = ft_strjoin(join, map);
+// 		map = get_next_line(fd);
+// 		ft_free(map);
+// 	}
+// 	ft_free(map);
+// 	return (join);
+// }

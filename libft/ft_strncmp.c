@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   To_hexa.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:38:37 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 16:07:34 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/09 15:14:28 by orbiay            #+#    #+#             */
+/*   Updated: 2022/10/09 15:15:04 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include"libft.h"
 
-int check_newline(char *str)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    int i = 0;
-    while (str[i])
-    {
-        if (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n')
-        {
-              printf("str = %c\n",str[i]);
-            return 0;
-        }
-        i++;
-    }
-    return 1;
+	size_t	i;
+
+	i = 0;
+	while ((s1[i] || s2[i]) && (i < n))
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }

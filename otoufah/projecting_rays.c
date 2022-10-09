@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   To_hexa.c                                          :+:      :+:    :+:   */
+/*   projecting_rays.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:38:37 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 16:07:34 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:32 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/09 15:48:09 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int check_newline(char *str)
+void	projecting_rays(t_mlx *wind)
 {
-    int i = 0;
-    while (str[i])
-    {
-        if (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n')
-        {
-              printf("str = %c\n",str[i]);
-            return 0;
-        }
-        i++;
-    }
-    return 1;
+	int		i;
+	int		nbr_of_rays;
+	double	player_view;
+
+	i = -1;
+	nbr_of_rays = 1920;
+	player_view = wind->field_of_view - 32;
+	while (++i <= nbr_of_rays)
+	{
+		cast_rays(wind, player_view, i);
+		player_view += 0.0192;
+	}
 }

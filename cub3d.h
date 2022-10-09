@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:57:39 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/09 14:53:51 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
+/*   Updated: 2022/10/09 15:54:50 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@
 # include <fcntl.h>
 # include <math.h>
 # include <mlx.h>
-// # include "./libft/libft.h"
-// # include "./orbiay/parsing_map.h"
-
+#include"get_next_line/get_next_line.h"
+#include"libft/libft.h"
 # define BLUE 0X0000FF
 # define RED 0XFF0000
 # define GREEN 0X00FF00
 
 # define TRUE 1
+
+//!*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*Orbiay Part*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*
 
 typedef struct  fd
 {
@@ -39,8 +40,20 @@ typedef struct  fd
     char    *C;
     char    *full_map;
 }   t_fd;
+int check_Walls(char *str,int start,int count);
+int check_SO(char **str);
+int counting(char **str);
+int check_WE(char **str);
+char *joining(char **str);
+int check_EA(char **str);
+int check_F(char **str);
+int check_NO(char **str);
+int check_C(char **str);
+int     check_newline(char *str);
+t_fd read_and_add(char **av);
 
 
+//*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-Otoufah Part*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 typedef struct s_window
 {
@@ -69,38 +82,6 @@ typedef struct s_window
 	int		y_end_of_ray;
 }	t_mlx;
 
-
-//!---------------------------Orbiay Part --------------------------!//
-
-
-int		check_newline(char *str);
-int		check_NO(char **str);
-int		check_C(char **str);
-int		check_F(char **str);
-int		check_EA(char **str);
-int		check_WE(char **str);
-int		check_SO(char **str);
-int		counting(char **str);
-char	*joining(char **str);
-int		check_Walls(char *str,int start,int count);
-int     check_newline(char *str);
-char	*ft_strdup(char *s1);
-char	*ft_strjoin(char *s1, char *s2);
-size_t	ft_find_len(char *str, char what);
-char	*ft_strchar(char *str, char what);
-char	*ft_subsstr(char *str, size_t start, size_t how);
-char	*cutting_until_newline(char *str);
-char	*keeping_what_after_newline(char *str);
-char	*read_and_join(int fd, char *save);
-int		ft_atoi(const char *str);
-int     ft_strlen (char *str);
-char	**ft_split(char const *s, char c);
-t_fd	read_and_add(char **av);
-
-
-
-//!---------------------------Otoufah Part --------------------------!//
-char	*get_next_line(int fd);
 char	*read_map(int fd);
 void	map_filling(t_mlx *wind);
 void	move_forward(t_mlx *wind);
@@ -112,5 +93,4 @@ void	cast_rays(t_mlx	*wind, float nbr_ray, int i);
 void	projecting_rays(t_mlx	*wind);
 int		get_keys(int press, t_mlx	*wind);
 int		destroy_window(t_mlx *wind);
-
 #endif

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   To_hexa.c                                          :+:      :+:    :+:   */
+/*   move_backword.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:38:37 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 16:07:34 by orbiay           ###   ########.fr       */
+/*   Created: 2022/10/02 09:50:27 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/09 15:47:46 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int check_newline(char *str)
+void	move_backword(t_mlx *wind)
 {
-    int i = 0;
-    while (str[i])
-    {
-        if (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n')
-        {
-              printf("str = %c\n",str[i]);
-            return 0;
-        }
-        i++;
-    }
-    return 1;
+	double	x_step;
+	double	y_step;
+	int		move_pixels;
+
+	move_pixels = 5;
+	y_step = sin(wind->field_of_view * M_PI / 180) * move_pixels;
+	x_step = cos(wind->field_of_view * M_PI / 180) * move_pixels;
+	if (wind->map[(int)(wind->y_player - y_step * 2) / 20][(int)(wind->x_player - x_step * 2) / 20] == '0')
+	{
+		wind->x_player -= x_step;
+		wind->y_player -= y_step;
+	}
 }
