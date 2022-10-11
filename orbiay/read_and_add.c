@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../cub3d.h"
+#include "../cub3d.h"
 
 t_fd	read_and_add(char **av)
 {
@@ -20,6 +20,7 @@ t_fd	read_and_add(char **av)
 	t_fd	fd2;	
 
 	fd = open(av[1], O_RDONLY);
+	fd2.full_map = NULL;
 	if (fd == -1)
 	{
 		perror("Error\n");

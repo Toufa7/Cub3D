@@ -21,14 +21,13 @@ void	projecting_rays(t_mlx *wind)
 	wind->my_mlx.img = mlx_new_image(wind->mlx, 1920, 1080);
 	wind->my_mlx.addr = mlx_get_data_addr(wind->my_mlx.img, &wind->my_mlx.bits_per_pixel, &wind->my_mlx.line_length, &wind->my_mlx.endian);
 
-
 	i = -1;
 	nbr_of_rays = 1920;
 	player_view = wind->field_of_view - 32;
 	while (++i < nbr_of_rays)
 	{
 		cast_rays(wind, player_view, i);
-		player_view += 0.03125;
+		player_view += 0.02;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
