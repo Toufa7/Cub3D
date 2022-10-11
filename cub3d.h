@@ -6,31 +6,28 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 16:17:36 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/11 18:19:02 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
 
+# define TRUE 1
+# include <mlx.h>
+# include <math.h>
+# include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <math.h>
-# include <mlx.h>
-#include "get_next_line/get_next_line.h"
-#include "libft/libft.h"
-
-
-# define BLUE 0X0000FF
 # define RED 0XFF0000
+# define BLUE 0X0000FF
 # define GREEN 0X00FF00
+# include "libft/libft.h"
+# include "get_next_line/get_next_line.h"
 
-# define TRUE 1
-
-//!*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*Orbiay Part*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*
+//!*-*-*-*-*-*-*-*-*-*-*-*-*-*Orbiay Part*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*
 
 typedef struct fd
 {
@@ -74,7 +71,7 @@ int		check_walls(char *str, int start, int count);
 int		first_six_lines(char *split_str,	int line);
 int		check_walls(char	*str, int start, int count);
 
-//*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-Otoufah Part*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+//*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-Otoufah Part*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 typedef struct s_window
 {
