@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 15:54:50 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/10 16:17:36 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ int		req_zero(char **str, int start, int i);
 int		check_walls(char *str, int start, int count);
 int		first_six_lines(char *split_str,	int line);
 int		check_walls(char	*str, int start, int count);
-
 
 //*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-Otoufah Part*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 typedef	struct s_my_mlx
