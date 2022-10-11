@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   destroy_window.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 09:50:02 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/09 15:44:42 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/02 09:50:05 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "cub3d.h"
 
 int destroy_window(t_mlx *wind)
 {
