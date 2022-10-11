@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_player_position.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 09:50:13 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/09 15:47:40 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/02 09:50:14 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ void	get_player_position(t_mlx *wind)
 		{
 			if (wind->map[i][j] == 'P')
 			{
-				// printf("Found\b");
-				wind->map[i][j] = '0';
 				wind->y_player = i * 64;
 				wind->x_player = j * 64;
 				break ;

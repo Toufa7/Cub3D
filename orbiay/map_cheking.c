@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:47:49 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 15:50:05 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/11 18:20:49 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,23 @@ int	map_checking2(char	*str)
 	return (1);
 }
 
+// t_fd init_fd(t_fd fd)
+// {
+// 	fd.C = NULL;
+// 	fd.EA = NULL;
+// 	fd.F = NULL;
+// 	fd.full_map = NULL;
+// 	fd.NO = NULL;
+// 	fd.SO = NULL;
+// 	fd.WE = NULL;
+// 	return (fd);
+// }
+
 t_fd	file_dis(char *sp, char *s)
 {
 	t_fd	fd;
 
+	fd.full_map = NULL;
 	if (!strcmp(sp, "NO"))
 		fd.NO = ft_strdup(s);
 	else if (!strcmp(sp, "SO"))
