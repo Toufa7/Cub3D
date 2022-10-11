@@ -21,8 +21,12 @@ FUNCTIONS =	otoufah/map_filling.c\
 			otoufah/destroy_window.c\
 			orbiay/check_textures_colors.c\
 			orbiay/checking_walls.c\
+			orbiay/check_map_utils.c\
+			orbiay/read_and_add.c\
 			orbiay/To_hexa.c\
 			orbiay/main.c\
+			orbiay/map_cheking.c\
+			orbiay/check_Path.c\
 			libft/ft_strcmp.c\
 			libft/ft_strlen.c\
 			libft/ft_strncmp.c \
