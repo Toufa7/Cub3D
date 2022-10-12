@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:50:21 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/12 16:17:27 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/12 16:30:57 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ char	*only_map(char *str)
 
 	i = 6;
 	ret_str = NULL;
-	count = counting(sp_str);
+	sp_str = NULL;
 	sp_str = ft_split(str, '\n');
+	count = counting(sp_str);
 	while (i < count)
 	{
 		if (i > 6)
@@ -48,7 +49,6 @@ t_fd	read_and_add(char **av)
 		exit (0);
 	}
 	str = NULL;
-	// check_extension(&av[1]);
 	buf = get_next_line(fd);
 	while (buf)
 	{

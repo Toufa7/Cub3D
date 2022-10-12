@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/11 18:20:13 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/12 16:28:17 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int		counting(char **str);
 int		check_we(char **str);
 char	*joining(char **str);
 int		check_no(char **str);
+char	*only_map(char *str);
 int		check_ea(char **str);
 int		all_walls(char	*str);
 t_fd	take_path(char	*str);

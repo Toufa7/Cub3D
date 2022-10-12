@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub2d.c                                            :+:      :+:    :+:   */
+/*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/09/30 09:01:58 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/10/12 16:33:51 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ char	*read_map(int fd)
 int	main(int ac, char **av)
 {
 	t_mlx	wind;
-	int		fd;
 
 	wind.parsing = read_and_add(av);
 
-	// printf("Path 1-> %s\n", wind.parsing.NO);
-	// printf("Path 2-> %s\n", wind.parsing.SO);
-	// printf("Path 3-> %s\n", wind.parsing.WE);
-	// printf("Path 4-> %s\n", wind.parsing.EA);
-	// printf("Ceiling -> %s\n", wind.parsing.C);
-	// printf("Floor -> %s\n", wind.parsing.F);
-	// printf("Full Map -> %s\n", wind.parsing.full_map);
+	printf("Path 1-> %s\n", wind.parsing.NO);
+	printf("Path 2-> %s\n", wind.parsing.SO);
+	printf("Path 3-> %s\n", wind.parsing.WE);
+	printf("Path 4-> %s\n", wind.parsing.EA);
+	printf("Ceiling -> %s\n", wind.parsing.C);
+	printf("Floor -> %s\n", wind.parsing.F);
+	printf("Full Map -> \n%s", wind.parsing.full_map);
+	exit(0);
 	// wind = malloc(sizeof(t_mlx));
 
 	if (ac == 2)
