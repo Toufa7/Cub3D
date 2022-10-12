@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:45:50 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/09 16:07:01 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/10 14:15:05 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../libft/libft.h"
 
 size_t	ft_strrlen(char *str);
-int     check_newline(char *str);
+int		check_newline(char *str);
 char	*ft_strdup(char *s1);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_find_len(char *str, char what);
@@ -38,6 +38,5 @@ char	*get_next_line(int fd);
 //     char    *C;
 //     char    *full_map;
 // }   t_fd;
-
 
 #endif 

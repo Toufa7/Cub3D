@@ -6,18 +6,23 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:24:23 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/09 15:24:37 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/10 16:22:54 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char	*s1, char	*s2)
 {
-	int i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-		i++;
-	return (s1[i] - s2[i]);
+	if (!s1 || !s2)
+	{
+		printf("STRCMP \n");
+		return (1);
+	}
+	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
