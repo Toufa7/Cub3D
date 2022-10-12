@@ -76,7 +76,7 @@ void	cast_rays(t_mlx *wind, float nbr_ray)
 
 	px = wind->x_player;
 	py = wind->y_player;
-	dis_between_each_pix = 4;
+	dis_between_each_pix = 1;
 	distance_ray = 0;
 	while (1)
 	{
