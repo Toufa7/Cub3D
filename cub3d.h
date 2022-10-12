@@ -98,7 +98,7 @@ typedef struct s_window
 	int		x_end_of_ray;
 	int		y_end_of_ray;
 
-	// t_fd	parsing;
+	t_fd	parsing;
 	t_my_mlx my_mlx;
 
 }	t_mlx;

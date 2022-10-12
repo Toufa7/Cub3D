@@ -37,7 +37,7 @@ int	main(int ac, char **av)
 	t_mlx	wind;
 	int		fd;
 
-	// wind.parsing = read_and_add(av);
+	wind.parsing = read_and_add(av);
 
 	// printf("Path 1-> %s\n", wind.parsing.NO);
 	// printf("Path 2-> %s\n", wind.parsing.SO);
@@ -46,11 +46,11 @@ int	main(int ac, char **av)
 	// printf("Ceiling -> %s\n", wind.parsing.C);
 	// printf("Floor -> %s\n", wind.parsing.F);
 	// printf("Full Map -> %s\n", wind.parsing.full_map);
-	// exit(1);
 	// wind = malloc(sizeof(t_mlx));
+
 	if (ac == 2)
 	{
-		wind.map = ft_split(, '\n');
+		wind.map = ft_split(wind.parsing.full_map, '\n');
 		wind.mlx = mlx_init();
 
 		wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub3D");
