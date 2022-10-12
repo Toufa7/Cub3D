@@ -19,15 +19,9 @@ void	move_right(t_mlx *wind)
 	int		move_pixels;
 
 	move_pixels = 5;
-	//printf("Right\n");
+
 	x_step = cos((wind->field_of_view / 2) * M_PI / 180) * move_pixels;
 	y_step = sin((wind->field_of_view / 2) * M_PI / 180) * move_pixels;
-
-	printf("wind->x_player => %f\n",wind->x_player);
-	printf("x_step => %f\n",x_step);
-	printf("wind->y_player => %f\n",wind->y_player);
-	printf("y_step=> %f\n",y_step);
-
 	if (wind->map[(int)(wind->y_player + y_step) / 64][(int)(wind->x_player + x_step) / 64] == '0')
 	{
 		wind->x_player += x_step;

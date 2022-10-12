@@ -27,7 +27,7 @@ t_fd	read_and_add(char **av)
 		exit (0);
 	}
 	str = NULL;
-	check_extension(&av[1]);
+	// check_extension(&av[1]);
 	buf = get_next_line(fd);
 	while (buf)
 	{
