@@ -37,6 +37,7 @@ void	move_ray_right(t_mlx *wind)
 
 int	get_keys(int press, t_mlx *wind)
 {
+	printf("Fov => %f\n", wind->field_of_view);
 	mlx_clear_window(wind->mlx, wind->window);
 	if (press == 125)
 		move_backword(wind);
@@ -47,9 +48,9 @@ int	get_keys(int press, t_mlx *wind)
 	if (press == 2)
 		move_ray_right(wind);
 
-	if (press == 123)
+	if (press == 124)
 		move_left(wind);
-	if (press == 124) 
+	if (press == 123) 
 		move_right(wind);
 	if (press == 53)
         destroy_window(wind);

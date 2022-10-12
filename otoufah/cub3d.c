@@ -32,7 +32,6 @@ char	*read_map(int fd)
 	return (join);
 }
 
-
 int	main(int ac, char **av)
 {
 	t_mlx	wind;
@@ -47,8 +46,8 @@ int	main(int ac, char **av)
 
 		wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub3D");
 
-        wind.field_of_view = 90;
         get_player_position(&wind);
+        wind.field_of_view = 180;
         map_filling(&wind);
         mlx_hook(wind.window, 2, 0, get_keys, &wind);
         mlx_hook(wind.window, 17, 0, destroy_window, &wind);

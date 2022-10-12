@@ -27,7 +27,7 @@ void	projecting_rays(t_mlx *wind)
 	while (++i < nbr_of_rays)
 	{
 		cast_rays(wind, player_view, i);
-		player_view += 0.02;
+		player_view += 0.0333333333;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
@@ -39,7 +39,7 @@ void	casting_3d(double distance, int i, t_mlx *mlx)
 	int		ceiling;
 	double	projection_3d;
 
-	projection_3d = (64.0 / distance) * (1080 / 2);
+	projection_3d = (64.0 / distance) * (960 / (tan(32 * (M_PI / 180))));
 	
 	up_down = projection_3d / 2;
 
@@ -73,8 +73,7 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 	double	py;
 	int		p_x;
 	int		p_y;
-	double 	dist;
-
+	double 	distance;
 
 	px = wind->x_player;
 	py = wind->y_player;
@@ -86,11 +85,11 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 		{
 			wind->x_end_of_ray = p_x;
 			wind->y_end_of_ray = p_y;
-			dist = sqrt(((wind->x_player - wind->x_end_of_ray * 64) * (wind->x_player - wind->x_end_of_ray * 64)) + ((wind->y_player - wind->y_end_of_ray * 64) * (wind->y_player - wind->y_end_of_ray * 64)));
+			distance = sqrt(((wind->x_player - wind->x_end_of_ray * 64) * (wind->x_player - wind->x_end_of_ray * 64)) + ((wind->y_player - wind->y_end_of_ray * 64) * (wind->y_player - wind->y_end_of_ray * 64)));
 			break ;
 		}
-		px += cos((nbr_ray) * M_PI / 180) * 2;
-		py += sin((nbr_ray) * M_PI / 180) * 2;
+		px += cos((nbr_ray) * M_PI / 180) * 0.1;
+		py += sin((nbr_ray) * M_PI / 180) * 0.1;
 	}
-	casting_3d(dist,  i, wind);
+	casting_3d(distance,  i, wind);
 }

@@ -24,9 +24,9 @@
 #include "libft/libft.h"
 
 
-# define BLUE 0X0000FF
+# define BLUE 0Xc0dfef
 # define RED 0XFF0000
-# define GREEN 0X00FF00
+# define GREEN 0X74d434
 
 # define TRUE 1
 
@@ -88,6 +88,7 @@ typedef	struct s_my_mlx
 
 typedef struct s_window
 {
+
 	void	*mlx;
 	void	*window;
 	char	**map;

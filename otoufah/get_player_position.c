@@ -25,6 +25,7 @@ void	get_player_position(t_mlx *wind)
 		{
 			if (wind->map[i][j] == 'P')
 			{
+				wind->map[i][j] = '0';
 				wind->y_player = i * 64;
 				wind->x_player = j * 64;
 				break ;
