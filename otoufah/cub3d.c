@@ -15,7 +15,7 @@
 
 // TODO:
 // {
-// 	[✅]
+// 	[✅] Fixing 3D Rendring Strips
 // 	[❌] Handling More than 2 comma in rgb
 // 	[❌] Handling newlines inside the map
 // 	[❌] Convert RGB color to hexadecimal
