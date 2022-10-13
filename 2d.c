@@ -59,18 +59,16 @@ void	get_player_position(t_mlx *wind)
 	}
 }
 
-double	degrees_to_radians(t_mlx *wind)
+float	degrees_to_radians(t_mlx *wind)
 {
 	// wind->field_of_view = Angle Degree which is 60
 	return (wind->field_of_view * M_PI / 180);
 }
 
-void	cast_rays(t_mlx *wind, double fov)
+void	cast_rays(t_mlx *wind, float fov)
 {
-	double	px;
-	double	py;
-
-	printf("Fov -> %f\n", fov);
+	float	px;
+	float	py;
 
 	px = wind->x_player;
 	py = wind->y_player;
@@ -78,8 +76,8 @@ void	cast_rays(t_mlx *wind, double fov)
 	{
 		if (wind->map[(int)(py / 60)][(int)(px / 60)] == '1')
 			break ;
-		px += cos((fov) * M_PI / 180);
-		py += sin((fov) * M_PI / 180);
+		px += cos((fov) * M_PI / 180) * 5;
+		py += sin((fov) * M_PI / 180) * 5;
 		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
 	}
 }
@@ -88,7 +86,7 @@ void	projecting_rays(t_mlx *wind)
 {
 	int		i;
 	int		nbr_of_rays;
-	double	fov;
+	float	fov;
 
 	i = -1;
 	nbr_of_rays = 1920;
@@ -144,8 +142,8 @@ void	left(t_mlx *wind)
 
 void	move_forward(t_mlx *wind)
 {
-	double	px;
-	double	py;
+	float	px;
+	float	py;
 
 	py = sin(degrees_to_radians(wind)) * 5;
 	px = cos(degrees_to_radians(wind)) * 5;
@@ -158,8 +156,8 @@ void	move_forward(t_mlx *wind)
 
 void	move_backword(t_mlx *wind)
 {
-	double	px;
-	double	py;
+	float	px;
+	float	py;
 
 
 	py = sin(degrees_to_radians(wind)) * 5;
@@ -195,7 +193,7 @@ void	creating_window(t_mlx *wind)
 	int	height;
 	int	width;
 
-	height = 60 * 16;
+	height = 60 * 14;
 	width = 60 * 5;
 	wind->window = mlx_new_window(wind->mlx, height, width, "Cub2D");
 }

@@ -16,7 +16,7 @@ void	projecting_rays(t_mlx *wind)
 {
 	int		i;
 	int		nbr_of_rays;
-	double	player_view;
+	float	player_view;
 
 	i = -1;
 	nbr_of_rays = 1920;
@@ -29,6 +29,6 @@ void	projecting_rays(t_mlx *wind)
 		// printf("Y Player -> %f\n", wind->y_player);
 		// printf("Player View -> %f\n", player_view);
 		// printf("Idx-> %i\n", i);
-		player_view += 0.0192;
+		player_view += 0.03333333333;
 	}
 }

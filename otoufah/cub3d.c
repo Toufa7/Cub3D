@@ -15,9 +15,11 @@
 
 // TODO:
 // {
+// 	[✅]
 // 	[❌] Handling More than 2 comma in rgb
 // 	[❌] Handling newlines inside the map
 // 	[❌] Convert RGB color to hexadecimal
+// 	[❌] Don't forget to exit if an error happend
 // }
 
 int	main(int ac, char **av)
@@ -37,15 +39,9 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
-
 		wind.mlx = mlx_init();
-
 		wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub3D");
-
-        get_player_position(&wind);
-
-		printf("Fov -> %f\n", wind.field_of_view);
-	
+        get_player_position(&wind);	
         map_filling(&wind);
         mlx_hook(wind.window, 2, 0, get_keys, &wind);
         mlx_hook(wind.window, 17, 0, destroy_window, &wind);
