@@ -65,30 +65,21 @@ double	degrees_to_radians(t_mlx *wind)
 	return (wind->field_of_view * M_PI / 180);
 }
 
-void	cast_rays(t_mlx *wind, float nbr_ray)
+void	cast_rays(t_mlx *wind, double fov)
 {
 	double	px;
 	double	py;
-	int		distance_ray;
-	int		p_x;
-	int		p_y;
-	double		dis_between_each_pix;
+
+	printf("Fov -> %f\n", fov);
 
 	px = wind->x_player;
 	py = wind->y_player;
-	dis_between_each_pix = 1;
-	distance_ray = 0;
-	while (1)
+	while (TRUE)
 	{
-		p_x = (int)px / 60;
-		p_y = (int)py / 60;
-		if (wind->map[p_y][p_x] == '1')
-		{
-			printf("Pos -> [%d,%d]\n", p_y, p_x);
+		if (wind->map[(int)(py / 60)][(int)(px / 60)] == '1')
 			break ;
-		}
-		px += cos((nbr_ray) * M_PI / 180) * dis_between_each_pix;
-		py += sin((nbr_ray) * M_PI / 180) * dis_between_each_pix;
+		px += cos((fov) * M_PI / 180);
+		py += sin((fov) * M_PI / 180);
 		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
 	}
 }
@@ -97,16 +88,16 @@ void	projecting_rays(t_mlx *wind)
 {
 	int		i;
 	int		nbr_of_rays;
-	float	player_view;
+	double	fov;
 
 	i = -1;
-	nbr_of_rays = 60;
+	nbr_of_rays = 1920;
 	// Dividing my view into 2 triangle 32° left and 32° right
-	player_view = wind->field_of_view;
+	fov = wind->field_of_view;
 	while (i++ < nbr_of_rays)
 	{
-		cast_rays(wind, player_view);
-		player_view += 1;
+		cast_rays(wind, fov);
+		fov += 0.03;
 	}
 }
 
@@ -156,9 +147,9 @@ void	move_forward(t_mlx *wind)
 	double	px;
 	double	py;
 
-	py = sin(degrees_to_radians(wind)) * 1;
-	px = cos(degrees_to_radians(wind)) * 1;
-	if (wind->map[(int)(wind->y_player + py * 2) / 60][(int)(wind->x_player + px * 2) / 60] == '0')
+	py = sin(degrees_to_radians(wind)) * 5;
+	px = cos(degrees_to_radians(wind)) * 5;
+	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
 		wind->y_player += py;
@@ -171,9 +162,9 @@ void	move_backword(t_mlx *wind)
 	double	py;
 
 
-	py = sin(degrees_to_radians(wind)) * 1;
-	px = cos(degrees_to_radians(wind)) * 1;
-	if (wind->map[(int)(wind->y_player - py * 2) / 60][(int)(wind->x_player - px * 2) / 60] == '0')
+	py = sin(degrees_to_radians(wind)) * 5;
+	px = cos(degrees_to_radians(wind)) * 5;
+	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
 		wind->y_player -= py;
@@ -218,22 +209,13 @@ int	destroy_window(t_mlx *wind)
 int	main(int ac, char **av)
 {
 	t_mlx	wind;
+	int 	fildes;
 
 	if (ac == 2)
 	{
-		int fildes = open(av[1], O_RDONLY);
-		if (!fildes)
-		{
-			printf("Error\n");
-			exit(0);
-		}
+		fildes = open(av[1], O_RDONLY);
 		wind.map = ft_split(read_map(fildes), '\n');
 		wind.mlx = mlx_init();
-		if (ft_strncmp(&av[1][ft_strlen(av[1]) - 4], ".cub", 4) != 0)
-		{
-			printf("Provide a .cub file\n");
-			exit(1);
-		}
 		creating_window(&wind);
 		images_to_xpm(&wind);
 		get_player_position(&wind);
