@@ -6,11 +6,33 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:50:21 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/11 18:20:33 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/12 16:30:57 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
+
+char	*only_map(char *str)
+{
+	char	**sp_str;
+	char	*ret_str;
+	int		i;
+	int		count;
+
+	i = 6;
+	ret_str = NULL;
+	sp_str = NULL;
+	sp_str = ft_split(str, '\n');
+	count = counting(sp_str);
+	while (i < count)
+	{
+		if (i > 6)
+			ret_str = ft_strjoin(ret_str, "\n");
+		ret_str = ft_strjoin(ret_str, sp_str[i]);
+		i++;
+	}
+	return (ret_str);
+}
 
 t_fd	read_and_add(char **av)
 {
@@ -27,7 +49,6 @@ t_fd	read_and_add(char **av)
 		exit (0);
 	}
 	str = NULL;
-	// check_extension(&av[1]);
 	buf = get_next_line(fd);
 	while (buf)
 	{

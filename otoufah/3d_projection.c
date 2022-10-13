@@ -81,6 +81,8 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 	{
 		p_x = (int)px / 64;
 		p_y = (int)py / 64;
+		// if (wind->map[p_y][p_x] == ' ')
+		// 	continue ;
 		if (wind->map[p_y][p_x] == '1')
 		{
 			wind->x_end_of_ray = p_x;
@@ -88,8 +90,8 @@ void	cast_rays(t_mlx *wind, float nbr_ray , int i)
 			distance = sqrt(((wind->x_player - wind->x_end_of_ray * 64) * (wind->x_player - wind->x_end_of_ray * 64)) + ((wind->y_player - wind->y_end_of_ray * 64) * (wind->y_player - wind->y_end_of_ray * 64)));
 			break ;
 		}
-		px += cos((nbr_ray) * M_PI / 180) * 0.1;
-		py += sin((nbr_ray) * M_PI / 180) * 0.1;
+		px += cos((nbr_ray) * M_PI / 180);
+		py += sin((nbr_ray) * M_PI / 180);
 	}
 	casting_3d(distance,  i, wind);
 }
