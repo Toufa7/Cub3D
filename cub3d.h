@@ -82,8 +82,8 @@ typedef	struct s_my_mlx
 {
 	void	*img;
     char	*addr;
-    int		bits_per_pixel;
-    int		line_length;
+    int		bpp;
+    int		line_len;
     int		endian;
 }	t_my_mlx;
 
