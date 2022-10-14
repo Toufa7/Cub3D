@@ -30,9 +30,9 @@ typedef struct s_window
     char        *clear;
     char        *player;
 
-    float      field_of_view;
-    float      x_player;
-    float      y_player;
+    double      field_of_view;
+    double      x_player;
+    double      y_player;
 }   t_mlx;
 
 

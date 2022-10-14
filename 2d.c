@@ -59,16 +59,16 @@ void	get_player_position(t_mlx *wind)
 	}
 }
 
-float	degrees_to_radians(t_mlx *wind)
+double	degrees_to_radians(t_mlx *wind)
 {
 	// wind->field_of_view = Angle Degree which is 60
 	return (wind->field_of_view * M_PI / 180);
 }
 
-void	cast_rays(t_mlx *wind, float fov)
+void	cast_rays(t_mlx *wind, double fov)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 	px = wind->x_player;
 	py = wind->y_player;
@@ -86,7 +86,7 @@ void	projecting_rays(t_mlx *wind)
 {
 	int		i;
 	int		nbr_of_rays;
-	float	fov;
+	double	fov;
 
 	i = -1;
 	nbr_of_rays = 1920;
@@ -142,8 +142,8 @@ void	left(t_mlx *wind)
 
 void	move_forward(t_mlx *wind)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 	py = sin(degrees_to_radians(wind)) * 5;
 	px = cos(degrees_to_radians(wind)) * 5;
@@ -156,8 +156,8 @@ void	move_forward(t_mlx *wind)
 
 void	move_backword(t_mlx *wind)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 
 	py = sin(degrees_to_radians(wind)) * 5;

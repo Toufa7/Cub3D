@@ -16,7 +16,7 @@ void	projecting_rays(t_mlx *wind)
 {
 	int		i;
 	int		nbr_of_rays;
-	float	player_view;
+	double	player_view;
 
 	wind->my_mlx.img = mlx_new_image(wind->mlx, 1920, 1080);
 	wind->my_mlx.addr = mlx_get_data_addr(wind->my_mlx.img, &wind->my_mlx.bits_per_pixel, &wind->my_mlx.line_length, &wind->my_mlx.endian);
@@ -32,15 +32,14 @@ void	projecting_rays(t_mlx *wind)
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
 
-void	casting_3d(float distance, int i, t_mlx *mlx)
+void	casting_3d(double distance, int i, t_mlx *mlx)
 {
 	int		j;
 	int		up_down;
-	float	projection_3d;
+	double	projection_3d;
 
-	projection_3d = (64.0 / distance) * (1080 / 2);
+	projection_3d = (64.0 / distance) * ((1920 / 2) / (tan(32 * (M_PI / 180))));
 	up_down = (1080 / 2) - (projection_3d / 2);
-
 	j = 0;
 	while (j < 1080 && j < up_down)
 	{
@@ -59,11 +58,11 @@ void	casting_3d(float distance, int i, t_mlx *mlx)
 	}
 }
 
-void	cast_rays(t_mlx *wind, float fov , int i)
+void	cast_rays(t_mlx *wind, double fov , int i)
 {
-	float	px;
-	float	py;
-	float 	distance;
+	double	px;
+	double	py;
+	double 	distance;
 	int		y = 0;
 
 	px = wind->x_player;

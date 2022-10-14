@@ -93,11 +93,11 @@ typedef struct s_window
 	void	*mlx;
 	void	*window;
 	char	**map;
-	float	field_of_view;
-	float	x_player;
-	float	y_player;
-	float	x_end_of_ray;
-	float	y_end_of_ray;
+	double	field_of_view;
+	double	x_player;
+	double	y_player;
+	double	x_end_of_ray;
+	double	y_end_of_ray;
 
 	t_fd	parsing;
 	t_my_mlx my_mlx;
@@ -112,9 +112,9 @@ void	get_player_position(t_mlx *wind);
 void	move_backword(t_mlx *wind);
 void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
-void	cast_rays(t_mlx *wind, float nbr_ray , int i);
+void	cast_rays(t_mlx *wind, double nbr_ray , int i);
 void	projecting_rays(t_mlx *wind);
-void	casting_3d(float distance, int i, t_mlx *mlx);
+void	casting_3d(double distance, int i, t_mlx *mlx);
 int		get_keys(int press, t_mlx	*wind);
 int		destroy_window(t_mlx *wind);
 void	my_mlx_pixel_put(t_my_mlx *data, int x, int y, int color);

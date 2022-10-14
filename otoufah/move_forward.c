@@ -14,8 +14,8 @@
 
 void	move_forward(t_mlx *wind)
 {
-	float	x_step;
-	float	y_step;
+	double	x_step;
+	double	y_step;
 	int		move_pixels;
 
 	move_pixels = 5;

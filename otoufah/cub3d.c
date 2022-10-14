@@ -27,15 +27,6 @@ int	main(int ac, char **av)
 	t_mlx	wind;
 
 	wind.parsing = read_and_add(av);
-
-	// printf("Path 1-> %s\n", wind.parsing.NO);
-	// printf("Path 2-> %s\n", wind.parsing.SO);
-	// printf("Path 3-> %s\n", wind.parsing.WE);
-	// printf("Path 4-> %s\n", wind.parsing.EA);
-	// printf("Ceiling -> %s\n", wind.parsing.C);
-	// printf("Floor -> %s\n", wind.parsing.F);
-	printf("Full Map -> \n%s", wind.parsing.full_map);
-	// exit(0);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
@@ -50,4 +41,3 @@ int	main(int ac, char **av)
 	else
 		printf("Nbr of Args");
 }
-//handle more than coma
