@@ -42,10 +42,8 @@ all		:	$(NAME)
 $(NAME) : $(FUNCTIONS)
 			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
 
-clean	:	$(OBJECTS)
-			$(RM) $(OBJECTS)
-		
-fclean	:	clean
+clean	:	
 			$(RM) $(NAME)
+fclean	:	clean
 		
 re 		:	fclean all

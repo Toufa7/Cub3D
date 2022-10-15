@@ -30,23 +30,23 @@ void	projecting_rays(t_mlx *wind)
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
 
-void	casting_3d(double distance, int i, t_mlx *mlx)
+void	casting_3d(double distance, int height, t_mlx *mlx)
 {
-	int		y;
+	int		width;
 	double	floor_ceiling;
 	double	projection_3d;
 	double	distance_to_projection;
 
-	y = 0;
+	width = 0;
 	distance_to_projection = ((1920 / 2) / (tan(32.000 * (M_PI / 180))));
 	projection_3d = (64.000 / distance) * distance_to_projection;
 	floor_ceiling = (1080 / 2) - (projection_3d / 2);
-	while (y < 1080 && y < floor_ceiling)
-		my_mlx_pixel_put(&mlx->my_mlx, i, y++, BLUE);
-	while (y < 1080 && y < floor_ceiling + projection_3d)
-		my_mlx_pixel_put(&mlx->my_mlx, i, y++, RED);
-	while (y < 1080)
-		my_mlx_pixel_put(&mlx->my_mlx, i, y++, GREEN);
+	while (width < 1080 && width < floor_ceiling)
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
+	while (width < 1080 && width < floor_ceiling + projection_3d)
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, RED);
+	while (width < 1080)
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, GREEN);
 }
 
 double	calculate_distance(double y_player, double x_player,

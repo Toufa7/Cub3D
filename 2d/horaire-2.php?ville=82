@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Horaire de priere</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="styles/style-250.css" />
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-35630430-1']);
+            _gaq.push(['_setDomainName', 'habous.net']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-29109116-1', 'habous.gov.ma');
+            ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body>
+        <div id="main" style="background:url(images/Ban-Casa.png);">
+
+                        <div id="divselect">
+                <form  id="MyForm" action="" method="post" name="horairep">
+                    <select name="ville" onChange="location.href = this.options[this.selectedIndex].value;" class="cl_select">
+
+                        <option value=horaire-2.php?ville=1 >فكيك</option><option value=horaire-2.php?ville=2 >وجدة</option><option value=horaire-2.php?ville=3 >بوعرفة</option><option value=horaire-2.php?ville=4 >جرادة</option><option value=horaire-2.php?ville=5 >بركان</option><option value=horaire-2.php?ville=6 >عين الشعير</option><option value=horaire-2.php?ville=7 >تاوريرت</option><option value=horaire-2.php?ville=8 >الناظور</option><option value=horaire-2.php?ville=9 >مليلية</option><option value=horaire-2.php?ville=10 >بوعنان</option><option value=horaire-2.php?ville=11 >كرسيف</option><option value=horaire-2.php?ville=12 >بوتاجيت</option><option value=horaire-2.php?ville=13 >تانديت</option><option value=horaire-2.php?ville=14 >أكنول</option><option value=horaire-2.php?ville=15 >الحسيمة</option><option value=horaire-2.php?ville=16 >ميسور</option><option value=horaire-2.php?ville=17 >تازة</option><option value=horaire-2.php?ville=18 >بورد</option><option value=horaire-2.php?ville=19 >أرفود</option><option value=horaire-2.php?ville=20 >الريصاني</option><option value=horaire-2.php?ville=21 >واد أمليل</option><option value=horaire-2.php?ville=22 >تاهلة</option><option value=horaire-2.php?ville=23 >الراشدية</option><option value=horaire-2.php?ville=24 >الريش</option><option value=horaire-2.php?ville=25 >المنزل بني يازغة</option><option value=horaire-2.php?ville=26 >تاونات</option><option value=horaire-2.php?ville=27 >تيسة</option><option value=horaire-2.php?ville=28 >بولمان</option><option value=horaire-2.php?ville=29 >ميدلت</option><option value=horaire-2.php?ville=30 >صفرو</option><option value=horaire-2.php?ville=31 >كلميمة</option><option value=horaire-2.php?ville=32 >فاس</option><option value=horaire-2.php?ville=33 >إموزار كندر</option><option value=horaire-2.php?ville=34 >تنجداد</option><option value=horaire-2.php?ville=35 >إفران</option><option value=horaire-2.php?ville=36 >مولاي يعقوب</option><option value=horaire-2.php?ville=37 >آزرو</option><option value=horaire-2.php?ville=38 >شفشاون</option><option value=horaire-2.php?ville=39 >سبتة</option><option value=horaire-2.php?ville=40 >تطوان</option><option value=horaire-2.php?ville=41 >الحاجب</option><option value=horaire-2.php?ville=42 >زرهون</option><option value=horaire-2.php?ville=43 >مكناس</option><option value=horaire-2.php?ville=44 >وزان</option><option value=horaire-2.php?ville=45 >خنيفرة</option><option value=horaire-2.php?ville=46 >سيدي قاسم</option><option value=horaire-2.php?ville=47 >تيزي وسلي</option><option value=horaire-2.php?ville=48 >طنجة</option><option value=horaire-2.php?ville=49 >زاكورة</option><option value=horaire-2.php?ville=50 >القصر الكبير</option><option value=horaire-2.php?ville=51 >عرباوة</option><option value=horaire-2.php?ville=52 >سيدي سليمان</option><option value=horaire-2.php?ville=53 >سوق أربعاء الغرب</option><option value=horaire-2.php?ville=54 >أصيلا</option><option value=horaire-2.php?ville=55 >الخميسات</option><option value=horaire-2.php?ville=56 >قلعة مكونة</option><option value=horaire-2.php?ville=57 >العرائش</option><option value=horaire-2.php?ville=58 >مولاي بوعزة</option><option value=horaire-2.php?ville=59 >قصبة تادلة</option><option value=horaire-2.php?ville=60 >سيدي يحيى الغرب</option><option value=horaire-2.php?ville=61 >تيفلت</option><option value=horaire-2.php?ville=62 >بني ملال</option><option value=horaire-2.php?ville=63 >هسكورة</option><option value=horaire-2.php?ville=64 >واد زم</option><option value=horaire-2.php?ville=65 >أزيلال</option><option value=horaire-2.php?ville=66 >واد زم</option><option value=horaire-2.php?ville=67 >القنيطرة</option><option value=horaire-2.php?ville=68 >الرماني</option><option value=horaire-2.php?ville=69 >الرباط وسلا</option><option value=horaire-2.php?ville=70 >خريبكة</option><option value=horaire-2.php?ville=71 >ورزازات</option><option value=horaire-2.php?ville=72 >دمنات</option><option value=horaire-2.php?ville=73 >بن سليمان</option><option value=horaire-2.php?ville=74 >بوزنيقة</option><option value=horaire-2.php?ville=75 >الكارة</option><option value=horaire-2.php?ville=76 >المحمدية</option><option value=horaire-2.php?ville=77 >قلعة السراغنة</option><option value=horaire-2.php?ville=78 >برشيد</option><option value=horaire-2.php?ville=79 >سطات</option><option value=horaire-2.php?ville=80 >الدار البيضاء</option><option value=horaire-2.php?ville=81 >تالوين</option><option value=horaire-2.php?ville=82 selected=selected>بنكرير</option><option value=horaire-2.php?ville=83 >طاطا</option><option value=horaire-2.php?ville=84 >مراكش</option><option value=horaire-2.php?ville=85 >أقا</option><option value=horaire-2.php?ville=86 >آزمور</option><option value=horaire-2.php?ville=87 >اغرام</option><option value=horaire-2.php?ville=88 >الجديدة</option><option value=horaire-2.php?ville=89 >اليوسفبة</option><option value=horaire-2.php?ville=90 >تارودانت</option><option value=horaire-2.php?ville=91 >تافراوت</option><option value=horaire-2.php?ville=92 >آسفي</option><option value=horaire-2.php?ville=93 >الزاك</option><option value=horaire-2.php?ville=94 >أسا</option><option value=horaire-2.php?ville=95 >أكادير</option><option value=horaire-2.php?ville=96 >تزنيت</option><option value=horaire-2.php?ville=97 >الصويرة</option><option value=horaire-2.php?ville=98 >كلميم</option><option value=horaire-2.php?ville=99 >سيدي إفني</option><option value=horaire-2.php?ville=100 >طانطان</option><option value=horaire-2.php?ville=101 >السمارة</option><option value=horaire-2.php?ville=102 >طرفاية</option><option value=horaire-2.php?ville=103 >العيون</option><option value=horaire-2.php?ville=104 >بوجدور</option><option value=horaire-2.php?ville=105 >الداخلة</option><option value=horaire-2.php?ville=106 >الكويرة</option><option value=horaire-2.php?ville=107 >ألنيف</option><option value=horaire-2.php?ville=108 >ابي الجعد</option>                    </select> 
+                </form>
+            </div>
+                        <div class="txtelham hor_par">
+                <div>أوقات الصلاة حسب توقيت مدينة </div>
+                <div>بنكرير ليوم 15/10/2022</div>
+            </div>
+            <div style="clear:both;"></div>
+            <table class="horairetable">
+
+             <tr><td>الفجر : </td><td>05:09</td></tr>
+
+             <tr><td>الشروق : </td><td>06:31</td></tr>
+
+             <tr><td>الظهر : </td><td>12:23 </td></tr>
+
+             <tr><td>العصر : </td><td>
+
+            	15:32
+            </td>
+
+             <tr><td>المغرب : </td><td>18:05</td></tr>
+
+             <tr><td>العشاء :</td><td> 19:16</td></tr>
+
+            </table>
+			<div style="text-align:center;"><a href="http://www.habous.gov.ma" class="txtelham"  target="_blank">وزارة الأوقاف والشؤون الإسلامية</a></div>
+        </div>
+    </body>
+</html>
