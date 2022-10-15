@@ -12,7 +12,7 @@ def get_salat():
         print (str(i).replace("<td>", "").replace("</td>" ,"").strip())
 
 
-token = "MTAzMDg1MDQzOTEwMjYwMzI5NA.GLDLU4.yPHdsUgpq4CkLrffnJjt8ABAV-tVwMmjifKj_w"
+token = "**"
 
 intents = discord.Intents.default()
 intents.message_content = True
