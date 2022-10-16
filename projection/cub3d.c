@@ -15,8 +15,10 @@
 /* TODO:
 // {
 // 	[✅] Fixing 3D Rendring Strips
+// 	[❌] Adding textures
+// 	[❌] Fixing fisheye effect
 // 	[❌] Handling More than 2 comma in rgb
-// 	[❌] Handling newlines` inside the map
+// 	[❌] Handling newlines inside the map
 // 	[❌] Convert RGB color to hexadecimal
 // 	[❌] Don't forget to exit if an error happend
 */

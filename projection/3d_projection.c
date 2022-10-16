@@ -25,7 +25,7 @@ void	projecting_rays(t_mlx *wind)
 	while (++x < 1920)
 	{
 		cast_rays(wind, fov, x);
-		fov += 64.000 / 1920;
+		fov += 64.0 / 1920;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
@@ -66,7 +66,7 @@ void	cast_rays(t_mlx *wind, double fov, int x)
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)py / 64][(int)px / 64] == '1')
+		if (wind->map[(int)py / 64][(int)px / 64] == '1' || wind->map[(int)(py - 1) / 64][(int)(px - 1) / 64] == '1' || wind->map[(int)(py + 1) / 64][(int)(px + 1) / 64] == '1' )
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;

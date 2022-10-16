@@ -72,7 +72,7 @@ t_fd	read_and_add(char **av)
 		fd2 = take_path(str);
 		if (!map_checking2(str) || !check_colors_valid(fd2.F, fd2.C))
 			exit(0);
-		printf("\nALL thing is valid\n");
+		printf("Valid Map\n");
 	}
 	return (fd2);
 }

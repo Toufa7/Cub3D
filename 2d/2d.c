@@ -74,7 +74,9 @@ void	cast_rays(t_mlx *wind, double fov)
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)(py / 60)][(int)(px / 60)] == '1')
+		if (wind->map[(int)((py + 1) / 60)][(int)((px + 1) / 60)] == '1')
+			break ;
+		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
 			break ;
 		px += cos((fov) * M_PI / 180);
 		py += sin((fov) * M_PI / 180);
