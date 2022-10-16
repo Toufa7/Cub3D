@@ -15,6 +15,7 @@
 /* TODO:
 // {
 // 	[✅] Fixing 3D Rendring Strips
+// 	[✅] Fixing seeing between 2 walls
 // 	[❌] Adding textures
 // 	[❌] Fixing fisheye effect
 // 	[❌] Handling More than 2 comma in rgb
