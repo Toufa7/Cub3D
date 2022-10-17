@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/12 16:33:51 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/13 19:21:16 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 // TODO:
 // {
 // 	[✅] Fixing 3D Rendring Strips
-// 	[❌] Handling More than 2 comma in rgb
+// 	[✅] Handling More than 2 comma in rgb
 // 	[❌] Handling newlines inside the map
 // 	[❌] Convert RGB color to hexadecimal
-// 	[❌] Don't forget to exit if an error happend
+// 	[✅] Don't forget to exit if an error happend
 // }
 
 int	main(int ac, char **av)
@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 	// printf("Ceiling -> %s\n", wind.parsing.C);
 	// printf("Floor -> %s\n", wind.parsing.F);
 	printf("Full Map -> \n%s", wind.parsing.full_map);
-	// exit(0);
+	 exit(0);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
