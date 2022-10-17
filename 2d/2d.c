@@ -29,7 +29,7 @@ void	images_to_xpm(t_mlx *wind)
 
 	wind->wall = "../sprites/2d_black.xpm";
 	wind->clear = "../sprites/2d_white.xpm";
-	wind->player = "../sprites/player.xpm";
+	wind->player = "../sprites/2d_player.xpm";
 	wind->xpm_wall = mlx_xpm_file_to_image(wind->mlx, wind->wall, &width, &height);
 	wind->xpm_clear = mlx_xpm_file_to_image(wind->mlx, wind->clear, &width, &height);
 	wind->xpm_player = mlx_xpm_file_to_image(wind->mlx, wind->player, &width, &height);
@@ -61,8 +61,12 @@ void	get_player_position(t_mlx *wind)
 
 double	degrees_to_radians(t_mlx *wind)
 {
-	// wind->field_of_view = Angle Degree which is 60
 	return (wind->field_of_view * M_PI / 180);
+}
+
+double	degrees_to_radians_1(t_mlx *wind)
+{
+	return ((wind->field_of_view / 2) * M_PI / 180);
 }
 
 void	cast_rays(t_mlx *wind, double fov)
@@ -91,7 +95,7 @@ void	projecting_rays(t_mlx *wind)
 	double	fov;
 
 	i = -1;
-	nbr_of_rays = 1920;
+	nbr_of_rays = 1;
 	// Dividing my view into 2 triangle 32° left and 32° right
 	fov = wind->field_of_view;
 	while (i++ < nbr_of_rays)
@@ -120,7 +124,8 @@ void	map_filling(t_mlx	*wind)
 		}
 		i++;
 	}
-	mlx_string_put(wind->mlx, wind->window, wind->x_player, wind->y_player, BLUE, "*");
+	mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_player, wind->x_player, wind->y_player);
+	// mlx_string_put(wind->mlx, wind->window, wind->x_player, wind->y_player, BLUE, "*");
 	projecting_rays(wind);
 }
 
@@ -147,8 +152,8 @@ void	move_forward(t_mlx *wind)
 	double	px;
 	double	py;
 
-	py = sin(degrees_to_radians(wind)) * 5;
-	px = cos(degrees_to_radians(wind)) * 5;
+	py = sin(degrees_to_radians(wind));
+	px = cos(degrees_to_radians(wind));
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -162,8 +167,8 @@ void	move_backword(t_mlx *wind)
 	double	py;
 
 
-	py = sin(degrees_to_radians(wind)) * 5;
-	px = cos(degrees_to_radians(wind)) * 5;
+	py = sin(degrees_to_radians(wind));
+	px = cos(degrees_to_radians(wind));
 	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
@@ -171,16 +176,52 @@ void	move_backword(t_mlx *wind)
 	}
 }
 
+void	move_right(t_mlx *wind)
+{
+	double	px;
+	double	py;
+
+	py = sin(degrees_to_radians_1(wind));
+	px = cos(degrees_to_radians_1(wind));
+	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
+	{
+		wind->x_player += px;
+		wind->y_player += py;
+	}
+}
+
+void	move_left(t_mlx *wind)
+{
+	double	px;
+	double	py;
+
+
+	py = sin(degrees_to_radians_1(wind));
+	px = cos(degrees_to_radians_1(wind));
+	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
+	{
+		wind->x_player -= px;
+		wind->y_player -= py;
+	}
+}
+
+
+
+
 int	get_keys(int press, t_mlx *wind)
 {
-	if (press == 124)
+	if (press == 2)
 		right(wind);
-	if (press == 123)
+	if (press == 0)
 		left(wind);
 	if (press == 126)
 		move_forward(wind);
 	if (press == 125)
 		move_backword(wind);
+	if (press == 124)
+		move_right(wind);
+	if (press == 123)
+		move_left(wind);
 	if (press == 53)
 	{
 		mlx_destroy_window(wind->mlx, wind->window);
@@ -196,7 +237,7 @@ void	creating_window(t_mlx *wind)
 	int	width;
 
 	height = 60 * 20;
-	width = 60 * 5;
+	width = 60 * 6;
 	wind->window = mlx_new_window(wind->mlx, height, width, "Cub2D");
 }
 

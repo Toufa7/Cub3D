@@ -63,12 +63,13 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 	double	distance;
 	double	corrected_distance;
 
-	corrected_distance = 0.0;
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)py / 64][(int)px / 64] == '1' || wind->map[(int)(py - 1) / 64][(int)(px - 1) / 64] == '1' || wind->map[(int)(py + 1) / 64][(int)(px + 1) / 64] == '1' )
+		if (wind->map[(int)py / 64][(int)px / 64] == '1'
+			|| wind->map[(int)(py - 1) / 64][(int)(px - 1) / 64] == '1'
+			|| wind->map[(int)(py + 1) / 64][(int)(px + 1) / 64] == '1' )
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
@@ -79,6 +80,7 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 		px += cos((angle) * (M_PI / 180));
 		py += sin((angle) * (M_PI / 180));
 	}
-	corrected_distance = distance * cos((angle - wind->field_of_view) * (M_PI / 180));
+	corrected_distance = distance
+		* cos((angle - wind->field_of_view) * (M_PI / 180));
 	casting_3d(corrected_distance, x, wind);
 }

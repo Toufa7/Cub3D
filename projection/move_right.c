@@ -14,13 +14,13 @@
 
 void	move_right(t_mlx *wind)
 {
-	int		y_map;
-	int		x_map;
 	double	y_step;
 	double	x_step;
+	int		y_map;
+	int		x_map;
 
-	x_step = cos((wind->field_of_view / 2) * M_PI / 180) * 5;
 	y_step = sin((wind->field_of_view / 2) * M_PI / 180) * 5;
+	x_step = cos((wind->field_of_view / 2) * M_PI / 180) * 5;
 	y_map = (int)(wind->y_player + y_step) / 64;
 	x_map = (int)(wind->x_player + x_step) / 64;
 	if (wind->map[y_map][x_map] == '0')

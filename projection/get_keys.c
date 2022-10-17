@@ -12,7 +12,7 @@
 
 #include "../cub3d.h"
 
-void	move_ray_left(t_mlx *wind)
+void	rotate_left(t_mlx *wind)
 {
 	wind->field_of_view -= 10;
 	if (wind->field_of_view > 360)
@@ -21,7 +21,7 @@ void	move_ray_left(t_mlx *wind)
 		wind->field_of_view = 360;
 }
 
-void	move_ray_right(t_mlx *wind)
+void	rotate_right(t_mlx *wind)
 {
 	wind->field_of_view += 10;
 	if (wind->field_of_view > 360)
@@ -33,18 +33,18 @@ void	move_ray_right(t_mlx *wind)
 int	get_keys(int press, t_mlx *wind)
 {
 	mlx_clear_window(wind->mlx, wind->window);
-	if (press == 125)
-		move_backword(wind);
-	if (press == 126)
-		move_forward(wind);
-	if (press == 0)
-		move_ray_left(wind);
-	if (press == 2)
-		move_ray_right(wind);
 	if (press == 124)
-		move_left(wind);
+		rotate_right(wind);
 	if (press == 123)
+		rotate_left(wind);
+	if (press == 2)
 		move_right(wind);
+	if (press == 0)
+		move_left(wind);
+	if (press == 13)
+		move_forward(wind);
+	if (press == 1)
+		move_backword(wind);
 	if (press == 53)
 		destroy_window(wind);
 	projecting_rays(wind);

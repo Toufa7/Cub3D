@@ -18,7 +18,7 @@
 // 	[✅] Fixing 3D Rendring Strips
 // 	[✅] Fixing seeing between 2 walls
 // 	[✅] Fixing fisheye effect
-// 	[❌] Fixing keys
+// 	[✅] Fixing keys
 // 	[❌] Adding textures
 			Oussama
 // 	[❌] Handling More than 2 comma in rgb

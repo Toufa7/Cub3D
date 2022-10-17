@@ -8,27 +8,31 @@ def get_salat():
     get = requests.get(url)
     out = BeautifulSoup(get.content, "html.parser")
     output = out.find_all("td")
+    salat = []
     for i in output:
-        print (str(i).replace("<td>", "").replace("</td>" ,"").strip())
+        salat = str(i).replace("<td>", "").replace("</td>" ,"").strip()
+        print (salat[0][1])
 
 
-token = "**"
+get_salat()
 
-intents = discord.Intents.default()
-intents.message_content = True
+# token = "**"
 
-client = discord.Client(intents=intents)
+# intents = discord.Intents.default()
+# intents.message_content = True
 
-@client.event
-async def on_ready():
-    print(f'We have logged in as {client.user}')
+# client = discord.Client(intents=intents)
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+# @client.event
+# async def on_ready():
+#     print(f'We have logged in as {client.user}')
 
-    if message.content.startswith('$Salat'):
-        await message.channel.send('Hello!')
+# @client.event
+# async def on_message(message):
+#     if message.author == client.user:
+#         return
 
-client.run(token)
+#     if message.content.startswith('$Salat'):
+#         await message.channel.send('Hello!')
+
+# client.run(token)
