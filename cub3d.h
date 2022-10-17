@@ -24,15 +24,12 @@
 # include <fcntl.h>
 # include <math.h>
 # include <mlx.h>
-#include "get_next_line/get_next_line.h"
-#include "libft/libft.h"
-
+# include "get_next_line/get_next_line.h"
+# include "libft/libft.h"
 
 # define BLUE 0Xc0dfef
 # define RED 0XFF0000
 # define GREEN 0X74d434
-
-//!*-*-*-*-*-*-*-*-*-*-*-*-*-*Orbiay Part*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*
 
 typedef struct fd
 {
@@ -78,44 +75,39 @@ int		check_walls(char *str, int start, int count);
 int		first_six_lines(char *split_str,	int line);
 int		check_walls(char	*str, int start, int count);
 
-//*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-Otoufah Part*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-typedef	struct s_my_mlx
+typedef struct s_my_mlx
 {
 	void	*img;
-    char	*addr;
-    int		bits_per_pixel;
-    int		line_length;
-    int		endian;
+	char	*addr;
+	int		bpp;
+	int		line_len;
+	int		endian;
 }	t_my_mlx;
 
 typedef struct s_window
 {
-
-	void	*mlx;
-	void	*window;
-	char	**map;
-	float	field_of_view;
-	float	x_player;
-	float	y_player;
-	float	x_end_of_ray;
-	float	y_end_of_ray;
-
-	t_fd	parsing;
-	t_my_mlx my_mlx;
-
+	void		*mlx;
+	void		*window;
+	char		**map;
+	double		field_of_view;
+	double		x_player;
+	double		y_player;
+	double		x_end_of_ray;
+	double		y_end_of_ray;
+	t_fd		parsing;
+	t_my_mlx	my_mlx;
 }	t_mlx;
 
 char	*get_next_line(int fd);
-char	*read_map(int fd);
 void	map_filling(t_mlx *wind);
 void	move_forward(t_mlx *wind);
 void	get_player_position(t_mlx *wind);
 void	move_backword(t_mlx *wind);
 void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
-void	cast_rays(t_mlx *wind, float nbr_ray , int i);
+void	cast_rays(t_mlx *wind, double angle, int i);
 void	projecting_rays(t_mlx *wind);
-void	casting_3d(float distance, int i, t_mlx *mlx);
+void	casting_3d(double distance, int i, t_mlx *mlx);
 int		get_keys(int press, t_mlx	*wind);
 int		destroy_window(t_mlx *wind);
 void	my_mlx_pixel_put(t_my_mlx *data, int x, int y, int color);

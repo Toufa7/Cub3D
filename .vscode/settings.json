@@ -9,7 +9,8 @@
         "ios": "c",
         "system_error": "c",
         "unordered_map": "c",
-        "vector": "c"
+        "vector": "c",
+        "mlx.h": "c"
     },
     "makefile.launchConfigurations": [
         {

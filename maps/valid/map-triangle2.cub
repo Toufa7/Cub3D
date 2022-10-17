@@ -1,0 +1,12 @@
+NO cub3d-tester/textures/wall.xpm
+SO cub3d-tester/textures/bricks.xpm
+WE cub3d-tester/textures/gold.xpm
+EA cub3d-tester/textures/wood.xpm
+
+F 220,111,119
+C 225,111,0
+     11111
+    100S001
+     10001
+      111
+       1

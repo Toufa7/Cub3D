@@ -8,24 +8,23 @@ C_FLAGS = -Wall -Wextra -Werror
 
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
-FUNCTIONS =	otoufah/my_mlx_pixel_put.c\
-			otoufah/get_player_position.c\
-			otoufah/get_keys.c\
-			otoufah/3d_projection.c\
-			otoufah/move_forward.c\
-			otoufah/move_left.c\
-			otoufah/move_right.c\
-			otoufah/move_backword.c\
-			otoufah/destroy_window.c\
-			otoufah/map_filling.c\
-			orbiay/check_textures_colors.c\
-			orbiay/checking_walls.c\
-			orbiay/check_map_utils.c\
-			orbiay/read_and_add.c\
-			orbiay/To_hexa.c\
-			orbiay/main.c\
-			orbiay/map_cheking.c\
-			orbiay/check_Path.c\
+FUNCTIONS =	projection/my_mlx_pixel_put.c\
+			projection/get_player_position.c\
+			projection/get_keys.c\
+			projection/3d_projection.c\
+			projection/move_forward.c\
+			projection/move_left.c\
+			projection/move_right.c\
+			projection/move_backword.c\
+			projection/destroy_window.c\
+			map_parsing/check_textures_colors.c\
+			map_parsing/checking_walls.c\
+			map_parsing/check_map_utils.c\
+			map_parsing/read_and_add.c\
+			map_parsing/to_hexa.c\
+			map_parsing/main.c\
+			map_parsing/map_cheking.c\
+			map_parsing/check_Path.c\
 			libft/ft_strcmp.c\
 			libft/ft_strlen.c\
 			libft/ft_strncmp.c \
@@ -41,12 +40,10 @@ RM = rm -rf
 all		:	$(NAME) 
 
 $(NAME) : $(FUNCTIONS)
-			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./otoufah/cub3d.c -o $(NAME) 
+			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
 
-clean	:	$(OBJECTS)
-			$(RM) $(OBJECTS)
-		
-fclean	:	clean
+clean	:	
 			$(RM) $(NAME)
+fclean	:	clean
 		
 re 		:	fclean all
