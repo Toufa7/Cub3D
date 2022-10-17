@@ -38,8 +38,8 @@ void	casting_3d(double distance, int height, t_mlx *mlx)
 	double	distance_to_projection;
 
 	width = 0;
-	distance_to_projection = ((1920 / 2) / (tan((64.0 / 2) * (M_PI / 180))));
-	projection_3d = (64.000 / distance) * distance_to_projection;
+	distance_to_projection = ((1920 / 2) / (tan((32.0) * (M_PI / 180))));
+	projection_3d = (64.0 / distance) * distance_to_projection;
 	floor_ceiling = (1080 / 2) - (projection_3d / 2);
 	while (width < 1080 && width < floor_ceiling)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);

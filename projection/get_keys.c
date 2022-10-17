@@ -32,7 +32,6 @@ void	rotate_right(t_mlx *wind)
 
 int	get_keys(int press, t_mlx *wind)
 {
-	mlx_clear_window(wind->mlx, wind->window);
 	if (press == 124)
 		rotate_right(wind);
 	if (press == 123)
@@ -47,6 +46,7 @@ int	get_keys(int press, t_mlx *wind)
 		move_backword(wind);
 	if (press == 53)
 		destroy_window(wind);
+	mlx_clear_window(wind->mlx, wind->window);
 	projecting_rays(wind);
 	return (0);
 }

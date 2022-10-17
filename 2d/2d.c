@@ -16,9 +16,7 @@ char	*read_map(int fd)
 	{
 		join = ft_strjoin(join, map);
 		map = get_next_line(fd);
-		// ft_free(map);
 	}
-	// ft_free(map);
 	return (join);
 }
 
@@ -66,7 +64,7 @@ double	degrees_to_radians(t_mlx *wind)
 
 double	degrees_to_radians_1(t_mlx *wind)
 {
-	return ((wind->field_of_view / 2) * M_PI / 180);
+	return ((wind->field_of_view + 90) * M_PI / 180);
 }
 
 void	cast_rays(t_mlx *wind, double fov)
@@ -78,8 +76,6 @@ void	cast_rays(t_mlx *wind, double fov)
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)((py + 1) / 60)][(int)((px + 1) / 60)] == '1')
-			break ;
 		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
 			break ;
 		px += cos((fov) * M_PI / 180);
@@ -125,7 +121,6 @@ void	map_filling(t_mlx	*wind)
 		i++;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_player, wind->x_player, wind->y_player);
-	// mlx_string_put(wind->mlx, wind->window, wind->x_player, wind->y_player, BLUE, "*");
 	projecting_rays(wind);
 }
 
