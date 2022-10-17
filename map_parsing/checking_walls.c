@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:30:44 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 14:05:37 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/13 19:30:27 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,3 +51,4 @@ int	check_walls(char	*str, int start, int count)
 	}
 	return (1);
 }
+

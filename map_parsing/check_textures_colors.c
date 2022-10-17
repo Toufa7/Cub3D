@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 19:28:24 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 15:36:04 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/13 19:19:54 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,30 @@ int	check_c(char	**str)
 	if (!strcmp(str[0], "C") && counting(str) == 2)
 		return (1);
 	return (0);
+}
+
+int	check_comma(char *str)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (str[i])
+	{
+		if (str[i] == ',')
+			count++;
+		else if ((str[i] < '0' || str[i] > '9') && str[i] != ',')
+		{
+			printf("Error : Special character in your map plz fix it.");
+			return (0);
+		}
+		i++;
+	}
+	if (count > 2)
+	{
+		printf("Error : There is a problem with comma\n");
+		return (0);
+	}
+	return (1);
 }

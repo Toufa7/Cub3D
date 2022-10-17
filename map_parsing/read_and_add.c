@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:50:21 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/12 16:30:57 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/17 20:14:28 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,11 @@ t_fd	read_and_add(char **av)
 	{
 		fd2 = take_path(str);
 		if (!map_checking2(str) || !check_colors_valid(fd2.F, fd2.C))
-			exit(0);
-		printf("Valid Map\n");
+			exit(1);
+		printf("\nALL thing is valid\n");
 	}
+	else
+		exit(1);
+	printf("hhellodnd\n");
 	return (fd2);
 }
