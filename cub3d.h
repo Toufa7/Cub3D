@@ -104,7 +104,7 @@ void	get_player_position(t_mlx *wind);
 void	move_backword(t_mlx *wind);
 void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
-void	cast_rays(t_mlx *wind, double fov, int i);
+void	cast_rays(t_mlx *wind, double angle, int i);
 void	projecting_rays(t_mlx *wind);
 void	casting_3d(double distance, int i, t_mlx *mlx);
 int		get_keys(int press, t_mlx	*wind);

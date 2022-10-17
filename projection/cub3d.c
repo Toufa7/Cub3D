@@ -14,14 +14,18 @@
 
 /* TODO:
 // {
+			Poms
 // 	[✅] Fixing 3D Rendring Strips
 // 	[✅] Fixing seeing between 2 walls
+// 	[✅] Fixing fisheye effect
+// 	[❌] Fixing keys
 // 	[❌] Adding textures
-// 	[❌] Fixing fisheye effect
+			Oussama
 // 	[❌] Handling More than 2 comma in rgb
 // 	[❌] Handling newlines inside the map
 // 	[❌] Convert RGB color to hexadecimal
 // 	[❌] Don't forget to exit if an error happend
+// 	[❌] Leaks
 */
 
 int	main(int ac, char **av)

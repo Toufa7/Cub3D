@@ -1,0 +1,3841 @@
+Valid Map
+Init -> 32.000000
+Current Angle -> 238.000000
+Init -> 31.966667
+Current Angle -> 238.033333
+Init -> 31.933333
+Current Angle -> 238.066667
+Init -> 31.900000
+Current Angle -> 238.100000
+Init -> 31.866667
+Current Angle -> 238.133333
+Init -> 31.833333
+Current Angle -> 238.166667
+Init -> 31.800000
+Current Angle -> 238.200000
+Init -> 31.766667
+Current Angle -> 238.233333
+Init -> 31.733333
+Current Angle -> 238.266667
+Init -> 31.700000
+Current Angle -> 238.300000
+Init -> 31.666667
+Current Angle -> 238.333333
+Init -> 31.633333
+Current Angle -> 238.366667
+Init -> 31.600000
+Current Angle -> 238.400000
+Init -> 31.566667
+Current Angle -> 238.433333
+Init -> 31.533333
+Current Angle -> 238.466667
+Init -> 31.500000
+Current Angle -> 238.500000
+Init -> 31.466667
+Current Angle -> 238.533333
+Init -> 31.433333
+Current Angle -> 238.566667
+Init -> 31.400000
+Current Angle -> 238.600000
+Init -> 31.366667
+Current Angle -> 238.633333
+Init -> 31.333333
+Current Angle -> 238.666667
+Init -> 31.300000
+Current Angle -> 238.700000
+Init -> 31.266667
+Current Angle -> 238.733333
+Init -> 31.233333
+Current Angle -> 238.766667
+Init -> 31.200000
+Current Angle -> 238.800000
+Init -> 31.166667
+Current Angle -> 238.833333
+Init -> 31.133333
+Current Angle -> 238.866667
+Init -> 31.100000
+Current Angle -> 238.900000
+Init -> 31.066667
+Current Angle -> 238.933333
+Init -> 31.033333
+Current Angle -> 238.966667
+Init -> 31.000000
+Current Angle -> 239.000000
+Init -> 30.966667
+Current Angle -> 239.033333
+Init -> 30.933333
+Current Angle -> 239.066667
+Init -> 30.900000
+Current Angle -> 239.100000
+Init -> 30.866667
+Current Angle -> 239.133333
+Init -> 30.833333
+Current Angle -> 239.166667
+Init -> 30.800000
+Current Angle -> 239.200000
+Init -> 30.766667
+Current Angle -> 239.233333
+Init -> 30.733333
+Current Angle -> 239.266667
+Init -> 30.700000
+Current Angle -> 239.300000
+Init -> 30.666667
+Current Angle -> 239.333333
+Init -> 30.633333
+Current Angle -> 239.366667
+Init -> 30.600000
+Current Angle -> 239.400000
+Init -> 30.566667
+Current Angle -> 239.433333
+Init -> 30.533333
+Current Angle -> 239.466667
+Init -> 30.500000
+Current Angle -> 239.500000
+Init -> 30.466667
+Current Angle -> 239.533333
+Init -> 30.433333
+Current Angle -> 239.566667
+Init -> 30.400000
+Current Angle -> 239.600000
+Init -> 30.366667
+Current Angle -> 239.633333
+Init -> 30.333333
+Current Angle -> 239.666667
+Init -> 30.300000
+Current Angle -> 239.700000
+Init -> 30.266667
+Current Angle -> 239.733333
+Init -> 30.233333
+Current Angle -> 239.766667
+Init -> 30.200000
+Current Angle -> 239.800000
+Init -> 30.166667
+Current Angle -> 239.833333
+Init -> 30.133333
+Current Angle -> 239.866667
+Init -> 30.100000
+Current Angle -> 239.900000
+Init -> 30.066667
+Current Angle -> 239.933333
+Init -> 30.033333
+Current Angle -> 239.966667
+Init -> 30.000000
+Current Angle -> 240.000000
+Init -> 29.966667
+Current Angle -> 240.033333
+Init -> 29.933333
+Current Angle -> 240.066667
+Init -> 29.900000
+Current Angle -> 240.100000
+Init -> 29.866667
+Current Angle -> 240.133333
+Init -> 29.833333
+Current Angle -> 240.166667
+Init -> 29.800000
+Current Angle -> 240.200000
+Init -> 29.766667
+Current Angle -> 240.233333
+Init -> 29.733333
+Current Angle -> 240.266667
+Init -> 29.700000
+Current Angle -> 240.300000
+Init -> 29.666667
+Current Angle -> 240.333333
+Init -> 29.633333
+Current Angle -> 240.366667
+Init -> 29.600000
+Current Angle -> 240.400000
+Init -> 29.566667
+Current Angle -> 240.433333
+Init -> 29.533333
+Current Angle -> 240.466667
+Init -> 29.500000
+Current Angle -> 240.500000
+Init -> 29.466667
+Current Angle -> 240.533333
+Init -> 29.433333
+Current Angle -> 240.566667
+Init -> 29.400000
+Current Angle -> 240.600000
+Init -> 29.366667
+Current Angle -> 240.633333
+Init -> 29.333333
+Current Angle -> 240.666667
+Init -> 29.300000
+Current Angle -> 240.700000
+Init -> 29.266667
+Current Angle -> 240.733333
+Init -> 29.233333
+Current Angle -> 240.766667
+Init -> 29.200000
+Current Angle -> 240.800000
+Init -> 29.166667
+Current Angle -> 240.833333
+Init -> 29.133333
+Current Angle -> 240.866667
+Init -> 29.100000
+Current Angle -> 240.900000
+Init -> 29.066667
+Current Angle -> 240.933333
+Init -> 29.033333
+Current Angle -> 240.966667
+Init -> 29.000000
+Current Angle -> 241.000000
+Init -> 28.966667
+Current Angle -> 241.033333
+Init -> 28.933333
+Current Angle -> 241.066667
+Init -> 28.900000
+Current Angle -> 241.100000
+Init -> 28.866667
+Current Angle -> 241.133333
+Init -> 28.833333
+Current Angle -> 241.166667
+Init -> 28.800000
+Current Angle -> 241.200000
+Init -> 28.766667
+Current Angle -> 241.233333
+Init -> 28.733333
+Current Angle -> 241.266667
+Init -> 28.700000
+Current Angle -> 241.300000
+Init -> 28.666667
+Current Angle -> 241.333333
+Init -> 28.633333
+Current Angle -> 241.366667
+Init -> 28.600000
+Current Angle -> 241.400000
+Init -> 28.566667
+Current Angle -> 241.433333
+Init -> 28.533333
+Current Angle -> 241.466667
+Init -> 28.500000
+Current Angle -> 241.500000
+Init -> 28.466667
+Current Angle -> 241.533333
+Init -> 28.433333
+Current Angle -> 241.566667
+Init -> 28.400000
+Current Angle -> 241.600000
+Init -> 28.366667
+Current Angle -> 241.633333
+Init -> 28.333333
+Current Angle -> 241.666667
+Init -> 28.300000
+Current Angle -> 241.700000
+Init -> 28.266667
+Current Angle -> 241.733333
+Init -> 28.233333
+Current Angle -> 241.766667
+Init -> 28.200000
+Current Angle -> 241.800000
+Init -> 28.166667
+Current Angle -> 241.833333
+Init -> 28.133333
+Current Angle -> 241.866667
+Init -> 28.100000
+Current Angle -> 241.900000
+Init -> 28.066667
+Current Angle -> 241.933333
+Init -> 28.033333
+Current Angle -> 241.966667
+Init -> 28.000000
+Current Angle -> 242.000000
+Init -> 27.966667
+Current Angle -> 242.033333
+Init -> 27.933333
+Current Angle -> 242.066667
+Init -> 27.900000
+Current Angle -> 242.100000
+Init -> 27.866667
+Current Angle -> 242.133333
+Init -> 27.833333
+Current Angle -> 242.166667
+Init -> 27.800000
+Current Angle -> 242.200000
+Init -> 27.766667
+Current Angle -> 242.233333
+Init -> 27.733333
+Current Angle -> 242.266667
+Init -> 27.700000
+Current Angle -> 242.300000
+Init -> 27.666667
+Current Angle -> 242.333333
+Init -> 27.633333
+Current Angle -> 242.366667
+Init -> 27.600000
+Current Angle -> 242.400000
+Init -> 27.566667
+Current Angle -> 242.433333
+Init -> 27.533333
+Current Angle -> 242.466667
+Init -> 27.500000
+Current Angle -> 242.500000
+Init -> 27.466667
+Current Angle -> 242.533333
+Init -> 27.433333
+Current Angle -> 242.566667
+Init -> 27.400000
+Current Angle -> 242.600000
+Init -> 27.366667
+Current Angle -> 242.633333
+Init -> 27.333333
+Current Angle -> 242.666667
+Init -> 27.300000
+Current Angle -> 242.700000
+Init -> 27.266667
+Current Angle -> 242.733333
+Init -> 27.233333
+Current Angle -> 242.766667
+Init -> 27.200000
+Current Angle -> 242.800000
+Init -> 27.166667
+Current Angle -> 242.833333
+Init -> 27.133333
+Current Angle -> 242.866667
+Init -> 27.100000
+Current Angle -> 242.900000
+Init -> 27.066667
+Current Angle -> 242.933333
+Init -> 27.033333
+Current Angle -> 242.966667
+Init -> 27.000000
+Current Angle -> 243.000000
+Init -> 26.966667
+Current Angle -> 243.033333
+Init -> 26.933333
+Current Angle -> 243.066667
+Init -> 26.900000
+Current Angle -> 243.100000
+Init -> 26.866667
+Current Angle -> 243.133333
+Init -> 26.833333
+Current Angle -> 243.166667
+Init -> 26.800000
+Current Angle -> 243.200000
+Init -> 26.766667
+Current Angle -> 243.233333
+Init -> 26.733333
+Current Angle -> 243.266667
+Init -> 26.700000
+Current Angle -> 243.300000
+Init -> 26.666667
+Current Angle -> 243.333333
+Init -> 26.633333
+Current Angle -> 243.366667
+Init -> 26.600000
+Current Angle -> 243.400000
+Init -> 26.566667
+Current Angle -> 243.433333
+Init -> 26.533333
+Current Angle -> 243.466667
+Init -> 26.500000
+Current Angle -> 243.500000
+Init -> 26.466667
+Current Angle -> 243.533333
+Init -> 26.433333
+Current Angle -> 243.566667
+Init -> 26.400000
+Current Angle -> 243.600000
+Init -> 26.366667
+Current Angle -> 243.633333
+Init -> 26.333333
+Current Angle -> 243.666667
+Init -> 26.300000
+Current Angle -> 243.700000
+Init -> 26.266667
+Current Angle -> 243.733333
+Init -> 26.233333
+Current Angle -> 243.766667
+Init -> 26.200000
+Current Angle -> 243.800000
+Init -> 26.166667
+Current Angle -> 243.833333
+Init -> 26.133333
+Current Angle -> 243.866667
+Init -> 26.100000
+Current Angle -> 243.900000
+Init -> 26.066667
+Current Angle -> 243.933333
+Init -> 26.033333
+Current Angle -> 243.966667
+Init -> 26.000000
+Current Angle -> 244.000000
+Init -> 25.966667
+Current Angle -> 244.033333
+Init -> 25.933333
+Current Angle -> 244.066667
+Init -> 25.900000
+Current Angle -> 244.100000
+Init -> 25.866667
+Current Angle -> 244.133333
+Init -> 25.833333
+Current Angle -> 244.166667
+Init -> 25.800000
+Current Angle -> 244.200000
+Init -> 25.766667
+Current Angle -> 244.233333
+Init -> 25.733333
+Current Angle -> 244.266667
+Init -> 25.700000
+Current Angle -> 244.300000
+Init -> 25.666667
+Current Angle -> 244.333333
+Init -> 25.633333
+Current Angle -> 244.366667
+Init -> 25.600000
+Current Angle -> 244.400000
+Init -> 25.566667
+Current Angle -> 244.433333
+Init -> 25.533333
+Current Angle -> 244.466667
+Init -> 25.500000
+Current Angle -> 244.500000
+Init -> 25.466667
+Current Angle -> 244.533333
+Init -> 25.433333
+Current Angle -> 244.566667
+Init -> 25.400000
+Current Angle -> 244.600000
+Init -> 25.366667
+Current Angle -> 244.633333
+Init -> 25.333333
+Current Angle -> 244.666667
+Init -> 25.300000
+Current Angle -> 244.700000
+Init -> 25.266667
+Current Angle -> 244.733333
+Init -> 25.233333
+Current Angle -> 244.766667
+Init -> 25.200000
+Current Angle -> 244.800000
+Init -> 25.166667
+Current Angle -> 244.833333
+Init -> 25.133333
+Current Angle -> 244.866667
+Init -> 25.100000
+Current Angle -> 244.900000
+Init -> 25.066667
+Current Angle -> 244.933333
+Init -> 25.033333
+Current Angle -> 244.966667
+Init -> 25.000000
+Current Angle -> 245.000000
+Init -> 24.966667
+Current Angle -> 245.033333
+Init -> 24.933333
+Current Angle -> 245.066667
+Init -> 24.900000
+Current Angle -> 245.100000
+Init -> 24.866667
+Current Angle -> 245.133333
+Init -> 24.833333
+Current Angle -> 245.166667
+Init -> 24.800000
+Current Angle -> 245.200000
+Init -> 24.766667
+Current Angle -> 245.233333
+Init -> 24.733333
+Current Angle -> 245.266667
+Init -> 24.700000
+Current Angle -> 245.300000
+Init -> 24.666667
+Current Angle -> 245.333333
+Init -> 24.633333
+Current Angle -> 245.366667
+Init -> 24.600000
+Current Angle -> 245.400000
+Init -> 24.566667
+Current Angle -> 245.433333
+Init -> 24.533333
+Current Angle -> 245.466667
+Init -> 24.500000
+Current Angle -> 245.500000
+Init -> 24.466667
+Current Angle -> 245.533333
+Init -> 24.433333
+Current Angle -> 245.566667
+Init -> 24.400000
+Current Angle -> 245.600000
+Init -> 24.366667
+Current Angle -> 245.633333
+Init -> 24.333333
+Current Angle -> 245.666667
+Init -> 24.300000
+Current Angle -> 245.700000
+Init -> 24.266667
+Current Angle -> 245.733333
+Init -> 24.233333
+Current Angle -> 245.766667
+Init -> 24.200000
+Current Angle -> 245.800000
+Init -> 24.166667
+Current Angle -> 245.833333
+Init -> 24.133333
+Current Angle -> 245.866667
+Init -> 24.100000
+Current Angle -> 245.900000
+Init -> 24.066667
+Current Angle -> 245.933333
+Init -> 24.033333
+Current Angle -> 245.966667
+Init -> 24.000000
+Current Angle -> 246.000000
+Init -> 23.966667
+Current Angle -> 246.033333
+Init -> 23.933333
+Current Angle -> 246.066667
+Init -> 23.900000
+Current Angle -> 246.100000
+Init -> 23.866667
+Current Angle -> 246.133333
+Init -> 23.833333
+Current Angle -> 246.166667
+Init -> 23.800000
+Current Angle -> 246.200000
+Init -> 23.766667
+Current Angle -> 246.233333
+Init -> 23.733333
+Current Angle -> 246.266667
+Init -> 23.700000
+Current Angle -> 246.300000
+Init -> 23.666667
+Current Angle -> 246.333333
+Init -> 23.633333
+Current Angle -> 246.366667
+Init -> 23.600000
+Current Angle -> 246.400000
+Init -> 23.566667
+Current Angle -> 246.433333
+Init -> 23.533333
+Current Angle -> 246.466667
+Init -> 23.500000
+Current Angle -> 246.500000
+Init -> 23.466667
+Current Angle -> 246.533333
+Init -> 23.433333
+Current Angle -> 246.566667
+Init -> 23.400000
+Current Angle -> 246.600000
+Init -> 23.366667
+Current Angle -> 246.633333
+Init -> 23.333333
+Current Angle -> 246.666667
+Init -> 23.300000
+Current Angle -> 246.700000
+Init -> 23.266667
+Current Angle -> 246.733333
+Init -> 23.233333
+Current Angle -> 246.766667
+Init -> 23.200000
+Current Angle -> 246.800000
+Init -> 23.166667
+Current Angle -> 246.833333
+Init -> 23.133333
+Current Angle -> 246.866667
+Init -> 23.100000
+Current Angle -> 246.900000
+Init -> 23.066667
+Current Angle -> 246.933333
+Init -> 23.033333
+Current Angle -> 246.966667
+Init -> 23.000000
+Current Angle -> 247.000000
+Init -> 22.966667
+Current Angle -> 247.033333
+Init -> 22.933333
+Current Angle -> 247.066667
+Init -> 22.900000
+Current Angle -> 247.100000
+Init -> 22.866667
+Current Angle -> 247.133333
+Init -> 22.833333
+Current Angle -> 247.166667
+Init -> 22.800000
+Current Angle -> 247.200000
+Init -> 22.766667
+Current Angle -> 247.233333
+Init -> 22.733333
+Current Angle -> 247.266667
+Init -> 22.700000
+Current Angle -> 247.300000
+Init -> 22.666667
+Current Angle -> 247.333333
+Init -> 22.633333
+Current Angle -> 247.366667
+Init -> 22.600000
+Current Angle -> 247.400000
+Init -> 22.566667
+Current Angle -> 247.433333
+Init -> 22.533333
+Current Angle -> 247.466667
+Init -> 22.500000
+Current Angle -> 247.500000
+Init -> 22.466667
+Current Angle -> 247.533333
+Init -> 22.433333
+Current Angle -> 247.566667
+Init -> 22.400000
+Current Angle -> 247.600000
+Init -> 22.366667
+Current Angle -> 247.633333
+Init -> 22.333333
+Current Angle -> 247.666667
+Init -> 22.300000
+Current Angle -> 247.700000
+Init -> 22.266667
+Current Angle -> 247.733333
+Init -> 22.233333
+Current Angle -> 247.766667
+Init -> 22.200000
+Current Angle -> 247.800000
+Init -> 22.166667
+Current Angle -> 247.833333
+Init -> 22.133333
+Current Angle -> 247.866667
+Init -> 22.100000
+Current Angle -> 247.900000
+Init -> 22.066667
+Current Angle -> 247.933333
+Init -> 22.033333
+Current Angle -> 247.966667
+Init -> 22.000000
+Current Angle -> 248.000000
+Init -> 21.966667
+Current Angle -> 248.033333
+Init -> 21.933333
+Current Angle -> 248.066667
+Init -> 21.900000
+Current Angle -> 248.100000
+Init -> 21.866667
+Current Angle -> 248.133333
+Init -> 21.833333
+Current Angle -> 248.166667
+Init -> 21.800000
+Current Angle -> 248.200000
+Init -> 21.766667
+Current Angle -> 248.233333
+Init -> 21.733333
+Current Angle -> 248.266667
+Init -> 21.700000
+Current Angle -> 248.300000
+Init -> 21.666667
+Current Angle -> 248.333333
+Init -> 21.633333
+Current Angle -> 248.366667
+Init -> 21.600000
+Current Angle -> 248.400000
+Init -> 21.566667
+Current Angle -> 248.433333
+Init -> 21.533333
+Current Angle -> 248.466667
+Init -> 21.500000
+Current Angle -> 248.500000
+Init -> 21.466667
+Current Angle -> 248.533333
+Init -> 21.433333
+Current Angle -> 248.566667
+Init -> 21.400000
+Current Angle -> 248.600000
+Init -> 21.366667
+Current Angle -> 248.633333
+Init -> 21.333333
+Current Angle -> 248.666667
+Init -> 21.300000
+Current Angle -> 248.700000
+Init -> 21.266667
+Current Angle -> 248.733333
+Init -> 21.233333
+Current Angle -> 248.766667
+Init -> 21.200000
+Current Angle -> 248.800000
+Init -> 21.166667
+Current Angle -> 248.833333
+Init -> 21.133333
+Current Angle -> 248.866667
+Init -> 21.100000
+Current Angle -> 248.900000
+Init -> 21.066667
+Current Angle -> 248.933333
+Init -> 21.033333
+Current Angle -> 248.966667
+Init -> 21.000000
+Current Angle -> 249.000000
+Init -> 20.966667
+Current Angle -> 249.033333
+Init -> 20.933333
+Current Angle -> 249.066667
+Init -> 20.900000
+Current Angle -> 249.100000
+Init -> 20.866667
+Current Angle -> 249.133333
+Init -> 20.833333
+Current Angle -> 249.166667
+Init -> 20.800000
+Current Angle -> 249.200000
+Init -> 20.766667
+Current Angle -> 249.233333
+Init -> 20.733333
+Current Angle -> 249.266667
+Init -> 20.700000
+Current Angle -> 249.300000
+Init -> 20.666667
+Current Angle -> 249.333333
+Init -> 20.633333
+Current Angle -> 249.366667
+Init -> 20.600000
+Current Angle -> 249.400000
+Init -> 20.566667
+Current Angle -> 249.433333
+Init -> 20.533333
+Current Angle -> 249.466667
+Init -> 20.500000
+Current Angle -> 249.500000
+Init -> 20.466667
+Current Angle -> 249.533333
+Init -> 20.433333
+Current Angle -> 249.566667
+Init -> 20.400000
+Current Angle -> 249.600000
+Init -> 20.366667
+Current Angle -> 249.633333
+Init -> 20.333333
+Current Angle -> 249.666667
+Init -> 20.300000
+Current Angle -> 249.700000
+Init -> 20.266667
+Current Angle -> 249.733333
+Init -> 20.233333
+Current Angle -> 249.766667
+Init -> 20.200000
+Current Angle -> 249.800000
+Init -> 20.166667
+Current Angle -> 249.833333
+Init -> 20.133333
+Current Angle -> 249.866667
+Init -> 20.100000
+Current Angle -> 249.900000
+Init -> 20.066667
+Current Angle -> 249.933333
+Init -> 20.033333
+Current Angle -> 249.966667
+Init -> 20.000000
+Current Angle -> 250.000000
+Init -> 19.966667
+Current Angle -> 250.033333
+Init -> 19.933333
+Current Angle -> 250.066667
+Init -> 19.900000
+Current Angle -> 250.100000
+Init -> 19.866667
+Current Angle -> 250.133333
+Init -> 19.833333
+Current Angle -> 250.166667
+Init -> 19.800000
+Current Angle -> 250.200000
+Init -> 19.766667
+Current Angle -> 250.233333
+Init -> 19.733333
+Current Angle -> 250.266667
+Init -> 19.700000
+Current Angle -> 250.300000
+Init -> 19.666667
+Current Angle -> 250.333333
+Init -> 19.633333
+Current Angle -> 250.366667
+Init -> 19.600000
+Current Angle -> 250.400000
+Init -> 19.566667
+Current Angle -> 250.433333
+Init -> 19.533333
+Current Angle -> 250.466667
+Init -> 19.500000
+Current Angle -> 250.500000
+Init -> 19.466667
+Current Angle -> 250.533333
+Init -> 19.433333
+Current Angle -> 250.566667
+Init -> 19.400000
+Current Angle -> 250.600000
+Init -> 19.366667
+Current Angle -> 250.633333
+Init -> 19.333333
+Current Angle -> 250.666667
+Init -> 19.300000
+Current Angle -> 250.700000
+Init -> 19.266667
+Current Angle -> 250.733333
+Init -> 19.233333
+Current Angle -> 250.766667
+Init -> 19.200000
+Current Angle -> 250.800000
+Init -> 19.166667
+Current Angle -> 250.833333
+Init -> 19.133333
+Current Angle -> 250.866667
+Init -> 19.100000
+Current Angle -> 250.900000
+Init -> 19.066667
+Current Angle -> 250.933333
+Init -> 19.033333
+Current Angle -> 250.966667
+Init -> 19.000000
+Current Angle -> 251.000000
+Init -> 18.966667
+Current Angle -> 251.033333
+Init -> 18.933333
+Current Angle -> 251.066667
+Init -> 18.900000
+Current Angle -> 251.100000
+Init -> 18.866667
+Current Angle -> 251.133333
+Init -> 18.833333
+Current Angle -> 251.166667
+Init -> 18.800000
+Current Angle -> 251.200000
+Init -> 18.766667
+Current Angle -> 251.233333
+Init -> 18.733333
+Current Angle -> 251.266667
+Init -> 18.700000
+Current Angle -> 251.300000
+Init -> 18.666667
+Current Angle -> 251.333333
+Init -> 18.633333
+Current Angle -> 251.366667
+Init -> 18.600000
+Current Angle -> 251.400000
+Init -> 18.566667
+Current Angle -> 251.433333
+Init -> 18.533333
+Current Angle -> 251.466667
+Init -> 18.500000
+Current Angle -> 251.500000
+Init -> 18.466667
+Current Angle -> 251.533333
+Init -> 18.433333
+Current Angle -> 251.566667
+Init -> 18.400000
+Current Angle -> 251.600000
+Init -> 18.366667
+Current Angle -> 251.633333
+Init -> 18.333333
+Current Angle -> 251.666667
+Init -> 18.300000
+Current Angle -> 251.700000
+Init -> 18.266667
+Current Angle -> 251.733333
+Init -> 18.233333
+Current Angle -> 251.766667
+Init -> 18.200000
+Current Angle -> 251.800000
+Init -> 18.166667
+Current Angle -> 251.833333
+Init -> 18.133333
+Current Angle -> 251.866667
+Init -> 18.100000
+Current Angle -> 251.900000
+Init -> 18.066667
+Current Angle -> 251.933333
+Init -> 18.033333
+Current Angle -> 251.966667
+Init -> 18.000000
+Current Angle -> 252.000000
+Init -> 17.966667
+Current Angle -> 252.033333
+Init -> 17.933333
+Current Angle -> 252.066667
+Init -> 17.900000
+Current Angle -> 252.100000
+Init -> 17.866667
+Current Angle -> 252.133333
+Init -> 17.833333
+Current Angle -> 252.166667
+Init -> 17.800000
+Current Angle -> 252.200000
+Init -> 17.766667
+Current Angle -> 252.233333
+Init -> 17.733333
+Current Angle -> 252.266667
+Init -> 17.700000
+Current Angle -> 252.300000
+Init -> 17.666667
+Current Angle -> 252.333333
+Init -> 17.633333
+Current Angle -> 252.366667
+Init -> 17.600000
+Current Angle -> 252.400000
+Init -> 17.566667
+Current Angle -> 252.433333
+Init -> 17.533333
+Current Angle -> 252.466667
+Init -> 17.500000
+Current Angle -> 252.500000
+Init -> 17.466667
+Current Angle -> 252.533333
+Init -> 17.433333
+Current Angle -> 252.566667
+Init -> 17.400000
+Current Angle -> 252.600000
+Init -> 17.366667
+Current Angle -> 252.633333
+Init -> 17.333333
+Current Angle -> 252.666667
+Init -> 17.300000
+Current Angle -> 252.700000
+Init -> 17.266667
+Current Angle -> 252.733333
+Init -> 17.233333
+Current Angle -> 252.766667
+Init -> 17.200000
+Current Angle -> 252.800000
+Init -> 17.166667
+Current Angle -> 252.833333
+Init -> 17.133333
+Current Angle -> 252.866667
+Init -> 17.100000
+Current Angle -> 252.900000
+Init -> 17.066667
+Current Angle -> 252.933333
+Init -> 17.033333
+Current Angle -> 252.966667
+Init -> 17.000000
+Current Angle -> 253.000000
+Init -> 16.966667
+Current Angle -> 253.033333
+Init -> 16.933333
+Current Angle -> 253.066667
+Init -> 16.900000
+Current Angle -> 253.100000
+Init -> 16.866667
+Current Angle -> 253.133333
+Init -> 16.833333
+Current Angle -> 253.166667
+Init -> 16.800000
+Current Angle -> 253.200000
+Init -> 16.766667
+Current Angle -> 253.233333
+Init -> 16.733333
+Current Angle -> 253.266667
+Init -> 16.700000
+Current Angle -> 253.300000
+Init -> 16.666667
+Current Angle -> 253.333333
+Init -> 16.633333
+Current Angle -> 253.366667
+Init -> 16.600000
+Current Angle -> 253.400000
+Init -> 16.566667
+Current Angle -> 253.433333
+Init -> 16.533333
+Current Angle -> 253.466667
+Init -> 16.500000
+Current Angle -> 253.500000
+Init -> 16.466667
+Current Angle -> 253.533333
+Init -> 16.433333
+Current Angle -> 253.566667
+Init -> 16.400000
+Current Angle -> 253.600000
+Init -> 16.366667
+Current Angle -> 253.633333
+Init -> 16.333333
+Current Angle -> 253.666667
+Init -> 16.300000
+Current Angle -> 253.700000
+Init -> 16.266667
+Current Angle -> 253.733333
+Init -> 16.233333
+Current Angle -> 253.766667
+Init -> 16.200000
+Current Angle -> 253.800000
+Init -> 16.166667
+Current Angle -> 253.833333
+Init -> 16.133333
+Current Angle -> 253.866667
+Init -> 16.100000
+Current Angle -> 253.900000
+Init -> 16.066667
+Current Angle -> 253.933333
+Init -> 16.033333
+Current Angle -> 253.966667
+Init -> 16.000000
+Current Angle -> 254.000000
+Init -> 15.966667
+Current Angle -> 254.033333
+Init -> 15.933333
+Current Angle -> 254.066667
+Init -> 15.900000
+Current Angle -> 254.100000
+Init -> 15.866667
+Current Angle -> 254.133333
+Init -> 15.833333
+Current Angle -> 254.166667
+Init -> 15.800000
+Current Angle -> 254.200000
+Init -> 15.766667
+Current Angle -> 254.233333
+Init -> 15.733333
+Current Angle -> 254.266667
+Init -> 15.700000
+Current Angle -> 254.300000
+Init -> 15.666667
+Current Angle -> 254.333333
+Init -> 15.633333
+Current Angle -> 254.366667
+Init -> 15.600000
+Current Angle -> 254.400000
+Init -> 15.566667
+Current Angle -> 254.433333
+Init -> 15.533333
+Current Angle -> 254.466667
+Init -> 15.500000
+Current Angle -> 254.500000
+Init -> 15.466667
+Current Angle -> 254.533333
+Init -> 15.433333
+Current Angle -> 254.566667
+Init -> 15.400000
+Current Angle -> 254.600000
+Init -> 15.366667
+Current Angle -> 254.633333
+Init -> 15.333333
+Current Angle -> 254.666667
+Init -> 15.300000
+Current Angle -> 254.700000
+Init -> 15.266667
+Current Angle -> 254.733333
+Init -> 15.233333
+Current Angle -> 254.766667
+Init -> 15.200000
+Current Angle -> 254.800000
+Init -> 15.166667
+Current Angle -> 254.833333
+Init -> 15.133333
+Current Angle -> 254.866667
+Init -> 15.100000
+Current Angle -> 254.900000
+Init -> 15.066667
+Current Angle -> 254.933333
+Init -> 15.033333
+Current Angle -> 254.966667
+Init -> 15.000000
+Current Angle -> 255.000000
+Init -> 14.966667
+Current Angle -> 255.033333
+Init -> 14.933333
+Current Angle -> 255.066667
+Init -> 14.900000
+Current Angle -> 255.100000
+Init -> 14.866667
+Current Angle -> 255.133333
+Init -> 14.833333
+Current Angle -> 255.166667
+Init -> 14.800000
+Current Angle -> 255.200000
+Init -> 14.766667
+Current Angle -> 255.233333
+Init -> 14.733333
+Current Angle -> 255.266667
+Init -> 14.700000
+Current Angle -> 255.300000
+Init -> 14.666667
+Current Angle -> 255.333333
+Init -> 14.633333
+Current Angle -> 255.366667
+Init -> 14.600000
+Current Angle -> 255.400000
+Init -> 14.566667
+Current Angle -> 255.433333
+Init -> 14.533333
+Current Angle -> 255.466667
+Init -> 14.500000
+Current Angle -> 255.500000
+Init -> 14.466667
+Current Angle -> 255.533333
+Init -> 14.433333
+Current Angle -> 255.566667
+Init -> 14.400000
+Current Angle -> 255.600000
+Init -> 14.366667
+Current Angle -> 255.633333
+Init -> 14.333333
+Current Angle -> 255.666667
+Init -> 14.300000
+Current Angle -> 255.700000
+Init -> 14.266667
+Current Angle -> 255.733333
+Init -> 14.233333
+Current Angle -> 255.766667
+Init -> 14.200000
+Current Angle -> 255.800000
+Init -> 14.166667
+Current Angle -> 255.833333
+Init -> 14.133333
+Current Angle -> 255.866667
+Init -> 14.100000
+Current Angle -> 255.900000
+Init -> 14.066667
+Current Angle -> 255.933333
+Init -> 14.033333
+Current Angle -> 255.966667
+Init -> 14.000000
+Current Angle -> 256.000000
+Init -> 13.966667
+Current Angle -> 256.033333
+Init -> 13.933333
+Current Angle -> 256.066667
+Init -> 13.900000
+Current Angle -> 256.100000
+Init -> 13.866667
+Current Angle -> 256.133333
+Init -> 13.833333
+Current Angle -> 256.166667
+Init -> 13.800000
+Current Angle -> 256.200000
+Init -> 13.766667
+Current Angle -> 256.233333
+Init -> 13.733333
+Current Angle -> 256.266667
+Init -> 13.700000
+Current Angle -> 256.300000
+Init -> 13.666667
+Current Angle -> 256.333333
+Init -> 13.633333
+Current Angle -> 256.366667
+Init -> 13.600000
+Current Angle -> 256.400000
+Init -> 13.566667
+Current Angle -> 256.433333
+Init -> 13.533333
+Current Angle -> 256.466667
+Init -> 13.500000
+Current Angle -> 256.500000
+Init -> 13.466667
+Current Angle -> 256.533333
+Init -> 13.433333
+Current Angle -> 256.566667
+Init -> 13.400000
+Current Angle -> 256.600000
+Init -> 13.366667
+Current Angle -> 256.633333
+Init -> 13.333333
+Current Angle -> 256.666667
+Init -> 13.300000
+Current Angle -> 256.700000
+Init -> 13.266667
+Current Angle -> 256.733333
+Init -> 13.233333
+Current Angle -> 256.766667
+Init -> 13.200000
+Current Angle -> 256.800000
+Init -> 13.166667
+Current Angle -> 256.833333
+Init -> 13.133333
+Current Angle -> 256.866667
+Init -> 13.100000
+Current Angle -> 256.900000
+Init -> 13.066667
+Current Angle -> 256.933333
+Init -> 13.033333
+Current Angle -> 256.966667
+Init -> 13.000000
+Current Angle -> 257.000000
+Init -> 12.966667
+Current Angle -> 257.033333
+Init -> 12.933333
+Current Angle -> 257.066667
+Init -> 12.900000
+Current Angle -> 257.100000
+Init -> 12.866667
+Current Angle -> 257.133333
+Init -> 12.833333
+Current Angle -> 257.166667
+Init -> 12.800000
+Current Angle -> 257.200000
+Init -> 12.766667
+Current Angle -> 257.233333
+Init -> 12.733333
+Current Angle -> 257.266667
+Init -> 12.700000
+Current Angle -> 257.300000
+Init -> 12.666667
+Current Angle -> 257.333333
+Init -> 12.633333
+Current Angle -> 257.366667
+Init -> 12.600000
+Current Angle -> 257.400000
+Init -> 12.566667
+Current Angle -> 257.433333
+Init -> 12.533333
+Current Angle -> 257.466667
+Init -> 12.500000
+Current Angle -> 257.500000
+Init -> 12.466667
+Current Angle -> 257.533333
+Init -> 12.433333
+Current Angle -> 257.566667
+Init -> 12.400000
+Current Angle -> 257.600000
+Init -> 12.366667
+Current Angle -> 257.633333
+Init -> 12.333333
+Current Angle -> 257.666667
+Init -> 12.300000
+Current Angle -> 257.700000
+Init -> 12.266667
+Current Angle -> 257.733333
+Init -> 12.233333
+Current Angle -> 257.766667
+Init -> 12.200000
+Current Angle -> 257.800000
+Init -> 12.166667
+Current Angle -> 257.833333
+Init -> 12.133333
+Current Angle -> 257.866667
+Init -> 12.100000
+Current Angle -> 257.900000
+Init -> 12.066667
+Current Angle -> 257.933333
+Init -> 12.033333
+Current Angle -> 257.966667
+Init -> 12.000000
+Current Angle -> 258.000000
+Init -> 11.966667
+Current Angle -> 258.033333
+Init -> 11.933333
+Current Angle -> 258.066667
+Init -> 11.900000
+Current Angle -> 258.100000
+Init -> 11.866667
+Current Angle -> 258.133333
+Init -> 11.833333
+Current Angle -> 258.166667
+Init -> 11.800000
+Current Angle -> 258.200000
+Init -> 11.766667
+Current Angle -> 258.233333
+Init -> 11.733333
+Current Angle -> 258.266667
+Init -> 11.700000
+Current Angle -> 258.300000
+Init -> 11.666667
+Current Angle -> 258.333333
+Init -> 11.633333
+Current Angle -> 258.366667
+Init -> 11.600000
+Current Angle -> 258.400000
+Init -> 11.566667
+Current Angle -> 258.433333
+Init -> 11.533333
+Current Angle -> 258.466667
+Init -> 11.500000
+Current Angle -> 258.500000
+Init -> 11.466667
+Current Angle -> 258.533333
+Init -> 11.433333
+Current Angle -> 258.566667
+Init -> 11.400000
+Current Angle -> 258.600000
+Init -> 11.366667
+Current Angle -> 258.633333
+Init -> 11.333333
+Current Angle -> 258.666667
+Init -> 11.300000
+Current Angle -> 258.700000
+Init -> 11.266667
+Current Angle -> 258.733333
+Init -> 11.233333
+Current Angle -> 258.766667
+Init -> 11.200000
+Current Angle -> 258.800000
+Init -> 11.166667
+Current Angle -> 258.833333
+Init -> 11.133333
+Current Angle -> 258.866667
+Init -> 11.100000
+Current Angle -> 258.900000
+Init -> 11.066667
+Current Angle -> 258.933333
+Init -> 11.033333
+Current Angle -> 258.966667
+Init -> 11.000000
+Current Angle -> 259.000000
+Init -> 10.966667
+Current Angle -> 259.033333
+Init -> 10.933333
+Current Angle -> 259.066667
+Init -> 10.900000
+Current Angle -> 259.100000
+Init -> 10.866667
+Current Angle -> 259.133333
+Init -> 10.833333
+Current Angle -> 259.166667
+Init -> 10.800000
+Current Angle -> 259.200000
+Init -> 10.766667
+Current Angle -> 259.233333
+Init -> 10.733333
+Current Angle -> 259.266667
+Init -> 10.700000
+Current Angle -> 259.300000
+Init -> 10.666667
+Current Angle -> 259.333333
+Init -> 10.633333
+Current Angle -> 259.366667
+Init -> 10.600000
+Current Angle -> 259.400000
+Init -> 10.566667
+Current Angle -> 259.433333
+Init -> 10.533333
+Current Angle -> 259.466667
+Init -> 10.500000
+Current Angle -> 259.500000
+Init -> 10.466667
+Current Angle -> 259.533333
+Init -> 10.433333
+Current Angle -> 259.566667
+Init -> 10.400000
+Current Angle -> 259.600000
+Init -> 10.366667
+Current Angle -> 259.633333
+Init -> 10.333333
+Current Angle -> 259.666667
+Init -> 10.300000
+Current Angle -> 259.700000
+Init -> 10.266667
+Current Angle -> 259.733333
+Init -> 10.233333
+Current Angle -> 259.766667
+Init -> 10.200000
+Current Angle -> 259.800000
+Init -> 10.166667
+Current Angle -> 259.833333
+Init -> 10.133333
+Current Angle -> 259.866667
+Init -> 10.100000
+Current Angle -> 259.900000
+Init -> 10.066667
+Current Angle -> 259.933333
+Init -> 10.033333
+Current Angle -> 259.966667
+Init -> 10.000000
+Current Angle -> 260.000000
+Init -> 9.966667
+Current Angle -> 260.033333
+Init -> 9.933333
+Current Angle -> 260.066667
+Init -> 9.900000
+Current Angle -> 260.100000
+Init -> 9.866667
+Current Angle -> 260.133333
+Init -> 9.833333
+Current Angle -> 260.166667
+Init -> 9.800000
+Current Angle -> 260.200000
+Init -> 9.766667
+Current Angle -> 260.233333
+Init -> 9.733333
+Current Angle -> 260.266667
+Init -> 9.700000
+Current Angle -> 260.300000
+Init -> 9.666667
+Current Angle -> 260.333333
+Init -> 9.633333
+Current Angle -> 260.366667
+Init -> 9.600000
+Current Angle -> 260.400000
+Init -> 9.566667
+Current Angle -> 260.433333
+Init -> 9.533333
+Current Angle -> 260.466667
+Init -> 9.500000
+Current Angle -> 260.500000
+Init -> 9.466667
+Current Angle -> 260.533333
+Init -> 9.433333
+Current Angle -> 260.566667
+Init -> 9.400000
+Current Angle -> 260.600000
+Init -> 9.366667
+Current Angle -> 260.633333
+Init -> 9.333333
+Current Angle -> 260.666667
+Init -> 9.300000
+Current Angle -> 260.700000
+Init -> 9.266667
+Current Angle -> 260.733333
+Init -> 9.233333
+Current Angle -> 260.766667
+Init -> 9.200000
+Current Angle -> 260.800000
+Init -> 9.166667
+Current Angle -> 260.833333
+Init -> 9.133333
+Current Angle -> 260.866667
+Init -> 9.100000
+Current Angle -> 260.900000
+Init -> 9.066667
+Current Angle -> 260.933333
+Init -> 9.033333
+Current Angle -> 260.966667
+Init -> 9.000000
+Current Angle -> 261.000000
+Init -> 8.966667
+Current Angle -> 261.033333
+Init -> 8.933333
+Current Angle -> 261.066667
+Init -> 8.900000
+Current Angle -> 261.100000
+Init -> 8.866667
+Current Angle -> 261.133333
+Init -> 8.833333
+Current Angle -> 261.166667
+Init -> 8.800000
+Current Angle -> 261.200000
+Init -> 8.766667
+Current Angle -> 261.233333
+Init -> 8.733333
+Current Angle -> 261.266667
+Init -> 8.700000
+Current Angle -> 261.300000
+Init -> 8.666667
+Current Angle -> 261.333333
+Init -> 8.633333
+Current Angle -> 261.366667
+Init -> 8.600000
+Current Angle -> 261.400000
+Init -> 8.566667
+Current Angle -> 261.433333
+Init -> 8.533333
+Current Angle -> 261.466667
+Init -> 8.500000
+Current Angle -> 261.500000
+Init -> 8.466667
+Current Angle -> 261.533333
+Init -> 8.433333
+Current Angle -> 261.566667
+Init -> 8.400000
+Current Angle -> 261.600000
+Init -> 8.366667
+Current Angle -> 261.633333
+Init -> 8.333333
+Current Angle -> 261.666667
+Init -> 8.300000
+Current Angle -> 261.700000
+Init -> 8.266667
+Current Angle -> 261.733333
+Init -> 8.233333
+Current Angle -> 261.766667
+Init -> 8.200000
+Current Angle -> 261.800000
+Init -> 8.166667
+Current Angle -> 261.833333
+Init -> 8.133333
+Current Angle -> 261.866667
+Init -> 8.100000
+Current Angle -> 261.900000
+Init -> 8.066667
+Current Angle -> 261.933333
+Init -> 8.033333
+Current Angle -> 261.966667
+Init -> 8.000000
+Current Angle -> 262.000000
+Init -> 7.966667
+Current Angle -> 262.033333
+Init -> 7.933333
+Current Angle -> 262.066667
+Init -> 7.900000
+Current Angle -> 262.100000
+Init -> 7.866667
+Current Angle -> 262.133333
+Init -> 7.833333
+Current Angle -> 262.166667
+Init -> 7.800000
+Current Angle -> 262.200000
+Init -> 7.766667
+Current Angle -> 262.233333
+Init -> 7.733333
+Current Angle -> 262.266667
+Init -> 7.700000
+Current Angle -> 262.300000
+Init -> 7.666667
+Current Angle -> 262.333333
+Init -> 7.633333
+Current Angle -> 262.366667
+Init -> 7.600000
+Current Angle -> 262.400000
+Init -> 7.566667
+Current Angle -> 262.433333
+Init -> 7.533333
+Current Angle -> 262.466667
+Init -> 7.500000
+Current Angle -> 262.500000
+Init -> 7.466667
+Current Angle -> 262.533333
+Init -> 7.433333
+Current Angle -> 262.566667
+Init -> 7.400000
+Current Angle -> 262.600000
+Init -> 7.366667
+Current Angle -> 262.633333
+Init -> 7.333333
+Current Angle -> 262.666667
+Init -> 7.300000
+Current Angle -> 262.700000
+Init -> 7.266667
+Current Angle -> 262.733333
+Init -> 7.233333
+Current Angle -> 262.766667
+Init -> 7.200000
+Current Angle -> 262.800000
+Init -> 7.166667
+Current Angle -> 262.833333
+Init -> 7.133333
+Current Angle -> 262.866667
+Init -> 7.100000
+Current Angle -> 262.900000
+Init -> 7.066667
+Current Angle -> 262.933333
+Init -> 7.033333
+Current Angle -> 262.966667
+Init -> 7.000000
+Current Angle -> 263.000000
+Init -> 6.966667
+Current Angle -> 263.033333
+Init -> 6.933333
+Current Angle -> 263.066667
+Init -> 6.900000
+Current Angle -> 263.100000
+Init -> 6.866667
+Current Angle -> 263.133333
+Init -> 6.833333
+Current Angle -> 263.166667
+Init -> 6.800000
+Current Angle -> 263.200000
+Init -> 6.766667
+Current Angle -> 263.233333
+Init -> 6.733333
+Current Angle -> 263.266667
+Init -> 6.700000
+Current Angle -> 263.300000
+Init -> 6.666667
+Current Angle -> 263.333333
+Init -> 6.633333
+Current Angle -> 263.366667
+Init -> 6.600000
+Current Angle -> 263.400000
+Init -> 6.566667
+Current Angle -> 263.433333
+Init -> 6.533333
+Current Angle -> 263.466667
+Init -> 6.500000
+Current Angle -> 263.500000
+Init -> 6.466667
+Current Angle -> 263.533333
+Init -> 6.433333
+Current Angle -> 263.566667
+Init -> 6.400000
+Current Angle -> 263.600000
+Init -> 6.366667
+Current Angle -> 263.633333
+Init -> 6.333333
+Current Angle -> 263.666667
+Init -> 6.300000
+Current Angle -> 263.700000
+Init -> 6.266667
+Current Angle -> 263.733333
+Init -> 6.233333
+Current Angle -> 263.766667
+Init -> 6.200000
+Current Angle -> 263.800000
+Init -> 6.166667
+Current Angle -> 263.833333
+Init -> 6.133333
+Current Angle -> 263.866667
+Init -> 6.100000
+Current Angle -> 263.900000
+Init -> 6.066667
+Current Angle -> 263.933333
+Init -> 6.033333
+Current Angle -> 263.966667
+Init -> 6.000000
+Current Angle -> 264.000000
+Init -> 5.966667
+Current Angle -> 264.033333
+Init -> 5.933333
+Current Angle -> 264.066667
+Init -> 5.900000
+Current Angle -> 264.100000
+Init -> 5.866667
+Current Angle -> 264.133333
+Init -> 5.833333
+Current Angle -> 264.166667
+Init -> 5.800000
+Current Angle -> 264.200000
+Init -> 5.766667
+Current Angle -> 264.233333
+Init -> 5.733333
+Current Angle -> 264.266667
+Init -> 5.700000
+Current Angle -> 264.300000
+Init -> 5.666667
+Current Angle -> 264.333333
+Init -> 5.633333
+Current Angle -> 264.366667
+Init -> 5.600000
+Current Angle -> 264.400000
+Init -> 5.566667
+Current Angle -> 264.433333
+Init -> 5.533333
+Current Angle -> 264.466667
+Init -> 5.500000
+Current Angle -> 264.500000
+Init -> 5.466667
+Current Angle -> 264.533333
+Init -> 5.433333
+Current Angle -> 264.566667
+Init -> 5.400000
+Current Angle -> 264.600000
+Init -> 5.366667
+Current Angle -> 264.633333
+Init -> 5.333333
+Current Angle -> 264.666667
+Init -> 5.300000
+Current Angle -> 264.700000
+Init -> 5.266667
+Current Angle -> 264.733333
+Init -> 5.233333
+Current Angle -> 264.766667
+Init -> 5.200000
+Current Angle -> 264.800000
+Init -> 5.166667
+Current Angle -> 264.833333
+Init -> 5.133333
+Current Angle -> 264.866667
+Init -> 5.100000
+Current Angle -> 264.900000
+Init -> 5.066667
+Current Angle -> 264.933333
+Init -> 5.033333
+Current Angle -> 264.966667
+Init -> 5.000000
+Current Angle -> 265.000000
+Init -> 4.966667
+Current Angle -> 265.033333
+Init -> 4.933333
+Current Angle -> 265.066667
+Init -> 4.900000
+Current Angle -> 265.100000
+Init -> 4.866667
+Current Angle -> 265.133333
+Init -> 4.833333
+Current Angle -> 265.166667
+Init -> 4.800000
+Current Angle -> 265.200000
+Init -> 4.766667
+Current Angle -> 265.233333
+Init -> 4.733333
+Current Angle -> 265.266667
+Init -> 4.700000
+Current Angle -> 265.300000
+Init -> 4.666667
+Current Angle -> 265.333333
+Init -> 4.633333
+Current Angle -> 265.366667
+Init -> 4.600000
+Current Angle -> 265.400000
+Init -> 4.566667
+Current Angle -> 265.433333
+Init -> 4.533333
+Current Angle -> 265.466667
+Init -> 4.500000
+Current Angle -> 265.500000
+Init -> 4.466667
+Current Angle -> 265.533333
+Init -> 4.433333
+Current Angle -> 265.566667
+Init -> 4.400000
+Current Angle -> 265.600000
+Init -> 4.366667
+Current Angle -> 265.633333
+Init -> 4.333333
+Current Angle -> 265.666667
+Init -> 4.300000
+Current Angle -> 265.700000
+Init -> 4.266667
+Current Angle -> 265.733333
+Init -> 4.233333
+Current Angle -> 265.766667
+Init -> 4.200000
+Current Angle -> 265.800000
+Init -> 4.166667
+Current Angle -> 265.833333
+Init -> 4.133333
+Current Angle -> 265.866667
+Init -> 4.100000
+Current Angle -> 265.900000
+Init -> 4.066667
+Current Angle -> 265.933333
+Init -> 4.033333
+Current Angle -> 265.966667
+Init -> 4.000000
+Current Angle -> 266.000000
+Init -> 3.966667
+Current Angle -> 266.033333
+Init -> 3.933333
+Current Angle -> 266.066667
+Init -> 3.900000
+Current Angle -> 266.100000
+Init -> 3.866667
+Current Angle -> 266.133333
+Init -> 3.833333
+Current Angle -> 266.166667
+Init -> 3.800000
+Current Angle -> 266.200000
+Init -> 3.766667
+Current Angle -> 266.233333
+Init -> 3.733333
+Current Angle -> 266.266667
+Init -> 3.700000
+Current Angle -> 266.300000
+Init -> 3.666667
+Current Angle -> 266.333333
+Init -> 3.633333
+Current Angle -> 266.366667
+Init -> 3.600000
+Current Angle -> 266.400000
+Init -> 3.566667
+Current Angle -> 266.433333
+Init -> 3.533333
+Current Angle -> 266.466667
+Init -> 3.500000
+Current Angle -> 266.500000
+Init -> 3.466667
+Current Angle -> 266.533333
+Init -> 3.433333
+Current Angle -> 266.566667
+Init -> 3.400000
+Current Angle -> 266.600000
+Init -> 3.366667
+Current Angle -> 266.633333
+Init -> 3.333333
+Current Angle -> 266.666667
+Init -> 3.300000
+Current Angle -> 266.700000
+Init -> 3.266667
+Current Angle -> 266.733333
+Init -> 3.233333
+Current Angle -> 266.766667
+Init -> 3.200000
+Current Angle -> 266.800000
+Init -> 3.166667
+Current Angle -> 266.833333
+Init -> 3.133333
+Current Angle -> 266.866667
+Init -> 3.100000
+Current Angle -> 266.900000
+Init -> 3.066667
+Current Angle -> 266.933333
+Init -> 3.033333
+Current Angle -> 266.966667
+Init -> 3.000000
+Current Angle -> 267.000000
+Init -> 2.966667
+Current Angle -> 267.033333
+Init -> 2.933333
+Current Angle -> 267.066667
+Init -> 2.900000
+Current Angle -> 267.100000
+Init -> 2.866667
+Current Angle -> 267.133333
+Init -> 2.833333
+Current Angle -> 267.166667
+Init -> 2.800000
+Current Angle -> 267.200000
+Init -> 2.766667
+Current Angle -> 267.233333
+Init -> 2.733333
+Current Angle -> 267.266667
+Init -> 2.700000
+Current Angle -> 267.300000
+Init -> 2.666667
+Current Angle -> 267.333333
+Init -> 2.633333
+Current Angle -> 267.366667
+Init -> 2.600000
+Current Angle -> 267.400000
+Init -> 2.566667
+Current Angle -> 267.433333
+Init -> 2.533333
+Current Angle -> 267.466667
+Init -> 2.500000
+Current Angle -> 267.500000
+Init -> 2.466667
+Current Angle -> 267.533333
+Init -> 2.433333
+Current Angle -> 267.566667
+Init -> 2.400000
+Current Angle -> 267.600000
+Init -> 2.366667
+Current Angle -> 267.633333
+Init -> 2.333333
+Current Angle -> 267.666667
+Init -> 2.300000
+Current Angle -> 267.700000
+Init -> 2.266667
+Current Angle -> 267.733333
+Init -> 2.233333
+Current Angle -> 267.766667
+Init -> 2.200000
+Current Angle -> 267.800000
+Init -> 2.166667
+Current Angle -> 267.833333
+Init -> 2.133333
+Current Angle -> 267.866667
+Init -> 2.100000
+Current Angle -> 267.900000
+Init -> 2.066667
+Current Angle -> 267.933333
+Init -> 2.033333
+Current Angle -> 267.966667
+Init -> 2.000000
+Current Angle -> 268.000000
+Init -> 1.966667
+Current Angle -> 268.033333
+Init -> 1.933333
+Current Angle -> 268.066667
+Init -> 1.900000
+Current Angle -> 268.100000
+Init -> 1.866667
+Current Angle -> 268.133333
+Init -> 1.833333
+Current Angle -> 268.166667
+Init -> 1.800000
+Current Angle -> 268.200000
+Init -> 1.766667
+Current Angle -> 268.233333
+Init -> 1.733333
+Current Angle -> 268.266667
+Init -> 1.700000
+Current Angle -> 268.300000
+Init -> 1.666667
+Current Angle -> 268.333333
+Init -> 1.633333
+Current Angle -> 268.366667
+Init -> 1.600000
+Current Angle -> 268.400000
+Init -> 1.566667
+Current Angle -> 268.433333
+Init -> 1.533333
+Current Angle -> 268.466667
+Init -> 1.500000
+Current Angle -> 268.500000
+Init -> 1.466667
+Current Angle -> 268.533333
+Init -> 1.433333
+Current Angle -> 268.566667
+Init -> 1.400000
+Current Angle -> 268.600000
+Init -> 1.366667
+Current Angle -> 268.633333
+Init -> 1.333333
+Current Angle -> 268.666667
+Init -> 1.300000
+Current Angle -> 268.700000
+Init -> 1.266667
+Current Angle -> 268.733333
+Init -> 1.233333
+Current Angle -> 268.766667
+Init -> 1.200000
+Current Angle -> 268.800000
+Init -> 1.166667
+Current Angle -> 268.833333
+Init -> 1.133333
+Current Angle -> 268.866667
+Init -> 1.100000
+Current Angle -> 268.900000
+Init -> 1.066667
+Current Angle -> 268.933333
+Init -> 1.033333
+Current Angle -> 268.966667
+Init -> 1.000000
+Current Angle -> 269.000000
+Init -> 0.966667
+Current Angle -> 269.033333
+Init -> 0.933333
+Current Angle -> 269.066667
+Init -> 0.900000
+Current Angle -> 269.100000
+Init -> 0.866667
+Current Angle -> 269.133333
+Init -> 0.833333
+Current Angle -> 269.166667
+Init -> 0.800000
+Current Angle -> 269.200000
+Init -> 0.766667
+Current Angle -> 269.233333
+Init -> 0.733333
+Current Angle -> 269.266667
+Init -> 0.700000
+Current Angle -> 269.300000
+Init -> 0.666667
+Current Angle -> 269.333333
+Init -> 0.633333
+Current Angle -> 269.366667
+Init -> 0.600000
+Current Angle -> 269.400000
+Init -> 0.566667
+Current Angle -> 269.433333
+Init -> 0.533333
+Current Angle -> 269.466667
+Init -> 0.500000
+Current Angle -> 269.500000
+Init -> 0.466667
+Current Angle -> 269.533333
+Init -> 0.433333
+Current Angle -> 269.566667
+Init -> 0.400000
+Current Angle -> 269.600000
+Init -> 0.366667
+Current Angle -> 269.633333
+Init -> 0.333333
+Current Angle -> 269.666667
+Init -> 0.300000
+Current Angle -> 269.700000
+Init -> 0.266667
+Current Angle -> 269.733333
+Init -> 0.233333
+Current Angle -> 269.766667
+Init -> 0.200000
+Current Angle -> 269.800000
+Init -> 0.166667
+Current Angle -> 269.833333
+Init -> 0.133333
+Current Angle -> 269.866667
+Init -> 0.100000
+Current Angle -> 269.900000
+Init -> 0.066667
+Current Angle -> 269.933333
+Init -> 0.033333
+Current Angle -> 269.966667
+Init -> -0.000000
+Current Angle -> 270.000000
+Init -> -0.033333
+Current Angle -> 270.033333
+Init -> -0.066667
+Current Angle -> 270.066667
+Init -> -0.100000
+Current Angle -> 270.100000
+Init -> -0.133333
+Current Angle -> 270.133333
+Init -> -0.166667
+Current Angle -> 270.166667
+Init -> -0.200000
+Current Angle -> 270.200000
+Init -> -0.233333
+Current Angle -> 270.233333
+Init -> -0.266667
+Current Angle -> 270.266667
+Init -> -0.300000
+Current Angle -> 270.300000
+Init -> -0.333333
+Current Angle -> 270.333333
+Init -> -0.366667
+Current Angle -> 270.366667
+Init -> -0.400000
+Current Angle -> 270.400000
+Init -> -0.433333
+Current Angle -> 270.433333
+Init -> -0.466667
+Current Angle -> 270.466667
+Init -> -0.500000
+Current Angle -> 270.500000
+Init -> -0.533333
+Current Angle -> 270.533333
+Init -> -0.566667
+Current Angle -> 270.566667
+Init -> -0.600000
+Current Angle -> 270.600000
+Init -> -0.633333
+Current Angle -> 270.633333
+Init -> -0.666667
+Current Angle -> 270.666667
+Init -> -0.700000
+Current Angle -> 270.700000
+Init -> -0.733333
+Current Angle -> 270.733333
+Init -> -0.766667
+Current Angle -> 270.766667
+Init -> -0.800000
+Current Angle -> 270.800000
+Init -> -0.833333
+Current Angle -> 270.833333
+Init -> -0.866667
+Current Angle -> 270.866667
+Init -> -0.900000
+Current Angle -> 270.900000
+Init -> -0.933333
+Current Angle -> 270.933333
+Init -> -0.966667
+Current Angle -> 270.966667
+Init -> -1.000000
+Current Angle -> 271.000000
+Init -> -1.033333
+Current Angle -> 271.033333
+Init -> -1.066667
+Current Angle -> 271.066667
+Init -> -1.100000
+Current Angle -> 271.100000
+Init -> -1.133333
+Current Angle -> 271.133333
+Init -> -1.166667
+Current Angle -> 271.166667
+Init -> -1.200000
+Current Angle -> 271.200000
+Init -> -1.233333
+Current Angle -> 271.233333
+Init -> -1.266667
+Current Angle -> 271.266667
+Init -> -1.300000
+Current Angle -> 271.300000
+Init -> -1.333333
+Current Angle -> 271.333333
+Init -> -1.366667
+Current Angle -> 271.366667
+Init -> -1.400000
+Current Angle -> 271.400000
+Init -> -1.433333
+Current Angle -> 271.433333
+Init -> -1.466667
+Current Angle -> 271.466667
+Init -> -1.500000
+Current Angle -> 271.500000
+Init -> -1.533333
+Current Angle -> 271.533333
+Init -> -1.566667
+Current Angle -> 271.566667
+Init -> -1.600000
+Current Angle -> 271.600000
+Init -> -1.633333
+Current Angle -> 271.633333
+Init -> -1.666667
+Current Angle -> 271.666667
+Init -> -1.700000
+Current Angle -> 271.700000
+Init -> -1.733333
+Current Angle -> 271.733333
+Init -> -1.766667
+Current Angle -> 271.766667
+Init -> -1.800000
+Current Angle -> 271.800000
+Init -> -1.833333
+Current Angle -> 271.833333
+Init -> -1.866667
+Current Angle -> 271.866667
+Init -> -1.900000
+Current Angle -> 271.900000
+Init -> -1.933333
+Current Angle -> 271.933333
+Init -> -1.966667
+Current Angle -> 271.966667
+Init -> -2.000000
+Current Angle -> 272.000000
+Init -> -2.033333
+Current Angle -> 272.033333
+Init -> -2.066667
+Current Angle -> 272.066667
+Init -> -2.100000
+Current Angle -> 272.100000
+Init -> -2.133333
+Current Angle -> 272.133333
+Init -> -2.166667
+Current Angle -> 272.166667
+Init -> -2.200000
+Current Angle -> 272.200000
+Init -> -2.233333
+Current Angle -> 272.233333
+Init -> -2.266667
+Current Angle -> 272.266667
+Init -> -2.300000
+Current Angle -> 272.300000
+Init -> -2.333333
+Current Angle -> 272.333333
+Init -> -2.366667
+Current Angle -> 272.366667
+Init -> -2.400000
+Current Angle -> 272.400000
+Init -> -2.433333
+Current Angle -> 272.433333
+Init -> -2.466667
+Current Angle -> 272.466667
+Init -> -2.500000
+Current Angle -> 272.500000
+Init -> -2.533333
+Current Angle -> 272.533333
+Init -> -2.566667
+Current Angle -> 272.566667
+Init -> -2.600000
+Current Angle -> 272.600000
+Init -> -2.633333
+Current Angle -> 272.633333
+Init -> -2.666667
+Current Angle -> 272.666667
+Init -> -2.700000
+Current Angle -> 272.700000
+Init -> -2.733333
+Current Angle -> 272.733333
+Init -> -2.766667
+Current Angle -> 272.766667
+Init -> -2.800000
+Current Angle -> 272.800000
+Init -> -2.833333
+Current Angle -> 272.833333
+Init -> -2.866667
+Current Angle -> 272.866667
+Init -> -2.900000
+Current Angle -> 272.900000
+Init -> -2.933333
+Current Angle -> 272.933333
+Init -> -2.966667
+Current Angle -> 272.966667
+Init -> -3.000000
+Current Angle -> 273.000000
+Init -> -3.033333
+Current Angle -> 273.033333
+Init -> -3.066667
+Current Angle -> 273.066667
+Init -> -3.100000
+Current Angle -> 273.100000
+Init -> -3.133333
+Current Angle -> 273.133333
+Init -> -3.166667
+Current Angle -> 273.166667
+Init -> -3.200000
+Current Angle -> 273.200000
+Init -> -3.233333
+Current Angle -> 273.233333
+Init -> -3.266667
+Current Angle -> 273.266667
+Init -> -3.300000
+Current Angle -> 273.300000
+Init -> -3.333333
+Current Angle -> 273.333333
+Init -> -3.366667
+Current Angle -> 273.366667
+Init -> -3.400000
+Current Angle -> 273.400000
+Init -> -3.433333
+Current Angle -> 273.433333
+Init -> -3.466667
+Current Angle -> 273.466667
+Init -> -3.500000
+Current Angle -> 273.500000
+Init -> -3.533333
+Current Angle -> 273.533333
+Init -> -3.566667
+Current Angle -> 273.566667
+Init -> -3.600000
+Current Angle -> 273.600000
+Init -> -3.633333
+Current Angle -> 273.633333
+Init -> -3.666667
+Current Angle -> 273.666667
+Init -> -3.700000
+Current Angle -> 273.700000
+Init -> -3.733333
+Current Angle -> 273.733333
+Init -> -3.766667
+Current Angle -> 273.766667
+Init -> -3.800000
+Current Angle -> 273.800000
+Init -> -3.833333
+Current Angle -> 273.833333
+Init -> -3.866667
+Current Angle -> 273.866667
+Init -> -3.900000
+Current Angle -> 273.900000
+Init -> -3.933333
+Current Angle -> 273.933333
+Init -> -3.966667
+Current Angle -> 273.966667
+Init -> -4.000000
+Current Angle -> 274.000000
+Init -> -4.033333
+Current Angle -> 274.033333
+Init -> -4.066667
+Current Angle -> 274.066667
+Init -> -4.100000
+Current Angle -> 274.100000
+Init -> -4.133333
+Current Angle -> 274.133333
+Init -> -4.166667
+Current Angle -> 274.166667
+Init -> -4.200000
+Current Angle -> 274.200000
+Init -> -4.233333
+Current Angle -> 274.233333
+Init -> -4.266667
+Current Angle -> 274.266667
+Init -> -4.300000
+Current Angle -> 274.300000
+Init -> -4.333333
+Current Angle -> 274.333333
+Init -> -4.366667
+Current Angle -> 274.366667
+Init -> -4.400000
+Current Angle -> 274.400000
+Init -> -4.433333
+Current Angle -> 274.433333
+Init -> -4.466667
+Current Angle -> 274.466667
+Init -> -4.500000
+Current Angle -> 274.500000
+Init -> -4.533333
+Current Angle -> 274.533333
+Init -> -4.566667
+Current Angle -> 274.566667
+Init -> -4.600000
+Current Angle -> 274.600000
+Init -> -4.633333
+Current Angle -> 274.633333
+Init -> -4.666667
+Current Angle -> 274.666667
+Init -> -4.700000
+Current Angle -> 274.700000
+Init -> -4.733333
+Current Angle -> 274.733333
+Init -> -4.766667
+Current Angle -> 274.766667
+Init -> -4.800000
+Current Angle -> 274.800000
+Init -> -4.833333
+Current Angle -> 274.833333
+Init -> -4.866667
+Current Angle -> 274.866667
+Init -> -4.900000
+Current Angle -> 274.900000
+Init -> -4.933333
+Current Angle -> 274.933333
+Init -> -4.966667
+Current Angle -> 274.966667
+Init -> -5.000000
+Current Angle -> 275.000000
+Init -> -5.033333
+Current Angle -> 275.033333
+Init -> -5.066667
+Current Angle -> 275.066667
+Init -> -5.100000
+Current Angle -> 275.100000
+Init -> -5.133333
+Current Angle -> 275.133333
+Init -> -5.166667
+Current Angle -> 275.166667
+Init -> -5.200000
+Current Angle -> 275.200000
+Init -> -5.233333
+Current Angle -> 275.233333
+Init -> -5.266667
+Current Angle -> 275.266667
+Init -> -5.300000
+Current Angle -> 275.300000
+Init -> -5.333333
+Current Angle -> 275.333333
+Init -> -5.366667
+Current Angle -> 275.366667
+Init -> -5.400000
+Current Angle -> 275.400000
+Init -> -5.433333
+Current Angle -> 275.433333
+Init -> -5.466667
+Current Angle -> 275.466667
+Init -> -5.500000
+Current Angle -> 275.500000
+Init -> -5.533333
+Current Angle -> 275.533333
+Init -> -5.566667
+Current Angle -> 275.566667
+Init -> -5.600000
+Current Angle -> 275.600000
+Init -> -5.633333
+Current Angle -> 275.633333
+Init -> -5.666667
+Current Angle -> 275.666667
+Init -> -5.700000
+Current Angle -> 275.700000
+Init -> -5.733333
+Current Angle -> 275.733333
+Init -> -5.766667
+Current Angle -> 275.766667
+Init -> -5.800000
+Current Angle -> 275.800000
+Init -> -5.833333
+Current Angle -> 275.833333
+Init -> -5.866667
+Current Angle -> 275.866667
+Init -> -5.900000
+Current Angle -> 275.900000
+Init -> -5.933333
+Current Angle -> 275.933333
+Init -> -5.966667
+Current Angle -> 275.966667
+Init -> -6.000000
+Current Angle -> 276.000000
+Init -> -6.033333
+Current Angle -> 276.033333
+Init -> -6.066667
+Current Angle -> 276.066667
+Init -> -6.100000
+Current Angle -> 276.100000
+Init -> -6.133333
+Current Angle -> 276.133333
+Init -> -6.166667
+Current Angle -> 276.166667
+Init -> -6.200000
+Current Angle -> 276.200000
+Init -> -6.233333
+Current Angle -> 276.233333
+Init -> -6.266667
+Current Angle -> 276.266667
+Init -> -6.300000
+Current Angle -> 276.300000
+Init -> -6.333333
+Current Angle -> 276.333333
+Init -> -6.366667
+Current Angle -> 276.366667
+Init -> -6.400000
+Current Angle -> 276.400000
+Init -> -6.433333
+Current Angle -> 276.433333
+Init -> -6.466667
+Current Angle -> 276.466667
+Init -> -6.500000
+Current Angle -> 276.500000
+Init -> -6.533333
+Current Angle -> 276.533333
+Init -> -6.566667
+Current Angle -> 276.566667
+Init -> -6.600000
+Current Angle -> 276.600000
+Init -> -6.633333
+Current Angle -> 276.633333
+Init -> -6.666667
+Current Angle -> 276.666667
+Init -> -6.700000
+Current Angle -> 276.700000
+Init -> -6.733333
+Current Angle -> 276.733333
+Init -> -6.766667
+Current Angle -> 276.766667
+Init -> -6.800000
+Current Angle -> 276.800000
+Init -> -6.833333
+Current Angle -> 276.833333
+Init -> -6.866667
+Current Angle -> 276.866667
+Init -> -6.900000
+Current Angle -> 276.900000
+Init -> -6.933333
+Current Angle -> 276.933333
+Init -> -6.966667
+Current Angle -> 276.966667
+Init -> -7.000000
+Current Angle -> 277.000000
+Init -> -7.033333
+Current Angle -> 277.033333
+Init -> -7.066667
+Current Angle -> 277.066667
+Init -> -7.100000
+Current Angle -> 277.100000
+Init -> -7.133333
+Current Angle -> 277.133333
+Init -> -7.166667
+Current Angle -> 277.166667
+Init -> -7.200000
+Current Angle -> 277.200000
+Init -> -7.233333
+Current Angle -> 277.233333
+Init -> -7.266667
+Current Angle -> 277.266667
+Init -> -7.300000
+Current Angle -> 277.300000
+Init -> -7.333333
+Current Angle -> 277.333333
+Init -> -7.366667
+Current Angle -> 277.366667
+Init -> -7.400000
+Current Angle -> 277.400000
+Init -> -7.433333
+Current Angle -> 277.433333
+Init -> -7.466667
+Current Angle -> 277.466667
+Init -> -7.500000
+Current Angle -> 277.500000
+Init -> -7.533333
+Current Angle -> 277.533333
+Init -> -7.566667
+Current Angle -> 277.566667
+Init -> -7.600000
+Current Angle -> 277.600000
+Init -> -7.633333
+Current Angle -> 277.633333
+Init -> -7.666667
+Current Angle -> 277.666667
+Init -> -7.700000
+Current Angle -> 277.700000
+Init -> -7.733333
+Current Angle -> 277.733333
+Init -> -7.766667
+Current Angle -> 277.766667
+Init -> -7.800000
+Current Angle -> 277.800000
+Init -> -7.833333
+Current Angle -> 277.833333
+Init -> -7.866667
+Current Angle -> 277.866667
+Init -> -7.900000
+Current Angle -> 277.900000
+Init -> -7.933333
+Current Angle -> 277.933333
+Init -> -7.966667
+Current Angle -> 277.966667
+Init -> -8.000000
+Current Angle -> 278.000000
+Init -> -8.033333
+Current Angle -> 278.033333
+Init -> -8.066667
+Current Angle -> 278.066667
+Init -> -8.100000
+Current Angle -> 278.100000
+Init -> -8.133333
+Current Angle -> 278.133333
+Init -> -8.166667
+Current Angle -> 278.166667
+Init -> -8.200000
+Current Angle -> 278.200000
+Init -> -8.233333
+Current Angle -> 278.233333
+Init -> -8.266667
+Current Angle -> 278.266667
+Init -> -8.300000
+Current Angle -> 278.300000
+Init -> -8.333333
+Current Angle -> 278.333333
+Init -> -8.366667
+Current Angle -> 278.366667
+Init -> -8.400000
+Current Angle -> 278.400000
+Init -> -8.433333
+Current Angle -> 278.433333
+Init -> -8.466667
+Current Angle -> 278.466667
+Init -> -8.500000
+Current Angle -> 278.500000
+Init -> -8.533333
+Current Angle -> 278.533333
+Init -> -8.566667
+Current Angle -> 278.566667
+Init -> -8.600000
+Current Angle -> 278.600000
+Init -> -8.633333
+Current Angle -> 278.633333
+Init -> -8.666667
+Current Angle -> 278.666667
+Init -> -8.700000
+Current Angle -> 278.700000
+Init -> -8.733333
+Current Angle -> 278.733333
+Init -> -8.766667
+Current Angle -> 278.766667
+Init -> -8.800000
+Current Angle -> 278.800000
+Init -> -8.833333
+Current Angle -> 278.833333
+Init -> -8.866667
+Current Angle -> 278.866667
+Init -> -8.900000
+Current Angle -> 278.900000
+Init -> -8.933333
+Current Angle -> 278.933333
+Init -> -8.966667
+Current Angle -> 278.966667
+Init -> -9.000000
+Current Angle -> 279.000000
+Init -> -9.033333
+Current Angle -> 279.033333
+Init -> -9.066667
+Current Angle -> 279.066667
+Init -> -9.100000
+Current Angle -> 279.100000
+Init -> -9.133333
+Current Angle -> 279.133333
+Init -> -9.166667
+Current Angle -> 279.166667
+Init -> -9.200000
+Current Angle -> 279.200000
+Init -> -9.233333
+Current Angle -> 279.233333
+Init -> -9.266667
+Current Angle -> 279.266667
+Init -> -9.300000
+Current Angle -> 279.300000
+Init -> -9.333333
+Current Angle -> 279.333333
+Init -> -9.366667
+Current Angle -> 279.366667
+Init -> -9.400000
+Current Angle -> 279.400000
+Init -> -9.433333
+Current Angle -> 279.433333
+Init -> -9.466667
+Current Angle -> 279.466667
+Init -> -9.500000
+Current Angle -> 279.500000
+Init -> -9.533333
+Current Angle -> 279.533333
+Init -> -9.566667
+Current Angle -> 279.566667
+Init -> -9.600000
+Current Angle -> 279.600000
+Init -> -9.633333
+Current Angle -> 279.633333
+Init -> -9.666667
+Current Angle -> 279.666667
+Init -> -9.700000
+Current Angle -> 279.700000
+Init -> -9.733333
+Current Angle -> 279.733333
+Init -> -9.766667
+Current Angle -> 279.766667
+Init -> -9.800000
+Current Angle -> 279.800000
+Init -> -9.833333
+Current Angle -> 279.833333
+Init -> -9.866667
+Current Angle -> 279.866667
+Init -> -9.900000
+Current Angle -> 279.900000
+Init -> -9.933333
+Current Angle -> 279.933333
+Init -> -9.966667
+Current Angle -> 279.966667
+Init -> -10.000000
+Current Angle -> 280.000000
+Init -> -10.033333
+Current Angle -> 280.033333
+Init -> -10.066667
+Current Angle -> 280.066667
+Init -> -10.100000
+Current Angle -> 280.100000
+Init -> -10.133333
+Current Angle -> 280.133333
+Init -> -10.166667
+Current Angle -> 280.166667
+Init -> -10.200000
+Current Angle -> 280.200000
+Init -> -10.233333
+Current Angle -> 280.233333
+Init -> -10.266667
+Current Angle -> 280.266667
+Init -> -10.300000
+Current Angle -> 280.300000
+Init -> -10.333333
+Current Angle -> 280.333333
+Init -> -10.366667
+Current Angle -> 280.366667
+Init -> -10.400000
+Current Angle -> 280.400000
+Init -> -10.433333
+Current Angle -> 280.433333
+Init -> -10.466667
+Current Angle -> 280.466667
+Init -> -10.500000
+Current Angle -> 280.500000
+Init -> -10.533333
+Current Angle -> 280.533333
+Init -> -10.566667
+Current Angle -> 280.566667
+Init -> -10.600000
+Current Angle -> 280.600000
+Init -> -10.633333
+Current Angle -> 280.633333
+Init -> -10.666667
+Current Angle -> 280.666667
+Init -> -10.700000
+Current Angle -> 280.700000
+Init -> -10.733333
+Current Angle -> 280.733333
+Init -> -10.766667
+Current Angle -> 280.766667
+Init -> -10.800000
+Current Angle -> 280.800000
+Init -> -10.833333
+Current Angle -> 280.833333
+Init -> -10.866667
+Current Angle -> 280.866667
+Init -> -10.900000
+Current Angle -> 280.900000
+Init -> -10.933333
+Current Angle -> 280.933333
+Init -> -10.966667
+Current Angle -> 280.966667
+Init -> -11.000000
+Current Angle -> 281.000000
+Init -> -11.033333
+Current Angle -> 281.033333
+Init -> -11.066667
+Current Angle -> 281.066667
+Init -> -11.100000
+Current Angle -> 281.100000
+Init -> -11.133333
+Current Angle -> 281.133333
+Init -> -11.166667
+Current Angle -> 281.166667
+Init -> -11.200000
+Current Angle -> 281.200000
+Init -> -11.233333
+Current Angle -> 281.233333
+Init -> -11.266667
+Current Angle -> 281.266667
+Init -> -11.300000
+Current Angle -> 281.300000
+Init -> -11.333333
+Current Angle -> 281.333333
+Init -> -11.366667
+Current Angle -> 281.366667
+Init -> -11.400000
+Current Angle -> 281.400000
+Init -> -11.433333
+Current Angle -> 281.433333
+Init -> -11.466667
+Current Angle -> 281.466667
+Init -> -11.500000
+Current Angle -> 281.500000
+Init -> -11.533333
+Current Angle -> 281.533333
+Init -> -11.566667
+Current Angle -> 281.566667
+Init -> -11.600000
+Current Angle -> 281.600000
+Init -> -11.633333
+Current Angle -> 281.633333
+Init -> -11.666667
+Current Angle -> 281.666667
+Init -> -11.700000
+Current Angle -> 281.700000
+Init -> -11.733333
+Current Angle -> 281.733333
+Init -> -11.766667
+Current Angle -> 281.766667
+Init -> -11.800000
+Current Angle -> 281.800000
+Init -> -11.833333
+Current Angle -> 281.833333
+Init -> -11.866667
+Current Angle -> 281.866667
+Init -> -11.900000
+Current Angle -> 281.900000
+Init -> -11.933333
+Current Angle -> 281.933333
+Init -> -11.966667
+Current Angle -> 281.966667
+Init -> -12.000000
+Current Angle -> 282.000000
+Init -> -12.033333
+Current Angle -> 282.033333
+Init -> -12.066667
+Current Angle -> 282.066667
+Init -> -12.100000
+Current Angle -> 282.100000
+Init -> -12.133333
+Current Angle -> 282.133333
+Init -> -12.166667
+Current Angle -> 282.166667
+Init -> -12.200000
+Current Angle -> 282.200000
+Init -> -12.233333
+Current Angle -> 282.233333
+Init -> -12.266667
+Current Angle -> 282.266667
+Init -> -12.300000
+Current Angle -> 282.300000
+Init -> -12.333333
+Current Angle -> 282.333333
+Init -> -12.366667
+Current Angle -> 282.366667
+Init -> -12.400000
+Current Angle -> 282.400000
+Init -> -12.433333
+Current Angle -> 282.433333
+Init -> -12.466667
+Current Angle -> 282.466667
+Init -> -12.500000
+Current Angle -> 282.500000
+Init -> -12.533333
+Current Angle -> 282.533333
+Init -> -12.566667
+Current Angle -> 282.566667
+Init -> -12.600000
+Current Angle -> 282.600000
+Init -> -12.633333
+Current Angle -> 282.633333
+Init -> -12.666667
+Current Angle -> 282.666667
+Init -> -12.700000
+Current Angle -> 282.700000
+Init -> -12.733333
+Current Angle -> 282.733333
+Init -> -12.766667
+Current Angle -> 282.766667
+Init -> -12.800000
+Current Angle -> 282.800000
+Init -> -12.833333
+Current Angle -> 282.833333
+Init -> -12.866667
+Current Angle -> 282.866667
+Init -> -12.900000
+Current Angle -> 282.900000
+Init -> -12.933333
+Current Angle -> 282.933333
+Init -> -12.966667
+Current Angle -> 282.966667
+Init -> -13.000000
+Current Angle -> 283.000000
+Init -> -13.033333
+Current Angle -> 283.033333
+Init -> -13.066667
+Current Angle -> 283.066667
+Init -> -13.100000
+Current Angle -> 283.100000
+Init -> -13.133333
+Current Angle -> 283.133333
+Init -> -13.166667
+Current Angle -> 283.166667
+Init -> -13.200000
+Current Angle -> 283.200000
+Init -> -13.233333
+Current Angle -> 283.233333
+Init -> -13.266667
+Current Angle -> 283.266667
+Init -> -13.300000
+Current Angle -> 283.300000
+Init -> -13.333333
+Current Angle -> 283.333333
+Init -> -13.366667
+Current Angle -> 283.366667
+Init -> -13.400000
+Current Angle -> 283.400000
+Init -> -13.433333
+Current Angle -> 283.433333
+Init -> -13.466667
+Current Angle -> 283.466667
+Init -> -13.500000
+Current Angle -> 283.500000
+Init -> -13.533333
+Current Angle -> 283.533333
+Init -> -13.566667
+Current Angle -> 283.566667
+Init -> -13.600000
+Current Angle -> 283.600000
+Init -> -13.633333
+Current Angle -> 283.633333
+Init -> -13.666667
+Current Angle -> 283.666667
+Init -> -13.700000
+Current Angle -> 283.700000
+Init -> -13.733333
+Current Angle -> 283.733333
+Init -> -13.766667
+Current Angle -> 283.766667
+Init -> -13.800000
+Current Angle -> 283.800000
+Init -> -13.833333
+Current Angle -> 283.833333
+Init -> -13.866667
+Current Angle -> 283.866667
+Init -> -13.900000
+Current Angle -> 283.900000
+Init -> -13.933333
+Current Angle -> 283.933333
+Init -> -13.966667
+Current Angle -> 283.966667
+Init -> -14.000000
+Current Angle -> 284.000000
+Init -> -14.033333
+Current Angle -> 284.033333
+Init -> -14.066667
+Current Angle -> 284.066667
+Init -> -14.100000
+Current Angle -> 284.100000
+Init -> -14.133333
+Current Angle -> 284.133333
+Init -> -14.166667
+Current Angle -> 284.166667
+Init -> -14.200000
+Current Angle -> 284.200000
+Init -> -14.233333
+Current Angle -> 284.233333
+Init -> -14.266667
+Current Angle -> 284.266667
+Init -> -14.300000
+Current Angle -> 284.300000
+Init -> -14.333333
+Current Angle -> 284.333333
+Init -> -14.366667
+Current Angle -> 284.366667
+Init -> -14.400000
+Current Angle -> 284.400000
+Init -> -14.433333
+Current Angle -> 284.433333
+Init -> -14.466667
+Current Angle -> 284.466667
+Init -> -14.500000
+Current Angle -> 284.500000
+Init -> -14.533333
+Current Angle -> 284.533333
+Init -> -14.566667
+Current Angle -> 284.566667
+Init -> -14.600000
+Current Angle -> 284.600000
+Init -> -14.633333
+Current Angle -> 284.633333
+Init -> -14.666667
+Current Angle -> 284.666667
+Init -> -14.700000
+Current Angle -> 284.700000
+Init -> -14.733333
+Current Angle -> 284.733333
+Init -> -14.766667
+Current Angle -> 284.766667
+Init -> -14.800000
+Current Angle -> 284.800000
+Init -> -14.833333
+Current Angle -> 284.833333
+Init -> -14.866667
+Current Angle -> 284.866667
+Init -> -14.900000
+Current Angle -> 284.900000
+Init -> -14.933333
+Current Angle -> 284.933333
+Init -> -14.966667
+Current Angle -> 284.966667
+Init -> -15.000000
+Current Angle -> 285.000000
+Init -> -15.033333
+Current Angle -> 285.033333
+Init -> -15.066667
+Current Angle -> 285.066667
+Init -> -15.100000
+Current Angle -> 285.100000
+Init -> -15.133333
+Current Angle -> 285.133333
+Init -> -15.166667
+Current Angle -> 285.166667
+Init -> -15.200000
+Current Angle -> 285.200000
+Init -> -15.233333
+Current Angle -> 285.233333
+Init -> -15.266667
+Current Angle -> 285.266667
+Init -> -15.300000
+Current Angle -> 285.300000
+Init -> -15.333333
+Current Angle -> 285.333333
+Init -> -15.366667
+Current Angle -> 285.366667
+Init -> -15.400000
+Current Angle -> 285.400000
+Init -> -15.433333
+Current Angle -> 285.433333
+Init -> -15.466667
+Current Angle -> 285.466667
+Init -> -15.500000
+Current Angle -> 285.500000
+Init -> -15.533333
+Current Angle -> 285.533333
+Init -> -15.566667
+Current Angle -> 285.566667
+Init -> -15.600000
+Current Angle -> 285.600000
+Init -> -15.633333
+Current Angle -> 285.633333
+Init -> -15.666667
+Current Angle -> 285.666667
+Init -> -15.700000
+Current Angle -> 285.700000
+Init -> -15.733333
+Current Angle -> 285.733333
+Init -> -15.766667
+Current Angle -> 285.766667
+Init -> -15.800000
+Current Angle -> 285.800000
+Init -> -15.833333
+Current Angle -> 285.833333
+Init -> -15.866667
+Current Angle -> 285.866667
+Init -> -15.900000
+Current Angle -> 285.900000
+Init -> -15.933333
+Current Angle -> 285.933333
+Init -> -15.966667
+Current Angle -> 285.966667
+Init -> -16.000000
+Current Angle -> 286.000000
+Init -> -16.033333
+Current Angle -> 286.033333
+Init -> -16.066667
+Current Angle -> 286.066667
+Init -> -16.100000
+Current Angle -> 286.100000
+Init -> -16.133333
+Current Angle -> 286.133333
+Init -> -16.166667
+Current Angle -> 286.166667
+Init -> -16.200000
+Current Angle -> 286.200000
+Init -> -16.233333
+Current Angle -> 286.233333
+Init -> -16.266667
+Current Angle -> 286.266667
+Init -> -16.300000
+Current Angle -> 286.300000
+Init -> -16.333333
+Current Angle -> 286.333333
+Init -> -16.366667
+Current Angle -> 286.366667
+Init -> -16.400000
+Current Angle -> 286.400000
+Init -> -16.433333
+Current Angle -> 286.433333
+Init -> -16.466667
+Current Angle -> 286.466667
+Init -> -16.500000
+Current Angle -> 286.500000
+Init -> -16.533333
+Current Angle -> 286.533333
+Init -> -16.566667
+Current Angle -> 286.566667
+Init -> -16.600000
+Current Angle -> 286.600000
+Init -> -16.633333
+Current Angle -> 286.633333
+Init -> -16.666667
+Current Angle -> 286.666667
+Init -> -16.700000
+Current Angle -> 286.700000
+Init -> -16.733333
+Current Angle -> 286.733333
+Init -> -16.766667
+Current Angle -> 286.766667
+Init -> -16.800000
+Current Angle -> 286.800000
+Init -> -16.833333
+Current Angle -> 286.833333
+Init -> -16.866667
+Current Angle -> 286.866667
+Init -> -16.900000
+Current Angle -> 286.900000
+Init -> -16.933333
+Current Angle -> 286.933333
+Init -> -16.966667
+Current Angle -> 286.966667
+Init -> -17.000000
+Current Angle -> 287.000000
+Init -> -17.033333
+Current Angle -> 287.033333
+Init -> -17.066667
+Current Angle -> 287.066667
+Init -> -17.100000
+Current Angle -> 287.100000
+Init -> -17.133333
+Current Angle -> 287.133333
+Init -> -17.166667
+Current Angle -> 287.166667
+Init -> -17.200000
+Current Angle -> 287.200000
+Init -> -17.233333
+Current Angle -> 287.233333
+Init -> -17.266667
+Current Angle -> 287.266667
+Init -> -17.300000
+Current Angle -> 287.300000
+Init -> -17.333333
+Current Angle -> 287.333333
+Init -> -17.366667
+Current Angle -> 287.366667
+Init -> -17.400000
+Current Angle -> 287.400000
+Init -> -17.433333
+Current Angle -> 287.433333
+Init -> -17.466667
+Current Angle -> 287.466667
+Init -> -17.500000
+Current Angle -> 287.500000
+Init -> -17.533333
+Current Angle -> 287.533333
+Init -> -17.566667
+Current Angle -> 287.566667
+Init -> -17.600000
+Current Angle -> 287.600000
+Init -> -17.633333
+Current Angle -> 287.633333
+Init -> -17.666667
+Current Angle -> 287.666667
+Init -> -17.700000
+Current Angle -> 287.700000
+Init -> -17.733333
+Current Angle -> 287.733333
+Init -> -17.766667
+Current Angle -> 287.766667
+Init -> -17.800000
+Current Angle -> 287.800000
+Init -> -17.833333
+Current Angle -> 287.833333
+Init -> -17.866667
+Current Angle -> 287.866667
+Init -> -17.900000
+Current Angle -> 287.900000
+Init -> -17.933333
+Current Angle -> 287.933333
+Init -> -17.966667
+Current Angle -> 287.966667
+Init -> -18.000000
+Current Angle -> 288.000000
+Init -> -18.033333
+Current Angle -> 288.033333
+Init -> -18.066667
+Current Angle -> 288.066667
+Init -> -18.100000
+Current Angle -> 288.100000
+Init -> -18.133333
+Current Angle -> 288.133333
+Init -> -18.166667
+Current Angle -> 288.166667
+Init -> -18.200000
+Current Angle -> 288.200000
+Init -> -18.233333
+Current Angle -> 288.233333
+Init -> -18.266667
+Current Angle -> 288.266667
+Init -> -18.300000
+Current Angle -> 288.300000
+Init -> -18.333333
+Current Angle -> 288.333333
+Init -> -18.366667
+Current Angle -> 288.366667
+Init -> -18.400000
+Current Angle -> 288.400000
+Init -> -18.433333
+Current Angle -> 288.433333
+Init -> -18.466667
+Current Angle -> 288.466667
+Init -> -18.500000
+Current Angle -> 288.500000
+Init -> -18.533333
+Current Angle -> 288.533333
+Init -> -18.566667
+Current Angle -> 288.566667
+Init -> -18.600000
+Current Angle -> 288.600000
+Init -> -18.633333
+Current Angle -> 288.633333
+Init -> -18.666667
+Current Angle -> 288.666667
+Init -> -18.700000
+Current Angle -> 288.700000
+Init -> -18.733333
+Current Angle -> 288.733333
+Init -> -18.766667
+Current Angle -> 288.766667
+Init -> -18.800000
+Current Angle -> 288.800000
+Init -> -18.833333
+Current Angle -> 288.833333
+Init -> -18.866667
+Current Angle -> 288.866667
+Init -> -18.900000
+Current Angle -> 288.900000
+Init -> -18.933333
+Current Angle -> 288.933333
+Init -> -18.966667
+Current Angle -> 288.966667
+Init -> -19.000000
+Current Angle -> 289.000000
+Init -> -19.033333
+Current Angle -> 289.033333
+Init -> -19.066667
+Current Angle -> 289.066667
+Init -> -19.100000
+Current Angle -> 289.100000
+Init -> -19.133333
+Current Angle -> 289.133333
+Init -> -19.166667
+Current Angle -> 289.166667
+Init -> -19.200000
+Current Angle -> 289.200000
+Init -> -19.233333
+Current Angle -> 289.233333
+Init -> -19.266667
+Current Angle -> 289.266667
+Init -> -19.300000
+Current Angle -> 289.300000
+Init -> -19.333333
+Current Angle -> 289.333333
+Init -> -19.366667
+Current Angle -> 289.366667
+Init -> -19.400000
+Current Angle -> 289.400000
+Init -> -19.433333
+Current Angle -> 289.433333
+Init -> -19.466667
+Current Angle -> 289.466667
+Init -> -19.500000
+Current Angle -> 289.500000
+Init -> -19.533333
+Current Angle -> 289.533333
+Init -> -19.566667
+Current Angle -> 289.566667
+Init -> -19.600000
+Current Angle -> 289.600000
+Init -> -19.633333
+Current Angle -> 289.633333
+Init -> -19.666667
+Current Angle -> 289.666667
+Init -> -19.700000
+Current Angle -> 289.700000
+Init -> -19.733333
+Current Angle -> 289.733333
+Init -> -19.766667
+Current Angle -> 289.766667
+Init -> -19.800000
+Current Angle -> 289.800000
+Init -> -19.833333
+Current Angle -> 289.833333
+Init -> -19.866667
+Current Angle -> 289.866667
+Init -> -19.900000
+Current Angle -> 289.900000
+Init -> -19.933333
+Current Angle -> 289.933333
+Init -> -19.966667
+Current Angle -> 289.966667
+Init -> -20.000000
+Current Angle -> 290.000000
+Init -> -20.033333
+Current Angle -> 290.033333
+Init -> -20.066667
+Current Angle -> 290.066667
+Init -> -20.100000
+Current Angle -> 290.100000
+Init -> -20.133333
+Current Angle -> 290.133333
+Init -> -20.166667
+Current Angle -> 290.166667
+Init -> -20.200000
+Current Angle -> 290.200000
+Init -> -20.233333
+Current Angle -> 290.233333
+Init -> -20.266667
+Current Angle -> 290.266667
+Init -> -20.300000
+Current Angle -> 290.300000
+Init -> -20.333333
+Current Angle -> 290.333333
+Init -> -20.366667
+Current Angle -> 290.366667
+Init -> -20.400000
+Current Angle -> 290.400000
+Init -> -20.433333
+Current Angle -> 290.433333
+Init -> -20.466667
+Current Angle -> 290.466667
+Init -> -20.500000
+Current Angle -> 290.500000
+Init -> -20.533333
+Current Angle -> 290.533333
+Init -> -20.566667
+Current Angle -> 290.566667
+Init -> -20.600000
+Current Angle -> 290.600000
+Init -> -20.633333
+Current Angle -> 290.633333
+Init -> -20.666667
+Current Angle -> 290.666667
+Init -> -20.700000
+Current Angle -> 290.700000
+Init -> -20.733333
+Current Angle -> 290.733333
+Init -> -20.766667
+Current Angle -> 290.766667
+Init -> -20.800000
+Current Angle -> 290.800000
+Init -> -20.833333
+Current Angle -> 290.833333
+Init -> -20.866667
+Current Angle -> 290.866667
+Init -> -20.900000
+Current Angle -> 290.900000
+Init -> -20.933333
+Current Angle -> 290.933333
+Init -> -20.966667
+Current Angle -> 290.966667
+Init -> -21.000000
+Current Angle -> 291.000000
+Init -> -21.033333
+Current Angle -> 291.033333
+Init -> -21.066667
+Current Angle -> 291.066667
+Init -> -21.100000
+Current Angle -> 291.100000
+Init -> -21.133333
+Current Angle -> 291.133333
+Init -> -21.166667
+Current Angle -> 291.166667
+Init -> -21.200000
+Current Angle -> 291.200000
+Init -> -21.233333
+Current Angle -> 291.233333
+Init -> -21.266667
+Current Angle -> 291.266667
+Init -> -21.300000
+Current Angle -> 291.300000
+Init -> -21.333333
+Current Angle -> 291.333333
+Init -> -21.366667
+Current Angle -> 291.366667
+Init -> -21.400000
+Current Angle -> 291.400000
+Init -> -21.433333
+Current Angle -> 291.433333
+Init -> -21.466667
+Current Angle -> 291.466667
+Init -> -21.500000
+Current Angle -> 291.500000
+Init -> -21.533333
+Current Angle -> 291.533333
+Init -> -21.566667
+Current Angle -> 291.566667
+Init -> -21.600000
+Current Angle -> 291.600000
+Init -> -21.633333
+Current Angle -> 291.633333
+Init -> -21.666667
+Current Angle -> 291.666667
+Init -> -21.700000
+Current Angle -> 291.700000
+Init -> -21.733333
+Current Angle -> 291.733333
+Init -> -21.766667
+Current Angle -> 291.766667
+Init -> -21.800000
+Current Angle -> 291.800000
+Init -> -21.833333
+Current Angle -> 291.833333
+Init -> -21.866667
+Current Angle -> 291.866667
+Init -> -21.900000
+Current Angle -> 291.900000
+Init -> -21.933333
+Current Angle -> 291.933333
+Init -> -21.966667
+Current Angle -> 291.966667
+Init -> -22.000000
+Current Angle -> 292.000000
+Init -> -22.033333
+Current Angle -> 292.033333
+Init -> -22.066667
+Current Angle -> 292.066667
+Init -> -22.100000
+Current Angle -> 292.100000
+Init -> -22.133333
+Current Angle -> 292.133333
+Init -> -22.166667
+Current Angle -> 292.166667
+Init -> -22.200000
+Current Angle -> 292.200000
+Init -> -22.233333
+Current Angle -> 292.233333
+Init -> -22.266667
+Current Angle -> 292.266667
+Init -> -22.300000
+Current Angle -> 292.300000
+Init -> -22.333333
+Current Angle -> 292.333333
+Init -> -22.366667
+Current Angle -> 292.366667
+Init -> -22.400000
+Current Angle -> 292.400000
+Init -> -22.433333
+Current Angle -> 292.433333
+Init -> -22.466667
+Current Angle -> 292.466667
+Init -> -22.500000
+Current Angle -> 292.500000
+Init -> -22.533333
+Current Angle -> 292.533333
+Init -> -22.566667
+Current Angle -> 292.566667
+Init -> -22.600000
+Current Angle -> 292.600000
+Init -> -22.633333
+Current Angle -> 292.633333
+Init -> -22.666667
+Current Angle -> 292.666667
+Init -> -22.700000
+Current Angle -> 292.700000
+Init -> -22.733333
+Current Angle -> 292.733333
+Init -> -22.766667
+Current Angle -> 292.766667
+Init -> -22.800000
+Current Angle -> 292.800000
+Init -> -22.833333
+Current Angle -> 292.833333
+Init -> -22.866667
+Current Angle -> 292.866667
+Init -> -22.900000
+Current Angle -> 292.900000
+Init -> -22.933333
+Current Angle -> 292.933333
+Init -> -22.966667
+Current Angle -> 292.966667
+Init -> -23.000000
+Current Angle -> 293.000000
+Init -> -23.033333
+Current Angle -> 293.033333
+Init -> -23.066667
+Current Angle -> 293.066667
+Init -> -23.100000
+Current Angle -> 293.100000
+Init -> -23.133333
+Current Angle -> 293.133333
+Init -> -23.166667
+Current Angle -> 293.166667
+Init -> -23.200000
+Current Angle -> 293.200000
+Init -> -23.233333
+Current Angle -> 293.233333
+Init -> -23.266667
+Current Angle -> 293.266667
+Init -> -23.300000
+Current Angle -> 293.300000
+Init -> -23.333333
+Current Angle -> 293.333333
+Init -> -23.366667
+Current Angle -> 293.366667
+Init -> -23.400000
+Current Angle -> 293.400000
+Init -> -23.433333
+Current Angle -> 293.433333
+Init -> -23.466667
+Current Angle -> 293.466667
+Init -> -23.500000
+Current Angle -> 293.500000
+Init -> -23.533333
+Current Angle -> 293.533333
+Init -> -23.566667
+Current Angle -> 293.566667
+Init -> -23.600000
+Current Angle -> 293.600000
+Init -> -23.633333
+Current Angle -> 293.633333
+Init -> -23.666667
+Current Angle -> 293.666667
+Init -> -23.700000
+Current Angle -> 293.700000
+Init -> -23.733333
+Current Angle -> 293.733333
+Init -> -23.766667
+Current Angle -> 293.766667
+Init -> -23.800000
+Current Angle -> 293.800000
+Init -> -23.833333
+Current Angle -> 293.833333
+Init -> -23.866667
+Current Angle -> 293.866667
+Init -> -23.900000
+Current Angle -> 293.900000
+Init -> -23.933333
+Current Angle -> 293.933333
+Init -> -23.966667
+Current Angle -> 293.966667
+Init -> -24.000000
+Current Angle -> 294.000000
+Init -> -24.033333
+Current Angle -> 294.033333
+Init -> -24.066667
+Current Angle -> 294.066667
+Init -> -24.100000
+Current Angle -> 294.100000
+Init -> -24.133333
+Current Angle -> 294.133333
+Init -> -24.166667
+Current Angle -> 294.166667
+Init -> -24.200000
+Current Angle -> 294.200000
+Init -> -24.233333
+Current Angle -> 294.233333
+Init -> -24.266667
+Current Angle -> 294.266667
+Init -> -24.300000
+Current Angle -> 294.300000
+Init -> -24.333333
+Current Angle -> 294.333333
+Init -> -24.366667
+Current Angle -> 294.366667
+Init -> -24.400000
+Current Angle -> 294.400000
+Init -> -24.433333
+Current Angle -> 294.433333
+Init -> -24.466667
+Current Angle -> 294.466667
+Init -> -24.500000
+Current Angle -> 294.500000
+Init -> -24.533333
+Current Angle -> 294.533333
+Init -> -24.566667
+Current Angle -> 294.566667
+Init -> -24.600000
+Current Angle -> 294.600000
+Init -> -24.633333
+Current Angle -> 294.633333
+Init -> -24.666667
+Current Angle -> 294.666667
+Init -> -24.700000
+Current Angle -> 294.700000
+Init -> -24.733333
+Current Angle -> 294.733333
+Init -> -24.766667
+Current Angle -> 294.766667
+Init -> -24.800000
+Current Angle -> 294.800000
+Init -> -24.833333
+Current Angle -> 294.833333
+Init -> -24.866667
+Current Angle -> 294.866667
+Init -> -24.900000
+Current Angle -> 294.900000
+Init -> -24.933333
+Current Angle -> 294.933333
+Init -> -24.966667
+Current Angle -> 294.966667
+Init -> -25.000000
+Current Angle -> 295.000000
+Init -> -25.033333
+Current Angle -> 295.033333
+Init -> -25.066667
+Current Angle -> 295.066667
+Init -> -25.100000
+Current Angle -> 295.100000
+Init -> -25.133333
+Current Angle -> 295.133333
+Init -> -25.166667
+Current Angle -> 295.166667
+Init -> -25.200000
+Current Angle -> 295.200000
+Init -> -25.233333
+Current Angle -> 295.233333
+Init -> -25.266667
+Current Angle -> 295.266667
+Init -> -25.300000
+Current Angle -> 295.300000
+Init -> -25.333333
+Current Angle -> 295.333333
+Init -> -25.366667
+Current Angle -> 295.366667
+Init -> -25.400000
+Current Angle -> 295.400000
+Init -> -25.433333
+Current Angle -> 295.433333
+Init -> -25.466667
+Current Angle -> 295.466667
+Init -> -25.500000
+Current Angle -> 295.500000
+Init -> -25.533333
+Current Angle -> 295.533333
+Init -> -25.566667
+Current Angle -> 295.566667
+Init -> -25.600000
+Current Angle -> 295.600000
+Init -> -25.633333
+Current Angle -> 295.633333
+Init -> -25.666667
+Current Angle -> 295.666667
+Init -> -25.700000
+Current Angle -> 295.700000
+Init -> -25.733333
+Current Angle -> 295.733333
+Init -> -25.766667
+Current Angle -> 295.766667
+Init -> -25.800000
+Current Angle -> 295.800000
+Init -> -25.833333
+Current Angle -> 295.833333
+Init -> -25.866667
+Current Angle -> 295.866667
+Init -> -25.900000
+Current Angle -> 295.900000
+Init -> -25.933333
+Current Angle -> 295.933333
+Init -> -25.966667
+Current Angle -> 295.966667
+Init -> -26.000000
+Current Angle -> 296.000000
+Init -> -26.033333
+Current Angle -> 296.033333
+Init -> -26.066667
+Current Angle -> 296.066667
+Init -> -26.100000
+Current Angle -> 296.100000
+Init -> -26.133333
+Current Angle -> 296.133333
+Init -> -26.166667
+Current Angle -> 296.166667
+Init -> -26.200000
+Current Angle -> 296.200000
+Init -> -26.233333
+Current Angle -> 296.233333
+Init -> -26.266667
+Current Angle -> 296.266667
+Init -> -26.300000
+Current Angle -> 296.300000
+Init -> -26.333333
+Current Angle -> 296.333333
+Init -> -26.366667
+Current Angle -> 296.366667
+Init -> -26.400000
+Current Angle -> 296.400000
+Init -> -26.433333
+Current Angle -> 296.433333
+Init -> -26.466667
+Current Angle -> 296.466667
+Init -> -26.500000
+Current Angle -> 296.500000
+Init -> -26.533333
+Current Angle -> 296.533333
+Init -> -26.566667
+Current Angle -> 296.566667
+Init -> -26.600000
+Current Angle -> 296.600000
+Init -> -26.633333
+Current Angle -> 296.633333
+Init -> -26.666667
+Current Angle -> 296.666667
+Init -> -26.700000
+Current Angle -> 296.700000
+Init -> -26.733333
+Current Angle -> 296.733333
+Init -> -26.766667
+Current Angle -> 296.766667
+Init -> -26.800000
+Current Angle -> 296.800000
+Init -> -26.833333
+Current Angle -> 296.833333
+Init -> -26.866667
+Current Angle -> 296.866667
+Init -> -26.900000
+Current Angle -> 296.900000
+Init -> -26.933333
+Current Angle -> 296.933333
+Init -> -26.966667
+Current Angle -> 296.966667
+Init -> -27.000000
+Current Angle -> 297.000000
+Init -> -27.033333
+Current Angle -> 297.033333
+Init -> -27.066667
+Current Angle -> 297.066667
+Init -> -27.100000
+Current Angle -> 297.100000
+Init -> -27.133333
+Current Angle -> 297.133333
+Init -> -27.166667
+Current Angle -> 297.166667
+Init -> -27.200000
+Current Angle -> 297.200000
+Init -> -27.233333
+Current Angle -> 297.233333
+Init -> -27.266667
+Current Angle -> 297.266667
+Init -> -27.300000
+Current Angle -> 297.300000
+Init -> -27.333333
+Current Angle -> 297.333333
+Init -> -27.366667
+Current Angle -> 297.366667
+Init -> -27.400000
+Current Angle -> 297.400000
+Init -> -27.433333
+Current Angle -> 297.433333
+Init -> -27.466667
+Current Angle -> 297.466667
+Init -> -27.500000
+Current Angle -> 297.500000
+Init -> -27.533333
+Current Angle -> 297.533333
+Init -> -27.566667
+Current Angle -> 297.566667
+Init -> -27.600000
+Current Angle -> 297.600000
+Init -> -27.633333
+Current Angle -> 297.633333
+Init -> -27.666667
+Current Angle -> 297.666667
+Init -> -27.700000
+Current Angle -> 297.700000
+Init -> -27.733333
+Current Angle -> 297.733333
+Init -> -27.766667
+Current Angle -> 297.766667
+Init -> -27.800000
+Current Angle -> 297.800000
+Init -> -27.833333
+Current Angle -> 297.833333
+Init -> -27.866667
+Current Angle -> 297.866667
+Init -> -27.900000
+Current Angle -> 297.900000
+Init -> -27.933333
+Current Angle -> 297.933333
+Init -> -27.966667
+Current Angle -> 297.966667
+Init -> -28.000000
+Current Angle -> 298.000000
+Init -> -28.033333
+Current Angle -> 298.033333
+Init -> -28.066667
+Current Angle -> 298.066667
+Init -> -28.100000
+Current Angle -> 298.100000
+Init -> -28.133333
+Current Angle -> 298.133333
+Init -> -28.166667
+Current Angle -> 298.166667
+Init -> -28.200000
+Current Angle -> 298.200000
+Init -> -28.233333
+Current Angle -> 298.233333
+Init -> -28.266667
+Current Angle -> 298.266667
+Init -> -28.300000
+Current Angle -> 298.300000
+Init -> -28.333333
+Current Angle -> 298.333333
+Init -> -28.366667
+Current Angle -> 298.366667
+Init -> -28.400000
+Current Angle -> 298.400000
+Init -> -28.433333
+Current Angle -> 298.433333
+Init -> -28.466667
+Current Angle -> 298.466667
+Init -> -28.500000
+Current Angle -> 298.500000
+Init -> -28.533333
+Current Angle -> 298.533333
+Init -> -28.566667
+Current Angle -> 298.566667
+Init -> -28.600000
+Current Angle -> 298.600000
+Init -> -28.633333
+Current Angle -> 298.633333
+Init -> -28.666667
+Current Angle -> 298.666667
+Init -> -28.700000
+Current Angle -> 298.700000
+Init -> -28.733333
+Current Angle -> 298.733333
+Init -> -28.766667
+Current Angle -> 298.766667
+Init -> -28.800000
+Current Angle -> 298.800000
+Init -> -28.833333
+Current Angle -> 298.833333
+Init -> -28.866667
+Current Angle -> 298.866667
+Init -> -28.900000
+Current Angle -> 298.900000
+Init -> -28.933333
+Current Angle -> 298.933333
+Init -> -28.966667
+Current Angle -> 298.966667
+Init -> -29.000000
+Current Angle -> 299.000000
+Init -> -29.033333
+Current Angle -> 299.033333
+Init -> -29.066667
+Current Angle -> 299.066667
+Init -> -29.100000
+Current Angle -> 299.100000
+Init -> -29.133333
+Current Angle -> 299.133333
+Init -> -29.166667
+Current Angle -> 299.166667
+Init -> -29.200000
+Current Angle -> 299.200000
+Init -> -29.233333
+Current Angle -> 299.233333
+Init -> -29.266667
+Current Angle -> 299.266667
+Init -> -29.300000
+Current Angle -> 299.300000
+Init -> -29.333333
+Current Angle -> 299.333333
+Init -> -29.366667
+Current Angle -> 299.366667
+Init -> -29.400000
+Current Angle -> 299.400000
+Init -> -29.433333
+Current Angle -> 299.433333
+Init -> -29.466667
+Current Angle -> 299.466667
+Init -> -29.500000
+Current Angle -> 299.500000
+Init -> -29.533333
+Current Angle -> 299.533333
+Init -> -29.566667
+Current Angle -> 299.566667
+Init -> -29.600000
+Current Angle -> 299.600000
+Init -> -29.633333
+Current Angle -> 299.633333
+Init -> -29.666667
+Current Angle -> 299.666667
+Init -> -29.700000
+Current Angle -> 299.700000
+Init -> -29.733333
+Current Angle -> 299.733333
+Init -> -29.766667
+Current Angle -> 299.766667
+Init -> -29.800000
+Current Angle -> 299.800000
+Init -> -29.833333
+Current Angle -> 299.833333
+Init -> -29.866667
+Current Angle -> 299.866667
+Init -> -29.900000
+Current Angle -> 299.900000
+Init -> -29.933333
+Current Angle -> 299.933333
+Init -> -29.966667
+Current Angle -> 299.966667
+Init -> -30.000000
+Current Angle -> 300.000000
+Init -> -30.033333
+Current Angle -> 300.033333
+Init -> -30.066667
+Current Angle -> 300.066667
+Init -> -30.100000
+Current Angle -> 300.100000
+Init -> -30.133333
+Current Angle -> 300.133333
+Init -> -30.166667
+Current Angle -> 300.166667
+Init -> -30.200000
+Current Angle -> 300.200000
+Init -> -30.233333
+Current Angle -> 300.233333
+Init -> -30.266667
+Current Angle -> 300.266667
+Init -> -30.300000
+Current Angle -> 300.300000
+Init -> -30.333333
+Current Angle -> 300.333333
+Init -> -30.366667
+Current Angle -> 300.366667
+Init -> -30.400000
+Current Angle -> 300.400000
+Init -> -30.433333
+Current Angle -> 300.433333
+Init -> -30.466667
+Current Angle -> 300.466667
+Init -> -30.500000
+Current Angle -> 300.500000
+Init -> -30.533333
+Current Angle -> 300.533333
+Init -> -30.566667
+Current Angle -> 300.566667
+Init -> -30.600000
+Current Angle -> 300.600000
+Init -> -30.633333
+Current Angle -> 300.633333
+Init -> -30.666667
+Current Angle -> 300.666667
+Init -> -30.700000
+Current Angle -> 300.700000
+Init -> -30.733333
+Current Angle -> 300.733333
+Init -> -30.766667
+Current Angle -> 300.766667
+Init -> -30.800000
+Current Angle -> 300.800000
+Init -> -30.833333
+Current Angle -> 300.833333
+Init -> -30.866667
+Current Angle -> 300.866667
+Init -> -30.900000
+Current Angle -> 300.900000
+Init -> -30.933333
+Current Angle -> 300.933333
+Init -> -30.966667
+Current Angle -> 300.966667
+Init -> -31.000000
+Current Angle -> 301.000000
+Init -> -31.033333
+Current Angle -> 301.033333
+Init -> -31.066667
+Current Angle -> 301.066667
+Init -> -31.100000
+Current Angle -> 301.100000
+Init -> -31.133333
+Current Angle -> 301.133333
+Init -> -31.166667
+Current Angle -> 301.166667
+Init -> -31.200000
+Current Angle -> 301.200000
+Init -> -31.233333
+Current Angle -> 301.233333
+Init -> -31.266667
+Current Angle -> 301.266667
+Init -> -31.300000
+Current Angle -> 301.300000
+Init -> -31.333333
+Current Angle -> 301.333333
+Init -> -31.366667
+Current Angle -> 301.366667
+Init -> -31.400000
+Current Angle -> 301.400000
+Init -> -31.433333
+Current Angle -> 301.433333
+Init -> -31.466667
+Current Angle -> 301.466667
+Init -> -31.500000
+Current Angle -> 301.500000
+Init -> -31.533333
+Current Angle -> 301.533333
+Init -> -31.566667
+Current Angle -> 301.566667
+Init -> -31.600000
+Current Angle -> 301.600000
+Init -> -31.633333
+Current Angle -> 301.633333
+Init -> -31.666667
+Current Angle -> 301.666667
+Init -> -31.700000
+Current Angle -> 301.700000
+Init -> -31.733333
+Current Angle -> 301.733333
+Init -> -31.766667
+Current Angle -> 301.766667
+Init -> -31.800000
+Current Angle -> 301.800000
+Init -> -31.833333
+Current Angle -> 301.833333
+Init -> -31.866667
+Current Angle -> 301.866667
+Init -> -31.900000
+Current Angle -> 301.900000
+Init -> -31.933333
+Current Angle -> 301.933333
+Init -> -31.966667
+Current Angle -> 301.966667
