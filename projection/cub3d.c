@@ -19,7 +19,9 @@
 // 	[✅] Fixing seeing between 2 walls
 // 	[✅] Fixing fisheye effect
 // 	[✅] Fixing keys
+
 // 	[❌] Adding textures
+
 			Oussama
 // 	[❌] Handling More than 2 comma in rgb
 // 	[❌] Handling newlines inside the map
