@@ -72,14 +72,15 @@ void	cast_rays(t_mlx *wind, double fov)
 	double	px;
 	double	py;
 
+	// printf("Angle -> %f\n", fov);
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
+		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1' || wind->map[(int)((py + 1) / 60)][(int)((px + 1) / 60)] == '1' || wind->map[(int)((py - 1) / 60)][(int)((px - 1) / 60)] == '1')
 			break ;
-		px += cos((fov) * M_PI / 180);
-		py += sin((fov) * M_PI / 180);
+		px += cos((fov) * M_PI / 180) * 1 ;
+		py += sin((fov) * M_PI / 180) * 1 ;
 		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
 	}
 }
@@ -91,7 +92,7 @@ void	projecting_rays(t_mlx *wind)
 	double	fov;
 
 	i = -1;
-	nbr_of_rays = 1;
+	nbr_of_rays = 1920;
 	// Dividing my view into 2 triangle 32° left and 32° right
 	fov = wind->field_of_view;
 	while (i++ < nbr_of_rays)
@@ -147,8 +148,8 @@ void	move_forward(t_mlx *wind)
 	double	px;
 	double	py;
 
-	py = sin(degrees_to_radians(wind));
-	px = cos(degrees_to_radians(wind));
+	py = sin(degrees_to_radians(wind)) * 5;
+	px = cos(degrees_to_radians(wind)) * 5;
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -162,9 +163,15 @@ void	move_backword(t_mlx *wind)
 	double	py;
 
 
-	py = sin(degrees_to_radians(wind));
-	px = cos(degrees_to_radians(wind));
-	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
+	py = sin(degrees_to_radians(wind)) * 5;
+	px = cos(degrees_to_radians(wind)) * 5;
+	printf("--\n");
+	printf("--\n");
+	printf("PX => %f\n", wind->y_player - py);
+	printf("PX / 60 => %f\n",( wind->y_player - py) / 60);
+	printf("PY => %f\n", wind->x_player - px);
+	printf("PY / 60  => %f\n", (wind->x_player - px) / 60);
+	if (wind->map[(int)((wind->y_player - py) / 60)][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
 		wind->y_player -= py;
@@ -176,8 +183,8 @@ void	move_right(t_mlx *wind)
 	double	px;
 	double	py;
 
-	py = sin(degrees_to_radians_1(wind));
-	px = cos(degrees_to_radians_1(wind));
+	py = sin(degrees_to_radians_1(wind)) * 5;
+	px = cos(degrees_to_radians_1(wind)) * 5;
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -190,9 +197,8 @@ void	move_left(t_mlx *wind)
 	double	px;
 	double	py;
 
-
-	py = sin(degrees_to_radians_1(wind));
-	px = cos(degrees_to_radians_1(wind));
+	py = sin(degrees_to_radians_1(wind)) * 5;
+	px = cos(degrees_to_radians_1(wind)) * 5;
 	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
