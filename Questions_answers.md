@@ -10,20 +10,32 @@ Solution ?
 
     W need to buffer to put our pixels in an image then push it into the window
 
+
+
 What an mlx image requires ?
 
     We need to pass some pointers to mlx_pointer :
 
         -   bits per pixel : pixels are basicly int (4 bytes)
 
+
+
 Why in my_mlx_pixel_put bpp it's 32 and not 24 ?
 
     An RGBA color value is specified with: rgba(red, green, blue, alpha).
     The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
 
+
+
 What does mlx_get_data_addr do ?
 
     it provide us with information about the generated image
+    if it works as it should it should provide 3 informations ;
+    bpp         : how many bits required to express a color of a pixel
+    size_line   : how many bytes required to store 
+    endian      : techinque to store data (Hex Format  ) in your RAM
+
+
 
 
 What's endian means ?

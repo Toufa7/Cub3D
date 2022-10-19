@@ -30,6 +30,8 @@
 # define BLUE 0Xc0dfef
 # define RED 0XFF0000
 # define GREEN 0X74d434
+# define WIN_WIDTH 1920
+# define WIN_HEIGHT 1080
 
 typedef struct fd
 {
@@ -79,14 +81,20 @@ int		check_walls(char	*str, int start, int count);
 typedef struct s_my_mlx
 {
 /*
-	The image to used
+	The image to be used as parameter
 */
 	void	*img;
 /*
 	The image to used
 */
 	char	*addr;
+/*
+	The number of bytes required to express a color of pixel entered as arguments
+*/
 	int		bpp;
+/*
+	Nbr of bytes required to store one image horizontal line in memory (Provided as argument)
+*/
 	int		line_len;
 	int		endian;
 }	t_my_mlx;

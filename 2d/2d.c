@@ -92,7 +92,7 @@ void	projecting_rays(t_mlx *wind)
 	double	fov;
 
 	i = -1;
-	nbr_of_rays = 1920;
+	nbr_of_rays = WIN_WIDTH;
 	// Dividing my view into 2 triangle 32° left and 32° right
 	fov = wind->field_of_view;
 	while (i++ < nbr_of_rays)

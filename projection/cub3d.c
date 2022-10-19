@@ -35,12 +35,12 @@ int	main(int ac, char **av)
 	t_mlx	wind;
 
 	wind.parsing = read_and_add(av);
-	printf("\n%s",wind.parsing.full_map);
+	printf("\n %s \n",wind.parsing.full_map);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
 		wind.mlx = mlx_init();
-		wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub3D");
+		wind.window = mlx_new_window(wind.mlx, WIN_WIDTH, WIN_HEIGHT, "Cub3D");
 		get_player_position(&wind);
 		projecting_rays(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);
