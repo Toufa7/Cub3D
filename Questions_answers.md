@@ -1,3 +1,7 @@
+How computer store and dispplay graphics ?
+
+    as you know computer monitor made up of tiny pixels 
+
 Why mlx_pixel_put so slow ?
 
     Because it tries to put pixel instantly on window without waiting for the frame to be rendered entirely
@@ -17,6 +21,11 @@ Why in my_mlx_pixel_put bpp it's 32 and not 24 ?
     An RGBA color value is specified with: rgba(red, green, blue, alpha).
     The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
 
+What does mlx_get_data_addr do ?
+
+    it provide us with information about the generated image
+
+
 What's endian means ?
 
     Endianness is the representation of word of digital data in computer memory
@@ -28,3 +37,8 @@ How to write pixels on top of image ?
     We pass the reference in ordre to set that current data address
 
     Now that we have created our image it's time to push them to window 
+
+
+The images divided into small squares called pixels
+and each pixel requires 1 bit of memory
+we're working with RGB (0-255) each color takes 8 bits

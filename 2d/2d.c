@@ -143,7 +143,7 @@ void	left(t_mlx *wind)
 		wind->field_of_view += 360;
 }
 
-void	move_forward(t_mlx *wind)
+void	  move_forward(t_mlx *wind)
 {
 	double	px;
 	double	py;
