@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/18 17:35:16 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 14:16:25 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,6 @@ int	main(int ac, char **av)
 
 	wind.parsing = read_and_add(av);
 	printf("\n%s",wind.parsing.full_map);
-	//rgb_to_hexa(wind.parsing.F);
-	//printf("\n*******>HI \n");
-	while (1);
-	exit(0);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
