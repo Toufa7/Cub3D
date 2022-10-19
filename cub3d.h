@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/13 19:01:45 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/18 15:50:29 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char	*only_map(char *str);
 int		check_ea(char **str);
 int		all_walls(char	*str);
 t_fd	take_path(char	*str);
+int		rgb_to_hexa(char *str);
 int		check_comma(char *str);
 int		check_player(char str);
 t_fd	read_and_add(char **av);

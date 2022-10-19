@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:50:21 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/17 20:14:28 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/18 17:38:16 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,12 @@ t_fd	read_and_add(char **av)
 	int		fd;
 	char	*str;
 	char	*buf;
+	int		count;
 	t_fd	fd2;	
 
 	fd = open(av[1], O_RDONLY);
 	fd2.full_map = NULL;
+	count = 0;
 	if (fd == -1)
 	{
 		perror("Error ");
@@ -53,9 +55,13 @@ t_fd	read_and_add(char **av)
 	while (buf)
 	{
 		str = ft_strjoin(str, buf);
-		if (!strcmp(str, "\n"))
+		if (!ft_strncmp(buf, "1111111", 4) || !ft_strncmp(buf, "  1111", 5))
+			count = 1;
+		if (!strcmp(buf, "\n") && count)
 		{
-			printf("Error : There is a new line in map");
+			printf("--->%s==%d\n",buf,count);
+			printf("str = %s\n",str);
+			printf("Error : There is a new line in your map");
 			exit(1);
 		}
 		free(buf);
