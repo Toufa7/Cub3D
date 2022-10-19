@@ -23,6 +23,8 @@ What's endian means ?
 
 How to write pixels on top of image ?
 
-    So after creating your image you'll need to call mlx_get_address to retrive the memory address of that pixels
+    So after creating your image you'll need to call mlx_get_address to retrive the memory address of that pixels ??
 
     We pass the reference in ordre to set that current data address
+
+    Now that we have created our image it's time to push them to window 
