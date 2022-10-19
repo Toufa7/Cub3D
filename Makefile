@@ -2,7 +2,7 @@ NAME = cub3d
 
 CC = gcc
 
-ADDITIONAL_FLAGS = -g -fsanitize=address
+#ADDITIONAL_FLAGS = -g -fsanitize=address
 
 C_FLAGS = -Wall -Wextra -Werror
 
@@ -18,6 +18,7 @@ FUNCTIONS =	projection/my_mlx_pixel_put.c\
 			projection/moves/move_backword.c\
 			projection/destroy_window.c\
 			map_parsing/check_textures_colors.c\
+			map_parsing/rgb_to_hexa.c\
 			map_parsing/checking_walls.c\
 			map_parsing/check_map_utils.c\
 			map_parsing/read_and_add.c\
@@ -40,7 +41,7 @@ RM = rm -rf
 all		:	$(NAME) 
 
 $(NAME) : $(FUNCTIONS)
-			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
+			$(CC) $(C_FLAGS)  $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
 
 clean	:	
 			$(RM) $(NAME)
