@@ -11,7 +11,6 @@ Solution ?
     W need to buffer to put our pixels in an image then push it into the window
 
 
-
 What an mlx image requires ?
 
     We need to pass some pointers to mlx_pointer :

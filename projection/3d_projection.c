@@ -22,10 +22,6 @@ void	projecting_rays(t_mlx *wind)
 	wind->my_mlx.img = mlx_new_image(wind->mlx, WIN_WIDTH, WIN_HEIGHT);
 	wind->my_mlx.addr = mlx_get_data_addr(wind->my_mlx.img, &wind->my_mlx.bpp,
 			&wind->my_mlx.line_len, &wind->my_mlx.endian);
-	printf("Address			-> %s\n", wind->my_mlx.addr);
-	printf("Bpp		 		-> %d\n", wind->my_mlx.bpp);
-	printf("Line lenghth	-> %d\n", wind->my_mlx.line_len);
-	printf("Endian	 		-> %d\n", wind->my_mlx.endian);
 	while (++x < WIN_WIDTH)
 	{
 		cast_rays(wind, angle, x);
