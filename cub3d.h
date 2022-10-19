@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/18 15:50:29 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 16:37:21 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@
 # include "./libft/libft.h"
 
 # define TRUE 1
-# define BLUE 0Xc0dfef
+
+
 # define RED 0XFF0000
-# define GREEN 0X74d434
+
 # define WIN_WIDTH 1920
 # define WIN_HEIGHT 1080
 
@@ -42,6 +43,8 @@ typedef struct fd
 	char	*F;
 	char	*C;
 	char	*full_map;
+	int		color_c;
+	int		color_f;
 }	t_fd;
 
 int		len(char **str);

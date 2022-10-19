@@ -42,15 +42,15 @@ void	casting_3d(double distance, int height, t_mlx *mlx)
 	double	distance_to_projection;
 
 	width = 0;
-	distance_to_projection = ((WIN_WIDTH / 2) / (tan((32.0) * (M_PI / 180))));
+	distance_to_projection = ((WIN_WIDTH / 2) / (tan((64.0 / 2) * (M_PI / 180))));
 	projection_3d = (64.0 / distance) * distance_to_projection;
 	floor_ceiling = (WIN_HEIGHT / 2) - (projection_3d / 2);
 	while (width < WIN_HEIGHT && width < floor_ceiling)
-		my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_c);
 	while (width < WIN_HEIGHT && width < floor_ceiling + projection_3d)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, RED);
 	while (width < WIN_HEIGHT)
-		my_mlx_pixel_put(&mlx->my_mlx, height, width++, GREEN);
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_f);
 }
 
 double	calculate_distance(double y_player, double x_player,

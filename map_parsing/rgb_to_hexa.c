@@ -6,40 +6,24 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:18:38 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/18 16:02:20 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 16:44:37 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../cub3d.h"
 
-char	*without_comma(char *str)
+int	rgb(int r, int g, int b)
 {
-	char	*ret_str;
-	int		i;
-	int		j;
+	int	final;
 
-	ret_str = malloc(ft_strlen(str) - 1);
-	i = 0;
-	j = 0;
-	while (str[i])
-	{
-		if (str[i] == ',')
-			i++;
-		else
-		{
-			ret_str[j] = str[i];
-			i++;
-			j++;
-		}
-	}
-	ret_str[j] = 0;
-	return (ret_str);
+	final = (r << 16) + (g << 8) + b;
+	return (final);
 }
 
 int	rgb_to_hexa(char *str)
 {
-	str = without_comma(str);
-	//printf("%s", str);
-	
-	return (0);
+	char	**split;
+
+	split = ft_split(ft_strdup(str), ',');
+	return (rgb(ft_atoi(split[0]), ft_atoi(split[1]), ft_atoi(split[2])));
 }

@@ -77,10 +77,10 @@ void	cast_rays(t_mlx *wind, double fov)
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1' || wind->map[(int)((py + 1) / 60)][(int)((px + 1) / 60)] == '1' || wind->map[(int)((py - 1) / 60)][(int)((px - 1) / 60)] == '1')
+		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
 			break ;
-		px += cos((fov) * M_PI / 180) * 1 ;
-		py += sin((fov) * M_PI / 180) * 1 ;
+		px += cos((fov) * M_PI / 180) * 1;
+		py += sin((fov) * M_PI / 180) * 1;
 		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
 	}
 }
@@ -92,13 +92,13 @@ void	projecting_rays(t_mlx *wind)
 	double	fov;
 
 	i = -1;
-	nbr_of_rays = WIN_WIDTH;
+	nbr_of_rays = 1920;
 	// Dividing my view into 2 triangle 32° left and 32° right
-	fov = wind->field_of_view;
+	fov = wind->field_of_view - 32;
 	while (i++ < nbr_of_rays)
 	{
 		cast_rays(wind, fov);
-		fov += 0.03;
+		fov += 64.0 / 1920;
 	}
 }
 
@@ -261,7 +261,7 @@ int	main(int ac, char **av)
 		creating_window(&wind);
 		images_to_xpm(&wind);
 		get_player_position(&wind);
-		wind.field_of_view = 0;
+		wind.field_of_view = 270;
 		map_filling(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);
 		mlx_hook(wind.window, 17, 0, destroy_window, &wind);

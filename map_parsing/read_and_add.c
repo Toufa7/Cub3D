@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:50:21 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/18 17:38:16 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 14:34:14 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ t_fd	read_and_add(char **av)
 			count = 1;
 		if (!strcmp(buf, "\n") && count)
 		{
-			printf("--->%s==%d\n",buf,count);
-			printf("str = %s\n",str);
 			printf("Error : There is a new line in your map");
+			free(buf);
+			free(str);
 			exit(1);
 		}
 		free(buf);
@@ -77,11 +77,17 @@ t_fd	read_and_add(char **av)
 	{
 		fd2 = take_path(str);
 		if (!map_checking2(str) || !check_colors_valid(fd2.F, fd2.C))
+		{
+			free(str);
 			exit(1);
+		}
 		printf("\nALL thing is valid\n");
+		free(str);
 	}
 	else
+	{
+		free(str);
 		exit(1);
-	printf("hhellodnd\n");
+	}
 	return (fd2);
 }
