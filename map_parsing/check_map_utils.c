@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:38:51 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/18 17:02:34 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 14:29:23 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,11 @@ int	check_colors_valid(char *F, char *C)
 		return (0);
 	}
 	if (!check_comma(F) || !check_comma(C))
+	{
+		ft_free(sp_f);
+		ft_free(sp_c);
 		return (0);
+	}
 	ft_free(sp_f);
 	ft_free(sp_c);
 	return (1);

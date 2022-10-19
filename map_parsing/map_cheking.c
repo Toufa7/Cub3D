@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:47:49 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/13 18:44:25 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 14:27:05 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,16 @@ int	map_checking2(char	*str)
 	statrt = 6;
 	split_str = ft_split(str, '\n');
 	if (!check_spaces(split_str, statrt))
+	{
+		ft_free(split_str);
 		return (0);
+	}
 	if (!last_touches(split_str))
+	{
+		ft_free(split_str);
 		return (0);
+	}
+	ft_free(split_str);
 	return (1);
 }
 

@@ -2,7 +2,7 @@ NAME = cub3d
 
 CC = gcc
 
-#ADDITIONAL_FLAGS = -g -fsanitize=address
+ADDITIONAL_FLAGS = -g -fsanitize=address
 
 C_FLAGS = -Wall -Wextra -Werror
 
@@ -41,7 +41,7 @@ RM = rm -rf
 all		:	$(NAME) 
 
 $(NAME) : $(FUNCTIONS)
-			$(CC) $(C_FLAGS)  $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
+			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
 
 clean	:	
 			$(RM) $(NAME)
