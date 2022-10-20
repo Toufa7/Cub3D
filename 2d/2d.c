@@ -145,7 +145,7 @@ void	left(t_mlx *wind)
 
 void	  move_forward(t_mlx *wind)
 {
-	double	px;
+	double	px = 0;
 	double	py;
 
 	py = sin(degrees_to_radians(wind)) * 5;
