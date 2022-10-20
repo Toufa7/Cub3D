@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 09:49:51 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/17 20:15:43 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/19 18:31:55 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ void	casting_3d(double distance, int height, t_mlx *mlx)
 	projection_3d = (64.0 / distance) * distance_to_projection;
 	floor_ceiling = (1080 / 2) - (projection_3d / 2);
 	while (width < 1080 && width < floor_ceiling)
-		my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_f);
 	while (width < 1080 && width < floor_ceiling + projection_3d)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, RED);
 	while (width < 1080)
-		my_mlx_pixel_put(&mlx->my_mlx, height, width++, GREEN);
+		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_c);
 }
 
 double	calculate_distance(double y_player, double x_player,
