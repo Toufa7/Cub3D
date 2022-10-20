@@ -23,6 +23,8 @@
 
 :warning: Let's go back to some of the high school math :
 
+
+
 Before proceeding to the next section (describing what is done with the distance from theplayer to the wall), here is a short refresher on a piece of
 high school math which forms the foundation of most calculations in the game : SOH-CAH-TOA
 
@@ -30,7 +32,6 @@ high school math which forms the foundation of most calculations in the game : S
 
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
 
-When advancing 1 on the X axis, the ray moves up 𝑡𝑎𝑛(𝜃) on the Y axis. The reciprocalis calculated as follows:  move 1 on Y axis, move 𝑡𝑎𝑛(90 − 𝜃) on X axis.  To acceleratecos,sinandtancalculations, the engine uses a lookup table. See 4.11.1 "Cos/Sin TableLookup" on page
 
 
 
@@ -51,6 +52,19 @@ The number of rays will be the width of the window is 1920
     }
 
 0.03 this number came from dividing our player angle 64 on window's witdh 1920, with it we ensure to cast every pixel in our angle
+
+
+So as you know if our player has a 4 direction 2 vertical and 2 horizontal it's gonna be easy to implement his moves by simply increasing and decreasing his current positions [x,y],
+
+<img src="https://github.com/Toufa7/Cub3D/blob/fed5291a246a236e5a65148537472698ebd5d6d3/images/player%20directions.png" width="400"/>
+
+But what if the player want to go to diffrent angle :
+
+<img src="https://github.com/Toufa7/Cub3D/blob/5827035ebea0bd06d041e241b78fdd2df5d26c89/images/which_direction.png" width="400"/>
+
+
+when advancing 1 on the X axis, the ray moves up on the Y axis. The reciprocalis calculated as follows:  move 1 on Y axis, move 𝑡𝑎𝑛(90 − 𝜃) on X axis.  To acceleratecos,sinandtancalculations, the engine uses a lookup table. See 4.11.1 "Cos/Sin TableLookup" on page
+
 
 As you know the raycasting  doesn't draw the whole scene once each column represents a single ray cast out from the player at a particuler angle
 if the ray hits the wall we calcualted the distance  
