@@ -12,10 +12,10 @@ FUNCTIONS =	projection/my_mlx_pixel_put.c\
 			projection/get_player_position.c\
 			projection/get_keys.c\
 			projection/3d_projection.c\
-			projection/move_forward.c\
-			projection/move_left.c\
-			projection/move_right.c\
-			projection/move_backword.c\
+			projection/moves/move_forward.c\
+			projection/moves/move_left.c\
+			projection/moves/move_right.c\
+			projection/moves/move_backword.c\
 			projection/destroy_window.c\
 			map_parsing/check_textures_colors.c\
 			map_parsing/rgb_to_hexa.c\

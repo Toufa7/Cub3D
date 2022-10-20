@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:38:51 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/19 14:29:23 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/20 11:15:54 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,17 +92,14 @@ int	last_touches(char	**str)
 		j = 0;
 		while (str[i][j])
 		{
-			if (str[i][j] == '0')
-				count_0++;
 			if (check_player(str[i][j]))
 				cout_p++;
 			j++;
 		}
 		i++;
 	}
-	if (count_0 == 0 || (cout_p == 0 || cout_p > 1) || i == 6)
+	if ( (cout_p == 0 || cout_p > 1) || i == 6)
 	{
-		printf("cout_p = %d\n", cout_p);
 		printf("Error : There is a problem");
 		return (0);
 	}

@@ -14,7 +14,8 @@
 #define BLUE 0X0000FF
 #define RED 0XFF0000
 #define TRUE 1
-
+#define WIN_WIDTH 1920
+#define WIN_HEIGHT 1080
 typedef struct s_window
 {
     void	    *mlx;

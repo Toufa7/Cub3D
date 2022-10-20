@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/19 16:47:44 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/20 11:17:32 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // 	[✅] Fixing 3D Rendring Strips
 // 	[✅] Fixing seeing between 2 walls
 // 	[✅] Fixing fisheye effect
-// 	[y] Fixing keys
+// 	[✅] Fixing keys
 
 // 	[❌] Adding textures
 
@@ -35,14 +35,14 @@ int	main(int ac, char **av)
 	t_mlx	wind;
 
 	wind.parsing = read_and_add(av);
-	printf("HELLO\n");
 	wind.parsing.color_c = rgb_to_hexa(wind.parsing.C);
 	wind.parsing.color_f = rgb_to_hexa(wind.parsing.F);
+	printf("\nfull ma p =\n%s\n",wind.parsing.);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
 		wind.mlx = mlx_init();
-		wind.window = mlx_new_window(wind.mlx, 1920, 1080, "Cub3D");
+		wind.window = mlx_new_window(wind.mlx, WIN_WIDTH, WIN_HEIGHT, "Cub3D");
 		get_player_position(&wind);
 		projecting_rays(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);

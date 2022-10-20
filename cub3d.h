@@ -13,7 +13,6 @@
 #ifndef CUB3D_H
 # define CUB3D_H
 
-# define TRUE 1
 # include <mlx.h>
 # include <math.h>
 # include <fcntl.h>
@@ -24,12 +23,16 @@
 # include <fcntl.h>
 # include <math.h>
 # include <mlx.h>
-# include "get_next_line/get_next_line.h"
-# include "libft/libft.h"
+# include "./get_next_line/get_next_line.h"
+# include "./libft/libft.h"
 
-# define BLUE 0Xc0dfef
+# define TRUE 1
+
+
 # define RED 0XFF0000
-# define GREEN 0X74d434
+
+# define WIN_WIDTH 1920
+# define WIN_HEIGHT 1080
 
 typedef struct fd
 {
@@ -80,9 +83,21 @@ int		check_walls(char	*str, int start, int count);
 
 typedef struct s_my_mlx
 {
+/*
+	The image to be used as parameter
+*/
 	void	*img;
+/*
+	The image to used
+*/
 	char	*addr;
+/*
+	The number of bytes required to express a color of pixel entered as arguments
+*/
 	int		bpp;
+/*
+	Nbr of bytes required to store one image horizontal line in memory (Provided as argument)
+*/
 	int		line_len;
 	int		endian;
 }	t_my_mlx;
@@ -102,15 +117,38 @@ typedef struct s_window
 }	t_mlx;
 
 char	*get_next_line(int fd);
-void	map_filling(t_mlx *wind);
-void	move_forward(t_mlx *wind);
+/*
+	Getting the player position in the map [y,x]
+*/
 void	get_player_position(t_mlx *wind);
+/*
+	Used to move the player forward by increasing his current position by 1px
+*/
+void	move_forward(t_mlx *wind);
+/*
+	Used to move the player backward by decreasing his current position by 1px
+*/
 void	move_backword(t_mlx *wind);
+/*
+	Used to move the player by -90 degree in ordre to move him left 
+*/
 void	move_left(t_mlx *wind);
+/*
+	Used to move the player by -90 degree in ordre to move him right
+*/
 void	move_right(t_mlx *wind);
 void	cast_rays(t_mlx *wind, double angle, int i);
+/*
+	Starting from the player position we draw line using cast_rays()
+*/
 void	projecting_rays(t_mlx *wind);
+/*
+	When we mesured the distance we start rendring our world
+*/
 void	casting_3d(double distance, int i, t_mlx *mlx);
+/*
+	Whenever the user hit a key provide him wwith the move he requires
+*/
 int		get_keys(int press, t_mlx	*wind);
 int		destroy_window(t_mlx *wind);
 void	my_mlx_pixel_put(t_my_mlx *data, int x, int y, int color);
