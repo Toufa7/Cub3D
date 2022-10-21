@@ -30,6 +30,12 @@
 
 
 # define RED 0XFF0000
+# define WHITE 0XFFFFFF
+# define BLACK 0X000000
+# define PURPLE 0X800080
+# define BLUE 0X0000FF
+# define GREEN 0X00FF00
+
 
 # define WIN_WIDTH 1920
 # define WIN_HEIGHT 1080
@@ -145,7 +151,7 @@ void	projecting_rays(t_mlx *wind);
 /*
 	When we mesured the distance we start rendring our world
 */
-void	casting_3d(double distance, int i, t_mlx *mlx);
+void	casting_3d(double distance, int i, t_mlx *mlx, char dir);
 /*
 	Whenever the user hit a key provide him wwith the move he requires
 */

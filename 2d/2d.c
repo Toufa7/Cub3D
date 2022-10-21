@@ -1,5 +1,25 @@
 #include "cub2d.h"
 
+
+int draw_line(void *mlx, void *win, int beginX, int beginY, int endX, int endY, int color)
+{
+	double deltaX = endX - beginX; // 10
+	double deltaY = endY - beginY; // 0
+	int pixels = sqrt((deltaX * deltaX) + (deltaY * deltaY));
+	deltaX /= pixels; // 1
+	deltaY /= pixels; // 0
+	double pixelX = beginX;
+	double pixelY = beginY;
+	while (pixels)
+	{
+		mlx_pixel_put(mlx, win, pixelX, pixelY, color);
+		pixelX += deltaX;
+		pixelY += deltaY;
+		--pixels;
+	}
+	return (0);
+}
+
 char	*read_map(int fd)
 {
 	char	*join;
@@ -67,10 +87,50 @@ double	degrees_to_radians_1(t_mlx *wind)
 	return ((wind->field_of_view + 90) * M_PI / 180);
 }
 
+char	set_direction(double y_player, double x_player, double py, double px)
+{
+	if (y_player / 60.0 >= ((py) / 60.0) && x_player / 60.0 >= ((px) / 60.0))
+	{
+		if ((int)(py + 1) % 60 == 0)
+			return ('N');
+		else
+			return ('W');
+	}
+	else if (y_player / 60.0 > ((py) / 60.0) && x_player / 60.0 < ((px) / 60.0))
+	{
+		if ((int)(py + 1) % 60 == 0)
+			return ('N');
+		else
+		{
+			return ('E');
+		}
+	}
+	else if (y_player / 60.0 <= ((py) / 60.0) && x_player / 60.0 <= ((px) / 60.0))
+	{
+		if ((int)(py + 1) % 60 == 0)
+			return ('S');
+		else
+		{
+			printf("Hello World\n");
+			return ('E');
+		}
+	}
+	else if (y_player / 60.0 < ((py) / 60.0) && x_player / 60.0 > ((px) / 60.0))
+	{
+		if ((int)(py + 1) % 60 == 0)
+			return ('S');
+		else
+			return ('W');
+	}
+	return (0);
+	printf("------------------------\n");
+}
+
 void	cast_rays(t_mlx *wind, double fov)
 {
 	double	px;
 	double	py;
+	char 	dir = '\0';
 
 	// printf("Angle -> %f\n", fov);
 	px = wind->x_player;
@@ -79,23 +139,29 @@ void	cast_rays(t_mlx *wind, double fov)
 	{
 		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
 		{
-			printf("Player	Positions	[%d,%d]\n",(int)wind->y_player / 60,(int)wind->x_player / 60);
-			printf("Wall	Positions	[%d,%d]\n",(int)((py) / 60),(int)((px) / 60));
-			if ((int)wind->y_player / 60 > (int)((py) / 60) && (int)wind->x_player / 60 > (int)((px) / 60))
-				printf("North & West\n");
-			else if ((int)wind->y_player / 60 > (int)((py) / 60) && (int)wind->x_player / 60 < (int)((px) / 60))
-				printf("North & East\n");
-			else if ((int)wind->y_player / 60 < (int)((py) / 60) && (int)wind->x_player / 60 < (int)((px) / 60))
-				printf("South & East\n");
-			else if ((int)wind->y_player / 60 < (int)((py) / 60) && (int)wind->x_player / 60 > (int)((px) / 60))
-				printf("South & West\n");
-
+			// printf("Player	Positions	[%d,%d]\n",(int)wind->y_player / 60,(int)wind->x_player / 60);
+			// printf("Wall	Positions	[%d,%d]\n",(int)((py)),(int)((px)));
+			// printf("------------------------\n");
+			dir = set_direction(wind->y_player, wind->x_player, py, px);
+			printf("Direction -> %c\n", dir);
 			break ;
 		}
+		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
 		px += cos((fov) * M_PI / 180) * 1;
 		py += sin((fov) * M_PI / 180) * 1;
-		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
+
+
+
 	}
+		// printf("Dir -> %\n".);
+		// if (dir == 'N')
+		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLUE);
+		// else if (dir == 'E')
+		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, RED);
+		// else if (dir == 'S')
+		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, WHITE);
+		// else
+		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLACK);
 }
 
 void	projecting_rays(t_mlx *wind)
@@ -107,7 +173,7 @@ void	projecting_rays(t_mlx *wind)
 	i = -1;
 	nbr_of_rays = 1920;
 	// Dividing my view into 2 triangle 32° left and 32° right
-	fov = wind->field_of_view;
+	fov = wind->field_of_view - 32;
 	while (i++ < 1)
 	{
 		cast_rays(wind, fov);
@@ -140,7 +206,7 @@ void	map_filling(t_mlx	*wind)
 
 void	right(t_mlx *wind)
 {
-	wind->field_of_view += 5;
+	wind->field_of_view += 10;
 	if (wind->field_of_view > 360)
 		wind->field_of_view -= 360;
 	if (wind->field_of_view < 360)
@@ -149,7 +215,7 @@ void	right(t_mlx *wind)
 
 void	left(t_mlx *wind)
 {
-	wind->field_of_view -= 5;
+	wind->field_of_view -= 10;
 	if (wind->field_of_view > 360)
 		wind->field_of_view -= 360;
 	if (wind->field_of_view < 360)
@@ -161,8 +227,8 @@ void	  move_forward(t_mlx *wind)
 	double	px = 0;
 	double	py;
 
-	py = sin(degrees_to_radians(wind)) * 5;
-	px = cos(degrees_to_radians(wind)) * 5;
+	py = sin(degrees_to_radians(wind)) * 1;
+	px = cos(degrees_to_radians(wind)) * 1;
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -176,8 +242,8 @@ void	move_backword(t_mlx *wind)
 	double	py;
 
 
-	py = sin(degrees_to_radians(wind)) * 5;
-	px = cos(degrees_to_radians(wind)) * 5;
+	py = sin(degrees_to_radians(wind)) * 1;
+	px = cos(degrees_to_radians(wind)) * 1;
 	// printf("--\n");
 	// printf("--\n");
 	// printf("PX => %f\n", wind->y_player - py);
@@ -196,8 +262,8 @@ void	move_right(t_mlx *wind)
 	double	px;
 	double	py;
 
-	py = sin(degrees_to_radians_1(wind)) * 5;
-	px = cos(degrees_to_radians_1(wind)) * 5;
+	py = sin(degrees_to_radians_1(wind)) * 1;
+	px = cos(degrees_to_radians_1(wind)) * 1;
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -210,8 +276,8 @@ void	move_left(t_mlx *wind)
 	double	px;
 	double	py;
 
-	py = sin(degrees_to_radians_1(wind)) * 5;
-	px = cos(degrees_to_radians_1(wind)) * 5;
+	py = sin(degrees_to_radians_1(wind)) * 1;
+	px = cos(degrees_to_radians_1(wind)) * 1;
 	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
@@ -251,7 +317,7 @@ void	creating_window(t_mlx *wind)
 	int	width;
 
 	height = 60 * 20;
-	width = 60 * 6;
+	width = 60 * 8;
 	wind->window = mlx_new_window(wind->mlx, height, width, "Cub2D");
 }
 

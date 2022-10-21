@@ -12,6 +12,40 @@
 
 #include "../cub3d.h"
 
+char	set_direction(int y_player, int x_player, int py, int px)
+{
+	if (y_player / 64 >= ((py) / 64) && x_player / 64 >= ((px) / 64))
+	{
+		if ((py + 1) % 64 == 0)
+			return ('N');
+		else
+			return ('W');
+	}
+	else if (y_player / 64 > ((py) / 64) && x_player / 64 < ((px) / 64))
+	{
+		if ((py + 1) % 64 == 0)
+			return ('N');
+		else
+			return ('E');
+	}
+	else if (y_player / 64 <= ((py) / 64) && x_player / 64 <= ((px) / 64))
+	{
+		if ((py + 1) % 64 == 0)
+			return ('S');
+		else
+			return ('E');
+	}
+	else if (y_player / 64 < ((py) / 64) && x_player / 64 > ((px) / 64))
+	{
+		if ((py + 1) % 64 == 0)
+			return ('S');
+		else
+			return ('W');
+	}
+	return (0);
+	printf("------------------------\n");
+}
+
 void	projecting_rays(t_mlx *wind)
 {
 	int		x;
@@ -30,7 +64,7 @@ void	projecting_rays(t_mlx *wind)
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
 
-void	casting_3d(double distance, int height, t_mlx *mlx)
+void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 {
 	int		width;
 	double	floor_ceiling;
@@ -44,7 +78,16 @@ void	casting_3d(double distance, int height, t_mlx *mlx)
 	while (width < WIN_HEIGHT && width < floor_ceiling)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_c);
 	while (width < WIN_HEIGHT && width < floor_ceiling + projection_3d)
-		my_mlx_pixel_put(&mlx->my_mlx, height, width++, RED);
+	{
+		if (dir == 'W')
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, WHITE);
+		else if (dir == 'E')
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, PURPLE);
+		else if (dir == 'N')
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
+		else if (dir == 'S')
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLACK);
+	}
 	while (width < WIN_HEIGHT)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_f);
 }
@@ -62,15 +105,18 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 	double	py;
 	double	distance;
 	double	corrected_distance;
-	
+	char	direction;
+
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)py / 64][(int)px / 64] == '1' || wind->map[(int)(py / 64) + 1][(int)(px / 64) + 1] == '1' || wind->map[(int)(py / 64) - 1][(int)(px / 64) - 1] == '1' || wind->map[(int)(py / 64) + 1][(int)(px / 64)] == '1' || wind->map[(int)(py / 64)][(int)(px / 64) + 1] == '1'  || wind->map[(int)(py / 64) - 1][(int)(px / 64)] == '1' || wind->map[(int)(py / 64)][(int)(px / 64) - 1] == '1')
+		if (wind->map[(int)py / 64][(int)px / 64] == '1')
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
+			direction = set_direction((int)wind->y_player, (int)wind->x_player, (int)wind->y_end_of_ray, (int)wind->x_end_of_ray);
+			printf("Direction -> %c\n", direction);
 			distance = calculate_distance(wind->y_player, wind->x_player,
 					wind->y_end_of_ray, wind->x_end_of_ray);
 			break ;
@@ -80,5 +126,5 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 	}
 	corrected_distance = distance
 		* cos((angle - wind->field_of_view) * (M_PI / 180));
-	casting_3d(corrected_distance, x, wind);
+	casting_3d(corrected_distance, x, wind, direction);
 }
