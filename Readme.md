@@ -67,6 +67,12 @@ high school math which forms the foundation of most calculations in the game : S
 <img src="https://github.com/Toufa7/Cub3D/blob/0f29555a21a8c86fdc66918e2dcbc06479563645/images/calculations.png" width="400"/>
 
 
+You can see it like this way the player moves up to the px then the py like this ^_^
+
+
+<img src="https://github.com/Toufa7/Cub3D/blob/cdc9b641d15db278830aa814d1071fadc61d2fad/images/moving.gif" width="400"/>
+
+
 As you know the raycasting  doesn't draw the whole scene once each column represents a single ray cast out from the player at a particuler angle
 if the ray hits the wall we calcualted the distance  
 
@@ -101,14 +107,14 @@ if the ray hits the wall we calcualted the distance
 	    double py = player y position;
 	    while (True)
 	    {
-		    // now we need to starting casting ray from the angle that the player see's
 	    py += cos(fov) * distance between each ray;	 	
 	    px += sin(fov) * distance between each ray;
         // Protect you self (Seg Fault)
 	    if (map[py][px] == '1'] || map[py + 1][px + 1] == '1'] || || map[py - 1][px - 1] == '1'])
 		    break ;
+	        mlx_pixel_put(wind->mlx, wind->window, px, py, HEX_Color);
+
 	    }
-        mlx_pixel_put(wind->mlx, wind->window, px, py, HEX_Color);
     }
 
 
