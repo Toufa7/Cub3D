@@ -78,7 +78,20 @@ void	cast_rays(t_mlx *wind, double fov)
 	while (TRUE)
 	{
 		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
+		{
+			printf("Player	Positions	[%d,%d]\n",(int)wind->y_player / 60,(int)wind->x_player / 60);
+			printf("Wall	Positions	[%d,%d]\n",(int)((py) / 60),(int)((px) / 60));
+			if ((int)wind->y_player / 60 > (int)((py) / 60) && (int)wind->x_player / 60 > (int)((px) / 60))
+				printf("North & West\n");
+			else if ((int)wind->y_player / 60 > (int)((py) / 60) && (int)wind->x_player / 60 < (int)((px) / 60))
+				printf("North & East\n");
+			else if ((int)wind->y_player / 60 < (int)((py) / 60) && (int)wind->x_player / 60 < (int)((px) / 60))
+				printf("South & East\n");
+			else if ((int)wind->y_player / 60 < (int)((py) / 60) && (int)wind->x_player / 60 > (int)((px) / 60))
+				printf("South & West\n");
+
 			break ;
+		}
 		px += cos((fov) * M_PI / 180) * 1;
 		py += sin((fov) * M_PI / 180) * 1;
 		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
@@ -94,8 +107,8 @@ void	projecting_rays(t_mlx *wind)
 	i = -1;
 	nbr_of_rays = 1920;
 	// Dividing my view into 2 triangle 32° left and 32° right
-	fov = wind->field_of_view - 32;
-	while (i++ < nbr_of_rays)
+	fov = wind->field_of_view;
+	while (i++ < 1)
 	{
 		cast_rays(wind, fov);
 		fov += 64.0 / 1920;
@@ -165,12 +178,12 @@ void	move_backword(t_mlx *wind)
 
 	py = sin(degrees_to_radians(wind)) * 5;
 	px = cos(degrees_to_radians(wind)) * 5;
-	printf("--\n");
-	printf("--\n");
-	printf("PX => %f\n", wind->y_player - py);
-	printf("PX / 60 => %f\n",( wind->y_player - py) / 60);
-	printf("PY => %f\n", wind->x_player - px);
-	printf("PY / 60  => %f\n", (wind->x_player - px) / 60);
+	// printf("--\n");
+	// printf("--\n");
+	// printf("PX => %f\n", wind->y_player - py);
+	// printf("PX / 60 => %f\n",( wind->y_player - py) / 60);
+	// printf("PY => %f\n", wind->x_player - px);
+	// printf("PY / 60  => %f\n", (wind->x_player - px) / 60);
 	if (wind->map[(int)((wind->y_player - py) / 60)][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;

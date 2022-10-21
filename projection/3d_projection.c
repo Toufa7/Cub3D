@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 09:49:51 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/17 20:15:43 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:56:13 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,12 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 	double	py;
 	double	distance;
 	double	corrected_distance;
-
+	
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)py / 64][(int)px / 64] == '1'
-			|| wind->map[(int)(py - 1) / 64][(int)(px - 1) / 64] == '1'
-			|| wind->map[(int)(py + 1) / 64][(int)(px + 1) / 64] == '1' )
+		if (wind->map[(int)py / 64][(int)px / 64] == '1' || wind->map[(int)(py / 64) + 1][(int)(px / 64) + 1] == '1' || wind->map[(int)(py / 64) - 1][(int)(px / 64) - 1] == '1' || wind->map[(int)(py / 64) + 1][(int)(px / 64)] == '1' || wind->map[(int)(py / 64)][(int)(px / 64) + 1] == '1'  || wind->map[(int)(py / 64) - 1][(int)(px / 64)] == '1' || wind->map[(int)(py / 64)][(int)(px / 64) - 1] == '1')
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
