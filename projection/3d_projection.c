@@ -14,36 +14,35 @@
 
 char	set_direction(int y_player, int x_player, int py, int px)
 {
-	if (y_player / 64 >= ((py) / 64) && x_player / 64 >= ((px) / 64))
+	if (y_player / 64.0 >= ((py) / 64.0) && x_player / 64.0 >= ((px) / 64.0))
 	{
-		if ((py + 1) % 64 == 0)
+		if ((int)(py + 1 ) % 64 == 0)
 			return ('N');
 		else
 			return ('W');
 	}
-	else if (y_player / 64 > ((py) / 64) && x_player / 64 < ((px) / 64))
+	else if (y_player / 64.0 > ((py) / 64.0) && x_player / 64.0 < ((px) / 64.0))
 	{
-		if ((py + 1) % 64 == 0)
+		if ((int)(py + 1 ) % 64 == 0)
 			return ('N');
 		else
 			return ('E');
 	}
-	else if (y_player / 64 <= ((py) / 64) && x_player / 64 <= ((px) / 64))
+	else if (y_player / 64.0 <= ((py) / 64.0) && x_player / 64.0 <= ((px) / 64.0))
 	{
-		if ((py + 1) % 64 == 0)
+		if ((int)(py) % 64 == 0)
 			return ('S');
 		else
 			return ('E');
 	}
-	else if (y_player / 64 < ((py) / 64) && x_player / 64 > ((px) / 64))
+	else if (y_player / 64.0 < ((py) / 64.0) && x_player / 64.0 > ((px) / 64.0))
 	{
-		if ((py + 1) % 64 == 0)
+		if ((int)(py) % 64 == 0)
 			return ('S');
 		else
 			return ('W');
 	}
 	return (0);
-	printf("------------------------\n");
 }
 
 void	projecting_rays(t_mlx *wind)
