@@ -12,6 +12,7 @@ FUNCTIONS =	projection/my_mlx_pixel_put.c\
 			projection/get_player_position.c\
 			projection/get_keys.c\
 			projection/3d_projection.c\
+			projection/set_directions.c\
 			projection/moves/move_forward.c\
 			projection/moves/move_left.c\
 			projection/moves/move_right.c\

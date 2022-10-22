@@ -12,78 +12,7 @@
 
 #include "../cub3d.h"
 
-char	set_direction(int y_player, int x_player, int py, int px, t_mlx *wind)
-{
-	double ppy = ((py / 64.0) + 1);
-	double ppx = ((px / 64.0));
 
-	double ppyy = ((py / 64.0) - 1);
-	double ppxx = ((px / 64.0));
-
-	if (y_player > py && x_player > px)
-	{
-		if ((int)(py + 1) % 64 == 0 && wind->map[(int)((py / 64) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
-		{
-			return ('N');
-		}
-		else
-			return ('W');
-	}
-	else if (y_player > py && x_player < px)
-	{
-		if ((int)(py + 1) % 64 == 0 && wind->map[(int)((py / 64) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
-		{
-			return ('N');
-		}
-		else
-			return ('E');
-	}
-	else if (y_player <= py && x_player <= px)
-	{
-		if ((int)(py) % 64 == 0 && wind->map[(int)((py / 64) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
-			return ('S');
-		else
-			return ('E');
-	}
-	else if (y_player <= py && x_player >= px)
-	{
-		if ((int)(py) % 64 == 0 && wind->map[(int)((py / 64) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
-			return ('S');
-		else
-			return ('W');
-	}
-	return (0);
-
-	// if (y_player >= ((py)) && x_player >= ((px)))
-	// {
-	// 	if ((int)(py + 1 ) % (int)64 == 0)
-	// 		return ('N');
-	// 	else
-	// 		return ('W');
-	// }
-	// else if (y_player > ((py)) && x_player < ((px)))
-	// {
-	// 	if ((int)(py + 1 ) % (int)WALL_DIM == 0)
-	// 		return ('N');
-	// 	else
-	// 		return ('E');
-	// }
-	// else if (y_player <= ((py)) && x_player <= ((px)))
-	// {
-	// 	if ((int)(py) % (int)WALL_DIM == 0)
-	// 		return ('S');
-	// 	else
-	// 		return ('E');
-	// }
-	// else if (y_player < ((py)) && x_player > ((px)))
-	// {
-	// 	if ((int)(py) % (int)WALL_DIM == 0)
-	// 		return ('S');
-	// 	else
-	// 		return ('W');
-	// }
-	return (0);
-}
 
 void	projecting_rays(t_mlx *wind)
 {

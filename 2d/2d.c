@@ -97,7 +97,7 @@ char	set_direction(float y_player, float x_player, float py, float px, t_mlx *wi
 
 	if (y_player > py && x_player > px)
 	{
-		printf("Her -> %c\n", wind->map[(int)(ppy)][(int)(ppx)]);
+		// printf("Her -> %c\n", wind->map[(int)(ppy)][(int)(ppx)]);
 		if ((int)(py + 1) % 60 == 0 && wind->map[(int)((py / 60) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
 		{
 			return ('N');
@@ -177,10 +177,10 @@ void	projecting_rays(t_mlx *wind)
 	i = -1;
 	nbr_of_rays = 1920;
 	fov = wind->field_of_view - 30;
-	while (i++ < (1920))
+	while (i++ < (nbr_of_rays * 10))
 	{
 		cast_rays(wind, fov);
-		fov += 64.0 / nbr_of_rays;
+		fov += 720.0 / nbr_of_rays;
 	}
 }
 
@@ -227,11 +227,11 @@ void	left(t_mlx *wind)
 
 void	  move_forward(t_mlx *wind)
 {
-	float	px = 0;
+	float	px;
 	float	py;
 
-	py = sin(degrees_to_radians(wind));
-	px = cos(degrees_to_radians(wind));
+	py = sin(degrees_to_radians(wind)) * 10;
+	px = cos(degrees_to_radians(wind)) * 10;
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -245,14 +245,8 @@ void	move_backword(t_mlx *wind)
 	float	py;
 
 
-	py = sin(degrees_to_radians(wind));
-	px = cos(degrees_to_radians(wind));
-	// printf("--\n");
-	// printf("--\n");
-	// printf("PX => %f\n", wind->y_player - py);
-	// printf("PX / 60 => %f\n",( wind->y_player - py) / 60);
-	// printf("PY => %f\n", wind->x_player - px);
-	// printf("PY / 60  => %f\n", (wind->x_player - px) / 60);
+	py = sin(degrees_to_radians(wind)) * 10;
+	px = cos(degrees_to_radians(wind)) * 10;
 	if (wind->map[(int)((wind->y_player - py) / 60)][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
@@ -265,8 +259,8 @@ void	move_right(t_mlx *wind)
 	float	px;
 	float	py;
 
-	py = sin(degrees_to_radians_1(wind));
-	px = cos(degrees_to_radians_1(wind));
+	py = sin(degrees_to_radians_1(wind)) * 10;
+	px = cos(degrees_to_radians_1(wind)) * 10;
 	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
 	{
 		wind->x_player += px;
@@ -279,8 +273,8 @@ void	move_left(t_mlx *wind)
 	float	px;
 	float	py;
 
-	py = sin(degrees_to_radians_1(wind));
-	px = cos(degrees_to_radians_1(wind));
+	py = sin(degrees_to_radians_1(wind)) * 10;
+	px = cos(degrees_to_radians_1(wind)) * 10;
 	if (wind->map[(int)(wind->y_player - py) / 60][(int)(wind->x_player - px) / 60] == '0')
 	{
 		wind->x_player -= px;
@@ -316,8 +310,8 @@ void	creating_window(t_mlx *wind)
 	int	height;
 	int	width;
 
-	height = 60 * 20;
-	width = 60 * 8;
+	height = 60 * 21;
+	width = 60 * 9;
 	wind->window = mlx_new_window(wind->mlx, height, width, "Cub2D");
 }
 

@@ -145,6 +145,11 @@ void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
 void	cast_rays(t_mlx *wind, float angle, int i);
 /*
+	Whenever a ray hits the wall set which interface he see's
+*/
+char	set_direction(int y_player, int x_player, int py, int px, t_mlx *wind);
+
+/*
 	Starting from the player position we draw line using cast_rays()
 */
 void	projecting_rays(t_mlx *wind);
