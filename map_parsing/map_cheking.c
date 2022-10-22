@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:47:49 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/19 14:27:05 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 12:10:29 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,17 +74,18 @@ t_fd	take_path(char	*str)
 	int		i;
 
 	i = 0;
-	str_sp = ft_split(ft_strdup(str), '\n');
+	str_sp = ft_split(str, '\n');
 	while (i < 6)
 	{
-		sp = ft_split(ft_strdup(str_sp[i]), ' ');
+		sp = ft_split(str_sp[i], ' ');
 		s = joining(sp);
 		fd = file_dis(sp[0], s);
 		ft_free(sp);
 		free(s);
 		i++;
 	}
-	fd.full_map = only_map(ft_strdup(str));
+	fd.full_map = only_map(str);
+	ft_free(str_sp);
 	return (fd);
 }
 
@@ -102,7 +103,7 @@ int	check_isdigit(char **sp)
 		num = ft_atoi(sp[i]);
 		if (num > 255 || num < 0)
 		{
-			printf("Error :Colors  %s High Than 255\n", sp[i]);
+			printf("Error :Colors  %s High or low Than 255\n", sp[i]);
 			return (0);
 		}
 		i++;

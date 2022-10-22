@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/20 11:17:32 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 12:20:47 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 // 	[✅] Handling newlines inside the map
 // 	[✅] Convert RGB color to hexadecimal
 // 	[✅] Don't forget to exit if an error happend
-// 	[❌] Leaks
+// 	[✅] Leaks
 */
 
 int	main(int ac, char **av)
@@ -37,7 +37,7 @@ int	main(int ac, char **av)
 	wind.parsing = read_and_add(av);
 	wind.parsing.color_c = rgb_to_hexa(wind.parsing.C);
 	wind.parsing.color_f = rgb_to_hexa(wind.parsing.F);
-	printf("\nfull ma p =\n%s\n",wind.parsing.full_map);
+	system("leaks cub3d");
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');

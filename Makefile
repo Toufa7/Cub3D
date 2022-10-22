@@ -2,9 +2,13 @@ NAME = cub3d
 
 CC = gcc
 
-ADDITIONAL_FLAGS = -g -fsanitize=address
+#ADDITIONAL_FLAGS = -g -fsanitize=address
 
+<<<<<<< HEAD
+C_FLAGS = -Wall -Wextra -Werror -g
+=======
 C_FLAGS = 
+>>>>>>> 1c5fe34fd7138cd1063357a9e72911771dc28555
 
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
@@ -22,7 +26,6 @@ FUNCTIONS =	projection/my_mlx_pixel_put.c\
 			map_parsing/checking_walls.c\
 			map_parsing/check_map_utils.c\
 			map_parsing/read_and_add.c\
-			map_parsing/to_hexa.c\
 			map_parsing/main.c\
 			map_parsing/map_cheking.c\
 			map_parsing/check_Path.c\

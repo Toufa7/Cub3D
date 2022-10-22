@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:11:47 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/11 15:11:53 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/21 14:40:02 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ char	*ft_strdup(char *s1)
 	size_t	i;
 	size_t	l;
 	size_t	memory;
+
 	if (!s1)
-		return 0;
+		return (0);
 	l = ft_strlen(s1);
 	memory = (sizeof(char) * l + 1);
 	dup = (char *)malloc(memory);

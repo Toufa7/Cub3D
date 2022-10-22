@@ -1,7 +1,7 @@
 
 while True;
     do leaks cub3d;
-    sleep 2;
+    sleep 20;
     clear;
     done;
 

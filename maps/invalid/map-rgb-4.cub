@@ -1,9 +1,8 @@
-R 500 500
+
 NO tests/textures/wall.xpm
 SO tests/textures/bricks.xpm
 WE tests/textures/gold.xpm
 EA tests/textures/wood.xpm
-S tests/textures/enemy.xpm
 F 220,111,119
 C 225,111,999999999999999999999999999999
 

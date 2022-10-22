@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:38:51 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/20 11:15:54 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 12:13:49 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,8 +111,8 @@ int	check_colors_valid(char *F, char *C)
 	char	**sp_f;
 	char	**sp_c;
 
-	sp_c = ft_split(ft_strdup(C), ',');
-	sp_f = ft_split(ft_strdup(F), ',');
+	sp_c = ft_split(C, ',');
+	sp_f = ft_split(F, ',');
 	if (counting(sp_f) != 3 || counting(sp_c) != 3)
 	{
 		printf("Error : There is problem in COLORS.");
