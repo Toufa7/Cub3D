@@ -4,7 +4,11 @@ CC = gcc
 
 #ADDITIONAL_FLAGS = -g -fsanitize=address
 
+<<<<<<< HEAD
 C_FLAGS = -Wall -Wextra -Werror -g
+=======
+C_FLAGS = 
+>>>>>>> 1c5fe34fd7138cd1063357a9e72911771dc28555
 
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
@@ -40,7 +44,7 @@ RM = rm -rf
 all		:	$(NAME) 
 
 $(NAME) : $(FUNCTIONS)
-			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
+			$(CC) $(C_FLAGS)  $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
 
 clean	:	
 			$(RM) $(NAME)

@@ -11,8 +11,15 @@
 #include "../get_next_line/get_next_line.h"
 #include "../libft/libft.h"
 
-#define BLUE 0X0000FF
-#define RED 0XFF0000
+# define RED 0XFF0000
+# define WHITE 0XFFFFFF
+# define BLACK 0X000000
+# define PURPLE 0X800080
+# define BLUE 0X0000FF
+# define GREEN 0X00FF00
+
+
+
 #define TRUE 1
 #define WIN_WIDTH 1920
 #define WIN_HEIGHT 1080

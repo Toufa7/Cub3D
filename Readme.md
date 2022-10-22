@@ -24,10 +24,6 @@
 :warning: Let's go back to some of the high school math :
 
 
-
-Before proceeding to the next section (describing what is done with the distance from theplayer to the wall), here is a short refresher on a piece of
-high school math which forms the foundation of most calculations in the game : SOH-CAH-TOA
-
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
 
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
@@ -62,8 +58,19 @@ But what if the player want to go to diffrent angle :
 
 <img src="https://github.com/Toufa7/Cub3D/blob/5827035ebea0bd06d041e241b78fdd2df5d26c89/images/which_direction.png" width="400"/>
 
+To go to that direction we need the intersection in term of the a-axis and the y-axis, here is a short refresher on a piece of
+high school math which forms the foundation of most calculations in the game : SOH-CAH-TOA
 
-when advancing 1 on the X axis, the ray moves up on the Y axis. The reciprocalis calculated as follows:  move 1 on Y axis, move 𝑡𝑎𝑛(90 − 𝜃) on X axis.  To acceleratecos,sinandtancalculations, the engine uses a lookup table. See 4.11.1 "Cos/Sin TableLookup" on page
+<img src="https://github.com/Toufa7/Cub3D/blob/6c1598beb10949713c87323e2777010007e9540c/images/intersections.png" width="400"/>
+
+
+<img src="https://github.com/Toufa7/Cub3D/blob/0f29555a21a8c86fdc66918e2dcbc06479563645/images/calculations.png" width="400"/>
+
+
+You can see it like this way the player moves up to the px then the py like this ^_^
+
+
+<img src="https://github.com/Toufa7/Cub3D/blob/cdc9b641d15db278830aa814d1071fadc61d2fad/images/moving.gif" width="400"/>
 
 
 As you know the raycasting  doesn't draw the whole scene once each column represents a single ray cast out from the player at a particuler angle
@@ -100,14 +107,14 @@ if the ray hits the wall we calcualted the distance
 	    double py = player y position;
 	    while (True)
 	    {
-		    // now we need to starting casting ray from the angle that the player see's
 	    py += cos(fov) * distance between each ray;	 	
 	    px += sin(fov) * distance between each ray;
         // Protect you self (Seg Fault)
 	    if (map[py][px] == '1'] || map[py + 1][px + 1] == '1'] || || map[py - 1][px - 1] == '1'])
 		    break ;
+	        mlx_pixel_put(wind->mlx, wind->window, px, py, HEX_Color);
+
 	    }
-        mlx_pixel_put(wind->mlx, wind->window, px, py, HEX_Color);
     }
 
 

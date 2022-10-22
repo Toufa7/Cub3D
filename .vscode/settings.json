@@ -10,7 +10,8 @@
         "system_error": "c",
         "unordered_map": "c",
         "vector": "c",
-        "mlx.h": "c"
+        "mlx.h": "c",
+        "stdio.h": "c"
     },
     "makefile.launchConfigurations": [
         {
