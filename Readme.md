@@ -3,9 +3,10 @@
     WIN_WIDTH = 1920;
     WIN_HEIGHT = 1080;
     mlx.window = mlx_new_window(wind.mlx, WIN_WIDTH, WIN_HEIGHT, "Cub3D");
-    
-<img src="https://github.com/Toufa7/Cub3D/blob/69e8684df1de3c65f45df3d16731c41e4311d1b8/images/window.png" width="700"/>
 
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/69e8684df1de3c65f45df3d16731c41e4311d1b8/images/window.png" width="700"/>
+</p>
 
 :two: Getting the player position in the map and define the field of view based on  the char inserted in the map ;
 
@@ -23,11 +24,15 @@
 
 :warning: Let's go back to some of the high school math :
 
+<p align="center">
 
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
+</p>	
+	
+<p align="center">
 
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
-
+</p>
 
 
 
@@ -39,7 +44,7 @@ The number of rays will be the width of the window is 1920
     void	player_view()
     {
 	    int i = -1;
-	    float fov = the fov setted in the map - 32;
+	    double fov = the fov setted in the map - 32;
 	    while (++i < nbr_of_rays)
 	    {
 		    cast_ray(fov);
@@ -52,34 +57,45 @@ The number of rays will be the width of the window is 1920
 
 So as you know if our player has a 4 direction 2 vertical and 2 horizontal it's gonna be easy to implement his moves by simply increasing and decreasing his current positions [x,y],
 
+<p align="center">
+
 <img src="https://github.com/Toufa7/Cub3D/blob/fed5291a246a236e5a65148537472698ebd5d6d3/images/player%20directions.png" width="400"/>
+</p>
 
 But what if the player want to go to diffrent angle :
 
+<p align="center">	
 <img src="https://github.com/Toufa7/Cub3D/blob/5827035ebea0bd06d041e241b78fdd2df5d26c89/images/which_direction.png" width="400"/>
+</p>
 
 To go to that direction we need the intersection in term of the a-axis and the y-axis, here is a short refresher on a piece of
 high school math which forms the foundation of most calculations in the game : SOH-CAH-TOA
 
+	
+<p align="center">
+	
 <img src="https://github.com/Toufa7/Cub3D/blob/6c1598beb10949713c87323e2777010007e9540c/images/intersections.png" width="400"/>
+</p>
 
+<p align="center">
 
 <img src="https://github.com/Toufa7/Cub3D/blob/0f29555a21a8c86fdc66918e2dcbc06479563645/images/calculations.png" width="400"/>
-
+</p>
 
 You can see it like this way the player moves up to the px then the py like this ^_^
 
+<p align="center">
 
 <img src="https://github.com/Toufa7/Cub3D/blob/cdc9b641d15db278830aa814d1071fadc61d2fad/images/moving.gif" width="400"/>
-
+</p>
 
 As you know the raycasting  doesn't draw the whole scene once each column represents a single ray cast out from the player at a particuler angle
 if the ray hits the wall we calcualted the distance  
 
-    void	cast_ray(float fov)
+    void	cast_ray(double fov)
     {
-	    float px = player x position;
-	    float py = player y position;
+	    double px = player x position;
+	    double py = player y position;
 	    while (True)
 	    {
 		    // now we need to starting casting ray from the angle that the player see's
@@ -91,20 +107,27 @@ if the ray hits the wall we calcualted the distance
 	    }
     }
 
-<img src="https://github.com/Toufa7/Cub3D/blob/19f5be94c3bcb2bf58fa816e8f2296566b120932/images/Screen%20Shot%202022-10-19%20at%206.37.50%20PM.png" width="1000"/>
+<p align="center">
 
+<img src="https://github.com/Toufa7/Cub3D/blob/19f5be94c3bcb2bf58fa816e8f2296566b120932/images/Screen%20Shot%202022-10-19%20at%206.37.50%20PM.png" width="1000"/>
+</p>
 
 :warning: Remembre if you face this problem simply you have to check if there's any close wall to the position that's it hits the wall
 
+<p align="center">
 
 <img src="https://github.com/Toufa7/Cub3D/blob/190f522295450f248b63db86c341d65f418e9fc4/images/inside_cub.png" width="700"/>
+</p>
+
+<p align="center">
 
 <img src="https://github.com/Toufa7/Cub3D/blob/190f522295450f248b63db86c341d65f418e9fc4/images/inside_cub1.png" width="700"/>
-
-    void	cast_ray(float fov)
+</p>
+	
+    void	cast_ray(double fov)
     {
-	    float px = player x position;
-	    float py = player y position;
+	    double px = player x position;
+	    double py = player y position;
 	    while (True)
 	    {
 	    py += cos(fov) * distance between each ray;	 	
@@ -136,10 +159,26 @@ if the ray hits the wall we calcualted the distance
           move_backword();
      }
 
+:information_source: And if you wanna take you game to the next level to look like this
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/ael-bekk/Advanced-Raycasting-Cub3D/db34ea5c33af4e89f18c2c4fcf51da9265a5a24b/img_srces/Blank%208%20Grids%20Collage.png" width="1000"/>
+</p>
+
+
+<p align="center">
+<b> Here's your path ⤵️ : </b>
+</p>
+
+<p align="center">
+	<b> <a href="https://github.com/ael-bekk/Advanced-Raycasting-Cub3D">Advanced Raycasting Cub3D </a> </b>
+</p>
+
+
+
+# Questions and answers
 
 Starting to casting rays with the help of mlx_pixel_put it turn up that it works but in the 3D part we're going to face a few problems becuase that latter it tries to put pixel instantly on window without waiting for the frame to be rendered entirely so the solution we'll be to buffer or to put our pixels in an image then push it into the window that's what my_mlx_pixel_put do :
-
 
 1) Creating an image with the width and height:
 
@@ -154,9 +193,9 @@ Starting to casting rays with the help of mlx_pixel_put it turn up that it works
     Endian : Little 0 Big 1 Endian
 
 
-
+<p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/6945f32893b4c4d1abfc2ccefe889f0ae638ad6e/images/formula_my_mlx.png" width="600"/>
-
+</p>
 
 
 The above fomula it's actually in my_mlx_pixel_put :
@@ -168,7 +207,15 @@ BPP : 32bits ? because we have (ARGB) red, green, blue, alpha . the alpha parame
 
 How computer store and dispplay graphics ?
 
-    as you know computer monitor made up of tiny pixels 
+As we know every image is a combination of tiny pixels let's take a simple example :
+
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/191525ef73d4e3495579df26a88e6a7cbf55715e/images/appel_in_pxels.png" width="350" height="400"/>
+</p>
+
+each pixel has it's own color an example is that the top left has a green color in pixel so the computer define it with a specifique number tbc
+ 
 
 Why mlx_pixel_put so slow ?
 
