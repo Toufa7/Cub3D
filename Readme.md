@@ -232,7 +232,7 @@ https://velog.io/@parksj3205/miniLibX%EB%A1%9C-%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%8
 
 https://github.com/sejinpark12/MiniLibX_man_kor
 
-Very Very Verrrrrrry useful https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/
+Very Very Verrrrrrry useful 👌 https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/
 
 
 
