@@ -20,6 +20,8 @@
 // 	[✅] Fixing fisheye effect
 // 	[✅] Fixing keys
 
+// 	[✅] Adding colors to wall
+// 	[❌] Fixing colors between walls
 // 	[❌] Adding textures
 
 			Oussama
@@ -37,7 +39,6 @@ int	main(int ac, char **av)
 	wind.parsing = read_and_add(av);
 	wind.parsing.color_c = rgb_to_hexa(wind.parsing.C);
 	wind.parsing.color_f = rgb_to_hexa(wind.parsing.F);
-	system("leaks cub3d");
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');

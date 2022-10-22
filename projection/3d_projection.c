@@ -14,30 +14,30 @@
 
 char	set_direction(int y_player, int x_player, int py, int px)
 {
-	if (y_player / 64.0 >= ((py) / 64.0) && x_player / 64.0 >= ((px) / 64.0))
+	if (y_player >= ((py)) && x_player >= ((px)))
 	{
-		if ((int)(py + 1 ) % 64 == 0)
+		if ((int)(py + 1 ) % (int)WALL_DIM == 0)
 			return ('N');
 		else
 			return ('W');
 	}
-	else if (y_player / 64.0 > ((py) / 64.0) && x_player / 64.0 < ((px) / 64.0))
+	else if (y_player > ((py)) && x_player < ((px)))
 	{
-		if ((int)(py + 1 ) % 64 == 0)
+		if ((int)(py + 1 ) % (int)WALL_DIM == 0)
 			return ('N');
 		else
 			return ('E');
 	}
-	else if (y_player / 64.0 <= ((py) / 64.0) && x_player / 64.0 <= ((px) / 64.0))
+	else if (y_player <= ((py)) && x_player <= ((px)))
 	{
-		if ((int)(py) % 64 == 0)
+		if ((int)(py) % (int)WALL_DIM == 0)
 			return ('S');
 		else
 			return ('E');
 	}
-	else if (y_player / 64.0 < ((py) / 64.0) && x_player / 64.0 > ((px) / 64.0))
+	else if (y_player < ((py)) && x_player > ((px)))
 	{
-		if ((int)(py) % 64 == 0)
+		if ((int)(py) % (int)WALL_DIM == 0)
 			return ('S');
 		else
 			return ('W');
@@ -48,7 +48,7 @@ char	set_direction(int y_player, int x_player, int py, int px)
 void	projecting_rays(t_mlx *wind)
 {
 	int		x;
-	double	angle;
+	float	angle;
 
 	x = -1;
 	angle = wind->field_of_view - 32;
@@ -58,21 +58,21 @@ void	projecting_rays(t_mlx *wind)
 	while (++x < WIN_WIDTH)
 	{
 		cast_rays(wind, angle, x);
-		angle += 64.0 / WIN_WIDTH;
+		angle += WALL_DIM / 1910;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
 
-void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
+void	casting_3d(float distance, int height, t_mlx *mlx, char dir)
 {
 	int		width;
-	double	floor_ceiling;
-	double	projection_3d;
-	double	distance_to_projection;
+	float	floor_ceiling;
+	float	projection_3d;
+	float	distance_to_projection;
 
 	width = 0;
-	distance_to_projection = ((WIN_WIDTH / 2) / (tan((64.0 / 2) * (M_PI / 180))));
-	projection_3d = (64.0 / distance) * distance_to_projection;
+	distance_to_projection = ((WIN_WIDTH / 2) / (tan((WALL_DIM / 2) * (M_PI / 180))));
+	projection_3d = (WALL_DIM / distance) * distance_to_projection;
 	floor_ceiling = (WIN_HEIGHT / 2) - (projection_3d / 2);
 	while (width < WIN_HEIGHT && width < floor_ceiling)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_c);
@@ -91,31 +91,30 @@ void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_f);
 }
 
-double	calculate_distance(double y_player, double x_player,
-		double y_wall, double x_wall)
+float	calculate_distance(float y_player, float x_player,
+		float y_wall, float x_wall)
 {
 	return (sqrt(((x_player - x_wall) * (x_player - x_wall))
 			+ ((y_player - y_wall) * (y_player - y_wall))));
 }
 
-void	cast_rays(t_mlx *wind, double angle, int x)
+void	cast_rays(t_mlx *wind, float angle, int x)
 {
-	double	px;
-	double	py;
-	double	distance;
-	double	corrected_distance;
+	float	px;
+	float	py;
+	float	distance;
+	float	corrected_distance;
 	char	direction;
 
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
-		if (wind->map[(int)py / 64][(int)px / 64] == '1')
+		if (wind->map[(int)py / (int)WALL_DIM][(int)px / (int)WALL_DIM] == '1')
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
 			direction = set_direction((int)wind->y_player, (int)wind->x_player, (int)wind->y_end_of_ray, (int)wind->x_end_of_ray);
-			printf("Direction -> %c\n", direction);
 			distance = calculate_distance(wind->y_player, wind->x_player,
 					wind->y_end_of_ray, wind->x_end_of_ray);
 			break ;

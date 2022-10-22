@@ -2,7 +2,7 @@ NAME = cub3d
 
 CC = gcc
 
-#ADDITIONAL_FLAGS = -g -fsanitize=address
+ADDITIONAL_FLAGS = -g -fsanitize=address
 
 C_FLAGS = -Wall -Wextra -Werror -g
 
@@ -45,5 +45,9 @@ $(NAME) : $(FUNCTIONS)
 clean	:	
 			$(RM) $(NAME)
 fclean	:	clean
+
+run		:	fclean all
+
+			./cub3d maps/valid/map-no-0.cub
 		
 re 		:	fclean all

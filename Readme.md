@@ -39,7 +39,7 @@ The number of rays will be the width of the window is 1920
     void	player_view()
     {
 	    int i = -1;
-	    double fov = the fov setted in the map - 32;
+	    float fov = the fov setted in the map - 32;
 	    while (++i < nbr_of_rays)
 	    {
 		    cast_ray(fov);
@@ -76,10 +76,10 @@ You can see it like this way the player moves up to the px then the py like this
 As you know the raycasting  doesn't draw the whole scene once each column represents a single ray cast out from the player at a particuler angle
 if the ray hits the wall we calcualted the distance  
 
-    void	cast_ray(double fov)
+    void	cast_ray(float fov)
     {
-	    double px = player x position;
-	    double py = player y position;
+	    float px = player x position;
+	    float py = player y position;
 	    while (True)
 	    {
 		    // now we need to starting casting ray from the angle that the player see's
@@ -101,10 +101,10 @@ if the ray hits the wall we calcualted the distance
 
 <img src="https://github.com/Toufa7/Cub3D/blob/190f522295450f248b63db86c341d65f418e9fc4/images/inside_cub1.png" width="700"/>
 
-    void	cast_ray(double fov)
+    void	cast_ray(float fov)
     {
-	    double px = player x position;
-	    double py = player y position;
+	    float px = player x position;
+	    float py = player y position;
 	    while (True)
 	    {
 	    py += cos(fov) * distance between each ray;	 	
