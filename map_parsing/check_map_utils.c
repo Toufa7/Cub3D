@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:38:51 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/22 12:13:49 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 14:46:50 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,31 @@ int	check_player(char str)
 	return (0);
 }
 
+int	check_pos_player(char **str, int i, int j)
+{
+	if (!str[i + 1][j] || (str[i + 1][j] && str[i][j] == ' '))
+	{
+		printf("Error : Problem under Player [%d][%d].\n", i + 1, j);
+		return (0);
+	}
+	else if (!str[i - 1][j] || (str[i - 1][j] && str[i - 1][j] == ' '))
+	{
+		printf("Error : Problem above Player [%d][%d].\n", i - 1, j);
+		return (0);
+	}
+	else if (!str[i][j + 1] || (str[i + 1][j] && str[i + 1][j] == ' '))
+	{
+		printf("Error : Problem left Player [%d][%d].\n", i, j + 1);
+		return (0);
+	}
+	else if (!str[i][j - 1] || (str[i][j - 1] && str[i][j - 1] == ' '))
+	{
+		printf("Error : Problem above Player [%d][%d].\n", i, j - 1);
+		return (0);
+	}
+	return (1);
+}
+
 int	last_touches(char	**str)
 {
 	int		count_0;
@@ -93,12 +118,13 @@ int	last_touches(char	**str)
 		while (str[i][j])
 		{
 			if (check_player(str[i][j]))
+				if (check_pos_player(str, i, j))
 				cout_p++;
 			j++;
 		}
 		i++;
 	}
-	if ( (cout_p == 0 || cout_p > 1) || i == 6)
+	if ((cout_p == 0 || cout_p > 1) || i == 6)
 	{
 		printf("Error : There is a problem");
 		return (0);

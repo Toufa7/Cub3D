@@ -4,11 +4,7 @@ CC = gcc
 
 #ADDITIONAL_FLAGS = -g -fsanitize=address
 
-<<<<<<< HEAD
 C_FLAGS = -Wall -Wextra -Werror -g
-=======
-C_FLAGS = 
->>>>>>> 1c5fe34fd7138cd1063357a9e72911771dc28555
 
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
