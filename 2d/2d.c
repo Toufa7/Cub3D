@@ -107,7 +107,7 @@ char	set_direction(double y_player, double x_player, double py, double px)
 	}
 	else if (y_player / 60.0 <= ((py) / 60.0) && x_player / 60.0 <= ((px) / 60.0))
 	{
-		if ((int)(py + 1) % 60 == 0)
+		if ((int)(py) % 60 == 0)
 			return ('S');
 		else
 		{
@@ -117,7 +117,7 @@ char	set_direction(double y_player, double x_player, double py, double px)
 	}
 	else if (y_player / 60.0 < ((py) / 60.0) && x_player / 60.0 > ((px) / 60.0))
 	{
-		if ((int)(py + 1) % 60 == 0)
+		if ((int)(py) % 60 == 0)
 			return ('S');
 		else
 			return ('W');
@@ -139,29 +139,28 @@ void	cast_rays(t_mlx *wind, double fov)
 	{
 		if (wind->map[(int)((py) / 60)][(int)((px) / 60)] == '1')
 		{
-			// printf("Player	Positions	[%d,%d]\n",(int)wind->y_player / 60,(int)wind->x_player / 60);
-			// printf("Wall	Positions	[%d,%d]\n",(int)((py)),(int)((px)));
+			printf("Player	Positions	[%d,%d]\n",(int)wind->y_player / 60,(int)wind->x_player / 60);
+			printf("Wall	Positions	[%d,%d]\n",(int)((py)),(int)((px)));
 			// printf("------------------------\n");
 			dir = set_direction(wind->y_player, wind->x_player, py, px);
 			printf("Direction -> %c\n", dir);
 			break ;
 		}
-		mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
+		// mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
 		px += cos((fov) * M_PI / 180) * 1;
 		py += sin((fov) * M_PI / 180) * 1;
 
 
 
 	}
-		// printf("Dir -> %\n".);
-		// if (dir == 'N')
-		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLUE);
-		// else if (dir == 'E')
-		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, RED);
-		// else if (dir == 'S')
-		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, WHITE);
-		// else
-		// 	draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLACK);
+		if (dir == 'N')
+			draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLUE);
+		else if (dir == 'E')
+			draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, RED);
+		else if (dir == 'S')
+			draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, WHITE);
+		else if (dir == 'W')
+			draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLACK);
 }
 
 void	projecting_rays(t_mlx *wind)
@@ -174,7 +173,7 @@ void	projecting_rays(t_mlx *wind)
 	nbr_of_rays = 1920;
 	// Dividing my view into 2 triangle 32° left and 32° right
 	fov = wind->field_of_view - 32;
-	while (i++ < 1)
+	while (i++ < 1920)
 	{
 		cast_rays(wind, fov);
 		fov += 64.0 / 1920;
