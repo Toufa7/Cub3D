@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:57:49 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/18 16:43:36 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 12:08:41 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_free(char **str)
 		free(str[i]);
 		i++;
 	}
-	free(str[i]);
+	free(str);
 }
 
 int	check_textures(char **str,	int line)
@@ -55,7 +55,7 @@ int	check_textures(char **str,	int line)
 	static int	we;
 	static int	ea;
 
-	if (strcmp(str[0], "NO") && strcmp(str[0], "SO")
+	if (str[0] && strcmp(str[0], "NO") && strcmp(str[0], "SO")
 		&& strcmp(str[0], "WE") && strcmp(str[0], "EA")
 		&& strcmp(str[0], "F") && strcmp(str[0], "C"))
 	{
@@ -77,7 +77,7 @@ int	check_textures(char **str,	int line)
 	}
 	else if (line == 5 && (no == 0 || so == 0 || we == 0 || ea == 0))
 	{
-		printf("Error Map : Something Wrong");
+		printf("Error Map : Something Wrong whith Textures.");
 		return (0);
 	}
 	return (check_f_c(str, line));

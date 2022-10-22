@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 19:28:24 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/13 19:19:54 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 11:49:31 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*joining(char **str)
 
 int	check_c(char	**str)
 {
-	if (!strcmp(str[0], "C") && counting(str) == 2)
+	if (str[0] && !strcmp(str[0], "C") && counting(str) == 2)
 		return (1);
 	return (0);
 }

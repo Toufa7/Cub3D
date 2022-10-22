@@ -6,7 +6,7 @@
 /*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:50:21 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/20 10:58:54 by orbiay           ###   ########.fr       */
+/*   Updated: 2022/10/22 12:13:26 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*only_map(char *str)
 		ret_str = ft_strjoin(ret_str, sp_str[i]);
 		i++;
 	}
+	ft_free(sp_str);
 	return (ret_str);
 }
 
