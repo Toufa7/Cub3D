@@ -221,3 +221,18 @@ How to write pixels on top of image ?
 The images divided into small squares called pixels
 and each pixel requires 1 bit of memory
 we're working with RGB (0-255) each color takes 8 bits
+
+
+# Ressources :
+
+
+https://gontjarow.github.io/MiniLibX/
+
+https://velog.io/@parksj3205/miniLibX%EB%A1%9C-%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%83%9D%EC%84%B1%EA%B3%BC-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%8F%84%ED%98%95-%EA%B7%B8%EB%A6%AC%EA%B8%B0
+
+https://github.com/sejinpark12/MiniLibX_man_kor
+
+Very Very Verrrrrrry useful 👌 https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/
+
+
+
