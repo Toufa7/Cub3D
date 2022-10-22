@@ -11,7 +11,8 @@
         "unordered_map": "c",
         "vector": "c",
         "mlx.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "libft.h": "c"
     },
     "makefile.launchConfigurations": [
         {

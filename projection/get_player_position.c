@@ -21,7 +21,7 @@ void	set_field_of_view(t_mlx *wind, char in_map)
 	else if (in_map == 'E')
 		wind->field_of_view = 360.0;
 	else if (in_map == 'W')
-		wind->field_of_view = 360.0;
+		wind->field_of_view = 180.0;
 }
 
 void	get_player_position(t_mlx *wind)

@@ -87,32 +87,43 @@ float	degrees_to_radians_1(t_mlx *wind)
 	return ((wind->field_of_view + 90) * M_PI / 180);
 }
 
-char	set_direction(float y_player, float x_player, float py, float px)
+char	set_direction(float y_player, float x_player, float py, float px, t_mlx *wind)
 {
-	if (y_player >= ((py)) && x_player >= ((px)))
+	double ppy = ((py / 60) + 1);
+	double ppx = ((px / 60));
+
+	double ppyy = ((py / 60) - 1);
+	double ppxx = ((px / 60));
+
+	if (y_player > py && x_player > px)
 	{
-		if ((int)(py + 1 ) % 60 == 0)
+		printf("Her -> %c\n", wind->map[(int)(ppy)][(int)(ppx)]);
+		if ((int)(py + 1) % 60 == 0 && wind->map[(int)((py / 60) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
+		{
 			return ('N');
+		}
 		else
 			return ('W');
 	}
-	else if (y_player > ((py)) && x_player < ((px)))
+	else if (y_player > py && x_player < px)
 	{
-		if ((int)(py + 1 ) % 60 == 0)
+		if ((int)(py + 1) % 60 == 0 && wind->map[(int)((py / 60) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
+		{
 			return ('N');
+		}
 		else
 			return ('E');
 	}
-	else if (y_player <= ((py)) && x_player <= ((px)))
+	else if (y_player <= py && x_player <= px)
 	{
-		if ((int)(py) % 60 == 0)
+		if ((int)(py) % 60 == 0 && wind->map[(int)((py / 60) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
 			return ('S');
 		else
 			return ('E');
 	}
-	else if (y_player < ((py)) && x_player > ((px)))
+	else if (y_player <= py && x_player >= px)
 	{
-		if ((int)(py) % 60 == 0)
+		if ((int)(py) % 60 == 0 && wind->map[(int)((py / 60) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
 			return ('S');
 		else
 			return ('W');
@@ -134,9 +145,9 @@ void	cast_rays(t_mlx *wind, float fov)
 		if (wind->map[(int)((py / 60))][(int)((px / 60))] == '1')
 		{
 			// printf("Player	Positions	[%d,%d]\n",(int)wind->y_player,(int)wind->x_player);
-			printf("Wall	Positions	[%d,%d]\n",(int)((py) ),(int)((px) ));
+			// printf("Wall	Positions	[%d,%d]\n",(int)((py)),(int)((px)));
 			// printf("  ------------------------ \n");
-			dir = set_direction(wind->y_player, wind->x_player, py, px);
+			dir = set_direction(wind->y_player, wind->x_player, py, px, wind);
 			// printf("Direction -> %c\n", dir);
 			break ;
 		}
@@ -166,10 +177,10 @@ void	projecting_rays(t_mlx *wind)
 	i = -1;
 	nbr_of_rays = 1920;
 	fov = wind->field_of_view - 30;
-	while (i++ < nbr_of_rays)
+	while (i++ < (1920))
 	{
 		cast_rays(wind, fov);
-		fov += 60.0 / nbr_of_rays;
+		fov += 64.0 / nbr_of_rays;
 	}
 }
 
@@ -277,9 +288,6 @@ void	move_left(t_mlx *wind)
 	}
 }
 
-
-
-
 int	get_keys(int press, t_mlx *wind)
 {
 	if (press == 2)
@@ -332,7 +340,7 @@ int	main(int ac, char **av)
 		creating_window(&wind);
 		images_to_xpm(&wind);
 		get_player_position(&wind);
-		wind.field_of_view = 270;
+		wind.field_of_view = 230;
 		map_filling(&wind);
 		mlx_hook(wind.window, 2, 0, get_keys, &wind);
 		mlx_hook(wind.window, 17, 0, destroy_window, &wind);

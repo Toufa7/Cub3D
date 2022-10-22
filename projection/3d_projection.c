@@ -12,36 +12,76 @@
 
 #include "../cub3d.h"
 
-char	set_direction(int y_player, int x_player, int py, int px)
+char	set_direction(int y_player, int x_player, int py, int px, t_mlx *wind)
 {
-	if (y_player >= ((py)) && x_player >= ((px)))
+	double ppy = ((py / 64.0) + 1);
+	double ppx = ((px / 64.0));
+
+	double ppyy = ((py / 64.0) - 1);
+	double ppxx = ((px / 64.0));
+
+	if (y_player > py && x_player > px)
 	{
-		if ((int)(py + 1 ) % (int)WALL_DIM == 0)
+		if ((int)(py + 1) % 64 == 0 && wind->map[(int)((py / 64) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
+		{
 			return ('N');
+		}
 		else
 			return ('W');
 	}
-	else if (y_player > ((py)) && x_player < ((px)))
+	else if (y_player > py && x_player < px)
 	{
-		if ((int)(py + 1 ) % (int)WALL_DIM == 0)
+		if ((int)(py + 1) % 64 == 0 && wind->map[(int)((py / 64) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
+		{
 			return ('N');
+		}
 		else
 			return ('E');
 	}
-	else if (y_player <= ((py)) && x_player <= ((px)))
+	else if (y_player <= py && x_player <= px)
 	{
-		if ((int)(py) % (int)WALL_DIM == 0)
+		if ((int)(py) % 64 == 0 && wind->map[(int)((py / 64) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
 			return ('S');
 		else
 			return ('E');
 	}
-	else if (y_player < ((py)) && x_player > ((px)))
+	else if (y_player <= py && x_player >= px)
 	{
-		if ((int)(py) % (int)WALL_DIM == 0)
+		if ((int)(py) % 64 == 0 && wind->map[(int)((py / 64) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
 			return ('S');
 		else
 			return ('W');
 	}
+	return (0);
+
+	// if (y_player >= ((py)) && x_player >= ((px)))
+	// {
+	// 	if ((int)(py + 1 ) % (int)64 == 0)
+	// 		return ('N');
+	// 	else
+	// 		return ('W');
+	// }
+	// else if (y_player > ((py)) && x_player < ((px)))
+	// {
+	// 	if ((int)(py + 1 ) % (int)WALL_DIM == 0)
+	// 		return ('N');
+	// 	else
+	// 		return ('E');
+	// }
+	// else if (y_player <= ((py)) && x_player <= ((px)))
+	// {
+	// 	if ((int)(py) % (int)WALL_DIM == 0)
+	// 		return ('S');
+	// 	else
+	// 		return ('E');
+	// }
+	// else if (y_player < ((py)) && x_player > ((px)))
+	// {
+	// 	if ((int)(py) % (int)WALL_DIM == 0)
+	// 		return ('S');
+	// 	else
+	// 		return ('W');
+	// }
 	return (0);
 }
 
@@ -114,7 +154,7 @@ void	cast_rays(t_mlx *wind, float angle, int x)
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
-			direction = set_direction((int)wind->y_player, (int)wind->x_player, (int)wind->y_end_of_ray, (int)wind->x_end_of_ray);
+			direction = set_direction((int)wind->y_player, (int)wind->x_player, (int)wind->y_end_of_ray, (int)wind->x_end_of_ray, wind);
 			distance = calculate_distance(wind->y_player, wind->x_player,
 					wind->y_end_of_ray, wind->x_end_of_ray);
 			break ;
