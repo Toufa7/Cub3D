@@ -113,11 +113,11 @@ typedef struct s_window
 	void		*mlx;
 	void		*window;
 	char		**map;
-	float		field_of_view;
-	float		x_player;
-	float		y_player;
-	float		x_end_of_ray;
-	float		y_end_of_ray;
+	double		field_of_view;
+	double		x_player;
+	double		y_player;
+	double		x_end_of_ray;
+	double		y_end_of_ray;
 	t_fd		parsing;
 	t_my_mlx	my_mlx;
 }	t_mlx;
@@ -143,11 +143,11 @@ void	move_left(t_mlx *wind);
 	Used to move the player by -90 degree in ordre to move him right
 */
 void	move_right(t_mlx *wind);
-void	cast_rays(t_mlx *wind, float angle, int i);
+void	cast_rays(t_mlx *wind, double angle, int i);
 /*
 	Whenever a ray hits the wall set which interface he see's
 */
-char	set_direction(int y_player, int x_player, int py, int px, t_mlx *wind);
+char	set_directions(double y_player, double x_player, double py, double px, t_mlx *wind);
 
 /*
 	Starting from the player position we draw line using cast_rays()
@@ -156,7 +156,7 @@ void	projecting_rays(t_mlx *wind);
 /*
 	When we mesured the distance we start rendring our world
 */
-void	casting_3d(float distance, int i, t_mlx *mlx, char dir);
+void	casting_3d(double distance, int i, t_mlx *mlx, char dir);
 /*
 	Whenever the user hit a key provide him wwith the move he requires
 */

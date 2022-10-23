@@ -3,13 +3,13 @@
 
 int draw_line(void *mlx, void *win, int beginX, int beginY, int endX, int endY, int color)
 {
-	float deltaX = endX - beginX; // 10
-	float deltaY = endY - beginY; // 0
+	double deltaX = endX - beginX; // 10
+	double deltaY = endY - beginY; // 0
 	int pixels = sqrt((deltaX * deltaX) + (deltaY * deltaY));
 	deltaX /= pixels; // 1
 	deltaY /= pixels; // 0
-	float pixelX = beginX;
-	float pixelY = beginY;
+	double pixelX = beginX;
+	double pixelY = beginY;
 	while (pixels)
 	{
 		mlx_pixel_put(mlx, win, pixelX, pixelY, color);
@@ -77,17 +77,17 @@ void	get_player_position(t_mlx *wind)
 	}
 }
 
-float	degrees_to_radians(t_mlx *wind)
+double	degrees_to_radians(t_mlx *wind)
 {
 	return (wind->field_of_view * M_PI / 180);
 }
 
-float	degrees_to_radians_1(t_mlx *wind)
+double	degrees_to_radians_1(t_mlx *wind)
 {
 	return ((wind->field_of_view + 90) * M_PI / 180);
 }
 
-char	set_direction(float y_player, float x_player, float py, float px, t_mlx *wind)
+char	set_direction(double y_player, double x_player, double py, double px, t_mlx *wind)
 {
 	double ppy = ((py / 60) + 1);
 	double ppx = ((px / 60));
@@ -97,7 +97,6 @@ char	set_direction(float y_player, float x_player, float py, float px, t_mlx *wi
 
 	if (y_player > py && x_player > px)
 	{
-		// printf("Her -> %c\n", wind->map[(int)(ppy)][(int)(ppx)]);
 		if ((int)(py + 1) % 60 == 0 && wind->map[(int)((py / 60) + 1)] && wind->map[(int)(ppy)][(int)(ppx)] == '0')
 		{
 			return ('N');
@@ -132,16 +131,17 @@ char	set_direction(float y_player, float x_player, float py, float px, t_mlx *wi
 	// printf("------------------------\n");
 }
 
-void	cast_rays(t_mlx *wind, float fov)
+void	cast_rays(t_mlx *wind, double fov)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 	char 	dir = '\0';
 
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
+		//  || wind->map[(int)((py / 60) + 1)][(int)((px / 60)) + 1] == '1' || wind->map[(int)((py / 60) - 1)][(int)((px / 60) - 1)] == '1' || wind->map[(int)((py / 60) + 1)][(int)((px / 60) - 1)] == '1'
 		if (wind->map[(int)((py / 60))][(int)((px / 60))] == '1')
 		{
 			// printf("Player	Positions	[%d,%d]\n",(int)wind->y_player,(int)wind->x_player);
@@ -157,9 +157,7 @@ void	cast_rays(t_mlx *wind, float fov)
 	}
 
 	if (dir == 'N')
-	{
 		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, BLUE);
-	}
 	else if (dir == 'E')
 		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, RED);
 	else if (dir == 'S')
@@ -172,15 +170,15 @@ void	projecting_rays(t_mlx *wind)
 {
 	int		i;
 	int		nbr_of_rays;
-	float	fov;
+	double	fov;
 
 	i = -1;
 	nbr_of_rays = 1920;
 	fov = wind->field_of_view - 30;
-	while (i++ < (nbr_of_rays * 10))
+	while (i++ < nbr_of_rays)
 	{
 		cast_rays(wind, fov);
-		fov += 720.0 / nbr_of_rays;
+		fov += 64.0 / nbr_of_rays;
 	}
 }
 
@@ -227,8 +225,8 @@ void	left(t_mlx *wind)
 
 void	  move_forward(t_mlx *wind)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 	py = sin(degrees_to_radians(wind)) * 10;
 	px = cos(degrees_to_radians(wind)) * 10;
@@ -241,8 +239,8 @@ void	  move_forward(t_mlx *wind)
 
 void	move_backword(t_mlx *wind)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 
 	py = sin(degrees_to_radians(wind)) * 10;
@@ -256,8 +254,8 @@ void	move_backword(t_mlx *wind)
 
 void	move_right(t_mlx *wind)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 	py = sin(degrees_to_radians_1(wind)) * 10;
 	px = cos(degrees_to_radians_1(wind)) * 10;
@@ -270,8 +268,8 @@ void	move_right(t_mlx *wind)
 
 void	move_left(t_mlx *wind)
 {
-	float	px;
-	float	py;
+	double	px;
+	double	py;
 
 	py = sin(degrees_to_radians_1(wind)) * 10;
 	px = cos(degrees_to_radians_1(wind)) * 10;

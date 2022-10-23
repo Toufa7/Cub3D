@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "../cub3d.h"
 
-char	set_direction(int y_player, int x_player, int py, int px, t_mlx *wind)
+char	set_directions(double y_player, double x_player, double py, double px, t_mlx *wind)
 {
 	if (y_player > py && x_player > px)
 	{

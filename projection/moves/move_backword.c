@@ -14,8 +14,8 @@
 
 void	move_backword(t_mlx *wind)
 {
-	float	y_step;
-	float	x_step;
+	double	y_step;
+	double	x_step;
 	int		y_map;
 	int		x_map;
 

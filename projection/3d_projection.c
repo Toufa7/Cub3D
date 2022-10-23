@@ -17,7 +17,7 @@
 void	projecting_rays(t_mlx *wind)
 {
 	int		x;
-	float	angle;
+	double	angle;
 
 	x = -1;
 	angle = wind->field_of_view - 32;
@@ -32,12 +32,13 @@ void	projecting_rays(t_mlx *wind)
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
 
-void	casting_3d(float distance, int height, t_mlx *mlx, char dir)
+void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 {
+	(void)dir;
 	int		width;
-	float	floor_ceiling;
-	float	projection_3d;
-	float	distance_to_projection;
+	double	floor_ceiling;
+	double	projection_3d;
+	double	distance_to_projection;
 
 	width = 0;
 	distance_to_projection = ((WIN_WIDTH / 2) / (tan((WALL_DIM / 2) * (M_PI / 180))));
@@ -47,32 +48,32 @@ void	casting_3d(float distance, int height, t_mlx *mlx, char dir)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_c);
 	while (width < WIN_HEIGHT && width < floor_ceiling + projection_3d)
 	{
-		if (dir == 'W')
+		if (dir == 'N')
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, WHITE);
 		else if (dir == 'E')
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, PURPLE);
-		else if (dir == 'N')
+		else if (dir == 'W')
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
-		else if (dir == 'S')
+		else
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLACK);
 	}
 	while (width < WIN_HEIGHT)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->parsing.color_f);
 }
 
-float	calculate_distance(float y_player, float x_player,
-		float y_wall, float x_wall)
+double	calculate_distance(double y_player, double x_player,
+		double y_wall, double x_wall)
 {
 	return (sqrt(((x_player - x_wall) * (x_player - x_wall))
 			+ ((y_player - y_wall) * (y_player - y_wall))));
 }
 
-void	cast_rays(t_mlx *wind, float angle, int x)
+void	cast_rays(t_mlx *wind, double angle, int x)
 {
-	float	px;
-	float	py;
-	float	distance;
-	float	corrected_distance;
+	double	px;
+	double	py;
+	double	distance;
+	double	corrected_distance;
 	char	direction;
 
 	px = wind->x_player;
@@ -83,7 +84,7 @@ void	cast_rays(t_mlx *wind, float angle, int x)
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
-			direction = set_direction((int)wind->y_player, (int)wind->x_player, (int)wind->y_end_of_ray, (int)wind->x_end_of_ray, wind);
+			direction = set_directions(wind->y_player, wind->x_player, wind->y_end_of_ray, wind->x_end_of_ray, wind);
 			distance = calculate_distance(wind->y_player, wind->x_player,
 					wind->y_end_of_ray, wind->x_end_of_ray);
 			break ;
