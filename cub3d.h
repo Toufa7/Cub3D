@@ -89,21 +89,9 @@ int		check_walls(char	*str, int start, int count);
 
 typedef struct s_my_mlx
 {
-/*
-	The image to be used as parameter
-*/
 	void	*img;
-/*
-	The image to used
-*/
 	char	*addr;
-/*
-	The number of bytes required to express a color of pixel entered as arguments
-*/
 	int		bpp;
-/*
-	Nbr of bytes required to store one image horizontal line in memory (Provided as argument)
-*/
 	int		line_len;
 	int		endian;
 }	t_my_mlx;
@@ -145,10 +133,10 @@ void	move_left(t_mlx *wind);
 void	move_right(t_mlx *wind);
 void	cast_rays(t_mlx *wind, double angle, int i);
 /*
-	Whenever a ray hits the wall set which interface he see's
+	Whenever a ray hits the wall set which interface he see's based on his position [y,x]
+	and the wall intersection[y,x]
 */
-char	set_directions(double y_player, double x_player, double py, double px, t_mlx *wind);
-
+char	set_directions(double y_p, double x_p, double w_y, double w_x, t_mlx *wind);
 /*
 	Starting from the player position we draw line using cast_rays()
 */

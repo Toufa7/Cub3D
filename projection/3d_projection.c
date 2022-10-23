@@ -12,8 +12,6 @@
 
 #include "../cub3d.h"
 
-
-
 void	projecting_rays(t_mlx *wind)
 {
 	int		x;
@@ -27,21 +25,20 @@ void	projecting_rays(t_mlx *wind)
 	while (++x < WIN_WIDTH)
 	{
 		cast_rays(wind, angle, x);
-		angle += WALL_DIM / 1910;
+		angle += WALL_DIM / WIN_WIDTH;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
 
 void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 {
-	(void)dir;
 	int		width;
 	double	floor_ceiling;
 	double	projection_3d;
 	double	distance_to_projection;
 
 	width = 0;
-	distance_to_projection = ((WIN_WIDTH / 2) / (tan((WALL_DIM / 2) * (M_PI / 180))));
+	distance_to_projection = ((WIN_WIDTH / 2) / (tan((32.0) * (M_PI / 180))));
 	projection_3d = (WALL_DIM / distance) * distance_to_projection;
 	floor_ceiling = (WIN_HEIGHT / 2) - (projection_3d / 2);
 	while (width < WIN_HEIGHT && width < floor_ceiling)
@@ -73,7 +70,6 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 	double	px;
 	double	py;
 	double	distance;
-	double	corrected_distance;
 	char	direction;
 
 	px = wind->x_player;
@@ -84,7 +80,8 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 		{
 			wind->x_end_of_ray = px;
 			wind->y_end_of_ray = py;
-			direction = set_directions(wind->y_player, wind->x_player, wind->y_end_of_ray, wind->x_end_of_ray, wind);
+			direction = set_directions(wind->y_player, wind->x_player,
+					wind->y_end_of_ray, wind->x_end_of_ray, wind);
 			distance = calculate_distance(wind->y_player, wind->x_player,
 					wind->y_end_of_ray, wind->x_end_of_ray);
 			break ;
@@ -92,7 +89,6 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 		px += cos((angle) * (M_PI / 180));
 		py += sin((angle) * (M_PI / 180));
 	}
-	corrected_distance = distance
-		* cos((angle - wind->field_of_view) * (M_PI / 180));
-	casting_3d(corrected_distance, x, wind, direction);
+	casting_3d((distance * cos((angle - wind->field_of_view)
+				* (M_PI / 180))), x, wind, direction);
 }
