@@ -7,10 +7,10 @@ git commit -m commit
 
 echo "Pull or Push >"
 read -r answer
-if [ [ answer == "pull"] ];
+if [[ $answer == "pull" ]];
 then
     git pull
-elif [ [ answer == "push"]];
+elif [[ $answer == "push" ]];
 then
     git pull
 fi
