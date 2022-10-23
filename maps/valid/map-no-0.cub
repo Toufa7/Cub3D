@@ -1,7 +1,8 @@
-NO tests/textures/wall.xp
-SO tests/textures/bricks.xpm
-WE tests/textures/gold.xpm
-EA tests/textures/wood.xpm
+NO /Users/otoufah/Cub3d/sprites/xpm_images/north.xpm
+SO /Users/otoufah/Cub3d/sprites/xpm_images/south.xpm
+WE /Users/otoufah/Cub3d/sprites/xpm_images/west.xpm
+EA /Users/otoufah/Cub3d/sprites/xpm_images/east.xpm
+
 F 116,212,52
 C 135,206,235
 

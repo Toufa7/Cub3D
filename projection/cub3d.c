@@ -39,6 +39,7 @@ int	main(int ac, char **av)
 	wind.parsing = read_and_add(av);
 	wind.ceilling = rgb_to_hexa(wind.parsing.C);
 	wind.floor = rgb_to_hexa(wind.parsing.F);
+	images_to_xpm(&wind);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');

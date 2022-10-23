@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
 # include "./get_next_line/get_next_line.h"
 # include "./libft/libft.h"
 
@@ -95,6 +96,14 @@ typedef struct s_window
 	void		*mlx;
 	void		*window;
 	char		**map;
+	char		*north_img;
+	char		*south_img;
+	char		*east_img;
+	char		*west_img;
+	char		*north_xpm;
+	char		*south_xpm;
+	char		*east_xpm;
+	char		*west_xpm;
 	double		field_of_view;
 	double		x_player;
 	double		y_player;
@@ -108,6 +117,7 @@ typedef struct s_window
 	t_my_mlx	my_mlx;
 }	t_mlx;
 
+void	images_to_xpm(t_mlx *wind);
 char	*get_next_line(int fd);
 /*
 	Getting the player position in the map [y,x]
