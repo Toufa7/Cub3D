@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "../cub3d.h"
 
-char	set_directions(double y_p, double x_p, double w_y, double w_x, t_mlx *wind)
+char	set_directions(double w_y, double w_x, t_mlx *wind)
 {
-	if (y_p > w_y && x_p > w_x)
+	if (wind->y_player > w_y && wind->x_player > w_x)
 	{
 		if ((int)(w_y + 1) % 64 == 0
 			&& wind->map[(int)(w_y / 64.0) + 1][(int)(w_x / 64.0)] == '0')
@@ -21,7 +21,7 @@ char	set_directions(double y_p, double x_p, double w_y, double w_x, t_mlx *wind)
 		else
 			return ('W');
 	}
-	else if (y_p > w_y && x_p < w_x)
+	else if (wind->y_player > w_y && wind->x_player < w_x)
 	{
 		if ((int)(w_y + 1) % 64 == 0
 			&& wind->map[(int)((w_y / 64.0) + 1)][(int)(w_x / 64.0)] == '0')
@@ -29,7 +29,7 @@ char	set_directions(double y_p, double x_p, double w_y, double w_x, t_mlx *wind)
 		else
 			return ('E');
 	}
-	else if (y_p <= w_y && x_p <= w_x)
+	else if (wind->y_player <= w_y && wind->x_player <= w_x)
 	{
 		if ((int)(w_y) % 64 == 0
 			&& wind->map[(int)((w_y / 64.0) - 1)][(int)(w_x / 64.0)] == '0')
@@ -37,7 +37,7 @@ char	set_directions(double y_p, double x_p, double w_y, double w_x, t_mlx *wind)
 		else
 			return ('E');
 	}
-	else if (y_p <= w_y && x_p >= w_x)
+	else if (wind->y_player <= w_y && wind->x_player >= w_x)
 	{
 		if ((int)(w_y) % 64 == 0
 			&& wind->map[(int)((w_y / 64.0) - 1)][(int)(w_x / 64.0)] == '0')

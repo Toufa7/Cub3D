@@ -18,11 +18,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <math.h>
-# include <mlx.h>
 # include "./get_next_line/get_next_line.h"
 # include "./libft/libft.h"
 
@@ -49,8 +45,6 @@ typedef struct fd
 	char	*F;
 	char	*C;
 	char	*full_map;
-	int		color_c;
-	int		color_f;
 }	t_fd;
 
 int		len(char **str);
@@ -104,8 +98,12 @@ typedef struct s_window
 	double		field_of_view;
 	double		x_player;
 	double		y_player;
-	double		x_end_of_ray;
-	double		y_end_of_ray;
+	double		x_endRay;
+	double		y_endRay;
+	double		distance;
+	double		corrected_distance;
+	int			ceilling;
+	int			floor;
 	t_fd		parsing;
 	t_my_mlx	my_mlx;
 }	t_mlx;
@@ -136,7 +134,7 @@ void	cast_rays(t_mlx *wind, double angle, int i);
 	Whenever a ray hits the wall set which interface he see's based on his position [y,x]
 	and the wall intersection[y,x]
 */
-char	set_directions(double y_p, double x_p, double w_y, double w_x, t_mlx *wind);
+char	set_directions(double w_y, double w_x, t_mlx *wind);
 /*
 	Starting from the player position we draw line using cast_rays()
 */

@@ -37,8 +37,8 @@ int	main(int ac, char **av)
 	t_mlx	wind;
 
 	wind.parsing = read_and_add(av);
-	wind.parsing.color_c = rgb_to_hexa(wind.parsing.C);
-	wind.parsing.color_f = rgb_to_hexa(wind.parsing.F);
+	wind.ceilling = rgb_to_hexa(wind.parsing.C);
+	wind.floor = rgb_to_hexa(wind.parsing.F);
 	if (ac == 2)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');

@@ -12,7 +12,9 @@
         "vector": "c",
         "mlx.h": "c",
         "stdio.h": "c",
-        "libft.h": "c"
+        "libft.h": "c",
+        "iterator": "c",
+        "unistd.h": "c"
     },
     "makefile.launchConfigurations": [
         {
