@@ -1,3 +1,13 @@
+# Introduction :
+
+Wolfenstein 3D, released on May 5th, 1992, established the First Person Shooter genre. The game design, powered by an engine enabling beautiful 256 color graphics, speed, high framerate, clever AI, crisp sound effects, and engaging music, was universally acclaimed.
+
+# Project goals :
+
+A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic view inside a maze, in which you’ll have to find your way.
+
+# Walkthrough :
+
 :one: Creating our window with :
 
     WIN_WIDTH = 1920;
@@ -246,6 +256,7 @@ we're working with RGB (0-255) each color takes 8 bits
 
 # Ressources :
 
+* Minilibx Library : 
 
 https://gontjarow.github.io/MiniLibX/
 
@@ -253,7 +264,22 @@ https://velog.io/@parksj3205/miniLibX%EB%A1%9C-%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%8
 
 https://github.com/sejinpark12/MiniLibX_man_kor
 
-Very Very Verrrrrrry useful 👌 https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/
+* Raycasting
+
+Very Very Verrrrrrry useful 👌 :
+
+https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/
+
+This amazing book which explains every details in the game :
+
+<p align="center">
+<img src="https://app.thebookpatch.com/PublishedBooks/c1ab64b2-6df8-4ae7-91ae-64318af85a64/c1ab64b2-6df8-4ae7-91ae-64318af85a64_C.jpg" width="800"/>
+</p>
+
+https://fabiensanglard.net/gebbwolf3d/
+
+
+
 
 
 
