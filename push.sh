@@ -12,7 +12,7 @@ then
     git pull
     echo "Done with pulling, do you wanna push your files y/n ?"
     read -r pushing
-    if [[ $pushing == "y"]];
+    if [[ $pushing == "y" ]];
     then
         git push
     else
