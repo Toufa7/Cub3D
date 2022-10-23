@@ -82,7 +82,6 @@ t_fd	read_and_add(char **av)
 			free(str);
 			exit(1);
 		}
-		printf("\nALL thing is valid\n");
 		free(str);
 	}
 	else
