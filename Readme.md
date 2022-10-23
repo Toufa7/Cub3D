@@ -163,6 +163,24 @@ if the ray hits the wall we calcualted the distance
 
 # Questions and answers
 
+:question: How computer store and dispplay graphics ?
+
+As we know every image is a combination of tiny pixels let's take a simple example :
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/191525ef73d4e3495579df26a88e6a7cbf55715e/images/appel_in_pxels.png" width="350" height="400"/>
+</p>
+
+each pixel has it's own color an example is that the top left has a green color in pixel so the computer define it with a specifique number tbc
+ 
+:question: Why mlx_pixel_put so slow ?
+
+> Because it tries to put pixel instantly on window without waiting for the frame to be rendered entirely
+
+Solution ?
+
+> W need to buffer to put our pixels in an image then push it into the window
+
 Starting to casting rays with the help of mlx_pixel_put it turn up that it works but in the 3D part we're going to face a few problems becuase that latter it tries to put pixel instantly on window without waiting for the frame to be rendered entirely so the solution we'll be to buffer or to put our pixels in an image then push it into the window that's what my_mlx_pixel_put do :
 
 1) Creating an image with the width and height:
@@ -181,41 +199,13 @@ Starting to casting rays with the help of mlx_pixel_put it turn up that it works
 <img src="https://github.com/Toufa7/Cub3D/blob/6945f32893b4c4d1abfc2ccefe889f0ae638ad6e/images/formula_my_mlx.png" width="600"/>
 </p>
 
-The above fomula it's actually in my_mlx_pixel_put :
-
-Line lenght : we'll be the number of bytes required to stroe on image hortizontal line in memory * y to move to the other place
-
-BPP : 32bits ? because we have (ARGB) red, green, blue, alpha . the alpha parameter is a number between 0.0 and 1.0 for transparancy 
-
-
-How computer store and dispplay graphics ?
-
-As we know every image is a combination of tiny pixels let's take a simple example :
-
-
-<p align="center">
-<img src="https://github.com/Toufa7/Cub3D/blob/191525ef73d4e3495579df26a88e6a7cbf55715e/images/appel_in_pxels.png" width="350" height="400"/>
-</p>
-
-each pixel has it's own color an example is that the top left has a green color in pixel so the computer define it with a specifique number tbc
- 
-
-:question: Why mlx_pixel_put so slow ?
-
-> Because it tries to put pixel instantly on window without waiting for the frame to be rendered entirely
-
-Solution ?
-
-> W need to buffer to put our pixels in an image then push it into the window
-
+The above fomula it's actually in my_mlx_pixel_put : We'll discuss about it latter :arrow_heading_down: 
 
 :question: What an mlx image requires ?
 
 > We need to pass some pointers to mlx_pointer :
 
-        -   bits per pixel : pixels are basicly int (4 bytes)
-
-
+:small_blue_diamond: bits per pixel : pixels are basicly int (4 bytes)
 
 :question: Why in my_mlx_pixel_put bpp it's 32 and not 24 ?
 
@@ -223,32 +213,35 @@ Solution ?
 
 The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
 
-
-
 :question: What does mlx_get_data_addr do ?
 
-> it provide us with information about the generated image
-if it works as it should it should provide 3 informations :
-    bpp         : how many bits required to express a color of a pixel
-    size_line   : how many bytes required to store 
-    endian      : techinque to store data (Hex Format  ) in your RAM
+> it provide us with information about the generated image if it works as it should it should provide 3 informations :
+
+:small_blue_diamond: bpp         : how many bits required to express a color of a pixel
+:small_blue_diamond: size_line   : how many bytes required to store 
+:small_blue_diamond: endian      : techinque to store data (Hex Format  ) in your RAM
 
 :question: What's endian means ?
 
-    Endianness is the representation of word of digital data in computer memory
+> Endianness is the representation of word of digital data in computer memory
 
 :question: How to write pixels on top of image ?
 
-    So after creating your image you'll need to call mlx_get_address to retrive the memory address of that pixels ??
+> So after creating your image you'll need to call mlx_get_address to retrive the memory address of that pixels ??
 
-    We pass the reference in ordre to set that current data address
+> We pass the reference in ordre to set that current data address
 
-    Now that we have created our image it's time to push them to window 
+> Now that we have created our image it's time to push them to window 
 
 
 The images divided into small squares called pixels
 and each pixel requires 1 bit of memory
 we're working with RGB (0-255) each color takes 8 bits
+
+
+:question: Does printf slow down my program ?
+
+> Absolutly yes I/O is always slow in comparison to straight computation how i don't know actually sorry but you can try to redirect output in shell from console to a file and also don't forget that scrolling is usually a killer 
 
 
 # Ressources :
