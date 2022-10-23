@@ -16,7 +16,7 @@ then
     then
         git push
     else
-        exit (0);
+        exit;
     fi
 elif [[ $answer == "push" ]];
 then
