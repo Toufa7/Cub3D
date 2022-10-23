@@ -157,7 +157,7 @@ if the ray hits the wall we calcualted the distance
 </p>
 
 <p align="center">
-	<b> <a href="https://github.com/ael-bekk/Advanced-Raycasting-Cub3D">Advanced Raycasting Cub3D </a> </b>
+	<b> <a href="https://github.com/ael-bekk/Advanced-Raycasting-Cub3D"target="_blank" > Advanced Raycasting Cub3D </a> </b>
 </p>
 
 
