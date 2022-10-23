@@ -8,6 +8,8 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 
 # Walkthrough :
 
+:warning: If you don't have any idea about the Minilibx library please check the resources down below after diving into the walkthrough
+
 :one: Creating our window with :
 
     WIN_WIDTH = 1920;
@@ -18,7 +20,7 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 <img src="https://github.com/Toufa7/Cub3D/blob/69e8684df1de3c65f45df3d16731c41e4311d1b8/images/window.png" width="700"/>
 </p>
 
-:two: Getting the player position in the map and define the field of view based on  the char inserted in the map :
+:two: Getting the player position in the map and define the field of view based on the character inserted in the map :
 
     if (map[y][x] == 'N')
         fov = 270
@@ -175,41 +177,48 @@ if the ray hits the wall we calcualted the distance
 
 :question: How computer store and dispplay graphics ?
 
-As we know every image is a combination of tiny pixels let's take a simple example :
-
+>As we know every image  divided into small squares called pixels and each pixel requires 1 bit of memory let's take a simple example :
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/191525ef73d4e3495579df26a88e6a7cbf55715e/images/appel_in_pxels.png" width="350" height="400"/>
 </p>
 
-each pixel has it's own color an example is that the top left has a green color in pixel so the computer define it with a specifique number tbc
- 
+> each pixel has it's own color an example is that the top left has a green color in pixel so the computer define it with a numerical value and these numbers are called Pixel Values. These pixel values denote the intensity of the pixels, we have pixel values ranging from 0 to 255. The smaller numbers closer to zero represent the darker shade while the larger numbers closer to 255 represent the lighter or the white shade.
+> This image is composed of many colors and almost all colors can be generated from the three primary colors  :heart: :green_heart: and :blue_heart:, 
+
+
 :question: Why mlx_pixel_put so slow ?
 
 > Because it tries to put pixel instantly on window without waiting for the frame to be rendered entirely
 
-Solution ?
+:question: So what's the solution ?
 
-> W need to buffer to put our pixels in an image then push it into the window
-
-Starting to casting rays with the help of mlx_pixel_put it turn up that it works but in the 3D part we're going to face a few problems becuase that latter it tries to put pixel instantly on window without waiting for the frame to be rendered entirely so the solution we'll be to buffer or to put our pixels in an image then push it into the window that's what my_mlx_pixel_put do :
+> W need to buffer to put our pixels in an image then push it into the window , starting to casting rays with the help of mlx_pixel_put it turn up that it works but in the 3D part we're going to face a few problems becuase that latter it tries to put pixel instantly on window without waiting for the frame to be rendered entirely so the solution we'll be to buffer or to put our pixels in an image then push it into the window that's what my_mlx_pixel_put do :
 
 1) Creating an image with the width and height:
 
-    mlx_new_image(mlx->mlx_ptr, height, width)
+	`mlx_new_image(mlx->mlx_ptr, height, width)`
     
-2) We need some informations about the created image, we'll be using (mlx_get_data_addr) as follows :
+2) We need some informations about the created image, we'll be using `mlx_get_data_addr` as follows :
 
-    bits per pixel : nbr of bytes needed to express the color of a pixel
-    
-    Size line : nbr of bytes required to stroe one horizontal line in memory
-    
-    Endian : Little 0 Big 1 Endian
+	for more informations about `mlx_get_data_addr` check it down below 🙂
+	
+2) We need to put pixels on top of our image :
+
+	we're using `my_mlx_pixel_put(&my_mlx, height, width++, hex_color)`
 
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/6945f32893b4c4d1abfc2ccefe889f0ae638ad6e/images/formula_my_mlx.png" width="600"/>
 </p>
 
-The above fomula it's actually in my_mlx_pixel_put : We'll discuss about it latter :arrow_heading_down: 
+The above fomula it's actually in `my_mlx_pixel_put` : We'll discuss about it latter :arrow_heading_down: 	
+			
+3) After that fire up your `mlx_put_image_to_window` to put it on the windows
+
+	`mlx_put_image_to_window(wind->mlx_ptr, wind->window, wind->image_created_before, starting_x, staring_y)`
+	
+4) Then after every move clear your window with the help of `mlx_clear_window` and repeat again,
+
+	`mlx_clear_window(wind->mlx, wind->window);`
 
 :question: What an mlx image requires ?
 
@@ -225,11 +234,13 @@ The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully o
 
 :question: What does mlx_get_data_addr do ?
 
-> it provide us with information about the generated image if it works as it should it should provide 3 informations :
+> it provide us with information about the generated image, if it works as it should it should provide you with 3 informations :
 
 :small_blue_diamond: bpp         : how many bits required to express a color of a pixel
-:small_blue_diamond: size_line   : how many bytes required to store 
-:small_blue_diamond: endian      : techinque to store data (Hex Format  ) in your RAM
+
+:small_blue_diamond: size_line   : how many bytes required to store one horizontal line in memory
+
+:small_blue_diamond: endian      : techinque to store data (Hex Format) in your RAM
 
 :question: What's endian means ?
 
@@ -237,16 +248,7 @@ The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully o
 
 :question: How to write pixels on top of image ?
 
-> So after creating your image you'll need to call mlx_get_address to retrive the memory address of that pixels ??
-
-> We pass the reference in ordre to set that current data address
-
-> Now that we have created our image it's time to push them to window 
-
-
-The images divided into small squares called pixels
-and each pixel requires 1 bit of memory
-we're working with RGB (0-255) each color takes 8 bits
+> So after creating your image, you'll need to call mlx_get_address to retrieve the memory address of that pixels ??, We pass the reference in order to set that current data address, now that we have created our image it's time to push them to the window with the help of mlx_put_image_to_window we can do it quickly. 
 
 
 :question: Does printf slow down my program ?
