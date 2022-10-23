@@ -10,7 +10,7 @@ read -r answer
 if [[ $answer == "pull" ]];
 then
     git pull
-    echo "Done with pulling, do you wanna push your files y/n ?"
+    echo "Done with pulling, do you wanna push your files (y/n)?"
     read -r pushing
     if [[ $pushing == "y" ]];
     then
