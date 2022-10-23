@@ -8,7 +8,7 @@
 <img src="https://github.com/Toufa7/Cub3D/blob/69e8684df1de3c65f45df3d16731c41e4311d1b8/images/window.png" width="700"/>
 </p>
 
-:two: Getting the player position in the map and define the field of view based on  the char inserted in the map ;
+:two: Getting the player position in the map and define the field of view based on  the char inserted in the map :
 
     if (map[y][x] == 'N')
         fov = 270
@@ -21,21 +21,15 @@
 
 :three: Starting to cast some rays :
 
-
 :warning: Let's go back to some of the high school math :
 
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
 </p>	
 	
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
 </p>
-
-
-
 
 Once we've got the player [y,x] so starting from his position we draw pixels as line we'll be using the minilibx function (mlx_pixel_put) to draw rays
 
@@ -54,11 +48,9 @@ The number of rays will be the width of the window is 1920
 
 0.03 this number came from dividing our player angle 64 on window's witdh 1920, with it we ensure to cast every pixel in our angle
 
-
 So as you know if our player has a 4 direction 2 vertical and 2 horizontal it's gonna be easy to implement his moves by simply increasing and decreasing his current positions [x,y],
 
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/fed5291a246a236e5a65148537472698ebd5d6d3/images/player%20directions.png" width="400"/>
 </p>
 
@@ -85,7 +77,6 @@ high school math which forms the foundation of most calculations in the game : S
 You can see it like this way the player moves up to the px then the py like this ^_^
 
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/cdc9b641d15db278830aa814d1071fadc61d2fad/images/moving.gif" width="400"/>
 </p>
 
@@ -108,19 +99,16 @@ if the ray hits the wall we calcualted the distance
     }
 
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/19f5be94c3bcb2bf58fa816e8f2296566b120932/images/Screen%20Shot%202022-10-19%20at%206.37.50%20PM.png" width="1000"/>
 </p>
 
 :warning: Remembre if you face this problem simply you have to check if there's any close wall to the position that's it hits the wall
 
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/190f522295450f248b63db86c341d65f418e9fc4/images/inside_cub.png" width="700"/>
 </p>
 
 <p align="center">
-
 <img src="https://github.com/Toufa7/Cub3D/blob/190f522295450f248b63db86c341d65f418e9fc4/images/inside_cub1.png" width="700"/>
 </p>
 	
@@ -139,7 +127,6 @@ if the ray hits the wall we calcualted the distance
 
 	    }
     }
-
 
 :four: For the key's part here's what you should do :
 
@@ -165,7 +152,6 @@ if the ray hits the wall we calcualted the distance
 <img src="https://raw.githubusercontent.com/ael-bekk/Advanced-Raycasting-Cub3D/db34ea5c33af4e89f18c2c4fcf51da9265a5a24b/img_srces/Blank%208%20Grids%20Collage.png" width="1000"/>
 </p>
 
-
 <p align="center">
 <b> Here's your path ⤵️ : </b>
 </p>
@@ -173,7 +159,6 @@ if the ray hits the wall we calcualted the distance
 <p align="center">
 	<b> <a href="https://github.com/ael-bekk/Advanced-Raycasting-Cub3D">Advanced Raycasting Cub3D </a> </b>
 </p>
-
 
 
 # Questions and answers
@@ -192,11 +177,9 @@ Starting to casting rays with the help of mlx_pixel_put it turn up that it works
     
     Endian : Little 0 Big 1 Endian
 
-
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/6945f32893b4c4d1abfc2ccefe889f0ae638ad6e/images/formula_my_mlx.png" width="600"/>
 </p>
-
 
 The above fomula it's actually in my_mlx_pixel_put :
 
@@ -217,46 +200,44 @@ As we know every image is a combination of tiny pixels let's take a simple examp
 each pixel has it's own color an example is that the top left has a green color in pixel so the computer define it with a specifique number tbc
  
 
-Why mlx_pixel_put so slow ?
+:question: Why mlx_pixel_put so slow ?
 
-    Because it tries to put pixel instantly on window without waiting for the frame to be rendered entirely
+> Because it tries to put pixel instantly on window without waiting for the frame to be rendered entirely
 
 Solution ?
 
-    W need to buffer to put our pixels in an image then push it into the window
+> W need to buffer to put our pixels in an image then push it into the window
 
 
-What an mlx image requires ?
+:question: What an mlx image requires ?
 
-    We need to pass some pointers to mlx_pointer :
+> We need to pass some pointers to mlx_pointer :
 
         -   bits per pixel : pixels are basicly int (4 bytes)
 
 
 
-Why in my_mlx_pixel_put bpp it's 32 and not 24 ?
+:question: Why in my_mlx_pixel_put bpp it's 32 and not 24 ?
 
-    An RGBA color value is specified with: rgba(red, green, blue, alpha).
-    The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+> An RGBA color value is specified with: rgba(red, green, blue, alpha).
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
 
 
 
-What does mlx_get_data_addr do ?
+:question: What does mlx_get_data_addr do ?
 
-    it provide us with information about the generated image
-    if it works as it should it should provide 3 informations ;
+> it provide us with information about the generated image
+if it works as it should it should provide 3 informations :
     bpp         : how many bits required to express a color of a pixel
     size_line   : how many bytes required to store 
     endian      : techinque to store data (Hex Format  ) in your RAM
 
-
-
-
-What's endian means ?
+:question: What's endian means ?
 
     Endianness is the representation of word of digital data in computer memory
 
-How to write pixels on top of image ?
+:question: How to write pixels on top of image ?
 
     So after creating your image you'll need to call mlx_get_address to retrive the memory address of that pixels ??
 
