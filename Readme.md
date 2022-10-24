@@ -158,6 +158,30 @@ if the ray hits the wall we calcualted the distance
           move_backword();
      }
 
+:five: Another challange we have is to set which direction the player sees of the Cub :
+
+We already know that a cub has 4 interfaces (not included bottom and top)
+
+<p align="center">
+<img src="https://2.bp.blogspot.com/-20Fu4yugxXw/VPjLSxkru_I/AAAAAAAAFD0/6RfOlTjgD-0/s1600/CSS_cube.gif" width="300"/>
+</p>
+
+anyway we need to each interfaces with the corrspondant color the process we'll be :
+
+1) Let's start by casting a single ray :
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/91d3b34918d144e3398901852118c063e49301f3/images/Screen%20Shot%202022-10-21%20at%2012.24.50%20PM.png" width="700"/>
+</p>
+
+2) We've got the player [y,x] and the end of ray [y,x] by a simple calculation we can remove 2 options as follows :
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/e15763faf0329fd7e5d1e5166c3f2f3e8448ff7c/images/Screen%20Shot%202022-10-24%20at%2011.31.51%20AM.png" width="1000"/>
+</p>
+
+3) So how to set directly which directions he sees we'll since each cub i've got i don't only have the position of the player and the end of ray in the map only but also with pixels, so as you know every cub tbc
+
 :information_source: And if you wanna take you game to the next level to look like this
 
 <p align="center">
@@ -283,6 +307,7 @@ https://fabiensanglard.net/gebbwolf3d/
 * Math
 
 https://blog.prepscholar.com/unit-circle-chart-radians-degrees
+https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/v/unit-circle-definition-of-trig-functions-1
 
 
 
