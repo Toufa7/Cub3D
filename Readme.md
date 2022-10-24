@@ -33,16 +33,6 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 
 :three: Starting to cast some rays :
 
-:warning: Let's go back to some of the high school math :
-
-<p align="center">
-<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
-</p>	
-	
-<p align="center">
-<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
-</p>
-
 Once we've got the player [y,x] so starting from his position we draw pixels as line we'll be using the minilibx function (mlx_pixel_put) to draw rays
 
 The number of rays will be the width of the window is 1920
@@ -72,8 +62,20 @@ But what if the player want to go to diffrent angle :
 <img src="https://github.com/Toufa7/Cub3D/blob/5827035ebea0bd06d041e241b78fdd2df5d26c89/images/which_direction.png" width="400"/>
 </p>
 
+:warning: Let's go back to some of the high school math :
+
 To go to that direction we need the intersection in term of the a-axis and the y-axis, here is a short refresher on a piece of
 high school math which forms the foundation of most calculations in the game : SOH-CAH-TOA
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
+</p>	
+	
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
+</p>
+
+
 
 	
 <p align="center">
