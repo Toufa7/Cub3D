@@ -48,7 +48,7 @@ clean	:
 			$(RM) $(NAME)
 fclean	:	clean
 
-run		:	fclean all
+run		: fclean all
 
 			./cub3d ./maps/valid/map-no-0.cub
 		

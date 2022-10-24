@@ -25,12 +25,12 @@
 
 # define TRUE 1
 
-# define RED 0XFF0000
-# define WHITE 0XFFFFFF
-# define BLACK 0X000000
-# define PURPLE 0X800080
-# define BLUE 0X0000FF
-# define GREEN 0X00FF00
+# define RED	0XFF0000
+# define WHITE	0XFFFFFF
+# define BLACK	0X000000
+# define PURPLE	0X800080
+# define BLUE	0X0000FF
+# define GREEN	0X00FF00
 
 # define WALL_DIM 64.0
 
@@ -39,6 +39,8 @@
 
 typedef struct fd
 {
+	// Put your stuffs down here
+
 	char	*NO;
 	char	*SO;
 	char	*WE;
@@ -139,6 +141,9 @@ void	move_left(t_mlx *wind);
 	Used to move the player by -90 degree in ordre to move him right
 */
 void	move_right(t_mlx *wind);
+/*
+	An infinite cast ray using x->cos() y->sin() until hitting the Wall
+*/
 void	cast_rays(t_mlx *wind, double angle, int i);
 /*
 	Whenever a ray hits the wall set which interface he see's based on his position [y,x]

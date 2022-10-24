@@ -2,8 +2,8 @@
 
 void    images_to_xpm(t_mlx *wind)
 {
-    // int height;
-    // int width;
+    int height;
+    int width;
 
     wind->north_img = wind->parsing.NO;
     wind->south_img = wind->parsing.SO;
@@ -15,9 +15,9 @@ void    images_to_xpm(t_mlx *wind)
     printf("So -> %s\n", wind->south_img);
     printf("Ea -> %s\n", wind->east_img);
     
-    // wind->north_xpm = mlx_xpm_file_to_image(wind->mlx, wind->north_img ,&width, &height);
-    // wind->south_xpm = mlx_xpm_file_to_image(wind->mlx, wind->south_img ,&width, &height);
-    // wind->west_xpm  = mlx_xpm_file_to_image(wind->mlx, wind->west_img ,&width, &height);
-    // wind->east_xpm  = mlx_xpm_file_to_image(wind->mlx, wind->east_img ,&width, &height);
+    wind->north_xpm = mlx_xpm_file_to_image(wind->mlx, wind->north_img ,&width, &height);
+    wind->south_xpm = mlx_xpm_file_to_image(wind->mlx, wind->south_img ,&width, &height);
+    wind->west_xpm  = mlx_xpm_file_to_image(wind->mlx, wind->west_img ,&width, &height);
+    wind->east_xpm  = mlx_xpm_file_to_image(wind->mlx, wind->east_img ,&width, &height);
 }
 

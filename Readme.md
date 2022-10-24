@@ -287,3 +287,6 @@ https://blog.prepscholar.com/unit-circle-chart-radians-degrees
 
 
 
+bitwise operator is much faster than traditional computation 
+
+

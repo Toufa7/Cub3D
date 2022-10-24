@@ -26,7 +26,7 @@ void	projecting_rays(t_mlx *wind)
 	{
 		cast_rays(wind, angle, x);
 		angle += WALL_DIM / WIN_WIDTH;
-		x++;
+		x += 50;
 	}
 	mlx_put_image_to_window(wind->mlx, wind->window, wind->my_mlx.img, 0, 0);
 }
@@ -47,13 +47,21 @@ void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 	while (width < WIN_HEIGHT && width < floor_ceiling + projection_3d)
 	{
 		if (dir == 'N')
+		{
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, WHITE);
+		}
 		else if (dir == 'E')
+		{
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, PURPLE);
+		}
 		else if (dir == 'W')
+		{
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
+		}
 		else
+		{
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLACK);
+		}
 	}
 	while (width < WIN_HEIGHT)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->floor);
