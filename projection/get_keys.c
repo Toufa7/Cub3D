@@ -14,20 +14,20 @@
 
 void	rotate_left(t_mlx *wind)
 {
-	wind->field_of_view -= 10;
-	if (wind->field_of_view > 360)
+	wind->field_of_view -= 10.0;
+	if (wind->field_of_view > 360.0)
 		wind->field_of_view = 0;
 	if (wind->field_of_view < 0)
-		wind->field_of_view = 360;
+		wind->field_of_view = 360.0;
 }
 
 void	rotate_right(t_mlx *wind)
 {
-	wind->field_of_view += 10;
-	if (wind->field_of_view > 360)
+	wind->field_of_view += 10.0;
+	if (wind->field_of_view > 360.0)
 		wind->field_of_view = 0;
 	if (wind->field_of_view < 0)
-		wind->field_of_view = 360;
+		wind->field_of_view = 360.0;
 }
 
 int	get_keys(int press, t_mlx *wind)

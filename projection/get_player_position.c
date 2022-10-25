@@ -15,9 +15,9 @@
 void	set_field_of_view(t_mlx *wind, char in_map)
 {
 	if (in_map == 'N')
-		wind->field_of_view = 270.0;
+		wind->field_of_view = 90.0;
 	else if (in_map == 'S')
-		wind->field_of_view = 90.00;
+		wind->field_of_view = 270.00;
 	else if (in_map == 'E')
 		wind->field_of_view = 360.0;
 	else if (in_map == 'W')

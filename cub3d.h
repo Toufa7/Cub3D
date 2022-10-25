@@ -33,6 +33,7 @@
 # define GREEN	0X00FF00
 
 # define WALL_DIM 64.0
+# define HALF_WALL 32.0
 
 # define WIN_WIDTH 1920
 # define WIN_HEIGHT 1080
@@ -91,6 +92,27 @@ typedef struct s_my_mlx
 	int		bpp;
 	int		line_len;
 	int		endian;
+
+	int		bpp_n;
+	int		line_len_n;
+	int		endian_n;
+
+	int		bpp_s;
+	int		line_len_s;
+	int		endian_s;
+
+	int		bpp_w;
+	int		line_len_w;
+	int		endian_w;
+
+	int		bpp_e;
+	int		line_len_e;
+	int		endian_e;
+
+	char	*addr_n;
+	char	*addr_s;
+	char	*addr_w;
+	char	*addr_e;
 }	t_my_mlx;
 
 typedef struct s_window
@@ -115,6 +137,11 @@ typedef struct s_window
 	double		corrected_distance;
 	int			ceilling;
 	int			floor;
+
+	double		dir_x;
+	double		dir_y;
+
+	
 	t_fd		parsing;
 	t_my_mlx	my_mlx;
 }	t_mlx;

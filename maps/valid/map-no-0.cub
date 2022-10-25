@@ -1,17 +1,17 @@
-NO /Users/otoufah/Cub3d/sprites/xpm_images/north.xpm
-SO /Users/otoufah/Cub3d/sprites/xpm_images/south.xpm
-WE /Users/otoufah/Cub3d/sprites/xpm_images/west.xpm
-EA /Users/otoufah/Cub3d/sprites/xpm_images/east.xpm
+NO ./sprites/xpm_images/north.xpm
+SO ./sprites/xpm_images/south.xpm
+WE ./sprites/xpm_images/west.xpm
+EA ./sprites/xpm_images/east.xpm
 
 F 116,212,52
 C 135,206,235
 
 11111111111111111111
 10000000000000000001
-10010000100010001001
-10100000000000000101
-1000000000S000000001
 10000000000000000001
-10100000100010000101
-10010000000000001001
+10000000000000000001
+10S00000000000000001
+10000000000000000001
+10000000000000000001
+10000000000000000001
 11111111111111111111
