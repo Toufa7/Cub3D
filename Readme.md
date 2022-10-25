@@ -23,25 +23,15 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 :two: Getting the player position in the map and define the field of view based on the character inserted in the map :
 
     if (map[y][x] == 'N')
-        fov = 270
-    else if (map[y][x] == 'S')
         fov = 90
+    else if (map[y][x] == 'S')
+        fov = 270
     else if (map[y][x] == 'E')
         fov = 360
     else if (map[y][x] == 'W')
         fov = 180
 
 :three: Starting to cast some rays :
-
-:warning: Let's go back to some of the high school math :
-
-<p align="center">
-<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
-</p>	
-	
-<p align="center">
-<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
-</p>
 
 Once we've got the player [y,x] so starting from his position we draw pixels as line we'll be using the minilibx function (mlx_pixel_put) to draw rays
 
@@ -50,15 +40,15 @@ The number of rays will be the width of the window is 1920
     void	player_view()
     {
 	    int i = -1;
-	    double fov = the fov setted in the map - 32;
+	    double fov = the fov setted in the map - 30;
 	    while (++i < nbr_of_rays)
 	    {
 		    cast_ray(fov);
-		    fov += 0.033333;
+		    fov += 0.0333;
 	    }
     }
 
-0.03 this number came from dividing our player angle 64 on window's witdh 1920, with it we ensure to cast every pixel in our angle
+0.0333 this number came from dividing our player angle 64 on window's witdh 1920, with it we ensure to cast every pixel in our angle
 
 So as you know if our player has a 4 direction 2 vertical and 2 horizontal it's gonna be easy to implement his moves by simply increasing and decreasing his current positions [x,y],
 
@@ -72,8 +62,18 @@ But what if the player want to go to diffrent angle :
 <img src="https://github.com/Toufa7/Cub3D/blob/5827035ebea0bd06d041e241b78fdd2df5d26c89/images/which_direction.png" width="400"/>
 </p>
 
+:warning: Let's go back to some of the high school math :
+
 To go to that direction we need the intersection in term of the a-axis and the y-axis, here is a short refresher on a piece of
 high school math which forms the foundation of most calculations in the game : SOH-CAH-TOA
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/circle.png" width="400"/>
+</p>	
+	
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/1021897d7f6a75ce61b804b15aa847147aa79897/images/unit_circle.png" width="400"/>
+</p>
 
 	
 <p align="center">
@@ -279,6 +279,9 @@ The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully o
 
 > Absolutly yes I/O is always slow in comparison to straight computation how i don't know actually sorry but you can try to redirect output in shell from console to a file and also don't forget that scrolling is usually a killer 
 
+:question: Who's better float or double to work with ?
+
+> Double is more precise than float and can store 64 bits (double of the number of bits float can stor)  Double is more precise and for storing large numbers, we prefer double over float
 
 # Ressources :
 
@@ -295,6 +298,8 @@ https://github.com/sejinpark12/MiniLibX_man_kor
 Very Very Verrrrrrry useful 👌 :
 
 https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/
+
+http://www.playfuljs.com/a-first-person-engine-in-265-lines/
 
 This amazing book which explains every details in the game :
 
