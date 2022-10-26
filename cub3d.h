@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:03:50 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/19 16:37:21 by orbiay           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef CUB3D_H
 # define CUB3D_H
 
@@ -40,8 +28,6 @@
 
 typedef struct fd
 {
-	// Put your stuffs down here
-
 	char	*NO;
 	char	*SO;
 	char	*WE;
@@ -120,28 +106,38 @@ typedef struct s_window
 	void		*mlx;
 	void		*window;
 	char		**map;
+
 	char		*north_img;
 	char		*south_img;
 	char		*east_img;
 	char		*west_img;
+
 	char		*north_xpm;
 	char		*south_xpm;
 	char		*east_xpm;
 	char		*west_xpm;
+
 	double		field_of_view;
+
 	double		x_player;
 	double		y_player;
-	double		x_endRay;
-	double		y_endRay;
+
+	double		x_endray;
+	double		y_endray;
+
 	double		distance;
+
 	double		corrected_distance;
+
 	int			ceilling;
 	int			floor;
 
-	double		dir_x;
-	double		dir_y;
+	double		where;
 
-	
+	double		dst_to_projection;
+	double		projection_3d;
+	double		floor_ceiling;
+
 	t_fd		parsing;
 	t_my_mlx	my_mlx;
 }	t_mlx;

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   cub3d.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 18:25:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/22 12:20:47 by orbiay           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../cub3d.h"
 
 /* TODO:
@@ -35,14 +23,14 @@
 void	parse_aguments(t_mlx	*wind)
 {
 	printf("We Path -> %s\n", wind->west_img);
-    printf("No Path -> %s\n", wind->north_img);
-    printf("So Path -> %s\n", wind->south_img);
-    printf("Ea Path -> %s\n", wind->east_img);
-    printf("C Color -> %s\n", wind->east_img);
-    printf("E Color -> %s\n", wind->east_img);
-	for (int i = 0; wind->map[i];i++)
+	printf("No Path -> %s\n", wind->north_img);
+	printf("So Path -> %s\n", wind->south_img);
+	printf("Ea Path -> %s\n", wind->east_img);
+	printf("C Color -> %s\n", wind->east_img);
+	printf("E Color -> %s\n", wind->east_img);
+	for (int i = 0; wind->map[i]; i++)
 	{
-    	printf("Map -> %s\n", wind->map[i]);
+		printf("Map -> %s\n", wind->map[i]);
 	}
 }
 

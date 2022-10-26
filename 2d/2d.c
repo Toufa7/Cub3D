@@ -48,9 +48,11 @@ void	images_to_xpm(t_mlx *wind)
 	wind->wall = "../sprites/2d_black.xpm";
 	wind->clear = "../sprites/2d_white.xpm";
 	wind->player = "../sprites/2d_player.xpm";
+	wind->coin = "../sprites/coin.xpm";
 	wind->xpm_wall = mlx_xpm_file_to_image(wind->mlx, wind->wall, &width, &height);
 	wind->xpm_clear = mlx_xpm_file_to_image(wind->mlx, wind->clear, &width, &height);
 	wind->xpm_player = mlx_xpm_file_to_image(wind->mlx, wind->player, &width, &height);
+	wind->xpm_coin = mlx_xpm_file_to_image(wind->mlx, wind->coin, &width, &height);
 }
 
 void	get_player_position(t_mlx *wind)
@@ -64,7 +66,12 @@ void	get_player_position(t_mlx *wind)
 		j = 0;
 		while (wind->map[i][j])
 		{
-			if (wind->map[i][j] == 'P')
+			if (wind->map[i][j] == 'C')
+			{
+				wind->y_coin = i * 60;
+				wind->x_coin = j * 60;
+			}
+			else if (wind->map[i][j] == 'P')
 			{
 				wind->map[i][j] = '0';
 				wind->y_player = i * 60;
@@ -87,6 +94,49 @@ double	degrees_to_radians_1(t_mlx *wind)
 	return ((wind->field_of_view + 90) * M_PI / 180);
 }
 
+char	set_direction_coin(double y_player, double x_player, double y_end_coin, double x_end_coin, t_mlx *wind)
+{
+	double ppy = ((y_end_coin / 60) + 1);
+	double ppx = ((x_end_coin / 60));
+
+	double ppyy = ((y_end_coin / 60) - 1);
+	double ppxx = ((x_end_coin / 60));
+
+	if (y_player > y_end_coin && x_player > x_end_coin)
+	{
+		if ((int)(y_end_coin + 1) % 60 == 0)
+		{
+			return ('F');
+		}
+		else
+			return ('Y');
+	}
+	else if (y_player > y_end_coin && x_player < x_end_coin)
+	{
+		if ((int)(y_end_coin + 1) % 60 == 0)
+		{
+			return ('F');
+		}
+		else
+			return ('N');
+	}
+	else if (y_player <= y_end_coin && x_player <= x_end_coin)
+	{
+		if ((int)(y_end_coin) % 60 == 0 && wind->map[(int)((y_end_coin / 60) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
+			return ('T');
+		else
+			return ('N');
+	}
+	else if (y_player <= y_end_coin && x_player >= x_end_coin)
+	{
+		if ((int)(y_end_coin) % 60 == 0 && wind->map[(int)((y_end_coin / 60) - 1)] && wind->map[(int)(ppyy)][(int)(ppxx)] == '0')
+			return ('T');
+		else
+			return ('Y');
+	}
+	return (0);
+}
+
 char	set_direction(double y_player, double x_player, double py, double px, t_mlx *wind)
 {
 	double ppy = ((py / 60) + 1);
@@ -94,6 +144,8 @@ char	set_direction(double y_player, double x_player, double py, double px, t_mlx
 
 	double ppyy = ((py / 60) - 1);
 	double ppxx = ((px / 60));
+
+
 
 	if (y_player > py && x_player > px)
 	{
@@ -128,7 +180,6 @@ char	set_direction(double y_player, double x_player, double py, double px, t_mlx
 			return ('W');
 	}
 	return (0);
-	// printf("------------------------\n");
 }
 
 void	cast_rays(t_mlx *wind, double fov)
@@ -136,19 +187,23 @@ void	cast_rays(t_mlx *wind, double fov)
 	double	px;
 	double	py;
 	char 	dir = '\0';
+	char 	dir_coin = '\0';
 
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
-		//  || wind->map[(int)((py / 60) + 1)][(int)((px / 60)) + 1] == '1' || wind->map[(int)((py / 60) - 1)][(int)((px / 60) - 1)] == '1' || wind->map[(int)((py / 60) + 1)][(int)((px / 60) - 1)] == '1'
+		if (wind->map[(int)((py / 60))][(int)((px / 60))] == 'C')
+		{
+			wind->x_end_coin = px;
+			wind->y_end_coin = py;
+			dir_coin = set_direction_coin(wind->y_player, wind->x_player, wind->y_coin, wind->x_coin, wind);
+			break;
+		}
 		if (wind->map[(int)((py / 60))][(int)((px / 60))] == '1')
 		{
-			// printf("Player	Positions	[%d,%d]\n",(int)wind->y_player,(int)wind->x_player);
-			// printf("Wall	Positions	[%d,%d]\n",(int)((py)),(int)((px)));
-			// printf("  ------------------------ \n");
+
 			dir = set_direction(wind->y_player, wind->x_player, py, px, wind);
-			// printf("Direction -> %c\n", dir);
 			break ;
 		}
 		// mlx_pixel_put(wind->mlx, wind->window, px, py, RED);
@@ -164,6 +219,15 @@ void	cast_rays(t_mlx *wind, double fov)
 		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, WHITE);
 	else if (dir == 'W')
 		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , px, py, GREEN);
+
+	if (dir_coin == 'F')
+		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , wind->x_coin, wind->y_coin, BLACK);
+	else if (dir_coin == 'Y')
+		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , wind->x_coin, wind->y_coin, PURPLE);
+	else if (dir_coin == 'N')
+		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , wind->x_coin, wind->y_coin, ORANGE);
+	else if (dir_coin == 'T')
+		draw_line(wind->mlx, wind->window,wind->x_player,wind->y_player , wind->x_coin, wind->y_coin, YELLOW);
 }
 
 void	projecting_rays(t_mlx *wind)
@@ -173,8 +237,8 @@ void	projecting_rays(t_mlx *wind)
 	double	fov;
 
 	i = -1;
-	nbr_of_rays = 1920;
-	fov = wind->field_of_view - 30;
+	nbr_of_rays = 500;
+	fov = wind->field_of_view;
 	while (i++ < nbr_of_rays)
 	{
 		cast_rays(wind, fov);
@@ -197,6 +261,8 @@ void	map_filling(t_mlx	*wind)
 				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_wall, j * 60, i * 60);
 			else if (wind->map[i][j] == '0')
 				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_clear, j * 60, i * 60);
+			else if (wind->map[i][j] == 'C')
+				mlx_put_image_to_window(wind->mlx, wind->window, wind->xpm_coin, j * 60, i * 60);
 			j++;
 		}
 		i++;
@@ -230,7 +296,7 @@ void	  move_forward(t_mlx *wind)
 
 	py = sin(degrees_to_radians(wind)) * 10;
 	px = cos(degrees_to_radians(wind)) * 10;
-	if (wind->map[(int)(wind->y_player + py) / 60][(int)(wind->x_player + px) / 60] == '0')
+	if (wind->map[(int)((wind->y_player + py)) / 60][(int)((wind->x_player + px)) / 60] == '0')
 	{
 		wind->x_player += px;
 		wind->y_player += py;

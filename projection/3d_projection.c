@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   3d_projection.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 09:49:51 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/23 16:39:50 by otoufah          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../cub3d.h"
 
 void	projecting_rays(t_mlx *wind)
@@ -42,16 +30,15 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 
 	px = wind->x_player;
 	py = wind->y_player;
-	
 	while (TRUE)
 	{
 		if (wind->map[(int)py / (int)WALL_DIM][(int)px / (int)WALL_DIM] == '1')
 		{
-			wind->x_endRay = px;
-			wind->y_endRay = py;
-			wind->distance = calculate_distance(wind->y_player, wind->x_player, wind->y_endRay, wind->x_endRay);
-			direction = set_directions(wind->y_endRay, wind->x_endRay, wind);
-			wind->dir_x = (int)round(wind->dir_x * (1000.0 / 64.0)) % 1000;
+			wind->x_endray = px;
+			wind->y_endray = py;
+			wind->distance = calculate_distance(wind->y_player, wind->x_player, wind->y_endray, wind->x_endray);
+			direction = set_directions(wind->y_endray, wind->x_endray, wind);
+			wind->where= (int)round(wind->where * (1000.0 / 64.0)) % 1000;
 			break ;
 		}
 		px += cos((angle) * (M_PI / 180));
@@ -61,73 +48,44 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 	casting_3d(wind->corrected_distance, x, wind, direction);
 }
 
-
-
 void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 {
+	int 	i;
+	char	*color;
 	int		width;
-	double	floor_ceiling;
-	double	projection_3d;
-	char	*dst;
-	double	distance_to_projection;
+
 	width = 0;
-
-	(void)dir;
-	distance_to_projection = ((WIN_WIDTH / 2) / (tan((HALF_WALL) * (M_PI / 180))));
-
-	projection_3d = (WALL_DIM / distance) * distance_to_projection;
-
-	floor_ceiling = (WIN_HEIGHT / 2) - (projection_3d / 2);
-
-						// ceilling 
-
-	while (width < WIN_HEIGHT && width < floor_ceiling)
-	{
+	i = -1;
+	mlx->dst_to_projection = ((WIN_WIDTH / 2) / (tan((HALF_WALL) * (M_PI / 180))));
+	mlx->projection_3d = (WALL_DIM / distance) * mlx->dst_to_projection;
+	mlx->floor_ceiling = (WIN_HEIGHT / 2) - (mlx->projection_3d / 2);
+	while (width < WIN_HEIGHT && width < mlx->floor_ceiling)
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->ceilling);
-	}
-
-						// Walls 
-
-	int	save_wid = width;
-	while (width < WIN_HEIGHT && width < floor_ceiling + projection_3d)
+	while (width < WIN_HEIGHT && width < mlx->floor_ceiling + mlx->projection_3d && ++i < WIN_HEIGHT) 
 	{
 		if (dir == 'N')
 		{
-			// 	dst = data->addr + (y * data->line_len + x * (data->bpp / 8));
-
-			dst = (mlx->my_mlx.addr_n + (((int)(round(((double)width - (double)save_wid + (projection_3d - (double)WIN_HEIGHT) * (projection_3d > WIN_HEIGHT) / 2) * (1000.0 / projection_3d))) % 1000) * mlx->my_mlx.line_len_n + (int)mlx->dir_x * (mlx->my_mlx.bpp_n / 8)));
-
-
-			// my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLACK);
-			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)dst);
+			color = (mlx->my_mlx.addr_w + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_w + (int)round(mlx->where) * (mlx->my_mlx.bpp_w / 8)));
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)color);
 		}
 		else if (dir == 'S')
 		{
-			dst = (mlx->my_mlx.addr_s + (((int)(round(((double)width - (double)save_wid + (projection_3d - (double)WIN_HEIGHT) * (projection_3d > WIN_HEIGHT) / 2) * (1000.0 / projection_3d))) % 1000) * mlx->my_mlx.line_len_s + (int)mlx->dir_x * (mlx->my_mlx.bpp_s / 8)));
-		// 	// color = *(int *)(mlx->my_mlx.addr_s + (((width - save_wid) % 1000) * mlx->my_mlx.line_len + (int)mlx->dir_x * (mlx->my_mlx.bpp / 8)));
-		// 	// my_mlx_pixel_put(&mlx->my_mlx, height, width++, BLUE);
-			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)dst);
+			color = (mlx->my_mlx.addr_s + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_s + (int)mlx->where * (mlx->my_mlx.bpp_s / 8)));
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)color);
 		}
-		// else if (dir == 'W')
-		// {
-		// 	dst = (mlx->my_mlx.addr_w + (((int)(round(((double)width - (double)save_wid + (projection_3d - (double)WIN_HEIGHT) * (projection_3d > WIN_HEIGHT) / 2) * (1000.0 / projection_3d))) % 1000) * mlx->my_mlx.line_len_w + (int)mlx->dir_y * (mlx->my_mlx.bpp_w / 8)));
-		// // 	// color = *(int *)(mlx->my_mlx.addr_w + (((width - save_wid) % 1000) * mlx->my_mlx.line_len + (int)mlx->dir_x * (mlx->my_mlx.bpp / 8)));
-		// // 	// my_mlx_pixel_put(&mlx->my_mlx, height, width++, PURPLE);
-		// 	my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)dst);
-		// }
+		else if (dir == 'W')
+		{
+			color = (mlx->my_mlx.addr_n + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_n + (int)mlx->where * (mlx->my_mlx.bpp_n / 8)));
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)color);
+		}
 		else
 		{
-			// dst = (mlx->my_mlx.addr_e + (((int)(round(((double)width - (double)save_wid + (projection_3d - (double)WIN_HEIGHT) * (projection_3d > WIN_HEIGHT) / 2) * (1000.0 / projection_3d))) % 1000) * mlx->my_mlx.line_len_e + (int)mlx->dir_x * (mlx->my_mlx.bpp_e / 8)));
-			// color = *(int *)(mlx->my_mlx.addr_e + (((width - save_wid) % 1000) * mlx->my_mlx.line_len + (int)mlx->dir_x * (mlx->my_mlx.bpp / 8)));
-			my_mlx_pixel_put(&mlx->my_mlx, height, width++, WHITE);
-			// my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)dst);
+			color = (mlx->my_mlx.addr_e + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_e + (int)mlx->where * (mlx->my_mlx.bpp_e / 8)));
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)color);
 		}
 	}
-
-						// Floor 
 	while (width < WIN_HEIGHT)
 	{
 		my_mlx_pixel_put(&mlx->my_mlx, height, width++, mlx->floor);
 	}
 }
-
