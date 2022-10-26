@@ -71,7 +71,7 @@ int	check_spaces(char **str, int start)
 
 int	check_player(char str)
 {
-	if (str == 'N' || str == 'S' || str == 'E' || str == 'W')
+	if (str == 'N' || str == 'S' || str == 'E' || str == 'W' || str == 'C')
 		return (1);
 	return (0);
 }
@@ -124,11 +124,11 @@ int	last_touches(char	**str)
 		}
 		i++;
 	}
-	if ((cout_p == 0 || cout_p > 1) || i == 6)
-	{
-		printf("Error : There is a problem");
-		return (0);
-	}
+	// if ((cout_p == 0 || cout_p > 1) || i == 6)
+	// {
+	// 	printf("Error : There is a problem A     ===");
+	// 	return (0);
+	// }
 	return (1);
 }
 

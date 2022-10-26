@@ -13,6 +13,7 @@ FUNCTIONS =	projection/my_mlx_pixel_put.c\
 			projection/get_keys.c\
 			projection/3d_projection.c\
 			projection/set_directions.c\
+			projection/set_directions_coins.c\
 			projection/images_xpm.c\
 			projection/moves/move_forward.c\
 			projection/moves/move_left.c\
@@ -42,7 +43,7 @@ RM = rm -rf
 all		:	$(NAME) 
 
 $(NAME) : $(FUNCTIONS)
-			$(CC) $(C_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
+			$(CC) $(C_FLAGS) $(ADDITIONAL_FLAGS) $(FUNCTIONS) $(MLX_FLAGS) ./projection/cub3d.c -o $(NAME) 
 
 clean	:	
 			$(RM) $(NAME)

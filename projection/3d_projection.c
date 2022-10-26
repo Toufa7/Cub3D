@@ -26,17 +26,26 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 {
 	double	px;
 	double	py;
-	char	direction;
+	char	direction = '\0';
+	char	direction_coin = '\0';
+	
 
 	px = wind->x_player;
 	py = wind->y_player;
 	while (TRUE)
 	{
+		if (wind->map[(int)py / (int)WALL_DIM][(int)px / (int)WALL_DIM] == 'C')
+		{
+			direction_coin = set_direction_coin(wind->y_player, wind->x_player, wind->y_coin, wind->x_coin, wind);
+			wind->distance = calculate_distance(wind->y_player, wind->x_player, wind->y_coin, wind->x_coin);
+			wind->where= (int)round(wind->where * (1000.0 / 64.0)) % 1000;
+			break;
+		}
 		if (wind->map[(int)py / (int)WALL_DIM][(int)px / (int)WALL_DIM] == '1')
 		{
 			wind->x_endray = px;
 			wind->y_endray = py;
-			wind->distance = calculate_distance(wind->y_player, wind->x_player, wind->y_endray, wind->x_endray);
+			wind->distance = calculate_distance(wind->y_player, wind->x_player, py, px);
 			direction = set_directions(wind->y_endray, wind->x_endray, wind);
 			wind->where= (int)round(wind->where * (1000.0 / 64.0)) % 1000;
 			break ;
@@ -45,15 +54,17 @@ void	cast_rays(t_mlx *wind, double angle, int x)
 		py += sin((angle) * (M_PI / 180));
 	}
 	wind->corrected_distance = wind->distance * cos((angle - wind->field_of_view) * (M_PI / 180));
-	casting_3d(wind->corrected_distance, x, wind, direction);
+	casting_3d(wind->corrected_distance, x, wind, direction, direction_coin);
 }
 
-void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
+void	casting_3d(double distance, int height, t_mlx *mlx, char dir, char coin)
 {
 	int 	i;
 	char	*color;
 	int		width;
 
+	printf("Coin		=> %c\n", coin);
+	printf("Direction	=> %c\n", dir);
 	width = 0;
 	i = -1;
 	mlx->dst_to_projection = ((WIN_WIDTH / 2) / (tan((HALF_WALL) * (M_PI / 180))));
@@ -75,6 +86,12 @@ void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 		}
 		else if (dir == 'W')
 		{
+			color = (mlx->my_mlx.addr_n + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_n + (int)mlx->where * (mlx->my_mlx.bpp_n / 8)));
+			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)color);
+		}
+		else if (coin == 'A')
+		{
+			// color = (mlx->my_mlx.addr_c + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_c + (int)mlx->where * (mlx->my_mlx.bpp_c / 8)));
 			color = (mlx->my_mlx.addr_n + (((int)(round((i + (mlx->projection_3d - (double)WIN_HEIGHT) * (mlx->projection_3d > WIN_HEIGHT) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.line_len_n + (int)mlx->where * (mlx->my_mlx.bpp_n / 8)));
 			my_mlx_pixel_put(&mlx->my_mlx, height, width++, *(unsigned int *)color);
 		}

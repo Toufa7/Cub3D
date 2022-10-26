@@ -23,6 +23,11 @@ void	get_player_position(t_mlx *wind)
 		j = 0;
 		while (wind->map[i][j])
 		{
+			if (wind->map[i][j] == 'C')
+			{
+				wind->y_coin = i * 64;
+				wind->x_coin = j * 64;
+			}
 			if (wind->map[i][j] == 'N' || wind->map[i][j] == 'S' ||
 				wind->map[i][j] == 'W' || wind->map[i][j] == 'E')
 			{

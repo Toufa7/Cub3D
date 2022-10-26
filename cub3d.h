@@ -95,10 +95,15 @@ typedef struct s_my_mlx
 	int		line_len_e;
 	int		endian_e;
 
+	int		bpp_c;
+	int		line_len_c;
+	int		endian_c;
+
 	char	*addr_n;
 	char	*addr_s;
 	char	*addr_w;
 	char	*addr_e;
+	char	*addr_c;
 }	t_my_mlx;
 
 typedef struct s_window
@@ -111,11 +116,13 @@ typedef struct s_window
 	char		*south_img;
 	char		*east_img;
 	char		*west_img;
+	char		*coin_img;
 
 	char		*north_xpm;
 	char		*south_xpm;
 	char		*east_xpm;
 	char		*west_xpm;
+	char		*coin_xpm;
 
 	double		field_of_view;
 
@@ -125,10 +132,13 @@ typedef struct s_window
 	double		x_endray;
 	double		y_endray;
 
+	double		x_coin;
+	double		y_coin;
+
 	double		distance;
 
 	double		corrected_distance;
-
+	
 	int			ceilling;
 	int			floor;
 
@@ -180,11 +190,12 @@ void	projecting_rays(t_mlx *wind);
 /*
 	When we mesured the distance we start rendring our world
 */
-void	casting_3d(double distance, int i, t_mlx *mlx, char dir);
+void	casting_3d(double distance, int i, t_mlx *mlx, char dir, char direction_coin);
 /*
 	Whenever the user hit a key provide him wwith the move he requires
 */
 int		get_keys(int press, t_mlx	*wind);
+char	set_direction_coin(double y_player, double x_player, double y_end_coin, double x_end_coin, t_mlx *wind);
 int		destroy_window(t_mlx *wind);
 void	my_mlx_pixel_put(t_my_mlx *data, int x, int y, int color);
 
