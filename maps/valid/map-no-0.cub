@@ -1,12 +1,22 @@
-NO ./sprites/xpm_images/south.xpm
-SO ./sprites/xpm_images/south.xpm
-WE ./sprites/xpm_images/south.xpm
+
+
+
+
+NO    ./sprites/xpm_images/south.xpm
+SO      ./sprites/xpm_images/south.xpm
+WE      ./sprites/xpm_images/south.xpm
 EA ./sprites/xpm_images/south.xpm
 
 F 231,  156,    29
 C 38,141,12
 
-11111111111111111111
+
+
+
+
+
+
+1111111111111111111
 10000000000010100001
 1E000101010000000001
 10001000001010000001
@@ -21,3 +31,6 @@ C 38,141,12
 10000000000000000001
 10001000000000000001
 11111111111111111111
+111111
+   
+  

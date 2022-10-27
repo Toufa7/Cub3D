@@ -6,7 +6,7 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:23:36 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 20:33:33 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:53:33 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ void	aff_line(t_data_par *parsing, t_index *index, char *line)
 	}
 	if (parsing->ciling_color == -1
 		|| parsing->floor_color == -1 || index->n_color != 2)
-	{
-		//printf("from here %d ", parsing->ciling_color);
 		error_color();
-	}
 	parsing -> maze[index->maze_index] = ft_strdup(line);
 	index -> maze_index++;
 }
@@ -34,7 +31,6 @@ void	get_info_map(t_data_par *parsing,
 		char *line, t_index *index, int *n_tex)
 {
 	char		*ptr;
-//	static int	empty;
 
 	ptr = ft_strtrim(line, " ");
 	if (check_possiblty_tex(ptr))
@@ -43,10 +39,6 @@ void	get_info_map(t_data_par *parsing,
 		get_color_values(parsing, ptr, index);
 	else if ((ptr[0] == '1' || ptr[0] == '0' || index->maze_index != 0))
 	{
-		// printf(" %s \n", line);
-		// if (((empty > 0 && (ptr[0] == '0' || ptr[1] == '1'))
-		// 		|| (ptr[0] != '0' && ptr[0] != '1' && ptr[0] != 0)))
-		// 	error_map();
 		if (ptr[0] == '1' || ptr[0] == '0' )
 			aff_line(parsing, index, line);
 		free(ptr);
@@ -55,6 +47,14 @@ void	get_info_map(t_data_par *parsing,
 	else
 		free(ptr);
 	free(line);
+}
+
+void	init_index(t_index *i)
+{
+	i->maze_index = 0;
+	i->n_color = 0;
+	i->n_derc = 0;
+	i->new_line = 0;
 }
 
 void	read_map(char *file, t_data_par *parsing)
@@ -67,10 +67,7 @@ void	read_map(char *file, t_data_par *parsing)
 
 	n_tex = 0;
 	line = 0;
-	i.maze_index = 0;
-	i.n_color = 0;
-	i.n_derc = 0;
-	i.new_line = 0;
+	init_index(&i);
 	fd = open(file, O_RDONLY);
 	while (1)
 	{
