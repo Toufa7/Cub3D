@@ -23,6 +23,7 @@ void	aff_line(t_data_par *parsing, t_index *index, char *line)
 	if (parsing->ciling_color == -1
 		|| parsing->floor_color == -1 || index->n_color != 2)
 	{
+		//printf("from here %d ", parsing->ciling_color);
 		error_color();
 	}
 	parsing -> maze[index->maze_index] = ft_strdup(line);
@@ -66,6 +67,10 @@ void	read_map(char *file, t_data_par *parsing)
 
 	n_tex = 0;
 	line = 0;
+	i.maze_index = 0;
+	i.n_color = 0;
+	i.n_derc = 0;
+	i.new_line = 0;
 	fd = open(file, O_RDONLY);
 	while (1)
 	{

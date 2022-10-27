@@ -26,7 +26,7 @@ int	main(int ac, char **av)
 	parsing = malloc(sizeof(t_data_par));
 	ft_parsing(ac, av, parsing);
 	wind.parsing = parsing;
-	// exit(0);
+
 	if (ac == 2)
 	{
 		wind.map = parsing->maze;
