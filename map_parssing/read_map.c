@@ -6,7 +6,7 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:23:36 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 18:02:48 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:33:33 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,12 @@ void	read_map(char *file, t_data_par *parsing)
 		ptr = line;
 		if (line == 0)
 			break ;
-		// if (line[0] == '\n')
-		// 	error_map();
+		if (line[0] == '\n' && i.maze_index != 0)
+			error_map();
 		line = ft_strtrim(line, "\n");
 		get_info_map(parsing, line, &i, &n_tex);
 		free(ptr);
 	}
 	parsing->maze[i.maze_index] = 0;
-//	check_maze_player(parsing);
+	check_maze_player(parsing);
 }
