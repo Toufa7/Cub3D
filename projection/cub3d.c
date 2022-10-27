@@ -21,13 +21,15 @@
 int	main(int ac, char **av)
 {
 	t_mlx	wind;
+	t_data_par *parsing;
 
-	wind.parsing = read_and_add(av);
-	wind.ceilling = rgb_to_hexa(wind.parsing.C);
-	wind.floor = rgb_to_hexa(wind.parsing.F);
+	parsing = malloc(sizeof(t_data_par));
+	ft_parsing(ac, av, parsing);
+	wind.parsing = parsing;
+
 	if (ac == 2)
 	{
-		wind.map = ft_split(wind.parsing.full_map, '\n');
+		wind.map = parsing->maze;
 		wind.mlx = mlx_init();
 		wind.window = mlx_new_window(wind.mlx, WIN_W, WIN_H, "Cub3D");
 		images_to_xpm(&wind);

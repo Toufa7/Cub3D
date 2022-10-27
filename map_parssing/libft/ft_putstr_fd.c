@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ael-oual <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:24:23 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 16:22:54 by orbiay           ###   ########.fr       */
+/*   Created: 2021/11/07 10:23:19 by ael-oual          #+#    #+#             */
+/*   Updated: 2021/11/14 17:52:56 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-
-int	ft_strcmp(char	*s1, char	*s2)
+#include "../includ/map_parssing.h"
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s1 || !s2)
+	int	index;
+
+	index = 0;
+	if (!s || !fd)
+		return ;
+	while (s[index] != '\0')
 	{
-		printf("STRCMP \n");
-		return (1);
+		ft_putchar_fd(s[index], fd);
+		index++;
 	}
-	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
 }

@@ -8,8 +8,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include "./get_next_line/get_next_line.h"
-# include "./libft/libft.h"
+# include "./map_parssing/includ/map_parssing.h"
 
 # define TRUE 1
 
@@ -26,50 +25,8 @@
 # define WIN_W	1920.0
 # define WIN_H	1080.0
 
-typedef struct fd
-{
-	char	*NO;
-	char	*SO;
-	char	*WE;
-	char	*EA;
-	char	*F;
-	char	*C;
-	char	*full_map;
-}	t_fd;
 
-int		len(char **str);
-void	ft_free(char **str);
-int		check_c(char **str);
-int		check_f(char **str);
-int		check_so(char **str);
-int		counting(char **str);
-int		check_we(char **str);
-char	*joining(char **str);
-int		check_no(char **str);
-char	*only_map(char *str);
-int		check_ea(char **str);
-int		all_walls(char	*str);
-t_fd	take_path(char	*str);
-int		rgb_to_hexa(char *str);
-int		check_comma(char *str);
-int		check_player(char str);
-t_fd	read_and_add(char **av);
-int		map_checking(char *str);
-t_fd	read_and_add(char **av);
-int		check_isdigit(char **sp);
-int		check_newline(char *str);
-int		map_checking2(char	*str);
-int		last_touches(char	**str);
-t_fd	file_dis(char *sp, char *s);
-void	check_extension(char *av[]);
-int		check_f_c(char	**str,	int line);
-int		check_spaces(char **str, int start);
-int		check_colors_valid(char *F, char *C);
-int		check_textures(char **str,	int line);
-int		req_zero(char **str, int start, int i);
-int		check_walls(char *str, int start, int count);
-int		first_six_lines(char *split_str,	int line);
-int		check_walls(char	*str, int start, int count);
+# define PX_MOVE	50
 
 typedef struct s_my_mlx
 {
@@ -145,7 +102,7 @@ typedef struct s_window
 	double		flo_cei;
 	char		*color;
 
-	t_fd		parsing;
+	t_data_par	*parsing;
 	t_my_mlx	my_mlx;
 }	t_mlx;
 

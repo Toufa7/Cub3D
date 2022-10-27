@@ -14,29 +14,31 @@ FUNCTIONS =	projection/my_mlx_pixel_put.c\
 			projection/3d_projection.c\
 			projection/set_directions.c\
 			projection/images_xpm.c\
-			projection/textures.c\
 			projection/moves/move_forward.c\
 			projection/moves/move_left.c\
 			projection/moves/move_right.c\
 			projection/moves/move_backword.c\
 			projection/destroy_window.c\
-			map_parsing/check_textures_colors.c\
-			map_parsing/rgb_to_hexa.c\
-			map_parsing/checking_walls.c\
-			map_parsing/check_map_utils.c\
-			map_parsing/read_and_add.c\
-			map_parsing/main.c\
-			map_parsing/map_cheking.c\
-			map_parsing/check_Path.c\
-			libft/ft_strcmp.c\
-			libft/ft_strlen.c\
-			libft/ft_strncmp.c \
-			libft/ft_strdup.c\
-			libft/ft_strjoin.c\
-			libft/ft_split.c\
-			libft/ft_atoi.c\
-			get_next_line/get_next_line.c\
-			get_next_line/get_next_line_utils.c\
+			projection/textures.c\
+			map_parssing/libft/ft_atoi.c\
+			map_parssing/libft/ft_strnstr.c\
+			map_parssing/libft/ft_calloc.c\
+			map_parssing/libft/ft_strlen.c\
+			map_parssing/libft/ft_strncmp.c\
+			map_parssing/libft/ft_strjoin.c\
+			map_parssing/libft/ft_strtrim.c\
+			map_parssing/libft/ft_putchar_fd.c\
+			map_parssing/libft/ft_putstr_fd.c\
+			map_parssing/cub_utils.c\
+			map_parssing/errors.c\
+			map_parssing/textur.c\
+			map_parssing/color.c\
+			map_parssing/get_next_line_utils.c\
+			map_parssing/parsing.c\
+			map_parssing/get_next_line.c\
+			map_parssing/read_map.c\
+			map_parssing/check_maze.c\
+			map_parssing/position.c\
 		
 RM = rm -rf
 

@@ -5,10 +5,11 @@ void	images_to_xpm(t_mlx *wind)
 	int	h;
 	int	w;
 
-	wind->n_img = wind->parsing.NO;
-	wind->s_img = wind->parsing.SO;
-	wind->e_img = wind->parsing.EA;
-	wind->w_img = wind->parsing.WE;
+	wind->n_img = wind->parsing->north_path;
+	wind->s_img = wind->parsing->south_path;
+	wind->e_img = wind->parsing->east_path;
+	wind->w_img = wind->parsing->west_path;
+
 	wind->n_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);
 	wind->s_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);
 	wind->e_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);

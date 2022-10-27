@@ -3,25 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ael-oual <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:14:28 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 14:03:45 by orbiay           ###   ########.fr       */
+/*   Created: 2021/11/02 19:07:14 by ael-oual          #+#    #+#             */
+/*   Updated: 2021/11/18 10:01:05 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include<stdio.h>
+#include "../includ/map_parssing.h"
 
-#include"libft.h"
-
+//int	ft_strncmp(char *s1, char *s2, unsigned int n)
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && (i < n))
+	if (n == 0)
+		return (0);
+	while (i < n && (*s1 != '\0' || *s2 != '\0'))
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (*s1 != *s2)
+			return ((unsigned char) *s1 - (unsigned char) *s2);
+		s1++;
+		s2++;
 		i++;
 	}
 	return (0);
 }
+/*
+int main()
+{
+     printf(" %d  %d ",ft_strncmp("abè","abè",3),strncmp("abè","abè",3));
+
+}
+*/

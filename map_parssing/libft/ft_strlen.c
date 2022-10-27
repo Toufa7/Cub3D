@@ -3,25 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:12:23 by orbiay            #+#    #+#             */
-/*   Updated: 2022/10/10 15:46:18 by orbiay           ###   ########.fr       */
+/*   Created: 2021/11/02 17:10:17 by ael-oual          #+#    #+#             */
+/*   Updated: 2022/10/25 14:13:39 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includ/map_parssing.h"
 
-int	ft_strlen(char	*str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	if (!str)
-		return (0);
-	while (str[i])
-	{
+	while (str !=  0 && str[i] != '\0')
 		i++;
-	}
 	return (i);
 }
