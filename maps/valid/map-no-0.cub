@@ -1,7 +1,7 @@
-NO ./sprites/xpm_images/north.xpm
+NO ./sprites/xpm_images/south.xpm
 SO ./sprites/xpm_images/south.xpm
-WE ./sprites/xpm_images/west.xpm
-EA ./sprites/xpm_images/east.xpm
+WE ./sprites/xpm_images/south.xpm
+EA ./sprites/xpm_images/south.xpm
 
 F 231,156,29
 C 38,141,124

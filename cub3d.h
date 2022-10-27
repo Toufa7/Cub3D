@@ -111,10 +111,9 @@ typedef struct s_window
 	void		*mlx;
 	void		*window;
 	char		**map;
-
 	int			width;
 	int			height;
-	
+
 	char		*n_img;
 	char		*s_img;
 	char		*e_img;
@@ -133,21 +132,18 @@ typedef struct s_window
 	double		x_endray;
 	double		y_endray;
 
-
 	double		distance;
-
 	double		corrected_distance;
-	
+
 	int			ceilling;
 	int			floor;
 
 	double		where;
 
-	char		*color;
-
 	double		dst_to_projection;
 	double		projection_3d;
 	double		flo_cei;
+	char		*color;
 
 	t_fd		parsing;
 	t_my_mlx	my_mlx;
@@ -180,8 +176,8 @@ void	move_right(t_mlx *wind);
 */
 void	cast_rays(t_mlx *wind, double angle, int i);
 /*
-	Whenever a ray hits the wall set which interface he see's based on his position [y,x]
-	and the wall intersection[y,x]
+	Whenever a ray hits the wall set which interface
+	he see's based on his position [y,x] and the wall intersection[y,x]
 */
 char	set_directions(double w_y, double w_x, t_mlx *wind);
 /*
