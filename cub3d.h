@@ -22,7 +22,13 @@
 # define WALL_DIM 64.0
 # define HALF_WALL 32.0
 
+/*
+	Video Resolution
+*/
 # define WIN_W	1920.0
+/*
+	Video Resolution
+*/
 # define WIN_H	1080.0
 
 
