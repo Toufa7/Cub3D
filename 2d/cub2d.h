@@ -25,8 +25,8 @@
 
 
 #define TRUE 1
-#define WIN_WIDTH 1920
-#define WIN_HEIGHT 1080
+#define WIN_W 1920
+#define WIN_H 1080
 typedef struct s_window
 {
     void	    *mlx;

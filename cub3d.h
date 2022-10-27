@@ -23,8 +23,8 @@
 # define WALL_DIM 64.0
 # define HALF_WALL 32.0
 
-# define WIN_WIDTH 1920
-# define WIN_HEIGHT 1080
+# define WIN_W	1920.0
+# define WIN_H	1080.0
 
 typedef struct fd
 {
@@ -80,23 +80,23 @@ typedef struct s_my_mlx
 	int		endian;
 
 	int		bpp_n;
-	int		line_len_n;
+	int		l_len_n;
 	int		endian_n;
 
 	int		bpp_s;
-	int		line_len_s;
+	int		l_len_s;
 	int		endian_s;
 
 	int		bpp_w;
-	int		line_len_w;
+	int		l_len_w;
 	int		endian_w;
 
 	int		bpp_e;
-	int		line_len_e;
+	int		l_len_e;
 	int		endian_e;
 
 	int		bpp_c;
-	int		line_len_c;
+	int		l_len_c;
 	int		endian_c;
 
 	char	*addr_n;
@@ -112,17 +112,18 @@ typedef struct s_window
 	void		*window;
 	char		**map;
 
-	char		*north_img;
-	char		*south_img;
-	char		*east_img;
-	char		*west_img;
-	char		*coin_img;
+	int			width;
+	int			height;
+	
+	char		*n_img;
+	char		*s_img;
+	char		*e_img;
+	char		*w_img;
 
-	char		*north_xpm;
-	char		*south_xpm;
-	char		*east_xpm;
-	char		*west_xpm;
-	char		*coin_xpm;
+	char		*n_xpm;
+	char		*s_xpm;
+	char		*e_xpm;
+	char		*w_xpm;
 
 	double		field_of_view;
 
@@ -132,8 +133,6 @@ typedef struct s_window
 	double		x_endray;
 	double		y_endray;
 
-	double		x_coin;
-	double		y_coin;
 
 	double		distance;
 
@@ -144,9 +143,11 @@ typedef struct s_window
 
 	double		where;
 
+	char		*color;
+
 	double		dst_to_projection;
 	double		projection_3d;
-	double		floor_ceiling;
+	double		flo_cei;
 
 	t_fd		parsing;
 	t_my_mlx	my_mlx;
@@ -190,12 +191,15 @@ void	projecting_rays(t_mlx *wind);
 /*
 	When we mesured the distance we start rendring our world
 */
-void	casting_3d(double distance, int i, t_mlx *mlx, char dir, char direction_coin);
+void	casting_3d(double distance, int i, t_mlx *mlx, char dir);
 /*
 	Whenever the user hit a key provide him wwith the move he requires
 */
 int		get_keys(int press, t_mlx	*wind);
-char	set_direction_coin(double y_player, double x_player, double y_end_coin, double x_end_coin, t_mlx *wind);
+char	*north_texture(t_mlx *mlx, int i);
+char	*south_texture(t_mlx *mlx, int i);
+char	*east_texture(t_mlx *mlx, int i);
+char	*west_texture(t_mlx *mlx, int i);
 int		destroy_window(t_mlx *wind);
 void	my_mlx_pixel_put(t_my_mlx *data, int x, int y, int color);
 

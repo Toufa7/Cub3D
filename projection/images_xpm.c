@@ -1,19 +1,24 @@
 #include "../cub3d.h"
 
-void    images_to_xpm(t_mlx *wind)
+void	images_to_xpm(t_mlx *wind)
 {
-    int height;
-    int width;
+	int	h;
+	int	w;
 
-    wind->north_xpm = mlx_xpm_file_to_image(wind->mlx, "./sprites/xpm_images/north.xpm", &width, &height);
-    wind->south_xpm = mlx_xpm_file_to_image(wind->mlx, "./sprites/xpm_images/south.xpm", &width, &height);
-    wind->east_xpm = mlx_xpm_file_to_image(wind->mlx, "./sprites/xpm_images/south.xpm", &width, &height);
-    wind->west_xpm = mlx_xpm_file_to_image(wind->mlx, "./sprites/xpm_images/south.xpm", &width, &height);
-    wind->coin_xpm = mlx_xpm_file_to_image(wind->mlx, "./sprites/xpm_images/coin_xpm.xpm", &width, &height);
-
-    wind->my_mlx.addr_n = mlx_get_data_addr(wind->north_xpm, &wind->my_mlx.bpp_n, &wind->my_mlx.line_len_n, &wind->my_mlx.endian_n);
-    wind->my_mlx.addr_s = mlx_get_data_addr(wind->south_xpm, &wind->my_mlx.bpp_s, &wind->my_mlx.line_len_s, &wind->my_mlx.endian_s);
-    wind->my_mlx.addr_w = mlx_get_data_addr(wind->west_xpm, &wind->my_mlx.bpp_w, &wind->my_mlx.line_len_w, &wind->my_mlx.endian_w);
-    wind->my_mlx.addr_e = mlx_get_data_addr(wind->east_xpm, &wind->my_mlx.bpp_e, &wind->my_mlx.line_len_e, &wind->my_mlx.endian_e);
-    wind->my_mlx.addr_c = mlx_get_data_addr(wind->east_xpm, &wind->my_mlx.bpp_c, &wind->my_mlx.line_len_c, &wind->my_mlx.endian_c);
+	wind->n_img = wind->parsing.NO;
+	wind->s_img = wind->parsing.SO;
+	wind->e_img = wind->parsing.EA;
+	wind->w_img = wind->parsing.WE;
+	wind->n_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);
+	wind->s_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);
+	wind->e_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);
+	wind->w_xpm = mlx_xpm_file_to_image(wind->mlx, wind->n_img, &w, &h);
+	wind->my_mlx.addr_n = mlx_get_data_addr(wind->n_xpm, &wind->my_mlx.bpp_n,
+			&wind->my_mlx.l_len_n, &wind->my_mlx.endian_n);
+	wind->my_mlx.addr_s = mlx_get_data_addr(wind->s_xpm, &wind->my_mlx.bpp_s,
+			&wind->my_mlx.l_len_s, &wind->my_mlx.endian_s);
+	wind->my_mlx.addr_w = mlx_get_data_addr(wind->w_xpm, &wind->my_mlx.bpp_w,
+			&wind->my_mlx.l_len_w, &wind->my_mlx.endian_w);
+	wind->my_mlx.addr_e = mlx_get_data_addr(wind->e_xpm, &wind->my_mlx.bpp_e,
+			&wind->my_mlx.l_len_e, &wind->my_mlx.endian_e);
 }

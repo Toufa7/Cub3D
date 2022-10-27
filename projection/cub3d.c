@@ -4,13 +4,11 @@
 // {
 			Poms
 // 	[✅] Fixing 3D Rendring Strips
-// 	[❌] Fixing seeing between 2 walls
 // 	[✅] Fixing fisheye effect
 // 	[✅] Fixing keys
-
 // 	[✅] Adding colors to wall
-// 	[❌] Fixing colors between walls
-// 	[❌] Adding textures
+// 	[✅] Adding textures
+// 	[❌] Fixing seeing between 2 walls
 
 			Abdesssamad
 // 	[✅] Handling More than 2 comma in rgb
@@ -19,20 +17,6 @@
 // 	[✅] Don't forget to exit if an error happend
 // 	[✅] Leaks
 */
-
-void	parse_aguments(t_mlx	*wind)
-{
-	printf("We Path -> %s\n", wind->west_img);
-	printf("No Path -> %s\n", wind->north_img);
-	printf("So Path -> %s\n", wind->south_img);
-	printf("Ea Path -> %s\n", wind->east_img);
-	printf("C Color -> %s\n", wind->east_img);
-	printf("E Color -> %s\n", wind->east_img);
-	for (int i = 0; wind->map[i]; i++)
-	{
-		printf("Map -> %s\n", wind->map[i]);
-	}
-}
 
 int	main(int ac, char **av)
 {
@@ -45,7 +29,7 @@ int	main(int ac, char **av)
 	{
 		wind.map = ft_split(wind.parsing.full_map, '\n');
 		wind.mlx = mlx_init();
-		wind.window = mlx_new_window(wind.mlx, WIN_WIDTH, WIN_HEIGHT, "Cub3D");
+		wind.window = mlx_new_window(wind.mlx, WIN_W, WIN_H, "Cub3D");
 		images_to_xpm(&wind);
 		get_player_position(&wind);
 		projecting_rays(&wind);

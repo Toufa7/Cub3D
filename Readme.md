@@ -12,9 +12,9 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 
 :one: Creating our window with :
 
-    WIN_WIDTH = 1920;
-    WIN_HEIGHT = 1080;
-    mlx.window = mlx_new_window(wind.mlx, WIN_WIDTH, WIN_HEIGHT, "Cub3D");
+    WIN_W = 1920;
+    WIN_H = 1080;
+    mlx.window = mlx_new_window(wind.mlx, WIN_W, WIN_H, "Cub3D");
 
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/69e8684df1de3c65f45df3d16731c41e4311d1b8/images/window.png" width="700"/>
