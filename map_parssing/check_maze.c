@@ -6,7 +6,7 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:41:06 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 22:55:16 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:47:39 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ void	check_line(t_data_par *parsing, int index, int *player_index)
 		if (line[i] == 'S' || line [i] == 'N'
 			|| line [i] == 'E' || line [i] == 'W')
 		{
-			around_ps(parsing->maze, i, index);
+			around_ps(parsing, i, index);
 			(*player_index)++;
 		}
 		if (line[i] == '0')
 		{
 			if (around_zero(parsing, index, line, i))
-				error_line();
+				error_line(parsing);
 		}
 		else if (check_possiblty(line[i]))
-			error_line();
+			error_line(parsing);
 		i++;
 	}
 }
@@ -50,13 +50,13 @@ void	check_maze_player(t_data_par *parsing)
 	while (parsing->maze[i])
 	{
 		if (i == 0 && true_line(parsing->maze[i]))
-			error_line();
+			error_line(parsing);
 		else
 			check_line(parsing, i, &player_index);
 		if (player_index > 1)
-			error_player();
+			error_map(parsing);
 		i++;
 	}
 	if (player_index == 0)
-		error_player();
+		error_map(parsing);
 }
