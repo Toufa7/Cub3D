@@ -1,32 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3d.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/28 12:16:30 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/28 12:16:37 by otoufah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
-
-/* TODO:
-// {
-			Poms
-// 	[✅] Fixing 3D Rendring Strips
-// 	[✅] Fixing fisheye effect
-// 	[✅] Fixing keys
-// 	[✅] Adding colors to wall
-// 	[✅] Adding textures
-// 	[❌] Fixing seeing between 2 walls
-
-			Abdesssamad
-// 	[✅] Handling More than 2 comma in rgb
-// 	[✅] Handling newlines inside the map
-// 	[✅] Convert RGB color to hexadecimal
-// 	[✅] Don't forget to exit if an error happend
-// 	[✅] Leaks
-*/
 
 int	main(int ac, char **av)
 {
-	t_mlx	wind;
-	t_data_par *parsing;
+	t_mlx		wind;
+	t_data_par	*parsing;
 
 	parsing = malloc(sizeof(t_data_par));
 	ft_parsing(ac, av, parsing);
 	wind.parsing = parsing;
-
 	if (ac == 2)
 	{
 		wind.map = parsing->maze;

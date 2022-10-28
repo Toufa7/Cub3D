@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_keys.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/28 12:18:06 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/28 12:18:13 by otoufah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	rotate_left(t_mlx *wind)
 {
-	wind->field_of_view -= 10.0;
+	wind->field_of_view -= PX_ROTATION;
 	if (wind->field_of_view > 360.0)
 		wind->field_of_view = 0;
 	if (wind->field_of_view < 0)
@@ -11,7 +23,7 @@ void	rotate_left(t_mlx *wind)
 
 void	rotate_right(t_mlx *wind)
 {
-	wind->field_of_view += 10.0;
+	wind->field_of_view += PX_ROTATION;
 	if (wind->field_of_view > 360.0)
 		wind->field_of_view = 0;
 	if (wind->field_of_view < 0)

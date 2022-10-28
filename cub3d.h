@@ -31,8 +31,15 @@
 */
 # define WIN_H	1080.0
 
-
+/*
+	Distance to move in pixels
+*/
 # define PX_MOVE	50
+
+/*
+	In ordre to rotate the player around 
+*/
+# define PX_ROTATION	10
 
 typedef struct s_my_mlx
 {

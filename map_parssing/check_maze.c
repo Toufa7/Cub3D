@@ -6,13 +6,13 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:41:06 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 17:46:19 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:55:16 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includ/map_parssing.h"
 
-void check_line(t_data_par *parsing, int index, int *player_index)
+void	check_line(t_data_par *parsing, int index, int *player_index)
 {
 	int		i;
 	char	*line;
@@ -33,10 +33,7 @@ void check_line(t_data_par *parsing, int index, int *player_index)
 				error_line();
 		}
 		else if (check_possiblty(line[i]))
-		{
-			// printf("lamaidsf  %s \n" , line);
 			error_line();
-		}
 		i++;
 	}
 }

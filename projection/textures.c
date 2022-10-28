@@ -1,4 +1,4 @@
-#include "../cub3d.h"
+ #include "../cub3d.h"
 
 char	*north_texture(t_mlx *mlx, int i)
 {

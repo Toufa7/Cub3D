@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   3d_projection.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/28 12:16:21 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/28 12:16:27 by otoufah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	projecting_rays(t_mlx *wind)
@@ -27,25 +39,17 @@ double	calc_dist(double y_player, double x_player,
 void	draw(t_mlx *mlx, int i, char dir)
 {
 	if (dir == 'N')
-	{
 		my_mlx_pixel_put(&mlx->my_mlx, mlx->height, mlx->width,
 			*(unsigned int *)north_texture(mlx, i));
-	}
 	else if (dir == 'S')
-	{
 		my_mlx_pixel_put(&mlx->my_mlx, mlx->height, mlx->width,
 			*(unsigned int *)south_texture(mlx, i));
-	}
 	else if (dir == 'W')
-	{
 		my_mlx_pixel_put(&mlx->my_mlx, mlx->height, mlx->width,
 			*(unsigned int *)west_texture(mlx, i));
-	}
 	else if (dir == 'E')
-	{
 		my_mlx_pixel_put(&mlx->my_mlx, mlx->height, mlx->width,
 			*(unsigned int *)east_texture(mlx, i));
-	}
 }
 
 void	cast_rays(t_mlx *wind, double angle, int x)

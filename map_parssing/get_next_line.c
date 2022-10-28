@@ -12,6 +12,7 @@
 /* ************************************************************************** */
 
 #include "./includ/map_parssing.h"
+
 char	*ft_strdup(char *src)
 {
 	char	*ptr;

@@ -6,21 +6,11 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 17:33:53 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 18:00:56 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:54:08 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includ/map_parssing.h"
-// int ft_direc(char c)
-// {
-// 	if (c == 'S')
-// 		return 90;
-// 	else if(c == 'N')
-// 		return 270;
-// 	else if(c == 'W')
-// 		return 180;
-// 	return 360;
-// }
 
 void	erros_functions(char **argv)
 {
