@@ -6,7 +6,7 @@
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:16:21 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/28 12:16:27 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/10/28 21:29:03 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,8 @@ void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 	mlx->projection_3d = (WALL_DIM / distance) * mlx->dst_to_projection;
 	mlx->flo_cei = (WIN_H / 2) - (mlx->projection_3d / 2);
 	while (mlx->width < WIN_H && mlx->width < mlx->flo_cei)
-		my_mlx_pixel_put(&mlx->my_mlx, height, mlx->width++, mlx->parsing->ciling_color);
+		my_mlx_pixel_put(&mlx->my_mlx, height,
+			mlx->width++, mlx->parsing->ciling_color);
 	while (mlx->width < WIN_H && mlx->width \
 	< mlx->flo_cei + mlx->projection_3d && ++i < WIN_H)
 	{
@@ -99,5 +100,6 @@ void	casting_3d(double distance, int height, t_mlx *mlx, char dir)
 		mlx->width ++;
 	}
 	while (mlx->width < WIN_H)
-		my_mlx_pixel_put(&mlx->my_mlx, height, mlx->width ++, mlx->parsing->floor_color);
+		my_mlx_pixel_put(&mlx->my_mlx, height,
+			mlx->width ++, mlx->parsing->floor_color);
 }

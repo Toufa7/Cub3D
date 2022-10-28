@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includ/map_parssing.h"
-#include<stdio.h>
+
 static int	chec_in_set(char *ptr, char c)
 {
 	int	index;
@@ -84,19 +84,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s_length = ft_strlen((char *)s1);
 	
 	ptr = remove_from_beg_end((char *)s1, (char *)set, ptr, s_length);
-	// printf(" %p \n",s1);
 	return (ptr);
 }
 
-// int main()
-// {
-	
-//     const char set[] = " \n\t";
-//     char *s1 = "  \t \t \n   \n\n\n\t";
-// 	char *s2 = "";
-// 	char *ret = ft_strtrim("     NO ./texture/the_north_texture.xpm", " ");
+/*int main()
+{
 
-//    // char *a = ft_strtrim(tab,set);
-//    printf(" %s ", ret);    
-// }
-
+    const char set[] = " \n\t";
+    char *s1 = "  \t \t \n   \n\n\n\t";
+	char *s2 = "";
+	char *ret = ft_strtrim("     NO ./texture/the_north_texture.xpm", " ");
+   // char *a = ft_strtrim(tab,set);
+   printf(" %s ", ret);    
+}
+*/

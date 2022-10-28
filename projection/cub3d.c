@@ -6,7 +6,7 @@
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:16:30 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/28 12:16:37 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/10/28 21:27:36 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 int	main(int ac, char **av)
 {
-	t_mlx	wind;
-	t_data_par *parsing;
+	t_mlx		wind;
+	t_data_par	*parsing;
 
 	parsing = malloc(sizeof(t_data_par));
 	ft_parsing(ac, av, parsing);
 	wind.parsing = parsing;
-
 	if (ac == 2)
 	{
 		wind.map = parsing->maze;
