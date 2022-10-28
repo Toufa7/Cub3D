@@ -6,7 +6,7 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 17:33:53 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 22:54:08 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:50:24 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,26 @@ int	get_nbr_line(int fd)
 		nbr_lin++;
 	}
 	if (nbr_lin == 0)
-		error_map();
+	{
+		printf("error file");
+		exit(1);
+	}
 	return (nbr_lin);
 }
 
 void	ft_parsing(int argc, char **argv, t_data_par *parsing)
 {
 	int	nbr_lin;
-	int	length_line;
 
 	nbr_lin = 0;
-	length_line = 0;
 	init(parsing);
 	nbr_lin = get_nbr_line(check_file_argument(argv, argc));
 	parsing->maze = malloc(nbr_lin * sizeof(char *));
+	if (parsing->maze == NULL)
+	{
+		printf("malloc error ");
+		exit(1);
+	}
 	parsing->nbr_lin = nbr_lin;
 	read_map(argv[1], parsing);
 }

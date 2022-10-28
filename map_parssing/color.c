@@ -6,7 +6,7 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:08:13 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 22:55:50 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:32:44 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	check_verg(char *line)
 		index++;
 	}
 	if (vergul == 2 && c[0] <= 255 && c[1] <= 255 && nbr <= 255)
-		return (256 * 256 * c[0] + 256 * c[1] + nbr);
+		return (((c[0] << 16) + (c[1] << 8) + nbr));
 	return (-1);
 }
 
@@ -76,8 +76,8 @@ int	ft_get_color(char *line, char *str)
 	str_color = ft_strtrim(line, str);
 	if (str_color[0] != ',' && str_color[ft_strlen(str_color) - 1] != ',')
 		color = check_verg(str_color);
-	if (color == -1)
-		error_color();
+	// if (color == -1)
+	// 	error_color();
 	free(line);
 	free(str_color);
 	return (color);

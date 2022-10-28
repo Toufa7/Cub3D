@@ -6,33 +6,32 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 18:33:05 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 22:54:45 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/28 18:51:05 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includ/map_parssing.h"
 
 	// system("leaks cub3d");
-void	error_line(void)
+void	error_line(t_data_par *parsing)
 {
-	printf(" error line [<>!<>] \n");
+	// free_function(parsing->maze);
+	free(parsing);
+	printf(" error line \n");
 	exit(1);
 }
 
-void	error_map(void)
+void	error_map(t_data_par *parsing)
 {
-	printf(" error map [<>!<>] \n");
+	// free_function(parsing->maze);
+	free(parsing);
+	printf(" error map \n");
 	exit(1);
 }
 
-void	error_player(void)
+void	error_color(t_data_par *parsing)
 {
-	printf(" error player [<>!<>] \n");
-	exit(1);
-}
-
-void	error_color(void)
-{
-	printf(" error color [<>!<>] \n");
+	free(parsing);
+	printf(" error color \n");
 	exit(1);
 }

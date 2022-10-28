@@ -14,12 +14,13 @@
 
 int	main(int ac, char **av)
 {
-	t_mlx		wind;
-	t_data_par	*parsing;
+	t_mlx	wind;
+	t_data_par *parsing;
 
 	parsing = malloc(sizeof(t_data_par));
 	ft_parsing(ac, av, parsing);
 	wind.parsing = parsing;
+
 	if (ac == 2)
 	{
 		wind.map = parsing->maze;

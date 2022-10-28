@@ -6,7 +6,7 @@
 /*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 11:30:19 by ael-oual          #+#    #+#             */
-/*   Updated: 2022/10/27 22:49:53 by ael-oual         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:34:26 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ void	ft_free(char **leaks);
 void	print_tab(char **tab);
 
 //!-----------Errors-----------------
-void	error_line(void);
-void	error_map(void);
+void	error_line(t_data_par *ft_parsing);
+void	error_map(t_data_par *ft_parsing);
 void	error_player(void);
-void	error_color(void);
+void	error_color(t_data_par *ft_parsing);
 /*!-----------Texture-----------------*/
 /* get texture path and add it to his varible in parssing */
 void	texture_value(t_data_par *parsing, char *line, int *nbr);
@@ -86,9 +86,11 @@ void	check_textures(t_data_par *parsing, t_index *index, char *line);
 char	*get_path_check(char *line, char *ser);
 //void check_texture(t_data_par *parsing,int n_derc , int n_color);
 //!------------tools--------------------
-/* check_possiblt of texture  */
+/* check_possiblt of textures NO SO WE EA   */
 int		check_possiblty_tex(char *line);
+/* check possiblty of this char (1 0 p ' ')*/
 int		check_possiblty(char c);
+/* initialise the data members of t_data_par */
 void	init(t_data_par *parsing);
 
 /* check line if any zero in it */
@@ -116,6 +118,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjjoin(char *s1, char *s2);
 void	check_maze_player(t_data_par *parsing);
-void	around_ps(char **maze, int i, int index);
+void	around_ps(t_data_par *parsing, int i, int index);
 int		around_zero(t_data_par *parsing, int index, char *line, int i);
 #endif
