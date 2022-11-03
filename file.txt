@@ -1,1 +1,0 @@
-(((int)(round((i + (mlx->projection_3d - (double)WIN_H) * (mlx->projection_3d > WIN_H) / 2) * (1000.0 / mlx->projection_3d))) % 1000) * mlx->my_mlx.l_len_w + (int)round(mlx->where) * (mlx->my_mlx.bpp_w / 8)));
