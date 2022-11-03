@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_window.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ael-oual <ael-oual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 12:16:47 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/28 12:17:41 by otoufah          ###   ########.fr       */
+/*   Created: 2021/11/02 17:10:17 by ael-oual          #+#    #+#             */
+/*   Updated: 2022/10/25 14:13:39 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "../includ/map_parsing.h"
 
-int	destroy_window(t_mlx *wind)
+size_t	ft_strlen(const char *str)
 {
-	mlx_destroy_window(wind->mlx, wind->window);
-	printf("Thanks for playing with us\n");
-	exit(0);
+	int		i;
+
+	i = 0;
+	while (str != 0 && str[i] != '\0')
+		i++;
+	return (i);
 }

@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include "./map_parssing/includ/map_parssing.h"
+# include "./map_parsing/includ/map_parsing.h"
 
 # define TRUE 1
 
@@ -35,6 +35,10 @@
 # define HALF_WALL 32.0
 
 /*
+	Represents the angular of our triangle
+*/
+# define THETA	64.0
+/*
 	Video Resolution
 */
 # define WIN_W	1920.0
@@ -46,12 +50,12 @@
 /*
 	Distance to move in pixels
 */
-# define PX_MOVE	10
+# define PX_MOVE	10.0
 
 /*
 	In ordre to rotate the player around 
 */
-# define PX_ROTATION	10
+# define PX_ROTATION	10.0
 
 typedef struct s_my_mlx
 {
@@ -111,8 +115,13 @@ typedef struct s_window
 	double		x_player;
 	double		y_player;
 
-	double		x_endray;
-	double		y_endray;
+	double		x_step;
+	double		y_step;
+
+	int			x_m;
+	int			y_m;
+
+	char		dir;
 
 	double		distance;
 	double		corrected_distance;
@@ -158,10 +167,17 @@ void	move_right(t_mlx *wind);
 */
 void	cast_rays(t_mlx *wind, double angle, int i);
 /*
-	Whenever a ray hits the wall set which interface
-	he see's based on his position [y,x] and the wall intersection[y,x]
+	Calculating the distance based on The Pythagorean theorem
+*/
+double	calculate_distance(double y_player, double x_player, double y_wall, double x_wall);
+/*
+	Whenever a ray hits the wall set which interface he see's based on his position [y,x] and the wall intersection[y,x]
 */
 char	set_directions(double w_y, double w_x, t_mlx *wind);
+/*
+	Fixing the buldge left and right to render flat wall as we really see them
+*/
+double	fix_fisheye(t_mlx *mlx, double angle);
 /*
 	Starting from the player position we draw line using cast_rays()
 */

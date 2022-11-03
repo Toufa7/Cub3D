@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_window.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: orbiay <orbiay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 12:16:47 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/28 12:17:41 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/09 15:24:23 by orbiay            #+#    #+#             */
+/*   Updated: 2022/10/10 16:22:54 by orbiay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include"libft.h"
 
-int	destroy_window(t_mlx *wind)
+int	ft_strcmp(char	*s1, char	*s2)
 {
-	mlx_destroy_window(wind->mlx, wind->window);
-	printf("Thanks for playing with us\n");
-	exit(0);
+	if (!s1 || !s2)
+	{
+		printf("STRCMP \n");
+		return (1);
+	}
+	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }

@@ -17,11 +17,11 @@ int	main(int ac, char **av)
 	t_mlx		wind;
 	t_data_par	*parsing;
 
-	parsing = malloc(sizeof(t_data_par));
-	ft_parsing(ac, av, parsing);
-	wind.parsing = parsing;
 	if (ac == 2)
 	{
+		parsing = malloc(sizeof(t_data_par));
+		ft_parsing(ac, av, parsing);
+		wind.parsing = parsing;
 		wind.map = parsing->maze;
 		wind.mlx = mlx_init();
 		wind.window = mlx_new_window(wind.mlx, WIN_W, WIN_H, "Cub3D");

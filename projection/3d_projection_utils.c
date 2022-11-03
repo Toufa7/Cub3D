@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_window.c                                   :+:      :+:    :+:   */
+/*   3d_projection_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 12:16:47 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/28 12:17:41 by otoufah          ###   ########.fr       */
+/*   Created: 2022/10/30 18:06:05 by otoufah           #+#    #+#             */
+/*   Updated: 2022/10/30 18:06:06 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int	destroy_window(t_mlx *wind)
+double	calculate_distance(double y_player, double x_player, double y_wall, double x_wall)
 {
-	mlx_destroy_window(wind->mlx, wind->window);
-	printf("Thanks for playing with us\n");
-	exit(0);
+	return (sqrt(((x_player - x_wall) * (x_player - x_wall)) + ((y_player - y_wall) * (y_player - y_wall))));
+}
+
+double	fix_fisheye(t_mlx *mlx, double angle)
+{
+	mlx->corrected_distance = mlx->distance * cos((angle - mlx->field_of_view) * (M_PI / 180));
+	return (mlx->corrected_distance);
 }

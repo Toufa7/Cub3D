@@ -1,0 +1,15 @@
+NO  ./sprites/xpm_images/coin.xpm
+SO  ./sprites/xpm_images/coin.xpm
+WE  ./sprites/xpm_images/coin.xpm
+EA  ./sprites/xpm_images/coin.xpm
+
+F 000,000,000
+C 000,000,000
+  
+ 11111111111111111
+1000000001000000001
+1000000000100000001
+100000E000000000001
+1000000000010000001
+1000000000100000001
+ 11111111111111111

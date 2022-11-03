@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_window.c                                   :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ael-oual <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 12:16:47 by otoufah           #+#    #+#             */
-/*   Updated: 2022/10/28 12:17:41 by otoufah          ###   ########.fr       */
+/*   Created: 2021/11/07 10:23:19 by ael-oual          #+#    #+#             */
+/*   Updated: 2021/11/14 17:52:56 by ael-oual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "../includ/map_parsing.h"
 
-int	destroy_window(t_mlx *wind)
+void	ft_putstr_fd(char *s, int fd)
 {
-	mlx_destroy_window(wind->mlx, wind->window);
-	printf("Thanks for playing with us\n");
-	exit(0);
+	int	index;
+
+	index = 0;
+	if (!s || !fd)
+		return ;
+	while (s[index] != '\0')
+	{
+		ft_putchar_fd(s[index], fd);
+		index++;
+	}
 }
