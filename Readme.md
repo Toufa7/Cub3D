@@ -182,6 +182,20 @@ anyway we need to each interfaces with the corrspondant color the process we'll 
 
 3) So how to set directly which directions he sees we'll since each cub i've got i don't only have the position of the player and the end of ray in the map only but also with pixels, so as you know every cub tbc
 
+
+
+:six: Adding Textures :
+
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/37eff01a474659d819cb00272ac344e240a45265/images/where__x.png" width="400" height="400"/>
+</p>
+
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/37eff01a474659d819cb00272ac344e240a45265/images/where_x.png" width="800" />
+</p>
+
 :information_source: And if you wanna take you game to the next level to look like this
 
 <p align="center">
