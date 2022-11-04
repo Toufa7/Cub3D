@@ -1,11 +1,11 @@
-NO  ./sprites/xpm_images/north.xpm
-SO  ./sprites/xpm_images/south.xpm
-WE  ./sprites/xpm_images/west.xpm
+NO  ./sprites/xpm_images/east.xpm
+SO  ./sprites/xpm_images/east.xpm
+WE  ./sprites/xpm_images/east.xpm
 EA  ./sprites/xpm_images/east.xpm
 
 F 231,  156,    29
 C 38,141,114  
-  
+
  11111111111111111
 1000000001000000001
 1000000000100000001

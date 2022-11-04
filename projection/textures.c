@@ -18,9 +18,9 @@ char	*north_texture(t_mlx *mlx, int i)
 	int	y;
 
 	x = (int)round(mlx->where);
-	// if (mlx->projection_3d > WIN_H)
-	// 	y = ((int)(round((i + (mlx->projection_3d - WIN_H) / 2.0) * (1000.0 / mlx->projection_3d))) % 1000);
-	// else
+	if (mlx->projection_3d > WIN_H)
+		y = ((int)(round((i + (mlx->projection_3d - WIN_H) / 2.0) * (1000.0 / mlx->projection_3d))) % 1000);
+	else
 		y = (int)round(i * (1000.0 / mlx->projection_3d)) % 1000;
 	mlx->color = mlx->my_mlx.addr_n + (y * mlx->my_mlx.l_len_n + (x * 4));
 	return (mlx->color);
@@ -32,9 +32,9 @@ char	*south_texture(t_mlx *mlx, int i)
 	int	y;
 
 	x = (int)round(mlx->where);
-	// if (mlx->projection_3d > WIN_H)
-	// 	y = ((int)(round((i + (mlx->projection_3d - WIN_H) / 2.0) * (1000.0 / mlx->projection_3d))) % 1000);
-	// else
+	if (mlx->projection_3d > WIN_H)
+		y = ((int)(round((i + (mlx->projection_3d - WIN_H) / 2.0) * (1000.0 / mlx->projection_3d))) % 1000);
+	else
 		y = (int)round(i * (1000.0 / mlx->projection_3d)) % 1000;
 	mlx->color = mlx->my_mlx.addr_s + (y * mlx->my_mlx.l_len_s + (x * 4));
 	return (mlx->color);
