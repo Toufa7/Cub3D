@@ -180,21 +180,35 @@ anyway we need to each interfaces with the corrspondant color the process we'll 
 <img src="https://github.com/Toufa7/Cub3D/blob/e15763faf0329fd7e5d1e5166c3f2f3e8448ff7c/images/Screen%20Shot%202022-10-24%20at%2011.31.51%20AM.png" width="1000"/>
 </p>
 
-3) So how to set directly which directions he sees we'll since each cub i've got i don't only have the position of the player and the end of ray in the map only but also with pixels, so as you know every cub tbc
+3) So how to set directly which directions he sees we'll since each cub i've got i don't only have the position of the player and the end of ray in the map only but also with pixels, so as you know every cub tbc ...
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/273867e298ee5c94854c23d7dc3d0e26a40472f5/images/Screen%20Shot%202023-02-11%20at%2012.56.24%20PM.png" width="1000"/>
+</p>
+
+:six: 2d to 3d :
+
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/f4e285c7bcbd5cfc4ae1904572d11c9ae2405a5f/images/Screen%20Shot%202022-10-16%20at%2010.16.25%20PM.png" width="1000" />
+</p>
 
 
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/f4e285c7bcbd5cfc4ae1904572d11c9ae2405a5f/images/Screen%20Shot%202022-10-16%20at%2010.04.40%20PM.png" width="1000" />
+</p>
 
-:six: Adding Textures :
 
+<p align="center">
+<img src="https://github.com/Toufa7/Cub3D/blob/f4e285c7bcbd5cfc4ae1904572d11c9ae2405a5f/images/Screen%20Shot%202022-10-16%20at%2010.09.07%20PM.png" width="1000" />
+</p>
+
+
+:seven: Adding Textures :
 
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/37eff01a474659d819cb00272ac344e240a45265/images/where__x.png" width="400" height="400"/>
 </p>
 
-
-<p align="center">
-<img src="https://github.com/Toufa7/Cub3D/blob/37eff01a474659d819cb00272ac344e240a45265/images/where_x.png" width="800" />
-</p>
 
 :information_source: And if you wanna take you game to the next level to look like this
 
