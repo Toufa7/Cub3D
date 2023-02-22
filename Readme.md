@@ -342,7 +342,9 @@ https://fabiensanglard.net/gebbwolf3d/
 https://blog.prepscholar.com/unit-circle-chart-radians-degrees
 https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/v/unit-circle-definition-of-trig-functions-1
 
+* Understnading 3D:
 
+https://www.youtube.com/watch?v=U0_ONQQ5ZNM
 
 
 bitwise operator is much faster than traditional computation 
