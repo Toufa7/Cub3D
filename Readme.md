@@ -346,6 +346,8 @@ https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb
 
 https://www.youtube.com/watch?v=U0_ONQQ5ZNM
 
+https://www.youtube.com/watch?v=wiYTxjJjfxs
+
 
 bitwise operator is much faster than traditional computation 
 
