@@ -349,6 +349,11 @@ https://www.youtube.com/watch?v=U0_ONQQ5ZNM
 https://www.youtube.com/watch?v=wiYTxjJjfxs
 
 
+* Raycasting visualiser: 
+
+https://editor.p5js.org/KernelOverseer/full/Ilst053ZC
+
+
 bitwise operator is much faster than traditional computation 
 
 
