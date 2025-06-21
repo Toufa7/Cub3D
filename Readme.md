@@ -22,6 +22,31 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 
 :two: Getting the player position in the map and define the field of view based on the character inserted in the map :
 
+## Player Direction vs Field of View (FOV)
+
+### Key Concepts:
+- **Player Direction Angle** (`player->angle`):
+  - Represents which way the player is facing (0°=North, 90°=East, 180°=South, 270°=West)
+  - Changes when player rotates
+  - Initial value set from map (N/S/E/W)
+
+- **Field of View (FOV)**:
+  - Fixed value (typically 60°)
+  - Defines how wide the player can see without turning
+  - Never changes during gameplay
+
+### Implementation Note:
+```c
+// Correct way to initialize player direction:
+if (map[y][x] == 'N') player->angle = 0;
+else if (map[y][x] == 'E') player->angle = 90;
+else if (map[y][x] == 'S') player->angle = 180;
+else if (map[y][x] == 'W') player->angle = 270;
+
+// FOV should be constant (defined in header):
+#define FOV 60.0
+
+// Your most change this to angle of the player not the fov just for batter understanding :)
     if (map[y][x] == 'N')
         fov = 90
     else if (map[y][x] == 'S')
