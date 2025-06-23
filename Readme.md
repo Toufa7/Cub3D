@@ -38,11 +38,15 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 ### Implementation Note:
 ```c
 // Correct way to initialize player direction:
-if (map[y][x] == 'N') player->angle = 0;
-else if (map[y][x] == 'E') player->angle = 90;
-else if (map[y][x] == 'S') player->angle = 180;
-else if (map[y][x] == 'W') player->angle = 270;
-
+if (map[y][x] == 'N')
+	player->angle = 0;
+else if (map[y][x] == 'E')
+	player->angle = 90;
+else if (map[y][x] == 'S')
+	player->angle = 180;
+else if (map[y][x] == 'W')
+	player->angle = 270;
+```
 // FOV should be constant (defined in header):
 #define FOV 60.0
 
