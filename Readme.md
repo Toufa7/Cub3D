@@ -37,7 +37,6 @@ A Cub3D a 1337's projects that aims to explore raycasting and making a dynamic v
 
 ### Implementation Note:
 ```c
-// Correct way to initialize player direction:
 if (map[y][x] == 'N')
 	player->angle = 0;
 else if (map[y][x] == 'E')
@@ -47,18 +46,6 @@ else if (map[y][x] == 'S')
 else if (map[y][x] == 'W')
 	player->angle = 270;
 ```
-// FOV should be constant (defined in header):
-#define FOV 60.0
-
-// Your most change this to angle of the player not the fov just for batter understanding :)
-    if (map[y][x] == 'N')
-        fov = 90
-    else if (map[y][x] == 'S')
-        fov = 270
-    else if (map[y][x] == 'E')
-        fov = 360
-    else if (map[y][x] == 'W')
-        fov = 180
 
 :three: Starting to cast some rays :
 
@@ -122,8 +109,9 @@ You can see it like this way the player moves up to the px then the py like this
 </p>
 
 As you know the raycasting  doesn't draw the whole scene once each column represents a single ray cast out from the player at a particuler angle
-if the ray hits the wall we calcualted the distance  
+if the ray hits the wall we calcualted the distance 
 
+```c
     void	cast_ray(double fov)
     {
 	    double px = player x position;
@@ -138,6 +126,7 @@ if the ray hits the wall we calcualted the distance
         // which means that we've reached the wall, remembre we need that intersection for the 3d part
 	    }
     }
+```
 
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/19f5be94c3bcb2bf58fa816e8f2296566b120932/images/Screen%20Shot%202022-10-19%20at%206.37.50%20PM.png" width="1000"/>
@@ -152,7 +141,8 @@ if the ray hits the wall we calcualted the distance
 <p align="center">
 <img src="https://github.com/Toufa7/Cub3D/blob/190f522295450f248b63db86c341d65f418e9fc4/images/inside_cub1.png" width="700"/>
 </p>
-	
+
+```c
     void	cast_ray(double fov)
     {
 	    double px = player x position;
@@ -168,9 +158,11 @@ if the ray hits the wall we calcualted the distance
 
 	    }
     }
+```
 
 :four: For the key's part here's what you should do :
 
+```c
     int keys()
     {
         if (KeyPressed = 124)
@@ -186,6 +178,7 @@ if the ray hits the wall we calcualted the distance
         if (KeyPressed = 1)
           move_backword();
      }
+```
 
 :five: Another challange we have is to set which direction the player sees of the Cub :
 
